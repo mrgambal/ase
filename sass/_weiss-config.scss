@@ -1,0 +1,92 @@
+// Help
+// http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+
+// $myicons-layout: vertical;
+// $myicons-spacing: 10px;
+// @import "myicons/*.png";
+
+$sans: Arial, FreeSans, sans-serif;
+$hSans: Verdana, "Bitstream Vera Sans", "DejaVu Sans", sans-serif;
+$hSansCond: Tahoma, Geneva, "DejaVu Sans Condensed", sans-serif;
+$serif: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
+$bSerif: Georgia, "Bitstream Charter", "Century Schoolbook L", serif;
+$aSerif: Palatino, "Palatino Linotype", Palladio, "URW Palladio L", "Book Antiqua", serif;
+$monospSerif: "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
+$monospSans: "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+$grotCond: "Arial Narrow", "DejaVu Sans Condensed", sans-serif;
+$futura: "FuturaMediumRegular", Futura, "URW Gothic L", Arial, FreeSans, sans-serif;
+
+// ============================================================================
+//  Basic configuration
+//=============================================================================
+
+$mainBgColor: #fff;
+$mainFgColor: #ccc;
+$baseColor: #434343;
+$accentColor: #000;
+$lnColor: #09f;
+$lnHoverColor: lighten($lnColor, 15%);
+$containerWidth: 974px;
+
+// Font configuration
+//  ---------------------------------------------------------------------------
+
+@import "compass/typography/vertical_rhythm";
+// http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+$baseFontFamily: 'ubuntu-light', $sans;
+$baseFontFamilyMono: $monospSerif;
+
+$base-font-size: 14px;
+// The font size set on the root html element.
+$base-line-height: 20px;
+// This line-height determines the basic unit of vertical rhythm.
+
+// http://www.modularscale.com by Tim Brown
+// https://github.com/scottkellum/modular-scale by scottkellum
+
+$h1-font-size: 50px;
+$h2-font-size: 36.6px;
+$h3-font-size: 30.9px;
+$h4-font-size: 22.6px;
+$h5-font-size: 19px;
+$h6-font-size: 14px;
+
+// ============================================================================
+//    Non-semantic grid support
+//=============================================================================
+
+@import "susy";
+
+$total-columns: 12;
+// a 12-column grid
+$column-width: 4em;
+// each column is 4em wide
+$gutter-width: 1em;
+// 1em gutters between columns
+$grid-padding: $gutter-width;
+// grid-padding equal to gutters
+
+// ============================================================================
+//    Breakpoints
+//=============================================================================
+
+$media-desktop_wide: 'screen and (min-width:1281px)';
+$media-desktop: 'screen and (max-width:1280px)';
+$media-tablet_landscape: 'screen and (max-width:1024px)';
+$media-tablet_portrait: 'screen and (max-width:768px)';
+$media-tablet_small: 'screen and (max-width:600px)';
+$media-phone_landscape: 'screen and (max-width:480px)';
+$media-phone_portrait: 'screen and (max-width:320px)';
+$media-portrait: 'screen and (orientation: portrait)';
+$media-landscape: 'screen and (orientation: landscape)';
+
+// ============================================================================
+//    Colors
+//=============================================================================
+
+$green: #82CB51;
+$blue: #78C6FA;
+$dark-blue: #516ECB;
+$yellow: #EED839;

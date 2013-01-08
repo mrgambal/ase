@@ -1,0 +1,244 @@
+@import "weiss-config";
+@import "helpers/mixins";
+
+/* ============================================================================
+		Main
+============================================================================= */
+
+/* @group Pattern: Block
+  --------------------------------------------------------------------------- */
+
+.block {
+	@include padding-leader(2, $base-font-size);
+	@include padding-trailer(2, $base-font-size);
+}
+
+.block_skin-dark {
+	color: #fff;
+
+	a {
+		color: #fff;
+	}
+}
+
+.block_skin-type-1 {
+	@extend .block_skin-dark;
+	background: $dark-blue url(../images/bg-seamless.png) 0 0 repeat;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+
+	pre {
+		box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+	}
+}
+
+.block_skin-type-2 {
+	background: $green;
+}
+
+.block_skin-type-3 {
+	background: $green;
+	@extend .block_skin-dark;
+}
+
+.block_skin-type-4 {
+	background: #008686;
+	@extend .block_skin-dark;
+}
+
+// Block Hero
+
+.block_hero__title {
+	//margin-bottom: 0;
+}
+
+.block_hero__subtitle {
+	font-size: 1.6em;
+	line-height: 1.4em;
+	margin-bottom: 0;
+}
+
+.block_hero__download {
+	padding-top: 4px;
+	text-align: center;
+	width: 219px;
+}
+
+.block_hero__btn {
+	text-decoration: none;
+	text-align: center;
+	padding: 1em;
+	width: 200px;
+	background-color: #3A3739;
+	@include transition();
+	display: inline-block;
+	vertical-align: top;
+	color: #fff;
+
+	.ie7-8 & {
+		display: inline;
+		zoom: 1;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: lighten(#3A3739, 10%);
+		color: #fff;
+	}
+}
+
+// block_u-content-ln
+
+.block_u-content-ln {
+	text-align: center;
+
+	p {
+		margin: 0;
+	}
+}
+
+/* @end */
+
+/* @group Unified nav i-slider-nav
+  --------------------------------------------------------------------------- */
+
+.i-slider-nav {
+	display: block;
+	position: absolute;
+	top: 40%;
+	width: 75px;
+	height: 100px;
+	text-decoration: none;
+	z-index: 6;
+	// about company caption
+	background-color: #BDD2FF;
+
+	&:active {
+		width: 70px;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.i-slider-nav_prev {
+	left: 0;
+}
+
+.i-slider-nav_next {
+	right: 0;
+}
+
+/* @end */
+
+/* @group def
+  --------------------------------------------------------------------------- */
+
+.def {
+	padding: 0;
+}
+
+.def__title {
+	@extend .h4;
+	margin-bottom: 10px;
+}
+
+.def__descr {
+	margin: 0;
+}
+
+.def__descr__row {
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.def__bage {
+	background-color: $dark-blue;
+	color: #fff;
+	padding: 0 5px;
+	margin: 0 5px 0 0;
+	border-radius: 2px;
+	width: 62px;
+	display: block;
+	float: left;
+	position: relative;
+	top: 1px;
+}
+
+/* @end */
+
+/* @group nav
+  --------------------------------------------------------------------------- */
+
+.nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav__item {
+	margin: 0;
+	padding: 0;
+
+	.nav_horiz & {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 10px;
+
+		.ie7-8 & {
+			display: inline;
+			zoom: 1;
+		}
+	}
+}
+
+.nav__ln {
+	cursor: pointer;
+}
+
+.nav_type-1 {
+
+	.nav__ln {
+		display: block;
+		padding: 0 5px;
+		border: 1px solid transparent;
+		border-radius: 2px;
+		color: #000;
+	}
+
+	.js-type-changer_active {
+		border-color: #000;
+	}
+}
+
+/* @end */
+
+/* @group Browser warning
+  --------------------------------------------------------------------------- */
+
+.warning {
+	position: fixed;
+	top: 40%;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	background: #fffd8b;
+	padding: 3em 0;
+	font-size: 1.4em;
+	line-height: 1.4;
+
+	a {
+		max-width: 834px;
+		margin: 0 auto;
+		display: block;
+		color: #000;
+		text-decoration: none;
+		padding: 4px 16px 4px 110px;
+	}
+
+	.ie6 & {
+		position: absolute;
+	}
+}
+
+/* @end */

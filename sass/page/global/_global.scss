@@ -1,0 +1,60 @@
+@import "weiss-config";
+@import "helpers/mixins";
+
+/* ============================================================================
+		GLOBAL
+============================================================================= */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section {
+	display: block;
+	// Corrects `block` display not defined in IE 9.
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	// Prevents iOS text size adjust after orientation change, without disabling user zoom.
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	font-size: $base-font-size;
+	@include adjust-leading-to(1);
+	font-family: $baseFontFamily;
+	color: $baseColor;
+	background: $mainBgColor;
+	overflow-y: scroll;
+	// force scroll
+	margin: 0;
+	// Removes default margin.
+}
+
+/* @group selection fixes
+  --------------------------------------------------------------------------- */
+
+body {
+	-webkit-tap-highlight-color: rgba($lnColor, 0.6);
+}
+
+::-moz-selection {
+	text-shadow: none;
+	background-color: rgba($lnColor, 0.6);
+	color: #fff;
+}
+
+::selection {
+	text-shadow: none;
+	background-color: rgba($lnColor, 0.6);
+	color: #fff;
+}
+
+// *:target {
+// 	border-bottom: 3px solid rgba(0, 0, 0, .1);
+// }
+//
+///* @end */
+
+///* Opera speed dial minimized */
+//@media screen and (view-mode: minimized) {}
+
+

@@ -1,7 +1,9 @@
 Aura Slider Engine
 ==================
 
->Simple, lightweight and flexible slider engine based on css animation abilities. Destination of this slider (and it major advantage) - just to change classes on items inside container. You could use all awailable css-powers to realize slider-effect of your dreams.
+>Simple, lightweight and flexible slider engine based on css animation abilities.
+ Destination of this slider (and it major advantage) - just to change classes on items inside container.
+ You could use all available css-powers to realize slider-effect for you needs or/and your dream for.
 
 Authors:
 -------

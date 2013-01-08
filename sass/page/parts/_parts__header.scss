@@ -1,0 +1,29 @@
+@import "weiss-config";
+@import "helpers/mixins";
+
+/* ============================================================================
+		Header
+============================================================================= */
+
+.region-header {
+}
+
+/* @group Site branding
+  --------------------------------------------------------------------------- */
+
+.site-name {
+	display: block;
+	font-size: 2em;
+	line-height: 1.4;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+.site-slogan {
+	font-size: 1em;
+	line-height: 1.2;
+	@include trailer(1);
+}
+
+/* @end */

@@ -1,0 +1,94 @@
+@import "weiss-config";
+@import "helpers/mixins";
+
+/* ============================================================================
+   @group Horizontal menu
+============================================================================ */
+
+/* navigation generic class */
+
+.global-nav {
+	padding-top: 38px;
+	//@include padding-leader(2, $base-font-size);
+	//@include padding-trailer(1, $base-font-size);
+}
+
+.global-nav__inner {
+	padding: 0;
+	margin: 0;
+	position:relative;
+	z-index: 2; // ie-fix z-index subnav
+}
+
+.global-nav__item,
+.global-nav__ln {
+	display: inline-block;
+	vertical-align: top;
+
+	.ie6-7 & {
+		display: inline;
+		zoom: 1;
+	}
+}
+
+.global-nav__item {
+	list-style: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+}
+
+.global-nav__ln {
+	padding: 0 1em 0 0;
+
+	&:hover,
+	&:focus {
+		color: $baseColor;
+	}
+
+	.global-nav__item_active & {
+		cursor:default;
+		color: $baseColor;
+	}
+}
+
+/* global-nav__item submenu */
+
+.global-nav__item {
+	position:relative;
+
+	&:hover {
+
+		.global-nav__ln {
+			color: $baseColor;
+		}
+
+		.global-nav__submenu {
+			visibility: visible;
+		}
+	}
+}
+
+/* Global nav submenu generic*/
+
+.global-nav__submenu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position:absolute;
+	top: 1em;
+	left: 0;
+	z-index: 2;
+	visibility: hidden;
+}
+
+.global-nav__submenu__ln {
+	display:block;
+	text-decoration:underline;
+
+	&:hover {
+		text-decoration:none;
+	}
+}
+
+/* @end */
