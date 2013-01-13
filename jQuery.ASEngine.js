@@ -17,7 +17,7 @@
  Version: 0.6a
 
  Copyright: Feel free to redistribute the script/modify it, as
- long as you leave my infos at the top.
+ long as you leave my info at the top.
 
  ------------------------------------------------------------------------- */
 ;
