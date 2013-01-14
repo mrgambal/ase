@@ -6,8 +6,8 @@ Scripts.Common = {
         $('html').removeClass('no-js');
     },
     warning: function () {
-
-        var warning = $('.warning'),
+        var sc = Scripts.Common,
+            warning = $('.warning'),
             warnHide = function () {
                 warning.fadeOut(800);
             },
@@ -22,12 +22,15 @@ Scripts.Common = {
         }).mouseleave(function () {
                 warnHide();
             });
+
+        return sc;
     },
     rotateSlider: function () {
-        var x = $('.js-marquee');
+        var sc = Scripts.Common,
+            containers = $('.js-marquee');
 
-        if (x.length)
-            x.each(function () {
+        if (containers.length)
+            containers.each(function () {
                 var el = $(this);
                 el.ASE({
                     autoplay: true,
@@ -39,26 +42,12 @@ Scripts.Common = {
                     }
                 }).addPagination(el.find('.js-marquee__pagination'));
             });
-    },
-    tabSlider: function () {
-        var x = $('.js-tab');
 
-        if (x.length)
-            x.ASE({
-                itemsSelector: '.js-tab__item',
-                autoplay: true,
-                prevCtrl: x.find('.js-tab__nav_prev'),
-                nextCtrl: x.find('.js-tab__nav_next'),
-                swipeCtrl: x.find('.js-tab__pane'),
-                nextClass: 'js-tab__item_next',
-                currentClass: 'js-tab__item_active',
-                prevClass: 'js-tab__item_prev',
-                onMove: function () {
-                    console.log('Slider #' + this.__indexInArray + '. i am tab after move function');
-                }
-            }).addPagination(x, 'js-marquee__pagination');
+        return sc;
     },
     animTypeChanger: function () {
+        var sc = Scripts.Common;
+
         $('.js-type-changer').on('click', function () {
             var actClass = 'js-type-changer_active',
                 slider = $('.css-slider');
@@ -69,6 +58,8 @@ Scripts.Common = {
             slider.removeClass('anim-type-1 anim-type-2 anim-type-3 anim-type-4 anim-type-5 anim-type-6 anim-type-7 anim-type-8 anim-type-9 anim-type-10');
             slider.addClass($(this).data('js-animtype'));
         });
+
+        return sc;
     },
     init: function () {
         var sc = this;
@@ -76,10 +67,9 @@ Scripts.Common = {
         sc.detecting();
 
         window.onload = function () {
-            sc.rotateSlider();
-            sc.tabSlider();
-            sc.warning();
-            sc.animTypeChanger();
+            sc.rotateSlider()
+                .warning()
+                .animTypeChanger();
         };
 
         return sc;
