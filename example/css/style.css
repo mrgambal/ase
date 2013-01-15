@@ -258,7 +258,7 @@ kbd {
 pre {
   background-color: #3a3739;
   color: #ccc;
-  padding: 0.643em 0 0.643em 2em;
+  padding: .643em 0 .643em 2em;
   width: 94%;
   overflow-x: auto;
 }
@@ -267,7 +267,7 @@ kbd {
   font-size: 1em;
   background: #3A3739;
   color: #fff;
-  padding: 0.2em 0.3em;
+  padding: .2em .3em;
   white-space: nowrap;
   border-radius: 4px;
 }
@@ -306,10 +306,10 @@ ins {
   *zoom: 1;
   max-width: 59em;
   _width: 59em;
-  padding-left: 1em;
-  padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 .l-global-header__top:after,
 .l-global-header__bottom:after {
@@ -353,10 +353,10 @@ ins {
   *zoom: 1;
   max-width: 59em;
   _width: 59em;
-  padding-left: 1em;
-  padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 .l-global-footer__inner:after {
   content: "";
@@ -402,10 +402,10 @@ l-row_flat {
   *zoom: 1;
   max-width: 59em;
   _width: 59em;
-  padding-left: 1em;
-  padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 .l-row_w:after {
   content: "";
@@ -980,7 +980,7 @@ dl dd {
   display: block;
   padding: 10px;
   color: #000;
-  text-shadow: 0 0 1px white;
+  text-shadow: 0 0 1px #fff;
 }
 
 @media screen and (min-width: 1281px) {
@@ -1088,7 +1088,7 @@ dl dd {
   width: 100%;
   overflow: hidden;
   background: #222;
-  box-shadow: inset 0 0 160px black;
+  box-shadow: inset 0 0 160px #000;
 }
 .css-slider .i-slider-nav {
   z-index: 2;
@@ -1141,10 +1141,10 @@ dl dd {
   *zoom: 1;
   max-width: 59em;
   _width: 59em;
-  padding-left: 1em;
-  padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
   padding-top: 2.85714em;
 }
 .css-slider__item__inner:after {
@@ -1474,53 +1474,70 @@ dl dd {
 /* @end */
 /* @group Animation: leaf over
   --------------------------------------------------------------------------- */
+.anim-type-9 {
+  -webkit-perspective: 900;
+  -moz-perspective: 900;
+  -ms-perspective: 900;
+  -o-perspective: 900;
+  perspective: 900;
+}
 .anim-type-9 .js-marquee__item {
-  -webkit-transition: all ease-in 600ms;
-  -moz-transition: all ease-in 600ms;
-  -o-transition: all ease-in 600ms;
-  transition: all ease-in 600ms;
   z-index: 0;
   left: 100%;
   visibility: hidden;
-}
-.anim-type-9 .js-marquee__item_active {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   -webkit-transition: all ease-in 600ms;
   -moz-transition: all ease-in 600ms;
   -o-transition: all ease-in 600ms;
   transition: all ease-in 600ms;
-  -webkit-perspective-origin: 50% 50%;
-  -moz-perspective-origin: 50% 50%;
-  -ms-perspective-origin: 50% 50%;
-  -o-perspective-origin: 50% 50%;
-  perspective-origin: 50% 50%;
+}
+.anim-type-9 .js-marquee__item_active {
+  -webkit-transform: rotate3d(0, 1, 0, 0);
+  -moz-transform: rotate3d(0, 1, 0, 0);
+  -ms-transform: rotate3d(0, 1, 0, 0);
+  -o-transform: rotate3d(0, 1, 0, 0);
+  transform: rotate3d(0, 1, 0, 0);
+  -webkit-perspective-origin: 0 0;
+  -moz-perspective-origin: 0 0;
+  -ms-perspective-origin: 0 0;
+  -o-perspective-origin: 0 0;
+  perspective-origin: 0 0;
+  -webkit-transition: all ease-in 600ms;
+  -moz-transition: all ease-in 600ms;
+  -o-transition: all ease-in 600ms;
+  transition: all ease-in 600ms;
   z-index: 1;
   left: 0;
   visibility: visible;
 }
 .anim-type-9 .js-marquee__item_prev {
   left: -100%;
-  -webkit-transform: perspective(400px) rotateY(45deg);
-  -moz-transform: perspective(400px) rotateY(45deg);
-  -ms-transform: perspective(400px) rotateY(45deg);
-  -o-transform: perspective(400px) rotateY(45deg);
-  transform: perspective(400px) rotateY(45deg);
-  -webkit-transform-origin: 50% 50% -50px;
-  -moz-transform-origin: 50% 50% -50px;
-  -ms-transform-origin: 50% 50% -50px;
-  -o-transform-origin: 50% 50% -50px;
-  transform-origin: 50% 50% -50px;
+  -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  -moz-transform: rotate3d(0, 1, 0, 90deg);
+  -ms-transform: rotate3d(0, 1, 0, 90deg);
+  -o-transform: rotate3d(0, 1, 0, 90deg);
+  transform: rotate3d(0, 1, 0, 90deg);
+  -webkit-transform-origin: 0 -100%;
+  -moz-transform-origin: 0 -100%;
+  -ms-transform-origin: 0 -100%;
+  -o-transform-origin: 0 -100%;
+  transform-origin: 0 -100%;
 }
 .anim-type-9 .js-marquee__item_next {
-  -webkit-transform: perspective(400px) rotateY(-45deg);
-  -moz-transform: perspective(400px) rotateY(-45deg);
-  -ms-transform: perspective(400px) rotateY(-45deg);
-  -o-transform: perspective(400px) rotateY(-45deg);
-  transform: perspective(400px) rotateY(-45deg);
-  -webkit-transform-origin: 50% 50% 50px;
-  -moz-transform-origin: 50% 50% 50px;
-  -ms-transform-origin: 50% 50% 50px;
-  -o-transform-origin: 50% 50% 50px;
-  transform-origin: 50% 50% 50px;
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  -ms-transform: rotate3d(0, 1, 0, -90deg);
+  -o-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
 }
 
 /* @end */
@@ -3068,7 +3085,7 @@ a.js-marquee__pagination_active:hover, a.js-marquee__pagination_active:focus {
 
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     text-shadow: none !important;
     filter: none !important;
     -ms-filter: none !important;
@@ -3094,7 +3111,7 @@ a.js-marquee__pagination_active:hover, a.js-marquee__pagination_active:focus {
   a,
   a:link,
   a:visited {
-    color: #444444 !important;
+    color: #444 !important;
     text-decoration: underline !important;
   }
 

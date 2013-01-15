@@ -451,22 +451,20 @@
   --------------------------------------------------------------------------- */
 
 .anim-type-9 { // leaf over
+	@include vendor(perspective, 900);
+
 	.js-marquee__item {
-		@include transition(all ease-in 600ms);
 		z-index: 0;
 		left: 100%;
 		visibility: hidden;
+		@include vendor(transform-style, preserve-3d);
+		@include transition(all ease-in 600ms);
 	}
 
 	.js-marquee__item_active {
+		@include vendor(transform, rotate3d(0,1,0,0));
+		@include vendor(perspective-origin, 0 0);
 		@include transition(all ease-in 600ms);
-
-		-webkit-perspective-origin: 50% 50%;
-		-moz-perspective-origin: 50% 50%;
-		-ms-perspective-origin: 50% 50%;
-		-o-perspective-origin: 50% 50%;
-		perspective-origin: 50% 50%;
-
 		z-index: 1;
 		left: 0;
 		visibility: visible;
@@ -474,34 +472,14 @@
 
 	.js-marquee__item_prev {
 		left: -100%;
-
-		-webkit-transform: perspective( 400px ) rotateY(45deg);
-		-moz-transform: perspective( 400px ) rotateY(45deg);
-		-ms-transform: perspective( 400px ) rotateY(45deg);
-		-o-transform: perspective( 400px ) rotateY(45deg);
-		transform: perspective( 400px ) rotateY(45deg);
-
-		-webkit-transform-origin: 50% 50% -50px;
-		-moz-transform-origin: 50% 50% -50px;
-		-ms-transform-origin: 50% 50% -50px;
-		-o-transform-origin: 50% 50% -50px;
-		transform-origin: 50% 50% -50px;
+		@include vendor(transform, rotate3d(0,1,0,90deg));
+		@include vendor(transform-origin, 0 -100%);
 	}
 
 	.js-marquee__item_next {
 		//left: 100%;
-
-		-webkit-transform: perspective( 400px ) rotateY(-45deg);
-		-moz-transform: perspective( 400px ) rotateY(-45deg);
-		-ms-transform: perspective( 400px ) rotateY(-45deg);
-		-o-transform: perspective( 400px ) rotateY(-45deg);
-		transform: perspective( 400px ) rotateY(-45deg);
-
-		-webkit-transform-origin: 50% 50% 50px;
-		-moz-transform-origin: 50% 50% 50px;
-		-ms-transform-origin: 50% 50% 50px;
-		-o-transform-origin: 50% 50% 50px;
-		transform-origin: 50% 50% 50px;
+		@include vendor(transform, rotate3d(0,1,0,-90deg));
+		@include vendor(transform-origin, 0 100%);
 	}
 }
 
