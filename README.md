@@ -146,6 +146,8 @@ Aura Slider Engine has a built-in pagination handler/generator. It should be cal
 
     <span data-href="#1" class="js-tab-ln">Tab 1</span>
 
+**IMPORTANT:** Default class for active pagination link is pagination-item-class + '_active'.
+
 Let's see how it can be used:
 
 ```js

@@ -86,25 +86,6 @@
 /* @group Animation: Slide
   --------------------------------------------------------------------------- */
 
-.anim-type-1 { // slide horiz
-	.js-marquee__item {
-		left: 100%;
-		@include transition(all ease-in 600ms);
-	}
-
-	.js-marquee__item_active {
-		left: 0;
-	}
-
-	.js-marquee__item_prev {
-		left: -100%;
-	}
-
-	.js-marquee__item_next {
-		// left: 100%;
-	}
-}
-
 .anim-type-2 { // slide vert
 	.js-marquee__item {
 		top: 100%;

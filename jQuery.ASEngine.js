@@ -36,7 +36,7 @@
         __curIndex: null,
         __eventNS: '.ASEngine',
         __indexInArray: 0,
-        __pgnClass: 'js-marquee__pagination',
+        __pgnClass: 'js-marquee__pagination__item',
         __pgnContainer: null,
         __timerID: 0,
 
