@@ -170,6 +170,27 @@ sl.addPagination('.js-slider__pagination-container', 'js-slider__pagination-cont
 sl.addPagination('.js-tabnav', 'js-tabnav__ln');
 ```
 
+###8. Reinit###
+In case if you need to change something in slider behavior on-the-fly e.g. set new autoplay delay time, you can use *init(options, container)* method. 
+This metod receives two arguments:
+
+    1. [JS-object] **options** - JavaScript-object with same options like in initialization example;
+    2. [jQuery-object | string] **container** (redundant) -  jQuery-selected container for pagination controls or selector for that container;
+
+**NOTICE:** second parameter was redundant. If passed - existing container wouldn't to be overridden.
+See example below:
+
+```js
+// taking container with existing slider
+var sl = $('.js-slider');
+
+// set new autoplay delay and new onMove callback
+sl.data('ASEngine').init({
+                    autoplayDelay: 1000,
+                    onMove: function () {console.log('Reinited Slider #' + this.__indexInArray + ' - Slide#' + this.__curIndex);}
+                });
+```
+
 ##Resume##
 My goal is to create simple and very flexible lightweight slider engine that can make life of web-developers a little bit easier. ASE doesn't declare requirements to your HTML-markup and don't bring own CSS.
 But (as mentioned above) you can use it without specially knowledges in HTML and CSS with our examples (will be added later).

@@ -14,7 +14,7 @@
  Dependencies: jQuery >= 1.7.2
                jQuery Mobile (if you want to handle swipe events on mobile devices)
 
- Version: 0.6a
+ Version: 0.7a
 
  Copyright: Feel free to redistribute the script/modify it, as
  long as you leave my info at the top.
@@ -90,6 +90,8 @@
             // autoplay
             if (_so.autoplay) 
                 _s.setAutoplay();
+            else
+                _s.stopAutoplay();
             // swipes on mobile devices
             if (_so.swipeCtrl && _so.swipeCtrl.length)
                 _so.swipeCtrl.on('swipeleft' + _s.__eventNS, _n)
@@ -266,9 +268,11 @@
         },
         init: function (opts, container) {
             var _s = this;
-            // apply passed options
-            _s.options = $.extend({}, _s.defaultOptions, opts);
-            _s.items = (_s.__container = container).find(_s.options.itemsSelector);
+            // try to find existing ASE binding
+            _old = (_s.__container || container).data('ASEngine');
+            // apply options
+            _s.options = $.extend((_old ? _old.options : {}), _s.defaultOptions, opts);
+            _s.items = (_s.__container = _s.__container || container).find(_s.options.itemsSelector);
 
             if (_s.items.length < 3)
                 return false;
