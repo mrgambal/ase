@@ -14,11 +14,7 @@
  Dependencies: jQuery >= 1.7.2
                jQuery Mobile (if you want to handle swipe events on mobile devices)
 
-<<<<<<< HEAD
- Version: 0.6a
-=======
  Version: 0.7a
->>>>>>> develop
 
  Copyright: Feel free to redistribute the script/modify it, as
  long as you leave my info at the top.
@@ -272,6 +268,7 @@
         },
         init: function (opts, container) {
             var _s = this;
+
             // try to find existing ASE binding
             _old = (_s.__container || container).data('ASEngine');
             // apply options
