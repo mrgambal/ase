@@ -17,7 +17,7 @@
  Version: 0.6a
 
  Copyright: Feel free to redistribute the script/modify it, as
- long as you leave my infos at the top.
+ long as you leave my info at the top.
 
  ------------------------------------------------------------------------- */
 ;
@@ -36,7 +36,7 @@
         __curIndex: null,
         __eventNS: '.ASEngine',
         __indexInArray: 0,
-        __pgnClass: 'js-marquee__pagination',
+        __pgnClass: 'js-marquee__pagination__item',
         __pgnContainer: null,
         __timerID: 0,
 
@@ -88,16 +88,12 @@
             if (_so.nextCtrl && _so.nextCtrl.length)
                 _so.nextCtrl.on('click' + _s.__eventNS, _n);
             // autoplay
-            if (_so.autoplay) {
-                if (_s.__timerID)
-                    clearInterval(_s.__timerID);
+            if (_so.autoplay) 
                 _s.setAutoplay();
-            }
             // swipes on mobile devices
-            if (_so.swipeCtrl && _so.swipeCtrl.length) {
+            if (_so.swipeCtrl && _so.swipeCtrl.length)
                 _so.swipeCtrl.on('swipeleft' + _s.__eventNS, _n)
                     .on('swiperight' + _s.__eventNS, _p);
-            }
             // hover on container
             _s.__container
                 .on('mouseenter' + _s.__eventNS, function () {
@@ -219,11 +215,8 @@
             if (_s.__pgnContainer)
                 _s.__changePaginationLink(itemIndex, prevIndex);
             // disable autoplay
-            if (stopAutoplay && _s.__timerID)
-                clearInterval(_s.__timerID);
-            // call onMove
-            if (typeof _so.onMove === 'function')
-                _so.onMove.call(this);
+            if (stopAutoplay)
+                _s.stopAutoplay();
 
             _s.items
                 .removeClass(_so.prevClass + " " + _so.nextClass)
@@ -240,14 +233,34 @@
                 .addClass(goBack ? _so.prevClass : _so.nextClass);
             _s.__curIndex = itemIndex;
 
+            // call onMove
+            if (typeof _so.onMove === 'function')
+                _so.onMove.call(this);
+
             return _s;
         },
-        setAutoplay: function () {
+        setAutoplay: function (interval) {
             var _s = this;
 
-            _s.__timerID = setInterval(function () {
+            if ((interval = parseInt(interval)))
+                _s.options.autoplayDelay = interval;
+
+            _s.stopAutoplay()
+              .__timerID = setInterval(function () {
                 _s.goNext(false);
             }, _s.options.autoplayDelay);
+
+            _s.options.autoplay = true;
+
+            return _s;
+        },
+        stopAutoplay: function () {
+            var _s = this;
+        
+            if (_s.__timerID) {
+                clearInterval(_s.__timerID);
+                _s.__timerID = _s.options.autoplay = false;
+            }
 
             return _s;
         },
