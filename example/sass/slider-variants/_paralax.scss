@@ -35,7 +35,7 @@
 	left: 0;
 	width: 100%;
 	height: 393px;
-	background-image: url(../images/bg-cross.png);
+	background-image: url(../images/example-paralax/bg-cross.png);
 	background-repeat: repeat;
 }
 
@@ -283,35 +283,35 @@ a.js-marquee__pagination_active {
 	}
 
 	.marquee__item__bg_1 {
-		background: url(../images/example/slider/slide-3-bg/2.png) center bottom repeat-x;
+		background: url(../images/example-paralax/slide-3/2.png) center bottom repeat-x;
 		@include transition(all ease-in 600ms);
 	}
 
 	.marquee__item__bg_2 {
-		background: url(../images/example/slider/slide-3-bg/3.png) center bottom repeat-x;
+		background: url(../images/example-paralax/slide-3/3.png) center bottom repeat-x;
 		@include transition(all ease-in 550ms);
 	}
 
 	.marquee__item__bg_3 {
-		background: url(../images/example/slider/slide-3-bg/4.png) center bottom repeat-x;
+		background: url(../images/example-paralax/slide-3/4.png) center bottom repeat-x;
 		@include transition(all ease-in 450ms);
 	}
 
 	.marquee__item__bg_tower {
-		background: url(../images/example/slider/slide-3-bg/tower.png) center bottom no-repeat;
+		background: url(../images/example-paralax/slide-3/tower.png) center bottom no-repeat;
 	}
 
 	.marquee__item__bg_sun {
-		background: url(../images/example/slider/slide-3-bg/sun.png) center top no-repeat;
+		background: url(../images/example-paralax/slide-3/sun.png) center top no-repeat;
 	}
 
 	.marquee__item__bg_cloud {
-		background: url(../images/example/slider/slide-3-bg/cloud.png) center bottom repeat-x;
+		background: url(../images/example-paralax/slide-3/cloud.png) center bottom repeat-x;
 		//@include transition(all ease-in 600ms);
 	}
 
 	.marquee__item__bg_cloud-group {
-		background: url(../images/example/slider/slide-3-bg/cloud-group.png) center bottom repeat-x;
+		background: url(../images/example-paralax/slide-3/cloud-group.png) center bottom repeat-x;
 	}
 
 	// .marquee__item__bg_1 {
@@ -331,7 +331,6 @@ a.js-marquee__pagination_active {
 
 	.marquee__item__bg_cloud-group {
 		-webkit-animation: pull_left-bg infinite linear 200s;
-		-webkit-transform: translateZ(0);
 		-moz-animation: pull_left-bg infinite linear 200s;
 		-o-animation: pull_left-bg infinite linear 200s;
 		-ms-animation: pull_left-bg infinite linear 200s;
@@ -346,7 +345,6 @@ a.js-marquee__pagination_active {
 
 	.marquee__item__bg_cloud {
 		-webkit-animation: pull_left-bg infinite linear 150s;
-		-webkit-transform: translateZ(0);
 		-moz-animation: pull_left-bg infinite linear 150s;
 		-o-animation: pull_left-bg infinite linear 150s;
 		-ms-animation: pull_left-bg infinite linear 150s;
@@ -368,7 +366,6 @@ a.js-marquee__pagination_active {
 		//visibility: hidden;
 		background-position: 30% 0;
 		@include transition(all ease-in 600ms);
-		-webkit-transform: translateZ(0);
 
 		.ie6-8 & {
 			visibility: hidden;

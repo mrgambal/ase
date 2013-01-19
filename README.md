@@ -142,6 +142,12 @@ Aura Slider Engine has a built-in pagination handler/generator. It should be cal
 	2. [string | bool] **pgnClass** - class for pagination controls explicitly declared in your HTML-markup inside container specified by first parameter. Default value - 'js-ase__pagination';
 	3. [string] **addClass** - class that will be added to pagination controls, only if they will be generated automatically. Default value - null.
 
+**IMPORTANT:** If you'll try to bind pagination with existing controls - don't forget to add *data-href*-attribute to them. Value must be hash-tag with number of slide (count starts from 1). E.g.:
+
+    <span data-href="#1" class="js-tab-ln">Tab 1</span>
+
+**IMPORTANT:** Default class for active pagination link is pagination-item-class + '_active'.
+
 Let's see how it can be used:
 
 ```js
@@ -155,13 +161,34 @@ sl.addPagination('.js-slider__pagination-container');
 sl.addPagination($('.js-slider__pagination-container'));
 
 // 2. Generating links with specified class (container is empty)
-sl.addPagination('.js-slider__pagination-container', 'js-another-class');
+sl.addPagination('.js-slider__pagination-container', 'js-slider__pagination-container__ln');
 
 // 3. Generating links with two specified classes (container is empty)
-sl.addPagination('.js-slider__pagination-container', 'another-class', 'yet-another-class');
+sl.addPagination('.js-slider__pagination-container', 'js-slider__pagination-container__ln', 'another-class-to-ln yet-another-class-to-ln');
 
-// 4. Binding to existing controls have class 'js-tab-ln' (links already in container)
-sl.addPagination('.js-slider__pagination-container', 'js-tab-ln');
+// 4. Binding to existing controls have class 'js-tabnav__ln' (links already in container). If links with specified class wasn`t found - they'll be generated.
+sl.addPagination('.js-tabnav', 'js-tabnav__ln');
+```
+
+###8. Reinit###
+In case if you need to change something in slider behavior on-the-fly e.g. set new autoplay delay time, you can use *init(options, container)* method. 
+This metod receives two arguments:
+
+    1. [JS-object] **options** - JavaScript-object with same options like in initialization example;
+    2. [jQuery-object | string] **container** (redundant) -  jQuery-selected container for pagination controls or selector for that container;
+
+**NOTICE:** second parameter was redundant. If passed - existing container wouldn't to be overridden.
+See example below:
+
+```js
+// taking container with existing slider
+var sl = $('.js-slider');
+
+// set new autoplay delay and new onMove callback
+sl.data('ASEngine').init({
+                    autoplayDelay: 1000,
+                    onMove: function () {console.log('Reinited Slider #' + this.__indexInArray + ' - Slide#' + this.__curIndex);}
+                });
 ```
 
 ##Resume##

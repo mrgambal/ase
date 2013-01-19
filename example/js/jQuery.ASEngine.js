@@ -14,10 +14,10 @@
  Dependencies: jQuery >= 1.7.2
                jQuery Mobile (if you want to handle swipe events on mobile devices)
 
- Version: 0.6a
+ Version: 0.7a
 
  Copyright: Feel free to redistribute the script/modify it, as
- long as you leave my infos at the top.
+ long as you leave my info at the top.
 
  ------------------------------------------------------------------------- */
 ;
@@ -36,7 +36,7 @@
         __curIndex: null,
         __eventNS: '.ASEngine',
         __indexInArray: 0,
-        __pgnClass: 'js-marquee__pagination',
+        __pgnClass: 'js-marquee__pagination__item',
         __pgnContainer: null,
         __timerID: 0,
 
@@ -88,16 +88,14 @@
             if (_so.nextCtrl && _so.nextCtrl.length)
                 _so.nextCtrl.on('click' + _s.__eventNS, _n);
             // autoplay
-            if (_so.autoplay) {
-                if (_s.__timerID)
-                    clearInterval(_s.__timerID);
+            if (_so.autoplay) 
                 _s.setAutoplay();
-            }
+            else
+                _s.stopAutoplay();
             // swipes on mobile devices
-            if (_so.swipeCtrl && _so.swipeCtrl.length) {
+            if (_so.swipeCtrl && _so.swipeCtrl.length)
                 _so.swipeCtrl.on('swipeleft' + _s.__eventNS, _n)
                     .on('swiperight' + _s.__eventNS, _p);
-            }
             // hover on container
             _s.__container
                 .on('mouseenter' + _s.__eventNS, function () {
@@ -219,11 +217,8 @@
             if (_s.__pgnContainer)
                 _s.__changePaginationLink(itemIndex, prevIndex);
             // disable autoplay
-            if (stopAutoplay && _s.__timerID)
-                clearInterval(_s.__timerID);
-            // call onMove
-            if (typeof _so.onMove === 'function')
-                _so.onMove.call(this);
+            if (stopAutoplay)
+                _s.stopAutoplay();
 
             _s.items
                 .removeClass(_so.prevClass + " " + _so.nextClass)
@@ -240,22 +235,45 @@
                 .addClass(goBack ? _so.prevClass : _so.nextClass);
             _s.__curIndex = itemIndex;
 
+            // call onMove
+            if (typeof _so.onMove === 'function')
+                _so.onMove.call(this);
+
             return _s;
         },
-        setAutoplay: function () {
+        setAutoplay: function (interval) {
             var _s = this;
 
-            _s.__timerID = setInterval(function () {
+            if ((interval = parseInt(interval)))
+                _s.options.autoplayDelay = interval;
+
+            _s.stopAutoplay()
+              .__timerID = setInterval(function () {
                 _s.goNext(false);
             }, _s.options.autoplayDelay);
+
+            _s.options.autoplay = true;
+
+            return _s;
+        },
+        stopAutoplay: function () {
+            var _s = this;
+        
+            if (_s.__timerID) {
+                clearInterval(_s.__timerID);
+                _s.__timerID = _s.options.autoplay = false;
+            }
 
             return _s;
         },
         init: function (opts, container) {
             var _s = this;
-            // apply passed options
-            _s.options = $.extend({}, _s.defaultOptions, opts);
-            _s.items = (_s.__container = container).find(_s.options.itemsSelector);
+
+            // try to find existing ASE binding
+            _old = (_s.__container || container).data('ASEngine');
+            // apply options
+            _s.options = $.extend((_old ? _old.options : {}), _s.defaultOptions, opts);
+            _s.items = (_s.__container = _s.__container || container).find(_s.options.itemsSelector);
 
             if (_s.items.length < 3)
                 return false;
