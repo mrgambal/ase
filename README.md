@@ -138,9 +138,9 @@ $('.js-slider__container').data('ASEngine') === window.ASESliders[0]
 
 Aura Slider Engine has a built-in pagination handler/generator. It should be called via *.addPagination()* method applied to slider container that was received as described above. Method can receive 3 parameters
 
-	1. [jQuery-object | string] **container** - jQuery-selected container for pagination controls or selector for that container;
-	2. [string | bool] **pgnClass** - class for pagination controls explicitly declared in your HTML-markup inside container specified by first parameter. Default value - 'js-ase__pagination';
-	3. [string] **addClass** - class that will be added to pagination controls, only if they will be generated automatically. Default value - null.
+	1. [jQuery-object | string] container - jQuery-selected container for pagination controls or selector for that container;
+	2. [string | bool]          pgnClass  - class for pagination controls explicitly declared in your HTML-markup inside container specified by first parameter. Default value - 'js-ase__pagination';
+	3. [string]                 addClass  - class that will be added to pagination controls, only if they will be generated automatically. Default value - null.
 
 **IMPORTANT:** If you'll try to bind pagination with existing controls - don't forget to add *data-href*-attribute to them. Value must be hash-tag with number of slide (count starts from 1). E.g.:
 
@@ -174,8 +174,8 @@ sl.addPagination('.js-tabnav', 'js-tabnav__ln');
 In case if you need to change something in slider behavior on-the-fly e.g. set new autoplay delay time, you can use *init(options, container)* method. 
 This metod receives two arguments:
 
-    1. [JS-object] **options** - JavaScript-object with same options like in initialization example;
-    2. [jQuery-object | string] **container** (redundant) -  jQuery-selected container for pagination controls or selector for that container;
+    1. [JS-object]              options               - JavaScript-object with same options like in initialization example;
+    2. [jQuery-object | string] container (redundant) -  jQuery-selected container for pagination controls or selector for that container;
 
 **NOTICE:** second parameter was redundant. If passed - existing container wouldn't to be overridden.
 See example below:
