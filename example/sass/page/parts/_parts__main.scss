@@ -225,7 +225,6 @@ $btn-height-hero: 42px;
 		display: inline-block;
 		vertical-align: top;
 
-
 		.ie7-8 & {
 			display: inline;
 			zoom: 1;
@@ -327,28 +326,32 @@ $btn-height-hero: 42px;
 	display: block;
 	position: absolute;
 	top: 40%;
-	width: 5em;
+	width: 67px;
 	height: 8em;
 	text-decoration: none;
 	background-color: #fff;
+	border: 2px solid transparent;
+	@include transition();
 
 	&:hover,
 	&:focus {
-		background-color: #eee;
 		outline: none;
+		border-color: #ccc;
 	}
 
 	&:active {
-		width: 4.5em;
+		width: 60px;
 	}
 }
 
 .i-slider-nav_prev {
 	left: 0;
+	border-left: none;
 }
 
 .i-slider-nav_next {
 	right: 0;
+	border-right: none;
 }
 
 /* @end */
