@@ -35,23 +35,23 @@ $containerWidth: 974px;
 @import "compass/typography/vertical_rhythm";
 // http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
-$baseFontFamily: 'ubuntu-light', $sans;
+$baseFontFamily: 'aller', $sans;
 $baseFontFamilyMono: $monospSerif;
 
 $base-font-size: 14px;
 // The font size set on the root html element.
-$base-line-height: 20px;
+$base-line-height: 22px;
 // This line-height determines the basic unit of vertical rhythm.
 
 // http://www.modularscale.com by Tim Brown
 // https://github.com/scottkellum/modular-scale by scottkellum
 
-$h1-font-size: 50px;
-$h2-font-size: 36.6px;
-$h3-font-size: 30.9px;
-$h4-font-size: 22.6px;
-$h5-font-size: 19px;
-$h6-font-size: 14px;
+$h1-font-size: 24px;
+$h2-font-size: 22px;
+$h3-font-size: 16px;
+$h4-font-size: 12px;
+$h5-font-size: 10px;
+$h6-font-size: 8px;
 
 // ============================================================================
 //    Non-semantic grid support

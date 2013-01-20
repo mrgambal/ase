@@ -6,41 +6,51 @@
 ============================================================================= */
 
 @font-face {
-	font-family: 'ubuntu-light';
-	src: url('../fonts/ubuntu/ubuntu-l-webfont.eot');
-	src: url('../fonts/ubuntu/ubuntu-l-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/ubuntu/ubuntu-l-webfont.woff') format('woff'),
-	url('../fonts/ubuntu/ubuntu-l-webfont.ttf') format('truetype');
+	font-family: 'aller';
+	src: url('../fonts/aller/aller_it-webfont.eot');
+	src: url('../fonts/aller/aller_it-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/aller/aller_it-webfont.woff') format('woff'),
+	url('../fonts/aller/aller_it-webfont.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'aller';
+	src: url('../fonts/aller/aller_lt-webfont.eot');
+	src: url('../fonts/aller/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/aller/aller_lt-webfont.woff') format('woff'),
+	url('../fonts/aller/aller_lt-webfont.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'ubuntu-light';
-	src: url('../fonts/ubuntu/ubuntu-li-webfont.eot');
-	src: url('../fonts/ubuntu/ubuntu-li-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/ubuntu/ubuntu-li-webfont.woff') format('woff'),
-	url('../fonts/ubuntu/ubuntu-li-webfont.ttf') format('truetype');
+	font-family: 'aller';
+	src: url('../fonts/aller/aller_ltit-webfont.eot');
+	src: url('../fonts/aller/aller_ltit-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/aller/aller_ltit-webfont.woff') format('woff'),
+	url('../fonts/aller/aller_ltit-webfont.ttf') format('truetype');
 	font-weight: normal;
 	font-style: italic;
 }
 
 @font-face {
-	font-family: 'ubuntu-light';
-	src: url('../fonts/ubuntu/ubuntu-r-webfont.eot');
-	src: url('../fonts/ubuntu/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/ubuntu/ubuntu-r-webfont.woff') format('woff'),
-	url('../fonts/ubuntu/ubuntu-r-webfont.ttf') format('truetype');
+	font-family: 'aller';
+	src: url('../fonts/aller/aller_rg-webfont.eot');
+	src: url('../fonts/aller/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/aller/aller_rg-webfont.woff') format('woff'),
+	url('../fonts/aller/aller_rg-webfont.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'ubuntu-light';
-	src: url('../fonts/ubuntu/ubuntu-ri-webfont.eot');
-	src: url('../fonts/ubuntu/ubuntu-ri-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/ubuntu/ubuntu-ri-webfont.woff') format('woff'),
-	url('../fonts/ubuntu/ubuntu-ri-webfont.ttf') format('truetype');
-	font-weight: bold;
-	font-style: italic;
+	font-family: 'iconFont';
+	src: url('../fonts/icon-font/iconFont.eot');
+	src: url('../fonts/icon-font/iconFont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/icon-font/iconFont.woff') format('woff'),
+	url('../fonts/icon-font/iconFont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }

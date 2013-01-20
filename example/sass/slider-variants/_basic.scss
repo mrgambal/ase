@@ -2,463 +2,297 @@
 @import "helpers/mixins";
 
 /* ============================================================================
-		Basic slider
+		Examples Sliders
 ============================================================================= */
 
-.css-slider {
-	position: relative;
-	width: 100%;
-	overflow: hidden; //ff fix
-	background: #222;
-	box-shadow: inset 0 0 160px #000;
+/* @group effect: slider type: slider_flat
+  --------------------------------------------------------------------------- */
 
-	.i-slider-nav {
-		z-index: 2;
-	}
-
-	.js-marquee__items-wr {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	.nav {
-		position: absolute;
-		top: 10px;
-		right: 0;
-		z-index: 5;
-	}
-}
-
-.css-slider__container {
-	position: relative;
-	height: 430px;
-	width: 100%;
-	z-index: 1;
-}
-
-.css-slider__item {
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 430px;
-	background: #000;
-}
-
-.css-slider__item_slide-1 {
-	background: $blue;
-}
-
-.css-slider__item_slide-2 {
-	background: $green;
-}
-
-.css-slider__item_slide-3 {
-	background: $yellow;
-}
-
-.css-slider__item__inner {
-	position: relative;
-	z-index: 1;
-	@include container;
-	@include padding-leader(2, $base-font-size);
-}
-
-.css-slider__item__title {
-	color: #fff;
-}
-
-/* Generic for all sliders variant */
-
-.css-slider {
-	.js-marquee__item {
+.slider_slide-flat {
+	.js-ase__item {
 		visibility: hidden;
 	}
 
-	.js-marquee__item_active {
+	.js-ase__item_active {
 		visibility: visible;
 	}
 }
 
-/* @group Animation: Slide
+/* @end */
+
+/* @group effect: slider type: slider_slide-vert
   --------------------------------------------------------------------------- */
 
-.anim-type-2 { // slide vert
-	.js-marquee__item {
-		top: 100%;
-		left: 0;
-		@include transition(all ease-in 600ms);
+.slider_slide-vert {
+	overflow: hidden;
+
+	.js-ase__item {
+		visibility: hidden;
+		top: -100%;
+		@include transition(all 600ms ease-in-out);
 	}
 
-	.js-marquee__item_active {
+	.js-ase__item_active {
+		visibility: visible;
 		top: 0;
 	}
 
-	.js-marquee__item_prev {
-		top: -100%;
-	}
-
-	.js-marquee__item_next {
-		// top: 100%;
+	.js-ase__item_prev {
+		top: 100%;
 	}
 }
 
 /* @end */
 
-/* @group Animation: Fade slide
+/* @group Animation: slider_slide-horiz
   --------------------------------------------------------------------------- */
 
-.anim-type-3 { // fade slide
-	.js-marquee__item {
-		left: 40%;
-		opacity: 0;
-		z-index: 0;
+.slider_slide-horiz {
+	overflow: hidden;
 
-		@include transition(all ease-in 600ms);
-		-webkit-transform: translateZ(0);
-
-		.ie6-8 & {
-			visibility: hidden;
-		}
-	}
-
-	.js-marquee__item_active {
-		left: 0;
-		opacity: 1;
-		z-index: 1;
-
-		.ie6-8 & {
-			visibility: visible;
-		}
-	}
-
-	.js-marquee__item_prev {
-		left: -40%;
-	}
-
-	.js-marquee__item_next {
-		// left: 40%;
-	}
-}
-
-/* @end */
-
-/* @group Animation: Grow
-  --------------------------------------------------------------------------- */
-
-.anim-type-4 { // grow
-	.js-marquee__item {
+	.js-ase__item {
 		visibility: hidden;
-		opacity: 0;
-		@include transition(all ease 600ms);
-
-		-webkit-transform-origin: 50% 50%;
-		-moz-transform-origin: 50% 50%;
-		-ms-transform-origin: 50% 50%;
-		-o-transform-origin: 50% 50%;
-		transform-origin: 50% 50%;
-	}
-
-	.js-marquee__item_active {
-		visibility: visible;
-		opacity: 1;
-	}
-
-	.js-marquee__item_prev,
-	.js-marquee__item_next {
-		-webkit-transform: scale( 0.01 );
-		-moz-transform: scale( 0.01 );
-		-ms-transform: scale( 0.01 );
-		-o-transform: scale( 0.01 );
-		transform: scale( 0.01 );
-	}
-}
-
-/* @end */
-
-/* @group Animation: Grow fade
-  --------------------------------------------------------------------------- */
-
-.anim-type-10 {
-	.js-marquee__item {
-		@include transition(all ease 600ms);
-		visibility: hidden;
-		opacity: 0;
-	}
-
-	.js-marquee__item_active {
-		visibility: visible;
-		opacity: 1;
-		-webkit-transform: scale( 1 );
-		-moz-transform: scale( 1 );
-		-ms-transform: scale( 1 );
-		-o-transform: scale( 1 );
-		transform: scale( 1 );
-	}
-
-	.js-marquee__item_prev {
-		-webkit-transform: scale( 0.8 );
-		-moz-transform: scale( 0.8 );
-		-ms-transform: scale( 0.8 );
-		-o-transform: scale( 0.8 );
-		transform: scale( 0.8 );
-	}
-
-	.js-marquee__item_next {
-		-webkit-transform: scale( 1.2 );
-		-moz-transform: scale( 1.2 );
-		-ms-transform: scale( 1.2 );
-		-o-transform: scale( 1.2 );
-		transform: scale( 1.2 );
-	}
-}
-
-/* @end */
-
-/* @group Animation: skew
-  --------------------------------------------------------------------------- */
-
-.anim-type-5 { // skew
-	.js-marquee__item {
-		visibility: hidden;
-		-webkit-perspective: 600px;
-		-moz-perspective: 600px;
-		-ms-perspective: 600px;
-		-o-perspective: 600px;
-		perspective: 600px;
-
-		-webkit-perspective-origin: 0% 50%;
-		-moz-perspective-origin: 0% 50%;
-		-ms-perspective-origin: 0% 50%;
-		-o-perspective-origin: 0% 50%;
-		perspective-origin: 0% 50%;
-	}
-
-	.js-marquee__item_active {
-		@include transition(all ease 600ms);
-		visibility: visible;
-		-webkit-transform-origin: 0% 0%;
-		-moz-transform-origin: 0% 0%;
-		-ms-transform-origin: 0% 0%;
-		-o-transform-origin: 0% 0%;
-		transform-origin: 0% 0%;
-	}
-
-	.js-marquee__item_prev {
-		-webkit-transform: skewY( 30deg );
-		-moz-transform: skewY( 30deg );
-		-ms-transform: skewY( 30deg );
-		-o-transform: skewY( 30deg );
-		transform: skewY( 30deg );
-	}
-
-	.js-marquee__item_next {
-		-webkit-transform: skewY( -30deg );
-		-moz-transform: skewY( -30deg );
-		-ms-transform: skewY( -30deg );
-		-o-transform: skewY( -30deg );
-		transform: skewY( -30deg );
-	}
-}
-
-/* @end */
-
-/* @group Animation: Twirl
-  --------------------------------------------------------------------------- */
-
-.anim-type-6 { // twirl
-	.js-marquee__item {
-		visibility: hidden;
-		opacity: 0;
-
-		-webkit-perspective: 400px;
-		-moz-perspective: 400px;
-		-ms-perspective: 400px;
-		-o-perspective: 400px;
-		perspective: 400px;
-
-		-webkit-perspective-origin: 50% 50%;
-		-moz-perspective-origin: 50% 50%;
-		-ms-perspective-origin: 50% 50%;
-		-o-perspective-origin: 50% 50%;
-		perspective-origin: 50% 50%;
-	}
-
-	.js-marquee__item_active {
-		@include transition(all ease 600ms);
-		visibility: visible;
-		opacity: 1;
-
-		-webkit-transform-origin: 50% 50%;
-		-moz-transform-origin: 50% 50%;
-		-ms-transform-origin: 50% 50%;
-		-o-transform-origin: 50% 50%;
-		transform-origin: 50% 50%;
-	}
-
-	.js-marquee__item_prev {
-		-webkit-transform: rotate3d( 80,-70,10,180deg );
-		-moz-transform: rotate3d( 80,70,10,180deg );
-		-ms-transform: rotate3d( 80,70,10,180deg );
-		-o-transform: rotate3d( 80,70,10,180deg );
-		transform: rotate3d( 80,70,10,180deg );
-	}
-
-	.js-marquee__item_next {
-		-webkit-transform: rotate3d( 80,70,10,-180deg );
-		-moz-transform: rotate3d( 80,70,10,-180deg );
-		-ms-transform: rotate3d( 80,70,10,-180deg );
-		-o-transform: rotate3d( 80,70,10,-180deg );
-		transform: rotate3d( 80,70,10,-180deg );
-	}
-}
-
-/* @end */
-
-/* @group Animation: fly
-  --------------------------------------------------------------------------- */
-
-.anim-type-7 { // fly
-	.js-marquee__item {
-		opacity: 0;
-
-		-webkit-perspective: 500px;
-		-moz-perspective: 500px;
-		-ms-perspective: 500px;
-		-o-perspective: 500px;
-		perspective: 500px;
-
-		-webkit-perspective-origin: 50% 50%;
-		-moz-perspective-origin: 50% 50%;
-		-ms-perspective-origin: 50% 50%;
-		-o-perspective-origin: 50% 50%;
-		perspective-origin: 50% 50%;
-	}
-
-	.js-marquee__item_active {
-		@include transition(all ease 600ms);
-		opacity: 1;
-
-		-webkit-transform-origin: 50% 50% -50px;
-		-moz-transform-origin: 50% 50% -50px;
-		-ms-transform-origin: 50% 50% -50px;
-		-o-transform-origin: 50% 50% -50px;
-		transform-origin: 50% 50% -50px;
-	}
-
-	.js-marquee__item_prev {
-		-webkit-transform: rotateX( 90deg );
-		-moz-transform: rotateX( 90deg );
-		-ms-transform: rotateX( 90deg );
-		-o-transform: rotateX( 90deg );
-		transform: rotateX( 90deg );
-	}
-
-	.js-marquee__item_next {
-		-webkit-transform: rotateX( -90deg );
-		-moz-transform: rotateX( -90deg );
-		-ms-transform: rotateX( -90deg );
-		-o-transform: rotateX( -90deg );
-		transform: rotateX( -90deg );
-	}
-}
-
-/* @end */
-
-/* @group Animation: extrude
-  --------------------------------------------------------------------------- */
-
-.anim-type-8 { // extrude
-	.js-marquee__item {
-		@include transition(all ease-in 600ms);
-		z-index: 0;
 		left: 100%;
-		visibility: hidden;
+		@include transition(all 600ms ease-in-out);
 	}
 
-	.js-marquee__item_active {
-		@include transition(all ease-in 600ms);
-
-		-webkit-perspective-origin: 50% 50%;
-		-moz-perspective-origin: 50% 50%;
-		-ms-perspective-origin: 50% 50%;
-		-o-perspective-origin: 50% 50%;
-		perspective-origin: 50% 50%;
-
-		z-index: 1;
-		left: 0;
+	.js-ase__item_active {
 		visibility: visible;
+		left: 0;
 	}
 
-	.js-marquee__item_prev {
+	.js-ase__item_prev {
 		left: -100%;
-
-		-webkit-transform: rotateX( 90deg );
-		-moz-transform: rotateX( 90deg );
-		-ms-transform: rotateX( 90deg );
-		-o-transform: rotateX( 90deg );
-		transform: rotateX( 90deg );
-
-		-webkit-transform-origin: 50% 50% -50px;
-		-moz-transform-origin: 50% 50% -50px;
-		-ms-transform-origin: 50% 50% -50px;
-		-o-transform-origin: 50% 50% -50px;
-		transform-origin: 50% 50% -50px;
-	}
-
-	.js-marquee__item_next {
-		//left: 100%;
-
-		-webkit-transform: rotateX( -90deg );
-		-moz-transform: rotateX( -90deg );
-		-ms-transform: rotateX( -90deg );
-		-o-transform: rotateX( -90deg );
-		transform: rotateX( -90deg );
-
-		-webkit-transform-origin: 50% 50% 50px;
-		-moz-transform-origin: 50% 50% 50px;
-		-ms-transform-origin: 50% 50% 50px;
-		-o-transform-origin: 50% 50% 50px;
-		transform-origin: 50% 50% 50px;
 	}
 }
 
 /* @end */
 
-/* @group Animation: leaf over
+/* @group effect: slider type: slider_slide-diagonal
   --------------------------------------------------------------------------- */
 
-.anim-type-9 { // leaf over
-	@include vendor(perspective, 900);
+.slider_slide-diagonal {
+	overflow: hidden;
 
-	.js-marquee__item {
+	.js-ase__item {
+		visibility: hidden;
+		top: 100%;
+		left: -100%;
+		@include transition(all 600ms ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		top: 0;
+		left: 0;
+	}
+
+	.js-ase__item_prev {
+		top: -100%;
+		left: 100%;
+	}
+}
+
+/* @end */
+
+/* @group effect: slider type: slider_slide-vert_fade
+  --------------------------------------------------------------------------- */
+
+.slider_slide-vert_fade {
+	overflow: hidden;
+
+	.js-ase__item {
+		visibility: hidden;
+		top: -100%;
+		opacity: 0;
+		@include transition(all 600ms ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		top: 0;
+		opacity: 1;
+	}
+
+	.js-ase__item_prev {
+		top: 100%;
+	}
+}
+
+/* @end */
+
+/* @group effect: slider type: slider_slide-diagonal_fade
+  --------------------------------------------------------------------------- */
+
+.slider_slide-diagonal_fade {
+	overflow: hidden;
+
+	.js-ase__item {
+		visibility: hidden;
+		top: 100%;
+		left: -100%;
+		opacity: 0;
+		@include transition(all 600ms ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		top: 0;
+		left: 0;
+		opacity: 1;
+	}
+
+	.js-ase__item_prev {
+		top: -100%;
+		left: 100%;
+	}
+}
+
+/* @end */
+
+/* @group Animation: slider_slide-horiz_fade
+  --------------------------------------------------------------------------- */
+
+.slider_slide-horiz_fade {
+	overflow: hidden;
+
+	.js-ase__item {
+		visibility: hidden;
+		left: 100%;
+		opacity: 0;
+		@include transition(all 600ms ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		left: 0;
+		opacity: 1;
+	}
+
+	.js-ase__item_prev {
+		left: -100%;
+	}
+}
+
+/* @end */
+
+/* @group effect: slider type: slider_slide-vert_fade-rotate
+  --------------------------------------------------------------------------- */
+
+.slider_slide-vert_fade-rotate {
+	overflow: hidden;
+
+	.ase-slider__container__inner {
+		@include vendor(perspective, 1500px);
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective-origin, 50% 50%);
+	}
+
+	.js-ase__item {
+		visibility: hidden;
+		top: 400px;
+		opacity: 0;
+		@include vendor(transform-origin, 50% 50%);
+		@include transition(all 600ms ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		top: 0;
+		opacity: 1;
+		@include vendor(transform, rotateX(0deg));
+	}
+
+	.js-ase__item_prev {
+		top: -400px;
+		@include vendor(transform, rotateX(-60deg));
+	}
+
+	.js-ase__item_next {
+		top: 400px;
+		@include vendor(transform, rotateX(60deg));
+	}
+}
+
+/* @end */
+
+/* @group Animation: slider_slide-horiz_fade-rotate
+  --------------------------------------------------------------------------- */
+
+.slider_slide-horiz_fade-rotate {
+	overflow: hidden;
+
+	.ase-slider__container__inner {
+		@include vendor(perspective, 1500px);
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective-origin, 50% 50%);
+	}
+
+	.js-ase__item {
+		visibility: hidden;
+		left: 100%;
+		opacity: 0;
+		@include vendor(backface-visibility, hidden);
+		@include vendor(transform-origin, 50% 50%);
+		@include transition(all 600ms ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		left: 0;
+		opacity: 1;
+		@include vendor(transform, rotateX(0deg));
+	}
+
+	.js-ase__item_prev {
+		left: -100%;
+		@include vendor(transform, rotateX(40deg));
+	}
+
+	.js-ase__item_next {
+		left: 100%;
+		@include vendor(transform, rotateX(-40deg));
+	}
+}
+
+/* @end */
+
+/* @group effect: slider type: slider_slide-horiz_leaf-over
+  --------------------------------------------------------------------------- */
+
+.slider_slide-horiz_leaf-over {
+	overflow: hidden;
+
+	.ase-slider__container__inner {
+		@include vendor(perspective, 900px);
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective-origin, 50% 50%);
+	}
+
+	.js-ase__item {
 		z-index: 0;
 		left: 100%;
 		visibility: hidden;
 		@include vendor(transform-style, preserve-3d);
-		@include transition(all ease-in 600ms);
+		@include transition(all 600ms ease-in-out);
 	}
 
-	.js-marquee__item_active {
+	.js-ase__item_active {
 		@include vendor(transform, rotate3d(0,1,0,0));
 		@include vendor(perspective-origin, 0 0);
-		@include transition(all ease-in 600ms);
+		@include transition(all 600ms ease-in-out);
 		z-index: 1;
 		left: 0;
 		visibility: visible;
 	}
 
-	.js-marquee__item_prev {
+	.js-ase__item_prev {
 		left: -100%;
 		@include vendor(transform, rotate3d(0,1,0,90deg));
 		@include vendor(transform-origin, 0 -100%);
 	}
 
-	.js-marquee__item_next {
-		//left: 100%;
+	.js-ase__item_next {
 		@include vendor(transform, rotate3d(0,1,0,-90deg));
 		@include vendor(transform-origin, 0 100%);
 	}
@@ -466,20 +300,615 @@
 
 /* @end */
 
-// .css-slider {
-// 	.js-marquee__item {
+/* @group Animation: slider_slide-windy
+  --------------------------------------------------------------------------- */
 
-// 	}
+.slider_slide-windy {
 
-// 	.js-marquee__item_active {
+	.ase-slider__container__inner {
+		@include vendor(perspective, 1500px);
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective-origin, 50% 50%);
+	}
 
-// 	}
+	.js-ase__item {
+		visibility: hidden;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		@include vendor(backface-visibility, hidden);
+		@include vendor(transform-origin, 50% 50%);
+		@include transition(all 600ms ease-in-out);
+	}
 
-// 	.js-marquee__item_prev {
+	.js-ase__item_active {
+		visibility: visible;
+		left: 0;
+		top: 0;
+		opacity: 1;
+		@include vendor(transform, scale(1) rotate3d(1, 1, 0, 0));
+	}
 
-// 	}
+	.js-ase__item_prev {
+		left: -40%;
+		top: 100px;
+		@include vendor(transform, scale(0.8) rotate3d(1, 1, 0, 60deg));
+	}
 
-// 	.js-marquee__item_next {
+	.js-ase__item_next {
+		left: 20%;
+		top: -100px;
+		@include vendor(transform, scale(1.2) rotate3d(1, 1, 0, -60deg));
+	}
+}
 
-// 	}
-// }
+/* @end */
+
+/* @group Animation: slider_slide-rotate_horiz
+  --------------------------------------------------------------------------- */
+
+.slider_slide-rotate_horiz {
+
+	.ase-slider__container__inner {
+		@include vendor(perspective, 2000px);
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective-origin, 50% 50%);
+	}
+
+	.js-ase__item {
+		visibility: hidden;
+		@include vendor(backface-visibility, hidden);
+		@include vendor(transform-origin, 50% 50%);
+		@include transition(all linear .6s);
+	}
+
+	.js-ase__item_active {
+		@include vendor(transform, rotateX(0deg));
+		visibility: visible;
+	}
+
+	.js-ase__item_prev {
+		@include vendor(transform, rotateX(180deg));
+	}
+
+	.js-ase__item_next {
+		@include vendor(transform, rotateX(-180deg));
+	}
+}
+
+/* @end */
+
+/* @group Animation: slider_slide-rotate_vert
+  --------------------------------------------------------------------------- */
+
+.slider_slide-rotate_vert {
+
+	.ase-slider__container__inner {
+		@include vendor(perspective, 2000px);
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective-origin, 200px 200px); // persentage dosen`t work for Y
+	}
+
+	.js-ase__item {
+		visibility: hidden;
+		@include vendor(backface-visibility, hidden);
+		@include vendor(transform-origin, 50% 0);
+		@include transition(all linear .6s);
+	}
+
+	.js-ase__item_active {
+		@include vendor(transform, rotateY(0deg));
+		visibility: visible;
+	}
+
+	.js-ase__item_prev {
+		@include vendor(transform, rotateY(180deg));
+	}
+
+	.js-ase__item_next {
+		@include vendor(transform, rotateY(-180deg));
+	}
+}
+
+/* @end */
+
+/* @group Animation: slider_slide-rotate_diag
+  --------------------------------------------------------------------------- */
+
+.slider_slide-rotate_diag {
+	overflow: hidden;
+
+	.ase-slider__container__inner {
+		@include vendor(perspective, 1500);
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective-origin, 50% 50%);
+	}
+
+	.js-ase__item {
+		visibility: hidden;
+		@include vendor(backface-visibility, hidden);
+		@include vendor(transform-origin, 50%);
+		@include transition(all linear .6s);
+	}
+
+	.js-ase__item_active {
+		@include vendor(transform, rotate3d(1, 1, 0, 0));
+		visibility: visible;
+	}
+
+	.js-ase__item_prev {
+		@include vendor(transform, rotate3d(1, 1, 0, 180deg));
+	}
+
+	.js-ase__item_next {
+		@include vendor(transform, rotate3d(1, 1, 0, -180deg));
+	}
+}
+
+/* @end */
+
+/* @group Animation: slider_slide-flip_horiz
+  --------------------------------------------------------------------------- */
+
+.slider_slide-flip_horiz {
+
+	.ase-slider__container__inner {
+		@include vendor(perspective, 2000);
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective-origin, 50% 50%);
+	}
+
+	.js-ase__item {
+		visibility: hidden;
+		@include vendor(backface-visibility, hidden);
+		@include vendor(transform-origin, 100% 0);
+		@include vendor(transform, rotateX(90deg));
+		@include transition(all linear .4s);
+	}
+
+	.js-ase__item_active {
+		@include vendor(transform, rotateX(0deg));
+		visibility: visible;
+	}
+
+	.js-ase__item_prev {
+		@include vendor(transform, rotateX(-90deg));
+	}
+}
+
+/* @end */
+
+/* @group Animation: slider_slide-flip_vert
+  --------------------------------------------------------------------------- */
+
+.slider_slide-flip_vert {
+
+	.ase-slider__container__inner {
+		@include vendor(perspective, 2000);
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective-origin, 200px 200px);
+	}
+
+	.js-ase__item {
+		visibility: hidden;
+		z-index: 2;
+		@include vendor(transform-origin, 0 100%);
+		@include vendor(transform, rotateY(-90deg));
+		@include vendor(backface-visibility, hidden);
+		@include transition(all linear .6s);
+	}
+
+	.js-ase__item_active {
+		@include vendor(transform, rotateY(0deg));
+		visibility: visible;
+	}
+
+	.js-ase__item_prev {
+		@include vendor(transform, rotateY(90deg));
+		z-index: 1;
+	}
+}
+
+/* @end */
+
+/* @group Animation: slider_slide-flip_center
+  --------------------------------------------------------------------------- */
+
+.slider_slide-flip_center {
+	overflow: hidden;
+
+	.ase-slider__container__inner {
+		@include vendor(perspective, 1500);
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective-origin, 200px 200px);
+	}
+
+	.js-ase__item {
+		opacity: 0;
+		@include vendor(transform-origin, 0 100% 50%);
+		@include vendor(transform, rotateY(-90deg));
+		@include vendor(backface-visibility, hidden);
+		@include transition(all linear .6s);
+	}
+
+	.js-ase__item_active {
+		@include vendor(transform, rotateY(0deg));
+		opacity: 1;
+	}
+
+	.js-ase__item_prev {
+		@include vendor(transform, rotateY(90deg));
+	}
+}
+
+/* @end */
+
+/* @group Animation: slider_slide-scale-in_fade
+  --------------------------------------------------------------------------- */
+
+.slider_slide-scale-in_fade {
+	.js-ase__item {
+		visibility: hidden;
+		opacity: 0;
+		@include transition(all 600ms ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		opacity: 1;
+		@include vendor(transform, scale(1));
+	}
+
+	.js-ase__item_prev {
+		@include vendor(transform, scale(.8));
+	}
+
+	.js-ase__item_next {
+		@include vendor(transform, scale(1.2));
+	}
+}
+
+/* @end */
+
+/* @group Animation: slider_slide-scale-extrude
+  --------------------------------------------------------------------------- */
+
+.slider_slide-scale-extrude {
+	overflow: hidden;
+
+	.js-ase__item {
+		@include transition(all ease-in 600ms);
+		z-index: 0;
+		left: 100%;
+		visibility: hidden;
+	}
+
+	.js-ase__item_active {
+		@include transition(all ease-in 600ms);
+		@include  vendor(perspective-origin, 50% 50%);
+		z-index: 1;
+		left: 0;
+		visibility: visible;
+	}
+
+	.js-ase__item_prev {
+		left: -100%;
+		@include vendor(transform, rotateX(90deg));
+		@include vendor(transform-origin, 50% 50% -50px);
+	}
+
+	.js-ase__item_next {
+		//left: 100%;
+		@include vendor(transform, rotateX(-90deg));
+		@include vendor(transform-origin, 50% 50% 50px);
+	}
+}
+
+/* @end */
+
+/* @group Animation: slider_slide-grow
+  --------------------------------------------------------------------------- */
+
+.slider_slide-grow {
+	.js-ase__item {
+		visibility: hidden;
+		opacity: 0;
+		@include transition(all 600ms ease-in-out);
+		@include vendor(transform-origin, 50% 50%);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.js-ase__item_prev,
+	.js-ase__item_next {
+		@include vendor(transform, scale(0.01));
+	}
+}
+
+/* @end */
+
+/* @group effect: slider type: slider_skew-vert
+  --------------------------------------------------------------------------- */
+
+.slider_skew-vert {
+
+	.js-ase__item {
+		visibility: hidden;
+		opacity: 0;
+		top: -100%;
+		@include transition(all 600ms ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		opacity: 1;
+		top: 0;
+		@include vendor(transform-origin, 0% 0%);
+	}
+
+	.js-ase__item_prev {
+		top: 100%;
+		@include vendor(transform, skewY(-30deg));
+	}
+
+	.js-ase__item_next {
+		@include vendor(transform, skewY(30deg));
+	}
+}
+
+/* @end */
+
+/* @group effect: slider type: slider_skew-horiz
+  --------------------------------------------------------------------------- */
+
+.slider_skew-horiz {
+
+	.js-ase__item {
+		visibility: hidden;
+		opacity: 0;
+		left: -100%;
+		@include transition(all 600ms ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		opacity: 1;
+		left: 0;
+		@include vendor(transform-origin, 100% 100%);
+	}
+
+	.js-ase__item_prev {
+		left: 100%;
+		@include vendor(transform, skewX(-30deg));
+	}
+
+	.js-ase__item_next {
+		@include vendor(transform, skewX(30deg));
+	}
+}
+
+/* @end */
+
+/* @group effect: slider type: slider_skew-flip
+  --------------------------------------------------------------------------- */
+
+.slider_skew-flip {
+	overflow: hidden;
+	@include vendor(perspective, 600px);
+	@include vendor(perspective-origin, 0% 50%);
+
+	.js-ase__item {
+		visibility: hidden;
+		@include transition(all 600ms ease-in-out);
+		@include vendor(transform-origin, 0 0);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		@include vendor(transform, skewY(0));
+	}
+
+	.js-ase__item_prev {
+		@include vendor(transform, skewY(-90deg));
+	}
+
+	.js-ase__item_next {
+		@include vendor(transform, skewY(90deg));
+	}
+}
+
+/* @end */
+
+/* @group effect: slider type: slider_skew-extrude
+  --------------------------------------------------------------------------- */
+
+.slider_skew-extrude {
+	overflow: hidden;
+	@include vendor(perspective, 600px);
+	@include vendor(perspective-origin, 0% 50%);
+
+	.js-ase__item {
+		visibility: hidden;
+		left: -100%;
+		@include transition(all 600ms ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		left: 0;
+		@include vendor(transform-origin, 0% 0%);
+	}
+
+	.js-ase__item_prev {
+		left: 100%;
+		@include vendor(transform, skewY(-30deg));
+	}
+
+	.js-ase__item_next {
+		@include vendor(transform, skewY(30deg));
+	}
+}
+
+/* @end */
+
+/* @group effect: slider type: slider_skew-rotate
+  --------------------------------------------------------------------------- */
+
+.slider_skew-rotate {
+	overflow: hidden;
+	@include vendor(perspective, 600px);
+	@include vendor(perspective-origin, 0% 50%);
+
+	.js-ase__item {
+		visibility: hidden;
+		top: -100%;
+		@include transition(all 600ms ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		top: 0;
+		@include vendor(transform-origin, 50% 0%);
+	}
+
+	.js-ase__item_prev {
+		top: 100%;
+		@include vendor(transform, skewY(-90deg));
+	}
+
+	.js-ase__item_next {
+		@include vendor(transform, skewY(90deg));
+	}
+}
+
+/* @end */
+
+/* @group effect: slider type: slider_skew-cut
+  --------------------------------------------------------------------------- */
+
+.slider_skew-cut {
+	overflow: hidden;
+	@include vendor(perspective, 600px);
+	@include vendor(perspective-origin, 0% 50%);
+
+	.js-ase__item {
+		visibility: hidden;
+		@include transition(all 600ms ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		@include vendor(transform-origin, 50% 0%);
+	}
+
+	.js-ase__item_prev {
+		@include vendor(transform, skewY(-90deg));
+	}
+
+	.js-ase__item_next {
+		@include vendor(transform, skewY(90deg));
+	}
+}
+
+/* @end */
+
+/* @group Animation: slider_lightSpeedIn
+  --------------------------------------------------------------------------- */
+
+.slider_lightSpeedIn {
+
+	.js-ase__item {
+		display: none;
+	}
+
+	.js-ase__item_active {
+		display: block;
+		@include vendor(animation, lightSpeedIn ease-out 0.5s);
+		@include vendor(transform-origin, 100% 100%);
+	}
+}
+
+@-webkit-keyframes lightSpeedIn {
+	0% { -webkit-transform: translateX(100%) skewX(-30deg); opacity: 0; }
+	60% { -webkit-transform: translateX(-20%) skewX(30deg); opacity: 1; }
+	80% { -webkit-transform: translateX(0%) skewX(-15deg); opacity: 1; }
+	100% { -webkit-transform: translateX(0%) skewX(0deg); opacity: 1; }
+}
+
+@-moz-keyframes lightSpeedIn {
+	0% { -moz-transform: translateX(100%) skewX(-30deg); opacity: 0; }
+	60% { -moz-transform: translateX(-20%) skewX(30deg); opacity: 1; }
+	80% { -moz-transform: translateX(0%) skewX(-15deg); opacity: 1; }
+	100% { -moz-transform: translateX(0%) skewX(0deg); opacity: 1; }
+}
+
+@-o-keyframes lightSpeedIn {
+	0% { -o-transform: translateX(100%) skewX(-30deg); opacity: 0; }
+	60% { -o-transform: translateX(-20%) skewX(30deg); opacity: 1; }
+	80% { -o-transform: translateX(0%) skewX(-15deg); opacity: 1; }
+	100% { -o-transform: translateX(0%) skewX(0deg); opacity: 1; }
+}
+
+@keyframes lightSpeedIn {
+	0% { transform: translateX(100%) skewX(-30deg); opacity: 0; }
+	60% { transform: translateX(-20%) skewX(30deg); opacity: 1; }
+	80% { transform: translateX(0%) skewX(-15deg); opacity: 1; }
+	100% { transform: translateX(0%) skewX(0deg); opacity: 1; }
+}
+
+/* @end */
+
+
+/* @group slider_expression
+  --------------------------------------------------------------------------- */
+
+.slider_expression {
+	box-shadow: none;
+	background: transparent;
+
+	.ase-slider__container__inner {
+		@include vendor(perspective, 2500px);
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective-origin, 50% 50%);
+	}
+
+	.js-ase__item {
+		left: 0;
+		top: 0;
+		z-index: 1;
+		@include vendor(transform-origin, 50% 50%);
+		@include transition(all 800ms ease-in-out);
+		//@include vendor(backface-visibility, hidden);
+	}
+
+	.js-ase__item_active {
+		left: 0;
+		top: 0;
+		z-index: 2;
+		@include vendor(transform, scale(1) rotate3d(1, 1, 0, 0));
+	}
+
+	.js-ase__item_prev {
+		left: -40%;
+		top: 100px;
+		@include vendor(transform, scale(0.8) rotate3d(1, 1, 0, 60deg));
+	}
+
+	.js-ase__item_next {
+		left: 20%;
+		top: -100px;
+		@include vendor(transform, scale(1.2) rotate3d(1, 1, 0, -57deg));
+	}
+}
+
+/* @end */
+
+
+/* TODO
+
+http://www.stuskitchen.com/
+
+*/

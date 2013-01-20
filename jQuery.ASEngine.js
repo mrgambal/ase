@@ -36,21 +36,21 @@
         __curIndex: null,
         __eventNS: '.ASEngine',
         __indexInArray: 0,
-        __pgnClass: 'js-marquee__pagination__item',
+        __pgnClass: 'js-ase__pagination__item',
         __pgnContainer: null,
         __timerID: 0,
 
         items: null,
         options: {},
         defaultOptions: {
-            itemsSelector: '.js-marquee__item',
+            itemsSelector: '.js-ase__item',
             prevCtrl: null,
             nextCtrl: null,
             swipeCtrl: null,
 
-            nextClass: 'js-marquee__item_next',
-            currentClass: 'js-marquee__item_active',
-            prevClass: 'js-marquee__item_prev',
+            nextClass: 'js-ase__item_next',
+            currentClass: 'js-ase__item_active',
+            prevClass: 'js-ase__item_prev',
 
             onMove: function () {},
             onNext: function () {},
@@ -88,7 +88,7 @@
             if (_so.nextCtrl && _so.nextCtrl.length)
                 _so.nextCtrl.on('click' + _s.__eventNS, _n);
             // autoplay
-            if (_so.autoplay) 
+            if (_so.autoplay)
                 _s.setAutoplay();
             else
                 _s.stopAutoplay();
@@ -258,7 +258,7 @@
         },
         stopAutoplay: function () {
             var _s = this;
-        
+
             if (_s.__timerID) {
                 clearInterval(_s.__timerID);
                 _s.__timerID = _s.options.autoplay = false;

@@ -25,51 +25,36 @@ Scripts.Common = {
 
         return sc;
     },
-    rotateSlider: function () {
-        var sc = Scripts.Common,
-            containers = $('.js-marquee');
+	sliderInit: function () {
+		var sc = Scripts.Common,
+			containers = $('.js-ase');
 
-        if (containers.length)
-            containers.each(function () {
-                var el = $(this);
-                el.ASE({
-                    autoplay: true,
-                    prevCtrl: el.find('.js-marquee__nav_prev'),
-                    nextCtrl: el.find('.js-marquee__nav_next'),
-                    swipeCtrl: el.find('.js-marquee__pane'),
-                    onMove: function () {
-                        console.log('Slider #' + this.__indexInArray + ' - Slide#' + this.__curIndex);
-                    }
-                }).addPagination(el.find('.js-marquee__pagination'));
-            });
+		if (containers.length) {
+			containers.each(function () {
+				var el = $(this);
+				el.ASE({
+					itemsSelector: '.js-ase__item',
+					prevCtrl: el.find('.js-ase__nav_prev'),
+					nextCtrl: el.find('.js-ase__nav_next'),
+					prevClass: 'js-ase__item_prev',
+					nextClass: 'js-ase__item_next',
+					currentClass: 'js-ase__item_active',
+					autoplay: false,
+					autoplayDelay: 10000
+				}).addPagination(el.find('.js-ase__pagination'), false, 'i-slider__pagination__item');
+			});
+		}
 
-        return sc;
-    },
-    animTypeChanger: function () {
-        var sc = Scripts.Common;
-
-        $('.js-type-changer').on('click', function () {
-            var actClass = 'js-type-changer_active',
-                slider = $('.css-slider');
-
-            $('.js-type-changer').removeClass(actClass);
-            $(this).addClass(actClass);
-
-            slider.removeClass('anim-type-1 anim-type-2 anim-type-3 anim-type-4 anim-type-5 anim-type-6 anim-type-7 anim-type-8 anim-type-9 anim-type-10');
-            slider.addClass($(this).data('js-animtype'));
-        });
-
-        return sc;
-    },
+		return sc;
+	},
     init: function () {
         var sc = this;
 
         sc.detecting();
 
         window.onload = function () {
-            sc.rotateSlider()
-                .warning()
-                .animTypeChanger();
+            sc.sliderInit()
+                .warning();
         };
 
         return sc;
@@ -77,3 +62,29 @@ Scripts.Common = {
 };
 
 Scripts.Common.init();
+
+function animTypeChanger () {
+
+	$('.js-type-changer-ln').on('click', function () {
+		var self = $(this),
+			actClass = 'js-type-changer-ln_active',
+			slider = self.parent().parent().parent().parent().find('.ase-slider-slice'),
+			animType = self.data('js-animtype'),
+			container = self.parent().parent(),
+			animFamily = container.data('js-animtype-family');
+
+		container.find('.js-type-changer-ln').removeClass(actClass);
+		self.addClass(actClass);
+
+		slider.removeClass()
+			.addClass(animType)
+			.addClass('element element_slider ase-slider-slice js-ase ' + animFamily);
+	});
+
+}
+
+$(document).ready(function() {
+	$('.js-type-changer').each( function () {
+		animTypeChanger ();
+	});
+});
