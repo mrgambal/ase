@@ -1,28 +1,37 @@
 @import "weiss-config";
 @import "helpers/mixins";
 
-.tab {
+.ase-tab {
 	position: relative;
+
+	.l-span {
+		overflow: hidden;
+	}
 }
 
-.js-tab__item {
+.js-ase-tab__item {
 	display: none;
 }
 
-.js-tab__item_active {
+.js-ase-tab__item_active {
 	display: block;
 }
 
-.js-tab__item_next {
+.js-ase-tab__item_next {
 }
 
-.js-tab__item_prev {
+.js-ase-tab__item_prev {
 }
 
 .tab__nav {
 	text-align: center;
 	margin-bottom: 30px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #78C6FA;
+
+	.js-ase-tab__pagination__ln_active {
+		background-color: #78C6FA;
+		color: #fff;
+	}
 }
 
 .tab__nav__inner {
@@ -51,17 +60,14 @@
 	text-decoration: none;
 
 	.tab__nav__item:hover & {
+		background-color: lighten(#78C6FA, 20%);
+		//@include background-image(linear-gradient(top, lighten(#78C6FA, 20%) 40%, #78C6FA 100%));
 	}
 
 	.tab__nav__item:active & {
+		background-color: #78C6FA;
 		color: #fff;
-		background-color: #ccc;
 	}
-}
-
-
-.tab__nav__ln__inner {
-	display: block;
 }
 
 .tab__content {}

@@ -189,12 +189,12 @@ $btn-height-hero: 42px;
 
 @mixin btn-ico-skin($color) {
 	background-color: $color;
-	color: #fff;
+	color: #3A3739;
 
 	.btn:hover &,
 	.btn:focus & {
 		background-color: darken($color, 10%);
-		color: #fff;
+		color: #3A3739;
 	}
 }
 

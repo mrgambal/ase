@@ -1,0 +1,90 @@
+/* @group accordion
+  --------------------------------------------------------------------------- */
+.ase-accordion__container__inner {
+  list-style: none;
+  padding: 0;
+}
+
+.ase-accordion__title {
+  display: block;
+  background: #78c6fa;
+  color: #fff;
+  padding: .4em;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-transition: all linear 200ms;
+  -moz-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
+}
+.ase-accordion__title:hover {
+  background-color: #47b1f8;
+}
+
+.ase-accordion__title__ico {
+  float: right;
+  font-style: normal;
+  font-size: 23px;
+}
+.ase-accordion__title__ico:after {
+  content: '+';
+}
+
+.ase-accordion__content {
+  display: none;
+}
+
+.ase-accordion .js-ase__item_active {
+  -webkit-perspective: 1500px;
+  -moz-perspective: 1500px;
+  -ms-perspective: 1500px;
+  -o-perspective: 1500px;
+  perspective: 1500px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+.ase-accordion .js-ase__item_active .ase-accordion__title {
+  background: #a200b8;
+}
+.ase-accordion .js-ase__item_active .ase-accordion__title:hover {
+  background-color: #750085;
+}
+.ase-accordion .js-ase__item_active .ase-accordion__title__ico:after {
+  content: '-';
+  margin-right: 4px;
+}
+.ase-accordion .js-ase__item_active .ase-accordion__content {
+  display: block;
+  -webkit-animation: vert-fade-rotate ease-out 0.3s;
+  -moz-animation: vert-fade-rotate ease-out 0.3s;
+  -ms-animation: vert-fade-rotate ease-out 0.3s;
+  -o-animation: vert-fade-rotate ease-out 0.3s;
+  animation: vert-fade-rotate ease-out 0.3s;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+@-webkit-keyframes vert-fade-rotate {
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+/* @end */

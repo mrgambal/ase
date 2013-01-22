@@ -1,0 +1,82 @@
+@import "weiss-config";
+@import "helpers/mixins";
+
+/* @group accordion
+  --------------------------------------------------------------------------- */
+
+$purple: #A200B8;
+
+.ase-accordion__container__inner {
+	list-style: none;
+	padding: 0;
+}
+
+.ase-accordion__item {
+
+}
+
+.ase-accordion__title {
+	display: block;
+	background: $blue;
+	color: #fff;
+	padding: .4em;
+	margin-bottom: 12px;
+	cursor: pointer;
+	@include transition();
+
+	&:hover {
+		background-color: darken($blue, 10%);
+	}
+}
+
+.ase-accordion__title__ico {
+	float: right;
+	font-style: normal;
+	font-size: 23px;
+
+	&:after {
+		content: '+';
+	}
+}
+
+.ase-accordion__content {
+	display: none;
+}
+
+.ase-accordion {
+
+	.js-ase__item_active {
+		@include vendor(perspective, 1500px);
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective-origin, 50% 50%);
+
+		.ase-accordion__title {
+			background: $purple;
+
+			&:hover {
+				background-color: darken($purple, 10%);
+			}
+		}
+
+		.ase-accordion__title__ico {
+			&:after {
+				content: '-';
+				margin-right: 4px;
+			}
+		}
+
+		.ase-accordion__content {
+			display: block;
+			@include vendor(animation, vert-fade-rotate ease-out 0.3s);
+			@include vendor(transform-origin, 0 0);
+		}
+	}
+
+}
+
+@-webkit-keyframes vert-fade-rotate {
+	0% { -webkit-transform: rotateX(-90deg); opacity: 0; }
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
+/* @end */

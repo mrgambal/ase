@@ -39,10 +39,25 @@ Scripts.Common = {
 					prevClass: 'js-ase__item_prev',
 					nextClass: 'js-ase__item_next',
 					currentClass: 'js-ase__item_active',
-					autoplay: false,
-					autoplayDelay: 10000
+					autoplay: false
 				}).addPagination(el.find('.js-ase__pagination'), false, 'i-slider__pagination__item');
 			});
+		}
+
+		return sc;
+	},
+	tabsInit: function () {
+		var sc = Scripts.Common,
+			tabContainer = $('.js-ase-tab');
+
+		if (tabContainer.length) {
+			tabContainer.ASE({
+				itemsSelector: '.js-ase-tab__item',
+				prevClass: 'js-ase-tab__item_prev',
+				nextClass: 'js-ase-tab__item_next',
+				currentClass: 'js-ase-tab__item_active',
+				autoplay: false
+			}).addPagination('.js-ase-tab__pagination', 'js-ase-tab__pagination__ln');
 		}
 
 		return sc;
@@ -54,6 +69,7 @@ Scripts.Common = {
 
         window.onload = function () {
             sc.sliderInit()
+	            .tabsInit()
                 .warning();
         };
 
