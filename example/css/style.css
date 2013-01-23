@@ -3646,9 +3646,11 @@ http://www.stuskitchen.com/
 }
 
 .tab__item .article {
-  -webkit-animation: tab-top;
-  -webkit-animation-duration: .5s;
-  -webkit-animation-timing-function: ease-in;
+  -webkit-animation: tab-top ease-in 0.5s;
+  -moz-animation: tab-top ease-in 0.5s;
+  -ms-animation: tab-top ease-in 0.5s;
+  -o-animation: tab-top ease-in 0.5s;
+  animation: tab-top ease-in 0.5s;
 }
 .tab__item .article_sec_0 {
   -webkit-animation-duration: 500ms;
@@ -3683,21 +3685,9 @@ http://www.stuskitchen.com/
   }
 }
 
-@-webkit-keyframes tab-right {
-  0% {
-    left: -20px;
-    opacity: 0;
-  }
-
-  100% {
-    left: 0;
-    opacity: 1;
-  }
-}
-
 @-webkit-keyframes tab-top {
   0% {
-    bottom: -60px;
+    bottom: -40px;
     opacity: 0;
   }
 
@@ -3707,19 +3697,27 @@ http://www.stuskitchen.com/
   }
 }
 
-@-webkit-keyframes tab-top-rotate {
+@-moz-keyframes tab-top {
   0% {
-    bottom: -60px;
+    bottom: -40px;
     opacity: 0;
-    -webkit-transform: rotate3d(80, 70, 10, 60deg);
-    -webkit-perspective-origin: 0 0;
   }
 
   100% {
     bottom: 0;
     opacity: 1;
-    -webkit-transform: rotate3d(0, 0, 0, 0deg);
-    -webkit-perspective-origin: 50% 50%;
+  }
+}
+
+@keyframes tab-top {
+  0% {
+    bottom: -40px;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0;
+    opacity: 1;
   }
 }
 
@@ -3733,27 +3731,26 @@ http://www.stuskitchen.com/
 
 .ase-accordion__title {
   display: block;
+  margin-bottom: 12px;
+}
+
+.ase-accordion__title__inner {
+  display: block;
+  padding: .4em;
+  text-decoration: none;
   background: #78c6fa;
   color: #fff;
-  padding: .4em;
-  margin-bottom: 12px;
-  cursor: pointer;
   -webkit-transition: all linear 200ms;
   -moz-transition: all linear 200ms;
   -o-transition: all linear 200ms;
   transition: all linear 200ms;
 }
-.ase-accordion__title:hover {
-  background-color: #47b1f8;
-}
-
-.ase-accordion__title__inner {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-}
 .ase-accordion__title__inner:hover, .ase-accordion__title__inner:focus {
+  background-color: #47b1f8;
   color: #fff;
+}
+.ase-accordion__title__inner:active {
+  background-color: #169cf6;
 }
 
 .ase-accordion__title__ico {
@@ -3786,11 +3783,9 @@ http://www.stuskitchen.com/
   -o-perspective-origin: 50% 50%;
   perspective-origin: 50% 50%;
 }
-.ase-accordion .js-ase-accordion__item_active .ase-accordion__title {
+.ase-accordion .js-ase-accordion__item_active .ase-accordion__title__inner {
   background: #a200b8;
-}
-.ase-accordion .js-ase-accordion__item_active .ase-accordion__title:hover {
-  background-color: #750085;
+  cursor: default;
 }
 .ase-accordion .js-ase-accordion__item_active .ase-accordion__title__ico:after {
   content: '-';

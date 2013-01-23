@@ -60,6 +60,10 @@ Scripts.Common = {
 			}).addPagination('.js-ase-accordion__items-wr', 'js-ase-accordion__item-ln');
 		}
 
+		$('.js-ase-accordion__item-ln_active').on('click', function () {
+			$(this).parent().parent().removeClass('js-ase-accordion__item_active');
+		});
+
 		return sc;
 	},
 	tabsInit: function () {

@@ -84,9 +84,7 @@
 .tab__item {
 
 	.article {
-		-webkit-animation: tab-top;
-		-webkit-animation-duration: .5s;
-		-webkit-animation-timing-function: ease-in;
+		@include vendor(animation, tab-top ease-in .5s);
 	}
 
 	@for $i from 0 through 5 {
@@ -101,19 +99,19 @@
 	100% { opacity: 1; -webkit-transform: rotate3d( 0, 0, 0, 0deg ); -webkit-perspective-origin: 50% 50%;}
 }
 
-@-webkit-keyframes tab-right {
-	0%   { left: -20px; opacity: 0; }
-	100% { left: 0; opacity: 1; }
-}
-
 @-webkit-keyframes tab-top {
-	0%   { bottom: -60px; opacity: 0;}
+	0%   { bottom: -40px; opacity: 0;}
 	100% { bottom: 0; opacity: 1; }
 }
 
-@-webkit-keyframes tab-top-rotate {
-	0%   { bottom: -60px; opacity: 0; -webkit-transform: rotate3d( 80,70,10,60deg ); -webkit-perspective-origin: 0 0;}
-	100% { bottom: 0; opacity: 1; -webkit-transform: rotate3d( 0, 0, 0, 0deg ); -webkit-perspective-origin: 50% 50%; }
+@-moz-keyframes tab-top {
+	0%   { bottom: -40px; opacity: 0;}
+	100% { bottom: 0; opacity: 1; }
+}
+
+@keyframes tab-top {
+	0%   { bottom: -40px; opacity: 0;}
+	100% { bottom: 0; opacity: 1; }
 }
 
 /* @end */

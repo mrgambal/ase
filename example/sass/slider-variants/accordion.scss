@@ -17,26 +17,25 @@ $purple: #A200B8;
 
 .ase-accordion__title {
 	display: block;
-	background: $blue;
-	color: #fff;
-	padding: .4em;
 	margin-bottom: 12px;
-	cursor: pointer;
-	@include transition();
-
-	&:hover {
-		background-color: darken($blue, 10%);
-	}
 }
 
 .ase-accordion__title__inner {
 	display: block;
+	padding: .4em;
 	text-decoration: none;
+	background: $blue;
 	color: #fff;
+	@include transition();
 
 	&:hover,
 	&:focus {
+		background-color: darken($blue, 10%);
 		color: #fff;
+	}
+
+	&:active {
+		background-color: darken($blue, 20%);
 	}
 }
 
@@ -61,12 +60,9 @@ $purple: #A200B8;
 		@include vendor(transform-style, preserve-3d);
 		@include vendor(perspective-origin, 50% 50%);
 
-		.ase-accordion__title {
+		.ase-accordion__title__inner {
 			background: $purple;
-
-			&:hover {
-				background-color: darken($purple, 10%);
-			}
+			cursor: default;
 		}
 
 		.ase-accordion__title__ico {

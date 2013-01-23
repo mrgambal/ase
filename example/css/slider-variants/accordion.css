@@ -7,27 +7,26 @@
 
 .ase-accordion__title {
   display: block;
+  margin-bottom: 12px;
+}
+
+.ase-accordion__title__inner {
+  display: block;
+  padding: .4em;
+  text-decoration: none;
   background: #78c6fa;
   color: #fff;
-  padding: .4em;
-  margin-bottom: 12px;
-  cursor: pointer;
   -webkit-transition: all linear 200ms;
   -moz-transition: all linear 200ms;
   -o-transition: all linear 200ms;
   transition: all linear 200ms;
 }
-.ase-accordion__title:hover {
-  background-color: #47b1f8;
-}
-
-.ase-accordion__title__inner {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-}
 .ase-accordion__title__inner:hover, .ase-accordion__title__inner:focus {
+  background-color: #47b1f8;
   color: #fff;
+}
+.ase-accordion__title__inner:active {
+  background-color: #169cf6;
 }
 
 .ase-accordion__title__ico {
@@ -60,11 +59,9 @@
   -o-perspective-origin: 50% 50%;
   perspective-origin: 50% 50%;
 }
-.ase-accordion .js-ase-accordion__item_active .ase-accordion__title {
+.ase-accordion .js-ase-accordion__item_active .ase-accordion__title__inner {
   background: #a200b8;
-}
-.ase-accordion .js-ase-accordion__item_active .ase-accordion__title:hover {
-  background-color: #750085;
+  cursor: default;
 }
 .ase-accordion .js-ase-accordion__item_active .ase-accordion__title__ico:after {
   content: '-';
