@@ -90,4 +90,14 @@ $purple: #A200B8;
 	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
 }
 
+@-moz-keyframes vert-fade-rotate {
+	0% { -webkit-transform: rotateX(-90deg); opacity: 0; }
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
+@keyframes vert-fade-rotate {
+	0% { -webkit-transform: rotateX(-90deg); opacity: 0; }
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
 /* @end */
