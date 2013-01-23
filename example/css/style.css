@@ -3605,10 +3605,6 @@ http://www.stuskitchen.com/
   margin-bottom: 30px;
   border-bottom: 1px solid #78c6fa;
 }
-.tab__nav .js-ase-tab__pagination__ln_active {
-  background-color: #78C6FA;
-  color: #fff;
-}
 
 .tab__nav__inner {
   margin: 0;
@@ -3634,12 +3630,13 @@ http://www.stuskitchen.com/
   padding: 5px 10px;
   text-decoration: none;
 }
-.tab__nav__item:hover .tab__nav__ln {
+.tab__nav__ln:hover {
   background-color: #daf0fe;
 }
-.tab__nav__item:active .tab__nav__ln {
-  background-color: #78C6FA;
-  color: #fff;
+
+.js-ase-tab__pagination__ln_active {
+  background: #78c6fa !important;
+  color: white !important;
 }
 
 /* @group article
@@ -3750,6 +3747,15 @@ http://www.stuskitchen.com/
   background-color: #47b1f8;
 }
 
+.ase-accordion__title__inner {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+.ase-accordion__title__inner:hover, .ase-accordion__title__inner:focus {
+  color: #fff;
+}
+
 .ase-accordion__title__ico {
   float: right;
   font-style: normal;
@@ -3763,7 +3769,7 @@ http://www.stuskitchen.com/
   display: none;
 }
 
-.ase-accordion .js-ase__item_active {
+.ase-accordion .js-ase-accordion__item_active {
   -webkit-perspective: 1500px;
   -moz-perspective: 1500px;
   -ms-perspective: 1500px;
@@ -3780,17 +3786,17 @@ http://www.stuskitchen.com/
   -o-perspective-origin: 50% 50%;
   perspective-origin: 50% 50%;
 }
-.ase-accordion .js-ase__item_active .ase-accordion__title {
+.ase-accordion .js-ase-accordion__item_active .ase-accordion__title {
   background: #a200b8;
 }
-.ase-accordion .js-ase__item_active .ase-accordion__title:hover {
+.ase-accordion .js-ase-accordion__item_active .ase-accordion__title:hover {
   background-color: #750085;
 }
-.ase-accordion .js-ase__item_active .ase-accordion__title__ico:after {
+.ase-accordion .js-ase-accordion__item_active .ase-accordion__title__ico:after {
   content: '-';
   margin-right: 4px;
 }
-.ase-accordion .js-ase__item_active .ase-accordion__content {
+.ase-accordion .js-ase-accordion__item_active .ase-accordion__content {
   display: block;
   -webkit-animation: vert-fade-rotate ease-out 0.3s;
   -moz-animation: vert-fade-rotate ease-out 0.3s;

@@ -29,6 +29,17 @@ $purple: #A200B8;
 	}
 }
 
+.ase-accordion__title__inner {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+
+	&:hover,
+	&:focus {
+		color: #fff;
+	}
+}
+
 .ase-accordion__title__ico {
 	float: right;
 	font-style: normal;
@@ -45,7 +56,7 @@ $purple: #A200B8;
 
 .ase-accordion {
 
-	.js-ase__item_active {
+	.js-ase-accordion__item_active {
 		@include vendor(perspective, 1500px);
 		@include vendor(transform-style, preserve-3d);
 		@include vendor(perspective-origin, 50% 50%);

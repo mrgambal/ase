@@ -21,6 +21,15 @@
   background-color: #47b1f8;
 }
 
+.ase-accordion__title__inner {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+.ase-accordion__title__inner:hover, .ase-accordion__title__inner:focus {
+  color: #fff;
+}
+
 .ase-accordion__title__ico {
   float: right;
   font-style: normal;
@@ -34,7 +43,7 @@
   display: none;
 }
 
-.ase-accordion .js-ase__item_active {
+.ase-accordion .js-ase-accordion__item_active {
   -webkit-perspective: 1500px;
   -moz-perspective: 1500px;
   -ms-perspective: 1500px;
@@ -51,17 +60,17 @@
   -o-perspective-origin: 50% 50%;
   perspective-origin: 50% 50%;
 }
-.ase-accordion .js-ase__item_active .ase-accordion__title {
+.ase-accordion .js-ase-accordion__item_active .ase-accordion__title {
   background: #a200b8;
 }
-.ase-accordion .js-ase__item_active .ase-accordion__title:hover {
+.ase-accordion .js-ase-accordion__item_active .ase-accordion__title:hover {
   background-color: #750085;
 }
-.ase-accordion .js-ase__item_active .ase-accordion__title__ico:after {
+.ase-accordion .js-ase-accordion__item_active .ase-accordion__title__ico:after {
   content: '-';
   margin-right: 4px;
 }
-.ase-accordion .js-ase__item_active .ase-accordion__content {
+.ase-accordion .js-ase-accordion__item_active .ase-accordion__content {
   display: block;
   -webkit-animation: vert-fade-rotate ease-out 0.3s;
   -moz-animation: vert-fade-rotate ease-out 0.3s;

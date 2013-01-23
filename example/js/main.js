@@ -46,6 +46,22 @@ Scripts.Common = {
 
 		return sc;
 	},
+	accordionInit: function () {
+		var sc = Scripts.Common,
+			tabContainer = $('.js-ase-accordion');
+
+		if (tabContainer.length) {
+			tabContainer.ASE({
+				itemsSelector: '.js-ase-accordion__item',
+				prevClass: 'js-ase-accordion__item_prev',
+				nextClass: 'js-ase-accordion__item_next',
+				currentClass: 'js-ase-accordion__item_active',
+				autoplay: false
+			}).addPagination('.js-ase-accordion__items-wr', 'js-ase-accordion__item-ln');
+		}
+
+		return sc;
+	},
 	tabsInit: function () {
 		var sc = Scripts.Common,
 			tabContainer = $('.js-ase-tab');
@@ -69,6 +85,7 @@ Scripts.Common = {
 
         window.onload = function () {
             sc.sliderInit()
+	            .accordionInit()
 	            .tabsInit()
                 .warning();
         };

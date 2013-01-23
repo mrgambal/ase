@@ -27,11 +27,6 @@
 	text-align: center;
 	margin-bottom: 30px;
 	border-bottom: 1px solid #78C6FA;
-
-	.js-ase-tab__pagination__ln_active {
-		background-color: #78C6FA;
-		color: #fff;
-	}
 }
 
 .tab__nav__inner {
@@ -59,15 +54,14 @@
 	padding: 5px 10px;
 	text-decoration: none;
 
-	.tab__nav__item:hover & {
+	&:hover {
 		background-color: lighten(#78C6FA, 20%);
-		//@include background-image(linear-gradient(top, lighten(#78C6FA, 20%) 40%, #78C6FA 100%));
 	}
+}
 
-	.tab__nav__item:active & {
-		background-color: #78C6FA;
-		color: #fff;
-	}
+.js-ase-tab__pagination__ln_active {
+	background: #78C6FA !important;
+	color: #fff !important;
 }
 
 .tab__content {}
