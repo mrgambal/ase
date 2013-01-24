@@ -271,7 +271,7 @@
             // try to find existing ASE binding
             _old = (_s.__container || container).data('ASEngine');
             // apply options
-            _s.options = $.extend((_old ? _old.options : {}), _s.defaultOptions, opts);
+            _s.options = $.extend({}, (_old ? _old.options : _s.defaultOptions), opts);
             _s.items = (_s.__container = _s.__container || container).find(_s.options.itemsSelector);
 
             if (_s.items.length < 3)

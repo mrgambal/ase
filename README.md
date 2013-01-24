@@ -19,7 +19,7 @@ Dependencies:
 
 Version:
 --------
- 0.6a
+ 0.7a
 
 Copyright:
 ----------
