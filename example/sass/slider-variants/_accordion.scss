@@ -11,9 +11,7 @@ $purple: #A200B8;
 	padding: 0;
 }
 
-.ase-accordion__item {
-
-}
+.ase-accordion__item {}
 
 .ase-accordion__title {
 	display: block;
@@ -51,6 +49,10 @@ $purple: #A200B8;
 
 .ase-accordion__content {
 	display: none;
+
+	p {
+		padding: 0 .4em;
+	}
 }
 
 .ase-accordion {

@@ -353,37 +353,6 @@ ins {
   padding-top: 2em;
 }
 
-.l-global-footer__inner {
-  *zoom: 1;
-  max-width: 59em;
-  _width: 59em;
-  padding-left: 1em;
-  padding-right: 1em;
-  margin-left: auto;
-  margin-right: auto;
-}
-.l-global-footer__inner:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.l-global-footer__left,
-.l-global-footer__right {
-  width: 49.15254%;
-  float: left;
-  margin-right: 1.69492%;
-  display: inline;
-}
-
-.l-global-footer__right {
-  float: right;
-  margin-right: 0;
-  #margin-left: -1em;
-  display: inline;
-  text-align: right;
-}
-
 /* @end */
 /* ============================================================================
     Non-semantic grid support
@@ -487,55 +456,6 @@ ul.l-row {
   margin-right: 0 !important;
 }
 
-/* @end */
-/* ============================================================================
-		 @group Sticky footer
-============================================================================= */
-.ie6-7 body {
-  overflow-y: auto;
-}
-
-@media screen and (max-width: 2400px) {
-  html, body {
-    height: 100%;
-  }
-
-  .l-main-aux {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto;
-    margin-bottom: -80px;
-  }
-
-  .l-main-aux__inner {
-    padding-bottom: 80px;
-  }
-
-  .l-global-footer {
-    position: relative;
-    height: 80px;
-  }
-}
-@media screen and (max-width: 768px) {
-  /* Sticky footer reset */
-  html, body {
-    height: auto;
-  }
-
-  .l-page {
-    min-height: auto;
-    margin-bottom: auto;
-  }
-
-  .l-main-aux__inner {
-    padding-bottom: 0;
-  }
-
-  .l-global-footer {
-    height: auto;
-  }
-}
 /* @end */
 /* ============================================================================
    Embed content
@@ -1082,6 +1002,44 @@ dl dd {
 /* ============================================================================
 		Footer
 ============================================================================= */
+.region-footer__top {
+  padding-top: 3.14286em;
+  padding-bottom: 3.14286em;
+  text-align: center;
+  background: #FAFAF6;
+}
+
+.region-footer__bottom {
+  padding-top: 1.57143em;
+  padding-bottom: 1.57143em;
+  color: #fff;
+  background: #434343;
+}
+.region-footer__bottom p {
+  margin: 0;
+}
+
+/* @group footer-about
+  --------------------------------------------------------------------------- */
+.footer-about__top {
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 27px;
+}
+.footer-about__top:before {
+  display: block;
+  margin-bottom: 14px;
+  font: normal normal 40px/1 "iconFont";
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  content: "\e0c8";
+}
+
+.footer-about__bottom {
+  margin-bottom: 0;
+}
+
+/* @end */
 /* ============================================================================
 		MASTER-CLASSES A
 ============================================================================= */
@@ -3764,6 +3722,9 @@ http://www.stuskitchen.com/
 
 .ase-accordion__content {
   display: none;
+}
+.ase-accordion__content p {
+  padding: 0 0.4em;
 }
 
 .ase-accordion .js-ase-accordion__item_active {

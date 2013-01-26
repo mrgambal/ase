@@ -50,21 +50,6 @@
 	padding-top: 2em;
 }
 
-.l-global-footer__inner {
-	@include container;
-}
-
-.l-global-footer__left,
-.l-global-footer__right {
-	@include span-columns(6,12);
-}
-
-.l-global-footer__left {
-}
-
-.l-global-footer__right {
-	@include omega;
-	text-align: right;
-}
+.l-global-footer__inner {}
 
 /* @end */

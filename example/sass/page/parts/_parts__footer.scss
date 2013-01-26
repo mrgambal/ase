@@ -6,3 +6,48 @@
 ============================================================================= */
 
 .region-footer {}
+
+.region-footer__top {
+	@include padding-leader(2, $base-font-size);
+	@include padding-trailer(2, $base-font-size);
+	text-align: center;
+	background: #FAFAF6;
+}
+
+.region-footer__bottom {
+	@include padding-leader(1, $base-font-size);
+	@include padding-trailer(1, $base-font-size);
+	color: #fff;
+	background: $baseColor;
+	
+	p {
+		margin: 0;
+	}
+}
+
+/* @group footer-about
+  --------------------------------------------------------------------------- */
+
+.footer-about {}
+
+.footer-about__top {
+	text-align: center;
+	margin: 0 0 10px;
+	font-size: 27px;
+
+	&:before {
+		display: block;
+		margin-bottom: 14px;
+		font: normal normal 40px/1 'iconFont';
+		speak: none;
+		-webkit-font-smoothing: antialiased;
+		//content: "\e0ca";
+		content: "\e0c8";
+	}
+}
+
+.footer-about__bottom {
+	margin-bottom: 0;
+}
+
+/* @end */
