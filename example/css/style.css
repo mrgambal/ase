@@ -408,6 +408,13 @@ ul.l-row {
   display: inline;
 }
 
+.l-span_3 {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
 .l-span_4 {
   width: 32.20339%;
   float: left;
@@ -1024,11 +1031,10 @@ dl dd {
 .footer-about__top {
   text-align: center;
   margin: 0 0 10px;
-  font-size: 27px;
 }
 .footer-about__top:before {
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   font: normal normal 40px/1 "iconFont";
   speak: none;
   -webkit-font-smoothing: antialiased;
@@ -2486,6 +2492,9 @@ dl dd {
 /* @end */
 /* @group Animation: slider_lightSpeedIn
   --------------------------------------------------------------------------- */
+.slider_lightSpeedIn {
+  overflow: hidden;
+}
 .slider_lightSpeedIn .js-ase__item {
   display: none;
 }
@@ -2594,9 +2603,19 @@ dl dd {
 /* @end */
 /* @group slider_expression
   --------------------------------------------------------------------------- */
+#slider_expression {
+  overflow: hidden;
+  padding-top: 11em;
+  padding-bottom: 6.28571em;
+}
+
 .slider_expression {
   box-shadow: none;
   background: transparent;
+}
+.slider_expression .ase-slider__inner {
+  position: relative;
+  z-index: 1;
 }
 .slider_expression .ase-slider__container__inner {
   -webkit-perspective: 2500px;
@@ -2662,7 +2681,8 @@ dl dd {
 /* TODO
 
 http://www.stuskitchen.com/
-
+http://www.fillstudio.com/
+http://dibusoft.com/
 */
 /* ============================================================================
 		ase-slider-slice
@@ -3543,6 +3563,330 @@ http://www.stuskitchen.com/
 }
 
 /* @end */
+/* @group tab-generic
+  --------------------------------------------------------------------------- */
+.ase-carousel {
+  position: relative;
+  width: 100%;
+}
+.ase-carousel .i-slider-nav {
+  z-index: 2;
+  top: 22%;
+}
+
+.ase-carousel__container {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  z-index: 1;
+}
+
+.ase-carousel__container__inner {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ase-carousel__item {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+}
+
+/* @end */
+/* @group carousel-element
+  --------------------------------------------------------------------------- */
+.carousel-element {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+.carousel-element_1 {
+  background-color: #78c6fa;
+}
+
+.carousel-element_2 {
+  background-color: #82cb51;
+}
+
+.carousel-element_3 {
+  background-color: #a200b8;
+}
+
+/* @end */
+/* @group carousel-nav
+  --------------------------------------------------------------------------- */
+.carousel-nav {
+  margin-top: 1.57143em;
+  padding-top: 1.57143em;
+  border-top: 1px solid black;
+  position: relative;
+}
+
+.carousel-nav__inner {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-nav__item {
+  margin: 0 1em;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.ie6-7 .carousel-nav__item {
+  display: inline;
+  zoom: 1;
+}
+
+.js-ase-carousel__pagination__ln_active {
+  color: #000;
+}
+
+.js-menu-line {
+  display: block;
+  background: red;
+  position: absolute;
+  height: 2px;
+  top: 2px;
+}
+
+/* @end */
+/* @group carousel_apple-like
+  --------------------------------------------------------------------------- */
+.carousel_apple-like {
+  overflow: hidden;
+}
+.carousel_apple-like .js-ase-carousel__item {
+  -webkit-transition: all linear 400ms;
+  -moz-transition: all linear 400ms;
+  -o-transition: all linear 400ms;
+  transition: all linear 400ms;
+  visibility: hidden;
+}
+.carousel_apple-like .js-ase-carousel__item li:first-child {
+  -webkit-animation-delay: 90ms;
+  -moz-animation-delay: 90ms;
+  -ms-animation-delay: 90ms;
+  -o-animation-delay: 90ms;
+  animation-delay: 90ms;
+}
+.carousel_apple-like .js-ase-carousel__item li:nth-child(2) {
+  -webkit-animation-delay: 180ms;
+  -moz-animation-delay: 180ms;
+  -ms-animation-delay: 180ms;
+  -o-animation-delay: 180ms;
+  animation-delay: 180ms;
+}
+.carousel_apple-like .js-ase-carousel__item li:nth-child(3) {
+  -webkit-animation-delay: 270ms;
+  -moz-animation-delay: 270ms;
+  -ms-animation-delay: 270ms;
+  -o-animation-delay: 270ms;
+  animation-delay: 270ms;
+}
+.carousel_apple-like .js-ase-carousel__item li:nth-child(4) {
+  -webkit-animation-delay: 360ms;
+  -moz-animation-delay: 360ms;
+  -ms-animation-delay: 360ms;
+  -o-animation-delay: 360ms;
+  animation-delay: 360ms;
+}
+.carousel_apple-like .js-ase-carousel__item_active {
+  left: 0;
+  visibility: visible;
+}
+.carousel_apple-like .js-ase-carousel__item_active_to-prev li {
+  -webkit-animation: moveFromLeft 350ms ease-in-out both;
+  -moz-animation: moveFromLeft 350ms ease-in-out both;
+  -ms-animation: moveFromLeft 350ms ease-in-out both;
+  -o-animation: moveFromLeft 350ms ease-in-out both;
+  animation: moveFromLeft 350ms ease-in-out both;
+}
+.carousel_apple-like .js-ase-carousel__item_active_to-prev li:nth-child(4) {
+  -webkit-animation-delay: 90ms;
+  -moz-animation-delay: 90ms;
+  -ms-animation-delay: 90ms;
+  -o-animation-delay: 90ms;
+  animation-delay: 90ms;
+}
+.carousel_apple-like .js-ase-carousel__item_active_to-prev li:nth-child(3) {
+  -webkit-animation-delay: 180ms;
+  -moz-animation-delay: 180ms;
+  -ms-animation-delay: 180ms;
+  -o-animation-delay: 180ms;
+  animation-delay: 180ms;
+}
+.carousel_apple-like .js-ase-carousel__item_active_to-prev li:nth-child(2) {
+  -webkit-animation-delay: 270ms;
+  -moz-animation-delay: 270ms;
+  -ms-animation-delay: 270ms;
+  -o-animation-delay: 270ms;
+  animation-delay: 270ms;
+}
+.carousel_apple-like .js-ase-carousel__item_active_to-prev li:first-child {
+  -webkit-animation-delay: 360ms;
+  -moz-animation-delay: 360ms;
+  -ms-animation-delay: 360ms;
+  -o-animation-delay: 360ms;
+  animation-delay: 360ms;
+}
+.carousel_apple-like .js-ase-carousel__item_active_to-next li {
+  -webkit-animation: moveFromRight 350ms ease-in-out both;
+  -moz-animation: moveFromRight 350ms ease-in-out both;
+  -ms-animation: moveFromRight 350ms ease-in-out both;
+  -o-animation: moveFromRight 350ms ease-in-out both;
+  animation: moveFromRight 350ms ease-in-out both;
+}
+.carousel_apple-like .js-ase-carousel__item_prev {
+  left: -100%;
+}
+.carousel_apple-like .js-ase-carousel__item_prev li {
+  -webkit-animation: moveToLeft 350ms ease-in-out both;
+  -moz-animation: moveToLeft 350ms ease-in-out both;
+  -ms-animation: moveToLeft 350ms ease-in-out both;
+  -o-animation: moveToLeft 350ms ease-in-out both;
+  animation: moveToLeft 350ms ease-in-out both;
+}
+.carousel_apple-like .js-ase-carousel__item_next {
+  left: 100%;
+}
+.carousel_apple-like .js-ase-carousel__item_next li {
+  -webkit-animation: moveToRight 350ms ease-in-out both;
+  -moz-animation: moveToRight 350ms ease-in-out both;
+  -ms-animation: moveToRight 350ms ease-in-out both;
+  -o-animation: moveToRight 350ms ease-in-out both;
+  animation: moveToRight 350ms ease-in-out both;
+}
+
+@-webkit-keyframes moveFromRight {
+  0% {
+    -webkit-transform: translateX(600%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes moveFromLeft {
+  0% {
+    -webkit-transform: translateX(-600%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes moveToRight {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+
+  100% {
+    -webkit-transform: translateX(600%);
+  }
+}
+
+@-webkit-keyframes moveToLeft {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+
+  100% {
+    -webkit-transform: translateX(-600%);
+  }
+}
+
+@-moz-keyframes moveFromRight {
+  0% {
+    -moz-transform: translateX(600%);
+  }
+
+  100% {
+    -moz-transform: translateX(0%);
+  }
+}
+
+@-moz-keyframes moveFromLeft {
+  0% {
+    -moz-transform: translateX(-600%);
+  }
+
+  100% {
+    -moz-transform: translateX(0%);
+  }
+}
+
+@-moz-keyframes moveToRight {
+  0% {
+    -moz-transform: translateX(0%);
+  }
+
+  100% {
+    -moz-transform: translateX(600%);
+  }
+}
+
+@-moz-keyframes moveToLeft {
+  0% {
+    -moz-transform: translateX(0%);
+  }
+
+  100% {
+    -moz-transform: translateX(-600%);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    transform: translateX(600%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes moveFromLeft {
+  0% {
+    transform: translateX(-600%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes moveToRight {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(600%);
+  }
+}
+
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-600%);
+  }
+}
+
+/* @end */
 .ase-tab {
   position: relative;
 }
@@ -3602,45 +3946,40 @@ http://www.stuskitchen.com/
 .article {
   position: relative;
 }
+.article img {
+  margin-bottom: 6px;
+}
+.article h2 {
+  margin-bottom: 8px;
+}
+.article h3 {
+  margin-bottom: 12px;
+}
 
 .tab__item .article {
-  -webkit-animation: tab-top ease-in 0.5s;
-  -moz-animation: tab-top ease-in 0.5s;
-  -ms-animation: tab-top ease-in 0.5s;
-  -o-animation: tab-top ease-in 0.5s;
-  animation: tab-top ease-in 0.5s;
+  -webkit-animation: tab-top ease-out 0.3s;
+  -moz-animation: tab-top ease-out 0.3s;
+  -ms-animation: tab-top ease-out 0.3s;
+  -o-animation: tab-top ease-out 0.3s;
+  animation: tab-top ease-out 0.3s;
 }
 .tab__item .article_sec_0 {
-  -webkit-animation-duration: 500ms;
+  -webkit-animation-duration: 200ms;
 }
 .tab__item .article_sec_1 {
-  -webkit-animation-duration: 580ms;
+  -webkit-animation-duration: 280ms;
 }
 .tab__item .article_sec_2 {
-  -webkit-animation-duration: 660ms;
+  -webkit-animation-duration: 360ms;
 }
 .tab__item .article_sec_3 {
-  -webkit-animation-duration: 740ms;
+  -webkit-animation-duration: 440ms;
 }
 .tab__item .article_sec_4 {
-  -webkit-animation-duration: 820ms;
+  -webkit-animation-duration: 520ms;
 }
 .tab__item .article_sec_5 {
-  -webkit-animation-duration: 900ms;
-}
-
-@-webkit-keyframes tab-rotate {
-  0% {
-    opacity: 0;
-    -webkit-transform: rotate3d(80, 70, 10, 160deg);
-    -webkit-perspective-origin: 0 0;
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: rotate3d(0, 0, 0, 0deg);
-    -webkit-perspective-origin: 50% 50%;
-  }
+  -webkit-animation-duration: 600ms;
 }
 
 @-webkit-keyframes tab-top {
@@ -3680,6 +4019,10 @@ http://www.stuskitchen.com/
 }
 
 /* @end */
+/*
+	TODO: http://www.factoria.it/
+
+*/
 /* @group accordion
   --------------------------------------------------------------------------- */
 .ase-accordion__container__inner {

@@ -41,6 +41,11 @@ ul.l-row {
 	@include span-columns(2, 12);
 }
 
+.l-span_3 {
+	@include span-columns(3, 12);
+}
+
+
 .l-span_4 {
 	@include span-columns(4, 12);
 }

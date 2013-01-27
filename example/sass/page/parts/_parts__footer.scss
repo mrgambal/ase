@@ -19,7 +19,7 @@
 	@include padding-trailer(1, $base-font-size);
 	color: #fff;
 	background: $baseColor;
-	
+
 	p {
 		margin: 0;
 	}
@@ -33,11 +33,10 @@
 .footer-about__top {
 	text-align: center;
 	margin: 0 0 10px;
-	font-size: 27px;
 
 	&:before {
 		display: block;
-		margin-bottom: 14px;
+		margin-bottom: 10px;
 		font: normal normal 40px/1 'iconFont';
 		speak: none;
 		-webkit-font-smoothing: antialiased;

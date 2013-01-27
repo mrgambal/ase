@@ -61,7 +61,7 @@ Scripts.Common = {
 		}
 
 		$('.js-ase-accordion__item-ln_active').on('click', function () {
-			$(this).parent().parent().removeClass('js-ase-accordion__item_active');
+			$(this).parent().parent().removeClass('js-ase-accordion__item_active'); //FIXME
 		});
 
 		return sc;
@@ -82,6 +82,73 @@ Scripts.Common = {
 
 		return sc;
 	},
+	caruselInit: function () {
+		var sc = Scripts.Common,
+			containers = $('.js-ase-carousel');
+
+		if (containers.length) {
+			containers.each(function () {
+				var el = $(this);
+				el.ASE({
+					itemsSelector: '.js-ase-carousel__item',
+					prevCtrl: el.find('.js-ase-carousel__nav_prev'),
+					nextCtrl: el.find('.js-ase-carousel__nav_next'),
+					prevClass: 'js-ase-carousel__item_prev',
+					nextClass: 'js-ase-carousel__item_next',
+					currentClass: 'js-ase-carousel__item_active',
+					autoplay: false,
+					onMove: function () { // FIXME move to core?
+						el.find('.js-ase-carousel__item_prev').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
+						el.find('.js-ase-carousel__item_next').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
+					},
+					onPrev: function () {
+						setTimeout( function() {
+							el.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-prev');
+						}, 10);
+					},
+					onNext: function () {
+						setTimeout( function() {
+							el.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-next');
+						}, 10);
+					}
+				}).addPagination('.js-ase-carousel__pagination', 'js-ase-carousel__pagination__ln');
+			});
+		}
+
+		return sc;
+	},
+//	menuLine: function () {
+//
+//		$('.carousel-nav__inner').append('<li class="js-menu-line"></li>');
+//
+//		if ($('.js-ase-carousel__pagination__ln_active').length > 0) {
+//			var activeEl = $('.js-ase-carousel__pagination__ln_active');
+//		} else {
+//			var activeEl = $('.carousel-nav__item').first().find('a');
+//		}
+//
+//		var line = $('.js-menu-line'),
+//			origLeft = activeEl.position().left,
+//			origWidth = activeEl.width();
+//
+//		line.css('width', origWidth).css('left', origLeft);
+//
+//		$('.js-ase-carousel__pagination__ln').hover(function() {
+//			var el = $(this),
+//				newLeft = el.position().left,
+//				newWidth = el.width();
+//
+//			line.stop().animate({
+//				left: newLeft,
+//				width: newWidth
+//			}, 200);
+//		}, function() {
+//			line.stop().animate({
+//				left: origLeft,
+//				width: origWidth
+//			}, 200);
+//		});
+//	},
     init: function () {
         var sc = this;
 
@@ -91,6 +158,8 @@ Scripts.Common = {
             sc.sliderInit()
 	            .accordionInit()
 	            .tabsInit()
+	            .caruselInit()
+	            .menuLine()
                 .warning();
         };
 
@@ -100,7 +169,7 @@ Scripts.Common = {
 
 Scripts.Common.init();
 
-function animTypeChanger () {
+function animTypeChanger () { // FIXME move me to object
 
 	$('.js-type-changer-ln').on('click', function () {
 		var self = $(this),

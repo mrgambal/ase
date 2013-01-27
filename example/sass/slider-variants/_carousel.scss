@@ -1,0 +1,250 @@
+@import "weiss-config";
+@import "helpers/mixins";
+
+$green: #82CB51;
+$blue: #78C6FA;
+$dark-blue: #516ECB;
+$violet: #A200B8;
+
+/* @group tab-generic
+  --------------------------------------------------------------------------- */
+
+.ase-carousel {
+	position: relative;
+	width: 100%;
+
+	.i-slider-nav {
+		z-index: 2;
+		top: 22%;
+	}
+}
+
+.ase-carousel__container {
+	position: relative;
+	height: 200px;
+	width: 100%;
+	z-index: 1;
+}
+
+.ase-carousel__container__inner {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ase-carousel__item {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 200px;
+}
+
+/* @end */
+
+/* @group carousel-element
+  --------------------------------------------------------------------------- */
+
+.carousel-element {
+	display: block;
+	width: 100%;
+	height: 200px;
+}
+
+.carousel-element_1 {
+	background-color: $blue;
+}
+
+.carousel-element_2 {
+	background-color: $green;
+}
+
+.carousel-element_3 {
+	background-color: $violet;
+}
+
+/* @end */
+
+/* @group carousel-nav
+  --------------------------------------------------------------------------- */
+
+.carousel-nav {
+	@include leader(1, $base-font-size);
+	@include padding-leader(1, $base-font-size);
+	border-top: 1px solid #000;
+	position: relative;
+}
+
+.carousel-nav__inner {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.carousel-nav__item {
+	margin: 0 1em;
+	padding: 0;
+	display: inline-block;
+	vertical-align: top;
+
+	.ie6-7 & {
+		display: inline;
+		zoom: 1;
+	}
+}
+
+.js-ase-carousel__pagination__ln_active {
+	color: #000;
+}
+
+.js-menu-line {
+	display: block;
+	background: red;
+	position: absolute;
+	height: 2px;
+	top: 2px;
+}
+
+/* @end */
+
+/* @group carousel_apple-like
+  --------------------------------------------------------------------------- */
+.carousel_apple-like {
+	overflow: hidden;
+
+	.js-ase-carousel__item {
+		@include transition(all linear 400ms);
+		visibility: hidden;
+
+		li {
+
+			&:first-child {
+				@include vendor(animation-delay, 90ms);
+			}
+
+			&:nth-child(2) {
+				@include vendor(animation-delay, 180ms);
+			}
+
+			&:nth-child(3) {
+				@include vendor(animation-delay, 270ms);
+			}
+
+			&:nth-child(4) {
+				@include vendor(animation-delay, 360ms);
+			}
+		}
+	}
+
+	.js-ase-carousel__item_active {
+		left: 0;
+		visibility: visible;
+	}
+
+	.js-ase-carousel__item_active_to-prev li {
+		@include vendor(animation, moveFromLeft 350ms ease-in-out both);
+
+		&:nth-child(4) {
+			@include vendor(animation-delay, 90ms);
+		}
+
+		&:nth-child(3) {
+			@include vendor(animation-delay, 180ms);
+		}
+
+		&:nth-child(2) {
+			@include vendor(animation-delay, 270ms);
+		}
+
+		&:first-child {
+			@include vendor(animation-delay, 360ms);
+		}
+	}
+
+	.js-ase-carousel__item_active_to-next li {
+		@include vendor(animation, moveFromRight 350ms ease-in-out both);
+	}
+
+
+	.js-ase-carousel__item_prev {
+		left: -100%;
+
+		li {
+			@include vendor(animation, moveToLeft 350ms ease-in-out both);
+		}
+	}
+
+	.js-ase-carousel__item_next {
+		left: 100%;
+
+		li {
+			@include vendor(animation, moveToRight 350ms ease-in-out both);
+		}
+	}
+
+}
+
+@-webkit-keyframes moveFromRight {
+	0% { -webkit-transform: translateX(600%); }
+	100% { -webkit-transform: translateX(0%); }
+}
+
+@-webkit-keyframes moveFromLeft {
+	0% { -webkit-transform: translateX(-600%); }
+	100% { -webkit-transform: translateX(0%); }
+}
+
+@-webkit-keyframes moveToRight {
+	0% { -webkit-transform: translateX(0%); }
+	100% { -webkit-transform: translateX(600%); }
+}
+
+@-webkit-keyframes moveToLeft {
+	0% { -webkit-transform: translateX(0%); }
+	100% { -webkit-transform: translateX(-600%); }
+}
+
+@-moz-keyframes moveFromRight {
+	0% { -moz-transform: translateX(600%); }
+	100% { -moz-transform: translateX(0%); }
+}
+
+@-moz-keyframes moveFromLeft {
+	0% { -moz-transform: translateX(-600%); }
+	100% { -moz-transform: translateX(0%); }
+}
+
+@-moz-keyframes moveToRight {
+	0% { -moz-transform: translateX(0%); }
+	100% { -moz-transform: translateX(600%); }
+}
+
+@-moz-keyframes moveToLeft {
+	0% { -moz-transform: translateX(0%); }
+	100% { -moz-transform: translateX(-600%); }
+}
+
+@keyframes moveFromRight {
+	0% { transform: translateX(600%); }
+	100% { transform: translateX(0%); }
+}
+
+@keyframes moveFromLeft {
+	0% { transform: translateX(-600%); }
+	100% { transform: translateX(0%); }
+}
+
+@keyframes moveToRight {
+	0% { transform: translateX(0%); }
+	100% { transform: translateX(600%); }
+}
+
+@keyframes moveToLeft {
+	0% { transform: translateX(0%); }
+	100% { transform: translateX(-600%); }
+}
+
+/* @end */

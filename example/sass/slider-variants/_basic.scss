@@ -819,6 +819,7 @@
   --------------------------------------------------------------------------- */
 
 .slider_lightSpeedIn {
+	overflow: hidden;
 
 	.js-ase__item {
 		display: none;
@@ -865,9 +866,20 @@
 /* @group slider_expression
   --------------------------------------------------------------------------- */
 
+#slider_expression {
+	overflow: hidden;
+	@include padding-leader(7, $base-font-size);
+	@include padding-trailer(4, $base-font-size);
+}
+
 .slider_expression {
 	box-shadow: none;
 	background: transparent;
+
+	.ase-slider__inner {
+		position: relative;
+		z-index: 1; // nav z-index fix
+	}
 
 	.ase-slider__container__inner {
 		@include vendor(perspective, 2500px);
@@ -910,5 +922,6 @@
 /* TODO
 
 http://www.stuskitchen.com/
-
+http://www.fillstudio.com/
+http://dibusoft.com/
 */
