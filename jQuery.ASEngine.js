@@ -170,9 +170,14 @@
 
             var _s = this,
                 _h = function (e) {
-                    var nextIndex = this.attributes['data-href'].value.substr(this.attributes['data-href'].value.indexOf('#') + 1) - 1;
+                    var nextIndex = this.attributes['data-href'].value.substr(this.attributes['data-href'].value.indexOf('#') + 1) - 1,
+                        fnName = (nextIndex < _s.__curIndex) ? 'onPrev' : 'onNext';
 
                     e.preventDefault();
+
+                    if (typeof _s.options[fnName] === 'function')
+                        _s.options[fnName].call(_s);
+
                     _s.goTo(nextIndex, true);
                 };
 

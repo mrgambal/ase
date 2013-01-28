@@ -2,121 +2,142 @@
 var Scripts = Scripts || {};
 
 Scripts.Common = {
-    detecting: function () {
+    animTypeChanger: function() {
+        var sc = Scripts.Common;
+        
+        $('.js-type-changer').on('click', '.js-type-changer-ln', function() {
+            var self = $(this),
+                    actClass = 'js-type-changer-ln_active',
+                    slider = self.parents('.exmpl-block__item').find('.ase-slider-slice'),
+                    animType = self.data('js-animtype'),
+                    container = self.parents('.js-type-changer'),
+                    animFamily = container.data('js-animtype-family');
+
+            container.find('.js-type-changer-ln').removeClass(actClass);
+            self.addClass(actClass);
+
+            slider.removeClass()
+                    .addClass(animType)
+                    .addClass('element element_slider ase-slider-slice js-ase ' + animFamily);
+        });
+        
+        return sc;
+    },
+    detecting: function() {
         $('html').removeClass('no-js');
     },
-    warning: function () {
+    warning: function() {
         var sc = Scripts.Common,
-            warning = $('.warning'),
-            warnHide = function () {
-                warning.fadeOut(800);
-            },
-            timeoutId = setTimeout(function () {
-                warnHide();
-            }, 2000);
+                warning = $('.warning'),
+                warnHide = function() {
+            warning.fadeOut(800);
+        },
+                timeoutId = setTimeout(function() {
+            warnHide();
+        }, 2000);
 
         warning.data('timeoutId', timeoutId);
 
-        warning.mouseenter(function () {
+        warning.mouseenter(function() {
             clearTimeout($(this).data('timeoutId'));
-        }).mouseleave(function () {
-                warnHide();
-            });
+        }).mouseleave(function() {
+            warnHide();
+        });
 
         return sc;
     },
-	sliderInit: function () {
-		var sc = Scripts.Common,
-			containers = $('.js-ase');
+    sliderInit: function() {
+        var sc = Scripts.Common,
+                containers = $('.js-ase');
 
-		if (containers.length) {
-			containers.each(function () {
-				var el = $(this);
-				el.ASE({
-					itemsSelector: '.js-ase__item',
-					prevCtrl: el.find('.js-ase__nav_prev'),
-					nextCtrl: el.find('.js-ase__nav_next'),
-					prevClass: 'js-ase__item_prev',
-					nextClass: 'js-ase__item_next',
-					currentClass: 'js-ase__item_active',
-					autoplay: false
-				}).addPagination(el.find('.js-ase__pagination'), false, 'i-slider__pagination__item');
-			});
-		}
+        if (containers.length) {
+            containers.each(function() {
+                var el = $(this);
+                el.ASE({
+                    itemsSelector: '.js-ase__item',
+                    prevCtrl: el.find('.js-ase__nav_prev'),
+                    nextCtrl: el.find('.js-ase__nav_next'),
+                    prevClass: 'js-ase__item_prev',
+                    nextClass: 'js-ase__item_next',
+                    currentClass: 'js-ase__item_active',
+                    autoplay: false
+                }).addPagination(el.find('.js-ase__pagination'), false, 'i-slider__pagination__item');
+            });
+        }
 
-		return sc;
-	},
-	accordionInit: function () {
-		var sc = Scripts.Common,
-			tabContainer = $('.js-ase-accordion');
+        return sc;
+    },
+    accordionInit: function() {
+        var sc = Scripts.Common,
+                tabContainer = $('.js-ase-accordion');
 
-		if (tabContainer.length) {
-			tabContainer.ASE({
-				itemsSelector: '.js-ase-accordion__item',
-				prevClass: 'js-ase-accordion__item_prev',
-				nextClass: 'js-ase-accordion__item_next',
-				currentClass: 'js-ase-accordion__item_active',
-				autoplay: false
-			}).addPagination('.js-ase-accordion__items-wr', 'js-ase-accordion__item-ln');
-		}
+        if (tabContainer.length) {
+            tabContainer.ASE({
+                itemsSelector: '.js-ase-accordion__item',
+                prevClass: 'js-ase-accordion__item_prev',
+                nextClass: 'js-ase-accordion__item_next',
+                currentClass: 'js-ase-accordion__item_active',
+                autoplay: false
+            }).addPagination('.js-ase-accordion__items-wr', 'js-ase-accordion__item-ln');
+        }
 
-		$('.js-ase-accordion__item-ln_active').on('click', function () {
-			$(this).parent().parent().removeClass('js-ase-accordion__item_active'); //FIXME
-		});
+        $('.js-ase-accordion__item-ln_active').on('click', function() {
+            $(this).parent().parent().removeClass('js-ase-accordion__item_active'); //FIXME
+        });
 
-		return sc;
-	},
-	tabsInit: function () {
-		var sc = Scripts.Common,
-			tabContainer = $('.js-ase-tab');
+        return sc;
+    },
+    tabsInit: function() {
+        var sc = Scripts.Common,
+                tabContainer = $('.js-ase-tab');
 
-		if (tabContainer.length) {
-			tabContainer.ASE({
-				itemsSelector: '.js-ase-tab__item',
-				prevClass: 'js-ase-tab__item_prev',
-				nextClass: 'js-ase-tab__item_next',
-				currentClass: 'js-ase-tab__item_active',
-				autoplay: false
-			}).addPagination('.js-ase-tab__pagination', 'js-ase-tab__pagination__ln');
-		}
+        if (tabContainer.length) {
+            tabContainer.ASE({
+                itemsSelector: '.js-ase-tab__item',
+                prevClass: 'js-ase-tab__item_prev',
+                nextClass: 'js-ase-tab__item_next',
+                currentClass: 'js-ase-tab__item_active',
+                autoplay: false
+            }).addPagination('.js-ase-tab__pagination', 'js-ase-tab__pagination__ln');
+        }
 
-		return sc;
-	},
-	caruselInit: function () {
-		var sc = Scripts.Common,
-			containers = $('.js-ase-carousel');
+        return sc;
+    },
+    caruselInit: function() {
+        var sc = Scripts.Common,
+                containers = $('.js-ase-carousel');
 
-		if (containers.length) {
-			containers.each(function () {
-				var el = $(this);
-				el.ASE({
-					itemsSelector: '.js-ase-carousel__item',
-					prevCtrl: el.find('.js-ase-carousel__nav_prev'),
-					nextCtrl: el.find('.js-ase-carousel__nav_next'),
-					prevClass: 'js-ase-carousel__item_prev',
-					nextClass: 'js-ase-carousel__item_next',
-					currentClass: 'js-ase-carousel__item_active',
-					autoplay: false,
-					onMove: function () { // FIXME move to core?
-						el.find('.js-ase-carousel__item_prev').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
-						el.find('.js-ase-carousel__item_next').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
-					},
-					onPrev: function () {
-						setTimeout( function() {
-							el.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-prev');
-						}, 10);
-					},
-					onNext: function () {
-						setTimeout( function() {
-							el.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-next');
-						}, 10);
-					}
-				}).addPagination('.js-ase-carousel__pagination', 'js-ase-carousel__pagination__ln');
-			});
-		}
+        if (containers.length) {
+            containers.each(function() {
+                var el = $(this);
+                el.ASE({
+                    itemsSelector: '.js-ase-carousel__item',
+                    prevCtrl: el.find('.js-ase-carousel__nav_prev'),
+                    nextCtrl: el.find('.js-ase-carousel__nav_next'),
+                    prevClass: 'js-ase-carousel__item_prev',
+                    nextClass: 'js-ase-carousel__item_next',
+                    currentClass: 'js-ase-carousel__item_active',
+                    autoplay: false,
+                    onMove: function() {
+                        el.find('.js-ase-carousel__item_prev').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
+                        el.find('.js-ase-carousel__item_next').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
+                    },
+                    onPrev: function() {
+                        setTimeout(function() {
+                            el.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-prev');
+                        }, 10);
+                    },
+                    onNext: function() {
+                        setTimeout(function() {
+                            el.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-next');
+                        }, 10);
+                    }
+                }).addPagination('.js-ase-carousel__pagination', 'js-ase-carousel__pagination__ln');
+            });
+        }
 
-		return sc;
-	},
+        return sc;
+    },
 //	menuLine: function () {
 //
 //		$('.carousel-nav__inner').append('<li class="js-menu-line"></li>');
@@ -149,18 +170,18 @@ Scripts.Common = {
 //			}, 200);
 //		});
 //	},
-    init: function () {
+    init: function() {
         var sc = this;
 
         sc.detecting();
 
-        window.onload = function () {
+        window.onload = function() {
             sc.sliderInit()
-	            .accordionInit()
-	            .tabsInit()
-	            .caruselInit()
-	            .menuLine()
-                .warning();
+                .accordionInit()
+                .tabsInit()
+                .caruselInit()
+                .warning()
+                .animTypeChanger();
         };
 
         return sc;
@@ -168,29 +189,3 @@ Scripts.Common = {
 };
 
 Scripts.Common.init();
-
-function animTypeChanger () { // FIXME move me to object
-
-	$('.js-type-changer-ln').on('click', function () {
-		var self = $(this),
-			actClass = 'js-type-changer-ln_active',
-			slider = self.parent().parent().parent().parent().find('.ase-slider-slice'),
-			animType = self.data('js-animtype'),
-			container = self.parent().parent(),
-			animFamily = container.data('js-animtype-family');
-
-		container.find('.js-type-changer-ln').removeClass(actClass);
-		self.addClass(actClass);
-
-		slider.removeClass()
-			.addClass(animType)
-			.addClass('element element_slider ase-slider-slice js-ase ' + animFamily);
-	});
-
-}
-
-$(document).ready(function() {
-	$('.js-type-changer').each( function () {
-		animTypeChanger ();
-	});
-});
