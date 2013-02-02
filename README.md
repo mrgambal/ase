@@ -5,7 +5,7 @@ Aura Slider Engine
 
 Authors:
 -------
-* JS-jedi: Dmitry Gambal (http://github.com/selfnamed)
+* JS-jedi: Dmitry Gambal (http://github.com/mrgambal)
 * CSS-jedi: Dmitry Nechepurenko (https://github.com/dimanech)
 
 Inspired By:
@@ -67,7 +67,7 @@ If you want to specify prev, next or swipe controls - just declare them into ASE
 
 ###4. Autoslide###
 
-One more useful feature you can use 'from-the-scratch' is auto-slide. To enable it you just need to add only 1 string to your code:
+One more useful feature you can use 'from-the-scratch' is auto-slide. To enable it you just need to add only 1 string to your existing code:
 
 ```js
  $('.js-slider__container').ASE({
