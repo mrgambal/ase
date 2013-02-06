@@ -2,190 +2,178 @@
 var Scripts = Scripts || {};
 
 Scripts.Common = {
-    animTypeChanger: function() {
-        var sc = Scripts.Common;
-        
-        $('.js-type-changer').on('click', '.js-type-changer-ln', function() {
-            var self = $(this),
-                    actClass = 'js-type-changer-ln_active',
-                    slider = self.parents('.exmpl-block__item').find('.ase-slider-slice'),
-                    animType = self.data('js-animtype'),
-                    container = self.parents('.js-type-changer'),
-                    animFamily = container.data('js-animtype-family');
+	detecting:function () {
+		$('html').removeClass('no-js');
+	},
+	warning:function () {
+		var sc = Scripts.Common,
+			warning = $('.warning'),
+			warnHide = function () {
+				warning.fadeOut(800);
+			},
+			timeoutId = setTimeout(function () {
+				warnHide();
+			}, 2000);
 
-            container.find('.js-type-changer-ln').removeClass(actClass);
-            self.addClass(actClass);
+		warning.data('timeoutId', timeoutId);
 
-            slider.removeClass()
-                    .addClass(animType)
-                    .addClass('element element_slider ase-slider-slice js-ase ' + animFamily);
-        });
-        
-        return sc;
-    },
-    detecting: function() {
-        $('html').removeClass('no-js');
-    },
-    warning: function() {
-        var sc = Scripts.Common,
-                warning = $('.warning'),
-                warnHide = function() {
-            warning.fadeOut(800);
-        },
-                timeoutId = setTimeout(function() {
-            warnHide();
-        }, 2000);
+		warning.mouseenter(function () {
+			clearTimeout($(this).data('timeoutId'));
+		}).mouseleave(function () {
+				warnHide();
+			});
 
-        warning.data('timeoutId', timeoutId);
+		return sc;
+	},
+	sliderInit:function () {
+		var sc = Scripts.Common,
+			containers = $('.js-ase');
 
-        warning.mouseenter(function() {
-            clearTimeout($(this).data('timeoutId'));
-        }).mouseleave(function() {
-            warnHide();
-        });
+		if (containers.length) {
+			containers.each(function () {
+				var el = $(this);
+				el.ASE({
+					itemsSelector:'.js-ase__item',
+					prevCtrl:el.find('.js-ase__nav_prev'),
+					nextCtrl:el.find('.js-ase__nav_next'),
+					prevClass:'js-ase__item_prev',
+					nextClass:'js-ase__item_next',
+					currentClass:'js-ase__item_active',
+					autoplay:false
+				}).addPagination(el.find('.js-ase__pagination'), false, 'i-slider__pagination__item');
+			});
+		}
 
-        return sc;
-    },
-    sliderInit: function() {
-        var sc = Scripts.Common,
-                containers = $('.js-ase');
+		return sc;
+	},
+	accordionInit:function () {
+		var sc = Scripts.Common,
+			tabContainer = $('.js-ase-accordion');
 
-        if (containers.length) {
-            containers.each(function() {
-                var el = $(this);
-                el.ASE({
-                    itemsSelector: '.js-ase__item',
-                    prevCtrl: el.find('.js-ase__nav_prev'),
-                    nextCtrl: el.find('.js-ase__nav_next'),
-                    prevClass: 'js-ase__item_prev',
-                    nextClass: 'js-ase__item_next',
-                    currentClass: 'js-ase__item_active',
-                    autoplay: false
-                }).addPagination(el.find('.js-ase__pagination'), false, 'i-slider__pagination__item');
-            });
-        }
+		if (tabContainer.length) {
+			tabContainer.ASE({
+				itemsSelector:'.js-ase-accordion__item',
+				prevClass:'js-ase-accordion__item_prev',
+				nextClass:'js-ase-accordion__item_next',
+				currentClass:'js-ase-accordion__item_active',
+				autoplay:false
+			}).addPagination('.js-ase-accordion__items-wr', 'js-ase-accordion__item-ln');
+		}
 
-        return sc;
-    },
-    accordionInit: function() {
-        var sc = Scripts.Common,
-                tabContainer = $('.js-ase-accordion');
+		$('.js-ase-accordion__item-ln_active').on('click', function () {
+			$(this).parent().parent().removeClass('js-ase-accordion__item_active'); //FIXME
+		});
 
-        if (tabContainer.length) {
-            tabContainer.ASE({
-                itemsSelector: '.js-ase-accordion__item',
-                prevClass: 'js-ase-accordion__item_prev',
-                nextClass: 'js-ase-accordion__item_next',
-                currentClass: 'js-ase-accordion__item_active',
-                autoplay: false
-            }).addPagination('.js-ase-accordion__items-wr', 'js-ase-accordion__item-ln');
-        }
+		return sc;
+	},
+	tabsInit:function () {
+		var sc = Scripts.Common,
+			tabContainer = $('.js-ase-tab');
 
-        $('.js-ase-accordion__item-ln_active').on('click', function() {
-            $(this).parent().parent().removeClass('js-ase-accordion__item_active'); //FIXME
-        });
+		if (tabContainer.length) {
+			tabContainer.ASE({
+				itemsSelector:'.js-ase-tab__item',
+				prevClass:'js-ase-tab__item_prev',
+				nextClass:'js-ase-tab__item_next',
+				currentClass:'js-ase-tab__item_active',
+				autoplay:false
+			}).addPagination('.js-ase-tab__pagination', 'js-ase-tab__pagination__ln');
+		}
 
-        return sc;
-    },
-    tabsInit: function() {
-        var sc = Scripts.Common,
-                tabContainer = $('.js-ase-tab');
+		return sc;
+	},
+	caruselInit:function () {
+		var sc = Scripts.Common,
+			containers = $('.js-ase-carousel');
 
-        if (tabContainer.length) {
-            tabContainer.ASE({
-                itemsSelector: '.js-ase-tab__item',
-                prevClass: 'js-ase-tab__item_prev',
-                nextClass: 'js-ase-tab__item_next',
-                currentClass: 'js-ase-tab__item_active',
-                autoplay: false
-            }).addPagination('.js-ase-tab__pagination', 'js-ase-tab__pagination__ln');
-        }
+		if (containers.length) {
+			containers.each(function () {
+				var el = $(this);
+				el.ASE({
+					itemsSelector:'.js-ase-carousel__item',
+					prevCtrl:el.find('.js-ase-carousel__nav_prev'),
+					nextCtrl:el.find('.js-ase-carousel__nav_next'),
+					prevClass:'js-ase-carousel__item_prev',
+					nextClass:'js-ase-carousel__item_next',
+					currentClass:'js-ase-carousel__item_active',
+					autoplay:false,
+					onMove:function () {
+						el.find('.js-ase-carousel__item_prev').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
+						el.find('.js-ase-carousel__item_next').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
+						menuLne(el.find('.js-ase-carousel__pagination__ln_active'));
+					},
+					onPrev:function () {
+						setTimeout(function () {
+							el.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-prev');
+						}, 1);
+					},
+					onNext:function () {
+						setTimeout(function () {
+							el.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-next');
+						}, 1);
+					}
+				}).addPagination('.js-ase-carousel__pagination', 'js-ase-carousel__pagination__ln');
+			});
 
-        return sc;
-    },
-    caruselInit: function() {
-        var sc = Scripts.Common,
-                containers = $('.js-ase-carousel');
+			// menu line initial state
 
-        if (containers.length) {
-            containers.each(function() {
-                var el = $(this);
-                el.ASE({
-                    itemsSelector: '.js-ase-carousel__item',
-                    prevCtrl: el.find('.js-ase-carousel__nav_prev'),
-                    nextCtrl: el.find('.js-ase-carousel__nav_next'),
-                    prevClass: 'js-ase-carousel__item_prev',
-                    nextClass: 'js-ase-carousel__item_next',
-                    currentClass: 'js-ase-carousel__item_active',
-                    autoplay: false,
-                    onMove: function() {
-                        el.find('.js-ase-carousel__item_prev').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
-                        el.find('.js-ase-carousel__item_next').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
-                    },
-                    onPrev: function() {
-                        setTimeout(function() {
-                            el.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-prev');
-                        }, 10);
-                    },
-                    onNext: function() {
-                        setTimeout(function() {
-                            el.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-next');
-                        }, 10);
-                    }
-                }).addPagination('.js-ase-carousel__pagination', 'js-ase-carousel__pagination__ln');
-            });
-        }
+			$('.js-menu-line-container').append('<li class="js-menu-line"></li>');
 
-        return sc;
-    },
-//	menuLine: function () {
-//
-//		$('.carousel-nav__inner').append('<li class="js-menu-line"></li>');
-//
-//		if ($('.js-ase-carousel__pagination__ln_active').length > 0) {
-//			var activeEl = $('.js-ase-carousel__pagination__ln_active');
-//		} else {
-//			var activeEl = $('.carousel-nav__item').first().find('a');
-//		}
-//
-//		var line = $('.js-menu-line'),
-//			origLeft = activeEl.position().left,
-//			origWidth = activeEl.width();
-//
-//		line.css('width', origWidth).css('left', origLeft);
-//
-//		$('.js-ase-carousel__pagination__ln').hover(function() {
-//			var el = $(this),
-//				newLeft = el.position().left,
-//				newWidth = el.width();
-//
-//			line.stop().animate({
-//				left: newLeft,
-//				width: newWidth
-//			}, 200);
-//		}, function() {
-//			line.stop().animate({
-//				left: origLeft,
-//				width: origWidth
-//			}, 200);
-//		});
-//	},
-    init: function() {
-        var sc = this;
+			var activeEl = $('.js-ase-carousel__pagination__ln_active'),
+				line = $('.js-menu-line'),
+				initLeft = activeEl.position().left,
+				initWidth = activeEl.width();
 
-        sc.detecting();
+			line.css('width', initWidth).css('left', initLeft);
 
-        window.onload = function() {
-            sc.sliderInit()
-                .accordionInit()
-                .tabsInit()
-                .caruselInit()
-                .warning()
-                .animTypeChanger();
-        };
+			// menu line on change
 
-        return sc;
-    }
+			function menuLne (el) {
+				var line = $('.js-menu-line'),
+					newLeft = el.position().left,
+					newWidth = el.width();
+
+				line.css('width', newWidth).css('left', newLeft);
+			}
+		}
+
+		return sc;
+	},
+	animTypeChanger:function () {
+
+		$('.js-type-changer-ln').on('click', function () {
+			var self = $(this),
+				actClass = 'js-type-changer-ln_active',
+				slider = self.parent().parent().parent().parent().find('.ase-slider-slice'),
+				animType = self.data('js-animtype'),
+				container = self.parent().parent(),
+				animFamily = container.data('js-animtype-family');
+
+			container.find('.js-type-changer-ln').removeClass(actClass);
+			self.addClass(actClass);
+
+			slider.removeClass()
+				.addClass(animType)
+				.addClass('element element_slider ase-slider-slice js-ase ' + animFamily);
+		});
+
+	},
+	init:function () {
+		var sc = this;
+
+		sc.detecting();
+
+		window.onload = function () {
+			sc.sliderInit()
+				.accordionInit()
+				.tabsInit()
+				.caruselInit()
+				.warning()
+				.animTypeChanger()
+		};
+
+		return sc;
+	}
 };
 
 Scripts.Common.init();

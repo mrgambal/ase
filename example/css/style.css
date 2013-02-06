@@ -801,15 +801,15 @@ dl dd {
 }
 
 .ase-slider__item_slide-1 {
-  background: #78c6fa;
+  background: rgba(120, 198, 250, 0.4);
 }
 
 .ase-slider__item_slide-2 {
-  background: #82cb51;
+  background: rgba(130, 203, 81, 0.4);
 }
 
 .ase-slider__item_slide-3 {
-  background: #a200b8;
+  background: rgba(162, 0, 184, 0.4);
 }
 
 .ase-slider__item__inner {
@@ -892,19 +892,19 @@ dl dd {
 }
 
 .js-ase__pagination__item_active {
-  background: #169cf6;
+  background: rgba(22, 156, 246, 0.4);
 }
 
 .js-ase__pagination__item_p1 .js-ase__pagination__item_active {
-  background: #169cf6;
+  background: rgba(22, 156, 246, 0.4);
 }
 
 .js-ase__pagination__item_p2 .js-ase__pagination__item_active {
-  background: #518c2a;
+  background: rgba(81, 140, 42, 0.4);
 }
 
 .js-ase__pagination__item_p3 .js-ase__pagination__item_active {
-  background: #480052;
+  background: rgba(72, 0, 82, 0.4);
 }
 
 /* @end */
@@ -928,7 +928,7 @@ dl dd {
 }
 
 .def__bage {
-  background-color: #516ecb;
+  background-color: rgba(81, 110, 203, 0.4);
   color: #fff;
   padding: 0 5px;
   margin: 0 5px 0 0;
@@ -2683,6 +2683,8 @@ dl dd {
 http://www.stuskitchen.com/
 http://www.fillstudio.com/
 http://dibusoft.com/
+
+
 */
 /* ============================================================================
 		ase-slider-slice
@@ -3571,7 +3573,7 @@ http://dibusoft.com/
 }
 .ase-carousel .i-slider-nav {
   z-index: 2;
-  top: 22%;
+  top: 43px;
 }
 
 .ase-carousel__container {
@@ -3595,6 +3597,24 @@ http://dibusoft.com/
   left: 0;
   width: 100%;
   height: 200px;
+}
+
+/* @end */
+/* @group i-slider__pagination_carousel
+  --------------------------------------------------------------------------- */
+.i-slider__pagination_carousel {
+  position: static;
+  margin-top: 1.57143em;
+  text-align: right;
+}
+.i-slider__pagination_carousel .i-slider__pagination__item {
+  display: inline-block;
+  vertical-align: top;
+  float: none;
+}
+.ie6-7 .i-slider__pagination_carousel .i-slider__pagination__item {
+  display: inline;
+  zoom: 1;
 }
 
 /* @end */
@@ -3652,23 +3672,25 @@ http://dibusoft.com/
 
 .js-menu-line {
   display: block;
-  background: red;
   position: absolute;
-  height: 2px;
-  top: 2px;
+  height: 10px;
+  top: -6px;
+  width: 23px;
+  background: url(../images/example-carousel/bg-arrow-active.png) 0 center no-repeat;
+  -webkit-transition: all ease-out 0.5s;
+  -moz-transition: all ease-out 0.5s;
+  -o-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
 }
 
 /* @end */
 /* @group carousel_apple-like
   --------------------------------------------------------------------------- */
-.carousel_apple-like {
-  overflow: hidden;
-}
 .carousel_apple-like .js-ase-carousel__item {
-  -webkit-transition: all linear 400ms;
-  -moz-transition: all linear 400ms;
-  -o-transition: all linear 400ms;
-  transition: all linear 400ms;
+  -webkit-transition: all linear 650ms;
+  -moz-transition: all linear 650ms;
+  -o-transition: all linear 650ms;
+  transition: all linear 650ms;
   visibility: hidden;
 }
 .carousel_apple-like .js-ase-carousel__item li:first-child {
@@ -3699,190 +3721,187 @@ http://dibusoft.com/
   -o-animation-delay: 360ms;
   animation-delay: 360ms;
 }
-.carousel_apple-like .js-ase-carousel__item_active {
-  left: 0;
-  visibility: visible;
-}
-.carousel_apple-like .js-ase-carousel__item_active_to-prev li {
-  -webkit-animation: moveFromLeft 350ms ease-in-out both;
-  -moz-animation: moveFromLeft 350ms ease-in-out both;
-  -ms-animation: moveFromLeft 350ms ease-in-out both;
-  -o-animation: moveFromLeft 350ms ease-in-out both;
-  animation: moveFromLeft 350ms ease-in-out both;
-}
-.carousel_apple-like .js-ase-carousel__item_active_to-prev li:nth-child(4) {
+.carousel_apple-like .js-ase-carousel__item_active_to-prev li:nth-child(4),
+.carousel_apple-like .js-ase-carousel__item_next li:nth-child(4) {
   -webkit-animation-delay: 90ms;
   -moz-animation-delay: 90ms;
   -ms-animation-delay: 90ms;
   -o-animation-delay: 90ms;
   animation-delay: 90ms;
 }
-.carousel_apple-like .js-ase-carousel__item_active_to-prev li:nth-child(3) {
+.carousel_apple-like .js-ase-carousel__item_active_to-prev li:nth-child(3),
+.carousel_apple-like .js-ase-carousel__item_next li:nth-child(3) {
   -webkit-animation-delay: 180ms;
   -moz-animation-delay: 180ms;
   -ms-animation-delay: 180ms;
   -o-animation-delay: 180ms;
   animation-delay: 180ms;
 }
-.carousel_apple-like .js-ase-carousel__item_active_to-prev li:nth-child(2) {
+.carousel_apple-like .js-ase-carousel__item_active_to-prev li:nth-child(2),
+.carousel_apple-like .js-ase-carousel__item_next li:nth-child(2) {
   -webkit-animation-delay: 270ms;
   -moz-animation-delay: 270ms;
   -ms-animation-delay: 270ms;
   -o-animation-delay: 270ms;
   animation-delay: 270ms;
 }
-.carousel_apple-like .js-ase-carousel__item_active_to-prev li:first-child {
+.carousel_apple-like .js-ase-carousel__item_active_to-prev li:first-child,
+.carousel_apple-like .js-ase-carousel__item_next li:first-child {
   -webkit-animation-delay: 360ms;
   -moz-animation-delay: 360ms;
   -ms-animation-delay: 360ms;
   -o-animation-delay: 360ms;
   animation-delay: 360ms;
 }
-.carousel_apple-like .js-ase-carousel__item_active_to-next li {
-  -webkit-animation: moveFromRight 350ms ease-in-out both;
-  -moz-animation: moveFromRight 350ms ease-in-out both;
-  -ms-animation: moveFromRight 350ms ease-in-out both;
-  -o-animation: moveFromRight 350ms ease-in-out both;
-  animation: moveFromRight 350ms ease-in-out both;
+.carousel_apple-like .js-ase-carousel__item_active {
+  visibility: visible;
 }
-.carousel_apple-like .js-ase-carousel__item_prev {
-  left: -100%;
+.carousel_apple-like .js-ase-carousel__item_active_to-prev li {
+  -webkit-animation: moveFromLeft 850ms ease-in-out both;
+  -moz-animation: moveFromLeft 850ms ease-in-out both;
+  -ms-animation: moveFromLeft 850ms ease-in-out both;
+  -o-animation: moveFromLeft 850ms ease-in-out both;
+  animation: moveFromLeft 850ms ease-in-out both;
+}
+.carousel_apple-like .js-ase-carousel__item_active_to-next li {
+  -webkit-animation: moveFromRight 850ms ease-in-out both;
+  -moz-animation: moveFromRight 850ms ease-in-out both;
+  -ms-animation: moveFromRight 850ms ease-in-out both;
+  -o-animation: moveFromRight 850ms ease-in-out both;
+  animation: moveFromRight 850ms ease-in-out both;
 }
 .carousel_apple-like .js-ase-carousel__item_prev li {
-  -webkit-animation: moveToLeft 350ms ease-in-out both;
-  -moz-animation: moveToLeft 350ms ease-in-out both;
-  -ms-animation: moveToLeft 350ms ease-in-out both;
-  -o-animation: moveToLeft 350ms ease-in-out both;
-  animation: moveToLeft 350ms ease-in-out both;
-}
-.carousel_apple-like .js-ase-carousel__item_next {
-  left: 100%;
+  -webkit-animation: moveToLeft 450ms ease-in-out both;
+  -moz-animation: moveToLeft 450ms ease-in-out both;
+  -ms-animation: moveToLeft 450ms ease-in-out both;
+  -o-animation: moveToLeft 450ms ease-in-out both;
+  animation: moveToLeft 450ms ease-in-out both;
 }
 .carousel_apple-like .js-ase-carousel__item_next li {
-  -webkit-animation: moveToRight 350ms ease-in-out both;
-  -moz-animation: moveToRight 350ms ease-in-out both;
-  -ms-animation: moveToRight 350ms ease-in-out both;
-  -o-animation: moveToRight 350ms ease-in-out both;
-  animation: moveToRight 350ms ease-in-out both;
+  -webkit-animation: moveToRight 450ms ease-in-out both;
+  -moz-animation: moveToRight 450ms ease-in-out both;
+  -ms-animation: moveToRight 450ms ease-in-out both;
+  -o-animation: moveToRight 450ms ease-in-out both;
+  animation: moveToRight 450ms ease-in-out both;
 }
 
 @-webkit-keyframes moveFromRight {
   0% {
-    -webkit-transform: translateX(600%);
+    -webkit-transform: translateX(1000%);
   }
 
   100% {
-    -webkit-transform: translateX(0%);
+    -webkit-transform: translateX(0);
   }
 }
 
 @-webkit-keyframes moveFromLeft {
   0% {
-    -webkit-transform: translateX(-600%);
+    -webkit-transform: translateX(-1000%);
   }
 
   100% {
-    -webkit-transform: translateX(0%);
+    -webkit-transform: translateX(0);
   }
 }
 
 @-webkit-keyframes moveToRight {
   0% {
-    -webkit-transform: translateX(0%);
+    -webkit-transform: translateX(0);
   }
 
   100% {
-    -webkit-transform: translateX(600%);
+    -webkit-transform: translateX(1000%);
   }
 }
 
 @-webkit-keyframes moveToLeft {
   0% {
-    -webkit-transform: translateX(0%);
+    -webkit-transform: translateX(0);
   }
 
   100% {
-    -webkit-transform: translateX(-600%);
+    -webkit-transform: translateX(-1000%);
   }
 }
 
 @-moz-keyframes moveFromRight {
   0% {
-    -moz-transform: translateX(600%);
+    -moz-transform: translateX(1000%);
   }
 
   100% {
-    -moz-transform: translateX(0%);
+    -moz-transform: translateX(0);
   }
 }
 
 @-moz-keyframes moveFromLeft {
   0% {
-    -moz-transform: translateX(-600%);
+    -moz-transform: translateX(-1000%);
   }
 
   100% {
-    -moz-transform: translateX(0%);
+    -moz-transform: translateX(0);
   }
 }
 
 @-moz-keyframes moveToRight {
   0% {
-    -moz-transform: translateX(0%);
+    -moz-transform: translateX(0);
   }
 
   100% {
-    -moz-transform: translateX(600%);
+    -moz-transform: translateX(1000%);
   }
 }
 
 @-moz-keyframes moveToLeft {
   0% {
-    -moz-transform: translateX(0%);
+    -moz-transform: translateX(0);
   }
 
   100% {
-    -moz-transform: translateX(-600%);
+    -moz-transform: translateX(-1000%);
   }
 }
 
 @keyframes moveFromRight {
   0% {
-    transform: translateX(600%);
+    transform: translateX(1000%);
   }
 
   100% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 }
 
 @keyframes moveFromLeft {
   0% {
-    transform: translateX(-600%);
+    transform: translateX(-1000%);
   }
 
   100% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 }
 
 @keyframes moveToRight {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 
   100% {
-    transform: translateX(600%);
+    transform: translateX(1000%);
   }
 }
 
 @keyframes moveToLeft {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 
   100% {
-    transform: translateX(-600%);
+    transform: translateX(-1000%);
   }
 }
 
@@ -3956,30 +3975,27 @@ http://dibusoft.com/
   margin-bottom: 12px;
 }
 
-.tab__item .article {
-  -webkit-animation: tab-top ease-out 0.3s;
-  -moz-animation: tab-top ease-out 0.3s;
-  -ms-animation: tab-top ease-out 0.3s;
-  -o-animation: tab-top ease-out 0.3s;
-  animation: tab-top ease-out 0.3s;
+.js-ase-tab__item_active .article {
+  -webkit-animation: tab-top ease-out 0.5s;
+  -moz-animation: tab-top ease-out 0.5s;
+  -ms-animation: tab-top ease-out 0.5s;
+  -o-animation: tab-top ease-out 0.5s;
+  animation: tab-top ease-out 0.5s;
 }
-.tab__item .article_sec_0 {
+.js-ase-tab__item_active .article_sec_0 {
   -webkit-animation-duration: 200ms;
 }
-.tab__item .article_sec_1 {
-  -webkit-animation-duration: 280ms;
+.js-ase-tab__item_active .article_sec_1 {
+  -webkit-animation-duration: 290ms;
 }
-.tab__item .article_sec_2 {
-  -webkit-animation-duration: 360ms;
+.js-ase-tab__item_active .article_sec_2 {
+  -webkit-animation-duration: 380ms;
 }
-.tab__item .article_sec_3 {
-  -webkit-animation-duration: 440ms;
+.js-ase-tab__item_active .article_sec_3 {
+  -webkit-animation-duration: 470ms;
 }
-.tab__item .article_sec_4 {
-  -webkit-animation-duration: 520ms;
-}
-.tab__item .article_sec_5 {
-  -webkit-animation-duration: 600ms;
+.js-ase-tab__item_active .article_sec_4 {
+  -webkit-animation-duration: 560ms;
 }
 
 @-webkit-keyframes tab-top {
@@ -4015,6 +4031,18 @@ http://dibusoft.com/
   100% {
     bottom: 0;
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes tab-rotate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate3d(80, 70, 10, 90deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
   }
 }
 

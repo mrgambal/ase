@@ -87,15 +87,14 @@
 
 }
 
-.tab__item {
-
+.js-ase-tab__item_active {
 	.article {
-		@include vendor(animation, tab-top ease-out .3s);
+		@include vendor(animation, tab-top ease-out .5s);
 	}
 
-	@for $i from 0 through 5 {
+	@for $i from 0 through 4 {
 		.article_sec_#{$i} {
-			-webkit-animation-duration: #{$i * 80 + 200}ms;
+			-webkit-animation-duration: #{$i * 90 + 200}ms;
 		}
 	}
 }
@@ -115,10 +114,10 @@
 	100% { bottom: 0; opacity: 1; }
 }
 
-//@-webkit-keyframes tab-rotate {
-//	0%   { opacity: 0; -webkit-transform: rotate3d( 80,70,10,90deg );}
-//	100% { opacity: 1; -webkit-transform: rotate3d( 0, 0, 0, 0deg );}
-//}
+@-webkit-keyframes tab-rotate {
+	0%   { opacity: 0; -webkit-transform: rotate3d( 80,70,10,90deg );}
+	100% { opacity: 1; -webkit-transform: rotate3d( 0, 0, 0, 0deg );}
+}
 
 /* @end */
 
