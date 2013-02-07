@@ -1,28 +1,26 @@
 @import "weiss-config";
 @import "helpers/mixins";
 
-.tab {
+.ase-tab {
 	position: relative;
+
+	.l-span {
+		overflow: hidden;
+	}
 }
 
-.js-tab__item {
+.js-ase-tab__item {
 	display: none;
 }
 
-.js-tab__item_active {
+.js-ase-tab__item_active {
 	display: block;
-}
-
-.js-tab__item_next {
-}
-
-.js-tab__item_prev {
 }
 
 .tab__nav {
 	text-align: center;
 	margin-bottom: 30px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #78C6FA;
 }
 
 .tab__nav__inner {
@@ -50,18 +48,14 @@
 	padding: 5px 10px;
 	text-decoration: none;
 
-	.tab__nav__item:hover & {
-	}
-
-	.tab__nav__item:active & {
-		color: #fff;
-		background-color: #ccc;
+	&:hover {
+		background-color: lighten(#78C6FA, 20%);
 	}
 }
 
-
-.tab__nav__ln__inner {
-	display: block;
+.js-ase-tab__pagination__ln_active {
+	background: #78C6FA !important;
+	color: #fff !important;
 }
 
 .tab__content {}
@@ -71,49 +65,70 @@
 
 .article {
 	position: relative;
-}
 
-.article_main {
-
-}
-
-.article_sec {
-
-}
-
-.tab__item {
-
-	.article {
-		-webkit-animation: tab-top;
-		-webkit-animation-duration: .5s;
-		-webkit-animation-timing-function: ease-in;
+	img {
+		margin-bottom: 6px;
 	}
 
-	@for $i from 0 through 5 {
+	h2 {
+		margin-bottom: 8px;
+	}
+
+	h3 {
+		margin-bottom: 12px;
+	}
+}
+
+.article_main {}
+
+.article_sec {}
+
+.js-ase-tab__item_active {
+	//-webkit-transform-style: preserve-3d;
+	//-webkit-perspective-origin: 100% 100%;
+	//@include vendor(perspective, 1600);
+
+	.article {
+		@include vendor(animation, tab-top ease-out .5s);
+		//-webkit-transform-origin: 0 50%;
+		//-webkit-backface-visibility: hidden;
+	}
+
+	@for $i from 0 through 4 {
 		.article_sec_#{$i} {
-			-webkit-animation-duration: #{$i * 80 + 500}ms;
+			-webkit-animation-duration: #{$i * 500 + 400}ms;
 		}
 	}
 }
 
-@-webkit-keyframes tab-rotate {
-	0%   { opacity: 0; -webkit-transform: rotate3d( 80,70,10,160deg ); -webkit-perspective-origin: 0 0;}
-	100% { opacity: 1; -webkit-transform: rotate3d( 0, 0, 0, 0deg ); -webkit-perspective-origin: 50% 50%;}
-}
-
-@-webkit-keyframes tab-right {
-	0%   { left: -20px; opacity: 0; }
-	100% { left: 0; opacity: 1; }
-}
-
 @-webkit-keyframes tab-top {
-	0%   { bottom: -60px; opacity: 0;}
+	0%   { bottom: -40px; opacity: 0;}
 	100% { bottom: 0; opacity: 1; }
 }
 
-@-webkit-keyframes tab-top-rotate {
-	0%   { bottom: -60px; opacity: 0; -webkit-transform: rotate3d( 80,70,10,60deg ); -webkit-perspective-origin: 0 0;}
-	100% { bottom: 0; opacity: 1; -webkit-transform: rotate3d( 0, 0, 0, 0deg ); -webkit-perspective-origin: 50% 50%; }
+@-moz-keyframes tab-top {
+	0%   { bottom: -40px; opacity: 0;}
+	100% { bottom: 0; opacity: 1; }
+}
+
+@keyframes tab-top {
+	0%   { bottom: -40px; opacity: 0;}
+	100% { bottom: 0; opacity: 1; }
+}
+
+@-webkit-keyframes tab-rotate {
+	0%   { opacity: 0; -webkit-transform: rotate3d( 80,70,10,90deg );}
+	100% { opacity: 1; -webkit-transform: rotate3d( 0, 0, 0, 0deg );}
+}
+
+@-webkit-keyframes tab-fly {
+	0%   { opacity: 0; -webkit-transform: rotateX(-90deg); bottom: -40px; -webkit-transform-origin: 0 50%;}
+	100% { opacity: 1; -webkit-transform: rotateX(0); bottom: 0; -webkit-transform-origin: 0 100%;}
 }
 
 /* @end */
+
+/*
+	TODO: http://www.factoria.it/
+
+*/

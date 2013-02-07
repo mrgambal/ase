@@ -5,7 +5,7 @@ Aura Slider Engine
 
 Authors:
 -------
-* JS-jedi: Dmitry Gambal (http://github.com/selfnamed)
+* JS-jedi: Dmitry Gambal (http://github.com/mrgambal)
 * CSS-jedi: Dmitry Nechepurenko (https://github.com/dimanech)
 
 Inspired By:
@@ -19,7 +19,7 @@ Dependencies:
 
 Version:
 --------
- 0.6a
+ 0.7a
 
 Copyright:
 ----------
@@ -67,7 +67,7 @@ If you want to specify prev, next or swipe controls - just declare them into ASE
 
 ###4. Autoslide###
 
-One more useful feature you can use 'from-the-scratch' is auto-slide. To enable it you just need to add only 1 string to your code:
+One more useful feature you can use 'from-the-scratch' is auto-slide. To enable it you just need to add only 1 string to your existing code:
 
 ```js
  $('.js-slider__container').ASE({
@@ -142,11 +142,11 @@ Aura Slider Engine has a built-in pagination handler/generator. It should be cal
 	2. [string | bool]          pgnClass  - class for pagination controls explicitly declared in your HTML-markup inside container specified by first parameter. Default value - 'js-ase__pagination';
 	3. [string]                 addClass  - class that will be added to pagination controls, only if they will be generated automatically. Default value - null.
 
+Default class for active pagination link is pagination-item-class + '_active'.
+
 **IMPORTANT:** If you'll try to bind pagination with existing controls - don't forget to add *data-href*-attribute to them. Value must be hash-tag with number of slide (count starts from 1). E.g.:
 
-    <span data-href="#1" class="js-tab-ln">Tab 1</span>
-
-**IMPORTANT:** Default class for active pagination link is pagination-item-class + '_active'.
+    <a href="#" data-href="#1" class="js-tab-ln">Tab 1</a>
 
 Let's see how it can be used:
 
@@ -171,7 +171,8 @@ sl.addPagination('.js-tabnav', 'js-tabnav__ln');
 ```
 
 ###8. Reinit###
-In case if you need to change something in slider behavior on-the-fly e.g. set new autoplay delay time, you can use *init(options, container)* method. 
+
+In case if you need to change something in slider behavior on-the-fly e.g. set new autoplay delay time, you can use *init(options, container)* method.
 This metod receives two arguments:
 
     1. [JS-object]              options               - JavaScript-object with same options like in initialization example;
@@ -192,8 +193,9 @@ sl.data('ASEngine').init({
 ```
 
 ##Resume##
+
 My goal is to create simple and very flexible lightweight slider engine that can make life of web-developers a little bit easier. ASE doesn't declare requirements to your HTML-markup and don't bring own CSS.
-But (as mentioned above) you can use it without specially knowledges in HTML and CSS with our examples (will be added later).
+But (as mentioned above) you can use it without specially knowledges in HTML and CSS with our examples.
 If you liked ASE, you can contribute, share links, write blog-posts, tell your mommy about it, make a tatoo 'I luv ASE', whatever...
 Enjoy!
 

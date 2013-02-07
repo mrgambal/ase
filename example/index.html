@@ -1,624 +1,1656 @@
 <!DOCTYPE html>
 <!--[if IEMobile 7]>
-<html class="iem7" lang="ru" dir="ltr"><![endif]-->
+<html class="iem7" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#"><![endif]-->
 <!--[if (lte IE 6)&(!IEMobile)]>
-<html class="ie6 ie6-7 ie6-8" lang="ru" dir="ltr"><![endif]-->
+<html class="ie6 ie6-7 ie6-8" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#"><![endif]-->
 <!--[if (IE 7)&(!IEMobile)]>
-<html class="ie7 ie6-7 ie6-8" lang="ru" dir="ltr"><![endif]-->
+<html class="ie7 ie6-7 ie6-8" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#"><![endif]-->
 <!--[if (IE 8)&(!IEMobile)]>
-<html class="ie8 ie6-8" lang="ru" dir="ltr"><![endif]-->
+<html class="ie8 ie6-8" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#"><![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
-<html lang="ru" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#">
-	<!--<![endif]-->
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="IE=5, IE=8, IE=9, IE=10" />
-		<!-- Social meta schema.org -->
-		<meta itemprop="name" content="Aura Slider Engine" />
-		<meta itemprop="description" content="Simple, lightweight and flexible slider engine based on css animation abilities." />
-		<!-- Social meta schema.org -->
-		<!-- Social meta ogp.me -->
-		<meta property="og:title" content="Aura Slider Engine" />
-		<meta property="og:description" content="Simple, lightweight and flexible slider engine based on css animation abilities." />
-		<!-- Social meta ogp.me -->
-		<title>Aura Slider Engine</title>
-		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-		<script type="text/javascript" src="js/vendor/modernizr.custom.js"></script>
-		<!--[if lt IE 9]>
-			<link href="css/ie-old.css" rel="stylesheet" type="text/css"/>
-			<script type="text/javascript" charset="utf-8" src="js/vendor/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-	<body>
-		<div class="l-main-aux">
-			<div class="l-main-aux__inner i-clfx">
+<html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#">
+<!--<![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=5, IE=8, IE=9, IE=10" />
+	<!-- Social meta schema.org -->
+	<meta itemprop="name" content="Aura Slider Engine" />
+	<meta itemprop="description" content="Simple, lightweight and flexible slider engine based on css animation abilities." />
+	<!-- Social meta schema.org -->
+	<!-- Social meta ogp.me -->
+	<meta property="og:title" content="Aura Slider Engine" />
+	<meta property="og:description" content="Simple, lightweight and flexible slider engine based on css animation abilities." />
+	<!-- Social meta ogp.me -->
+	<title>Aura Slider Engine</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="js/vendor/modernizr.custom.js"></script>
+	<!--[if lt IE 9]>
+		<link href="css/ie-old.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" charset="utf-8" src="js/vendor/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div class="l-main-aux">
+<div class="l-main-aux__inner i-clfx">
+<div class="region-header l-global-header">
 
-			<!-- .region-header -->
-				<div class="region-header l-global-header">
-					<header role="banner">
-						<div class="l-global-header__top">
-							<div class="l-global-header__top__l">
-								<hgroup>
-									<h1 class="site-name">Aura Slider Engine</h1>
-									<h2 class="site-slogan">Lightweight configurable slider engine</h2>
-								</hgroup>
-							</div>
-							<div class="l-global-header__top__r">
-								<div class="global-nav">
-									<nav role="navigation">
-										<ul class="global-nav__inner">
-											<li class="global-nav__item">
-												<a href="#getting-started" class="global-nav__ln">Getting started</a>
-											</li>
-											<li class="global-nav__item">
-												<a href="#examples" class="global-nav__ln">Examples</a>
-											</li>
-											<li class="global-nav__item">
-												<a href="#documentation" class="global-nav__ln">Documentation</a>
-											</li>
-											<li class="global-nav__item global-nav__item_active">
-												<a href="#" class="global-nav__ln">Support us</a>
-											</li>
-											<li class="global-nav__item global-nav__item_last">
-												<a href="#support-us" class="global-nav__ln">Source</a>
-											</li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-						</div>
-					</header>
-				</div>
-				<!-- /.region-header -->
-
-				<div class="block i-clfx">
-					<div class="l-row">
-						<div class="l-span l-span_12">
-
-							<div class="slice-marquee slice-marquee_radial slice-marquee_anim-type-7 js-marquee">
-
-								<div class="slice-marquee__inner">
-									<div class="slice-marquee__container js-marquee__pane">
-										<ul class="js-marquee__items-wr">
-											<li class="slice-marquee__item slice-marquee__item_slide-1 js-marquee__item">
-												<div class="slice-marquee__item__inner">
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_0"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_1"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_2"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_3"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_4"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_5"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_6"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_7"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_8"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_9"></i>
-												</div>
-											</li>
-											<li class="slice-marquee__item slice-marquee__item_slide-2 js-marquee__item">
-												<div class="slice-marquee__item__inner">
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_0"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_1"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_2"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_3"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_4"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_5"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_6"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_7"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_8"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_9"></i>
-												</div>
-											</li>
-											<li class="slice-marquee__item slice-marquee__item_slide-3 js-marquee__item">
-												<div class="slice-marquee__item__inner">
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_0"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_1"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_2"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_3"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_4"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_5"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_6"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_7"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_8"></i>
-													<i class="slice-marquee__item__slice slice-marquee__item__slice_9"></i>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-
-								<a href="#" class="i-slider-nav i-slider-nav_prev js-marquee__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
-								<a href="#" class="i-slider-nav i-slider-nav_next js-marquee__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
-
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="region-main i-clfx" role="main">
-					<div class="region-main__content">
-
-						<div class="block">
-							<div class="l-row l-row_w">
-								<div class="l-span l-span_6">
-									<h1 class="block_hero__title">Aura Slider Engine</h1>
-									<p class="block_hero__subtitle">Is a jQuery based, layout independent, lightweight, configurable slider engine for responsive and static sliders.</p>
-
-								</div>
-								<div class="l-span l-span_4 l-span_last">
-									<div class="block_hero__download">
-										<img src="images/browser_compatability.png" height="33" width="175" alt="" />
-										<p>IE7+, Google Chrome, Opera, Safari, <br /> Firefox</p>
-										<a href="https://github.com/selfnamed/ase/archive/master.zip" class="block_hero__btn">Download</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="block">
-							<div class="l-row l-row_w">
-								<div class="l-span l-span_4">
-									<h3 class="h4">Lightweight &amp; simple</h3>
-									<p>
-										For those who need a rugged, light and extensible base (ie7 +) only. <br />
-										Determine by yourself what, where and how should look and feel.
-									</p>
-								</div>
-								<div class="l-span l-span_4">
-									<h3 class="h4">Any content &amp; any markup</h3>
-									<p>
-										Slide anything &mdash; text, pictures, video. Use any markup and classes.
-									</p>
-								</div>
-								<div class="l-span l-span_4 l-span_last">
-									<h3 class="h4">Layout independent</h3>
-									<p>
-										Use service 'js-' classes or override them in to ours. Any markup you`d like.
-									</p>
-								</div>
-							</div>
-							<div class="l-row l-row_w">
-								<div class="l-span l-span_4">
-									<h3 class="h4">Static &amp; Responsive</h3>
-									<p>
-										Responsive as you make it responsive. Static if you make it so.
-									</p>
-								</div>
-								<div class="l-span l-span_4">
-									<h3 class="h4">Flexible &amp; modular</h3>
-									<p>Define all that you need at initilalization time.</p>
-								</div>
-								<div class="l-span l-span_4 l-span_last">
-									<h3 class="h4">Swipe &amp; touch support</h3>
-									<p>
-										Support touch and swipe events from jQuery mobile library.
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<section id="getting-started">
-							<div class="block block_skin-type-1">
-								<div class="l-row l-row_w">
-									<div class="l-span l-span_8">
-										<figure>
-											<pre>
-slider: function () {
-    var x = $('.js-marquee__items-wr');
-
-    if (x.length)
-        x.cssSlider({
-            autoplay: true,
-            prevCtrl: $('.js-marquee__nav_prev'),
-            nextCtrl: $('.js-marquee__nav_next'),
-            swipeCtrl: $('.js-marquee__pane')
-        }).addPagination('.js-marquee__pagination');
-}
-
-											</pre>
-											<figcaption>
-												Fig 1. Basic configuration
-											</figcaption>
-										</figure>
-									</div>
-									<div class="l-span l-span_4 l-span_last">
-										<h2>Getting started</h2>
-										<p>
-										</p>
-									</div>
-								</div>
-							</div>
-						</section>
-
-						<section id="examples">
-							<div class="block">
-								<div class="l-row l-row_w">
-									<div class="l-span l-span_4">
-										<h2>Basic responsive</h2>
-										<p>
-											Examples of basic responsive variant of slider
-										</p>
-									</div>
-									<div class="l-span l-span_8 l-span_last">
-										<figure>
-											<pre>
-.css-slider {
-	.js-marquee__item {
-		visibility: hidden;
-	}
-
-	.js-marquee__item_active {
-		visibility: visible;
-	}
-}
-											</pre>
-											<figcaption>
-												Fig 2. Basic
-											</figcaption>
-										</figure>
-									</div>
-								</div>
-							</div>
-
-							<div class="block i-clfx">
-								<div class="l-row">
-									<div class="l-span l-span_12">
-
-										<div class="css-slider js-marquee">
-
-											<div class="css-slider__inner">
-												<div class="css-slider__container js-marquee__pane">
-													<ul class="js-marquee__items-wr">
-														<li class="css-slider__item css-slider__item_slide-1 js-marquee__item">
-															<div class="css-slider__item__inner">
-																<p class="css-slider__item__title h1">Slide 1</p>
-															</div>
-															<i class="css-slider__item__bg-aux"></i>
-														</li>
-														<li class="css-slider__item css-slider__item_slide-2 js-marquee__item">
-															<div class="css-slider__item__inner">
-																<p class="css-slider__item__title h1">Slide 2</p>
-															</div>
-															<i class="css-slider__item__bg-aux"></i>
-														</li>
-														<li class="css-slider__item css-slider__item_slide-3 js-marquee__item">
-															<div class="css-slider__item__inner">
-																<p class="css-slider__item__title h1">Slide 3</p>
-															</div>
-															<i class="css-slider__item__bg-aux"></i>
-														</li>
-													</ul>
-												</div>
-											</div>
-
-											<a href="#" class="i-slider-nav i-slider-nav_prev js-marquee__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
-											<a href="#" class="i-slider-nav i-slider-nav_next js-marquee__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
-
-											<div class="marquee__pagination js-marquee__pagination"></div>
-
-											<ul class="nav nav_horiz nav_type-1">
-												<li class="nav__item"><span class="nav__ln js-type-changer js-type-changer_active">None</span></li>
-												<li class="nav__item"><span class="nav__ln js-type-changer" data-js-animtype="anim-type-1">Slide horiz</span></li>
-												<li class="nav__item"><span class="nav__ln js-type-changer" data-js-animtype="anim-type-2">Slide vert</span></li>
-												<li class="nav__item"><span class="nav__ln js-type-changer" data-js-animtype="anim-type-3">Fade slide</span></li>
-												<li class="nav__item"><span class="nav__ln js-type-changer" data-js-animtype="anim-type-4">Grow</span></li>
-												<li class="nav__item"><span class="nav__ln js-type-changer" data-js-animtype="anim-type-10">Grow fade</span></li>
-												<li class="nav__item"><span class="nav__ln js-type-changer" data-js-animtype="anim-type-5">Skew</span></li>
-												<li class="nav__item"><span class="nav__ln js-type-changer" data-js-animtype="anim-type-6">Twirl</span></li>
-												<li class="nav__item"><span class="nav__ln js-type-changer" data-js-animtype="anim-type-7">Fly</span></li>
-												<li class="nav__item"><span class="nav__ln js-type-changer" data-js-animtype="anim-type-8">Extrude</span></li>
-												<li class="nav__item"><span class="nav__ln js-type-changer" data-js-animtype="anim-type-9">Leaf over (3D)</span></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="block">
-								<div class="l-row l-row_w">
-									<div class="l-span l-span_4">
-										<h3>Slide horiz</h3>
-										<p>
-											Один элемент полностью уходит за область видимости. Перемещение происходит в горизонтальной плосткости.
-										</p>
-									</div>
-									<div class="l-span l-span_4">
-										<h3>Slide vert</h3>
-										<p>
-											Один элемент полностью уходит за область видимости. Перемещение происходит в вертикальной плосткости.
-										</p>
-									</div>
-									<div class="l-span l-span_4 l-span_last">
-										<h3>Fade slide</h3>
-										<p>
-											Один элемент полностью уходит за область видимости при этом теряя прозрачность. Перемещение происходит в горизонтальной плосткости.
-										</p>
-									</div>
-								</div>
-								<div class="l-row l-row_w">
-									<div class="l-span l-span_4">
-										<h3>Grow</h3>
-										<p>
-											Пропорциональное уменьшение элемента с увеличением прозрачности.
-										</p>
-									</div>
-									<div class="l-span l-span_4">
-										<h3>Grow fade</h3>
-										<p>
-											Переход элемента из увеличенного состояния с потерянной прозрачностью к исходным размерам.
-										</p>
-									</div>
-									<div class="l-span l-span_4 l-span_last">
-										<h3>Skew</h3>
-										<p>
-											Элемент появляется переходя от скошенного состояния к горизонтальному.
-										</p>
-									</div>
-								</div>
-								<div class="l-row l-row_w">
-									<div class="l-span l-span_4">
-										<h3>Twirl</h3>
-										<p>
-											Элемент появляется прокручиываясь по оси x в плоскости z.
-										</p>
-									</div>
-									<div class="l-span l-span_4">
-										<h3>Fly</h3>
-										<p>
-											Элемент появляется переходя от уменьшенной высоты к своим исходным размерам, при этом происходит увеличение прозрачности. Эффект напоминающий включение старого телевизора.
-										</p>
-									</div>
-									<div class="l-span l-span_4 l-span_last">
-										<h3>Extrude</h3>
-										<p>
-											Эффект напоминающий вытеснение одного элемента другим. Изменение размеров уходяшего элемнта с синхронным изменением позиции по x приходящего элемента.
-										</p>
-									</div>
-								</div>
-								<div class="l-row l-row_w">
-									<div class="l-span l-span_4">
-										<h3>Leaf over</h3>
-										<p>
-											Изменение перспективы уходящего элемента с синхронным изменением позиции по x появляющегося элемента.
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- Example paralax slider -->
-
-							<div class="block block_skin-type-1">
-								<div class="l-row l-row_w">
-									<div class="l-span l-span_4">
-										<h2>Paralax</h2>
-										<p>
-											Description
-										</p>
-									</div>
-									<div class="l-span l-span_8 l-span_last">
-										<figure>
-											<pre>
-
-											</pre>
-											<figcaption>
-												Fig 3. Paralax styles
-											</figcaption>
-										</figure>
-									</div>
-								</div>
-							</div>
-							<div class="block i-clfx">
-								<div class="l-row">
-									<div class="l-span l-span_12">
-
-										<div class="marquee js-marquee">
-											<div class="marquee__inner">
-												<div class="marquee__container js-marquee__pane">
-													<ul class="js-marquee__items-wr">
-														<li class="marquee__item marquee__item_slide-1 js-marquee__item">
-															<a href="#" class="marquee__item__ln-wrap">
-																<div class="marquee__item__title">A</div>
-																<div class="marquee__item__ico">B</div>
-															</a>
-														</li>
-														<li class="marquee__item marquee__item_slide-2 js-marquee__item">
-															<a href="#" class="marquee__item__ln-wrap">
-																<div class="marquee__item__title">A</div>
-																<div class="marquee__item__ico">B</div>
-																<div class="marquee__item__bg-wr">
-																	<div class="marquee__item__bg-wr__inner">
-																		<i class="marquee__item__bg marquee__item__bg_1">C</i>
-																	</div>
-																</div>
-															</a>
-														</li>
-														<li class="marquee__item marquee__item_slide-3 js-marquee__item">
-															<a href="#" class="marquee__item__ln-wrap">
-																<div class="marquee__item__title">A</div>
-																<i class="marquee__item__bg marquee__item__bg_sun"></i>
-																<i class="marquee__item__bg marquee__item__bg_1"></i>
-																<i class="marquee__item__bg marquee__item__bg_2"></i>
-																<i class="marquee__item__bg marquee__item__bg_cloud-group"></i>
-																<i class="marquee__item__bg marquee__item__bg_tower"></i>
-																<i class="marquee__item__bg marquee__item__bg_3"></i>
-																<i class="marquee__item__bg marquee__item__bg_cloud"></i>
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-
-											<a href="#" class="i-slider-nav i-slider-nav_prev i-hide_480 js-marquee__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
-											<a href="#" class="i-slider-nav i-slider-nav_next i-hide_480 js-marquee__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
-
-											<div class="marquee__pagination js-marquee__pagination"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="block">
-								<div class="l-row l-row_w">
-									<div class="l-span l-span_4">
-										<h3>Slide 1</h3>
-										<p>
-											Description
-										</p>
-									</div>
-									<div class="l-span l-span_4">
-										<h3>Slide 2</h3>
-										<p>
-											Description
-										</p>
-									</div>
-									<div class="l-span l-span_4 l-span_last">
-										<h3>Slide 3</h3>
-										<p>
-											Description
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- Example paralax slider -->
-
-
-						</section>
-
-						<!-- end examples -->
-
-						<section id="documentation">
-							<div class="block block_skin-type-1">
-								<div class="l-row l-row_w">
-									<div class="l-span l-span_10">
-										<h2>Documentation</h2>
-										<p>
-											Detailed description of some methods of script
-										</p>
-									</div>
-									<div class="l-span l-span_2 l-span_last">
-										<ul>
-											<li><a href="#">onMove</a></li>
-											<li><a href="#">onNext</a></li>
-											<li><a href="#">onPrev</a></li>
-											<li><a href="#">autoplay</a></li>
-											<li><a href="#">pagination</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="block">
-								<div class="l-row l-row_w">
-									<h3>Attributes</h3>
-									<dl class="def">
-										<dt class="def__title">onMove</dt>
-										<dd class="def__descr">
-											<p class="def__descr__row">Animation/style active number/dot</p>
-											<p class="def__descr__row"><strong class="def__bage">Default:</strong> <code>{backgroundColor:'#cc3333', color:'#fff'}</code></p>
-											<p class="def__descr__row"><strong class="def__bage">Accept:</strong> array</p>
-											<p class="def__descr__row"><strong class="def__bage">Example:</strong> <code>$('.box_skitter_large').skitter({animateNumberActive: {backgroundColor:'#000', color:'#ccc'}});z</code></p>
-										</dd>
-									</dl>
-									<dl class="def">
-										<dt class="def__title">onNext</dt>
-										<dd class="def__descr">
-											<p class="def__descr__row">Animation/style active number/dot</p>
-											<p class="def__descr__row"><strong class="def__bage">Default:</strong> <code>{backgroundColor:'#cc3333', color:'#fff'}</code></p>
-											<p class="def__descr__row"><strong class="def__bage">Accept:</strong> array</p>
-											<p class="def__descr__row"><strong class="def__bage">Example:</strong> <code>$('.box_skitter_large').skitter({animateNumberActive: {backgroundColor:'#000', color:'#ccc'}});z</code></p>
-										</dd>
-									</dl>
-									<dl class="def">
-										<dt class="def__title">onPrev</dt>
-										<dd class="def__descr">
-											<p class="def__descr__row">Animation/style active number/dot</p>
-											<p class="def__descr__row"><strong class="def__bage">Default:</strong> <code>{backgroundColor:'#cc3333', color:'#fff'}</code></p>
-											<p class="def__descr__row"><strong class="def__bage">Accept:</strong> array</p>
-											<p class="def__descr__row"><strong class="def__bage">Example:</strong> <code>$('.box_skitter_large').skitter({animateNumberActive: {backgroundColor:'#000', color:'#ccc'}});z</code></p>
-										</dd>
-									</dl>
-									<dl class="def">
-										<dt class="def__title">autoplay</dt>
-										<dd class="def__descr">
-											<p class="def__descr__row">Animation/style active number/dot</p>
-											<p class="def__descr__row"><strong class="def__bage">Default:</strong> <code>{backgroundColor:'#cc3333', color:'#fff'}</code></p>
-											<p class="def__descr__row"><strong class="def__bage">Accept:</strong> array</p>
-											<p class="def__descr__row"><strong class="def__bage">Example:</strong> <code>$('.box_skitter_large').skitter({animateNumberActive: {backgroundColor:'#000', color:'#ccc'}});z</code></p>
-										</dd>
-									</dl>
-									<dl class="def">
-										<dt class="def__title">pagination</dt>
-										<dd class="def__descr">
-											<p class="def__descr__row">Animation/style active number/dot</p>
-											<p class="def__descr__row"><strong class="def__bage">Default:</strong> <code>{backgroundColor:'#cc3333', color:'#fff'}</code></p>
-											<p class="def__descr__row"><strong class="def__bage">Accept:</strong> array</p>
-											<p class="def__descr__row"><strong class="def__bage">Example:</strong> <code>$('.box_skitter_large').skitter({animateNumberActive: {backgroundColor:'#000', color:'#ccc'}});z</code></p>
-										</dd>
-									</dl>
-									<i class="i-spacer i-spacer-20"></i>
-									<h3>Public methods</h3>
-									<dl class="def">
-										<dt class="def__title">$.cssSlider.next</dt>
-										<dd class="def__descr">
-											<p class="def__descr__row">Animation/style active number/dot</p>
-											<p class="def__descr__row"><strong class="def__bage">Default:</strong> <code>{backgroundColor:'#cc3333', color:'#fff'}</code></p>
-											<p class="def__descr__row"><strong class="def__bage">Accept:</strong> array</p>
-											<p class="def__descr__row"><strong class="def__bage">Example:</strong> <code>$('.box_skitter_large').skitter({animateNumberActive: {backgroundColor:'#000', color:'#ccc'}});z</code></p>
-										</dd>
-									</dl>
-
-								</div>
-							</div>
-						</section>
-
-						<section id="support-us">
-							<div class="block block_u-content-ln block_skin-type-3">
-								<h2 class="h4">This is open source project. Help make it better.</h2>
-								<div class="l-row l-row_w">
-									<div class="l-span l-span_6">
-										<!--<p><a href="#">Donate us</a></p>-->
-									</div>
-									<div class="l-span l-span_6 l-span_last">
-										<p><a href="https://github.com/selfnamed/ase">Fork on Github</a></p>
-									</div>
-								</div>
-							</div>
-						</section>
-
-					</div>
-					<!-- /.region-main__content -->
-				</div>
-				<!-- /.region-main-->
+	<div class="block">
+		<div class="l-row">
+			<div class="l-span l-span_6">
+				<h1 class="block_hero__title">Aura Slider Engine</h1>
+				<p class="block_hero__subtitle">Is a jQuery based, layout independent, lightweight, configurable slider engine for responsive and static sliders.</p>
 			</div>
-			<!-- /.l-main-aux__inner -->
+			<div class="l-span l-span_4 l-span_last">
+				<aside>
+					<div class="block_hero__info">
+						<div class="l-row">
+							<img src="images/browser_compatability.png" height="33" width="175" alt="" />
+							<p>
+								IE7+, Google Chrome, Opera, Safari,
+								<br /> Firefox
+							</p>
+						</div>
+						<div class="l-row">
+							<a href="https://github.com/mrgambal/ase" class="btn btn_hero btn_ico btn_black">
+								<span class="btn__inner">
+									<span class="btn__text">View on Github</span>
+									<i class="btn__ico btn__ico_blue btn__ico_github"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+				</aside>
+			</div>
 		</div>
-		<!-- /.l-main-aux -->
-		<!-- .region-footer -->
-		<div class="region-footer l-global-footer">
-			<footer role="contentinfo">
-				<div class="l-global-footer__inner">
-					<div class="l-global-footer__left">
+		<div class="i-spacer i-spacer-1"></div>
+		<div class="l-row">
+			<p>My goal is to create simple and very flexible lightweight slider engine that can make life of web-developers a little bit easier. ASE doesn't declare requirements to your HTML-markup and don't bring own CSS. But (as mentioned above) you can use it without specially knowledges in HTML and CSS with our examples (will be added later). If you liked ASE, you can contribute, share links, write blog-posts, tell your mommy about it, make a tatoo 'I luv ASE', whatever... Enjoy!</p>
+		</div>
+	</div>
+
+</div>
+<!-- /.region-header -->
+<div class="region-main i-clfx" role="main">
+<div class="region-main__content">
+
+<div class="exmpl-block i-clfx" id="slider_slide-flat">
+	<div class="i-clfx">
+		<div class="exmpl-block__item l-span l-span_12">
+			<div class="element element_slider ase-slider js-ase slider_slide-flat">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="exmpl-block i-clfx" id="slider_slides">
+	<div class="l-row-full">
+		<h2>Slider simple slides</h2>
+	</div>
+	<div class="i-clfx">
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_slide-vert</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-vert">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_slide-horiz</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-horiz">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4 l-span_last">
+			<div class="l-row">
+				<h3>slider_slide-diagonal</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-diagonal">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="exmpl-block i-clfx" id="slider_slides_fade">
+	<div class="l-row-full">
+		<h2>Slider simple slides fade</h2>
+	</div>
+	<div class="i-clfx">
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_slide-vert_fade</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-vert_fade">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_slide-horiz_fade</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-horiz_fade">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4 l-span_last">
+			<div class="l-row">
+				<h3>slider_slide-diagonal_fade</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-diagonal_fade">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="exmpl-block i-clfx" id="slider_slides_fade-rotate">
+	<div class="l-row-full">
+		<h2>Slider simple slides fade-rotate</h2>
+	</div>
+	<div class="i-clfx">
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_slide-vert_fade-rotate</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-vert_fade-rotate">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_slide-horiz_fade-rotate</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-horiz_fade-rotate">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4 l-span_last">
+			<div class="l-row">
+				<h3>slider_slide-horiz_leaf-over</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-horiz_leaf-over">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+	</div>
+	<div class="i-spacer i-spacer-2"></div>
+	<div class="i-clfx">
+		<div class="exmpl-block__item l-span l-span_2">&nbsp;</div>
+		<div class="exmpl-block__item l-span l-span_8">
+			<div class="l-row">
+				<h3>slider_slide-windy</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-windy">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_2 l-span_last">&nbsp;</div>
+	</div>
+</div>
+
+<div class="exmpl-block i-clfx" id="slider_slides_rotate">
+	<div class="l-row-full">
+		<h2>slider_slides_rotate</h2>
+	</div>
+	<div class="i-clfx">
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_slide-rotate_horiz</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-rotate_horiz">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_slide-rotate_vert</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-rotate_vert">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4 l-span_last">
+			<div class="l-row">
+				<h3>slider_slide-rotate_diag</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-rotate_diag">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="exmpl-block i-clfx" id="slider_slides_flip">
+	<div class="l-row-full">
+		<h2>slider_slides_flip</h2>
+	</div>
+	<div class="i-clfx">
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_slide-flip_horiz</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-flip_horiz">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_slide-flip_vert</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-flip_vert">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4 l-span_last">
+			<div class="l-row">
+				<h3>slider_slide-flip_center</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-flip_center">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="exmpl-block i-clfx" id="slider_slides_scale">
+	<div class="l-row-full">
+		<h2>Slider slider_slides_scale</h2>
+	</div>
+	<div class="i-clfx">
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_slide-scale-in_fade</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-scale-in_fade">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_slide-scale-extrude</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-scale-extrude">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4 l-span_last">
+			<div class="l-row">
+				<h3>slider_slide-grow</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_slide-grow">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="exmpl-block i-clfx" id="slider_skew">
+	<div class="l-row-full">
+		<h2>Slider slider_skew</h2>
+	</div>
+	<div class="i-clfx l-row_ov">
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_skew-vert</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_skew-vert">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_skew-horiz</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_skew-horiz">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4 l-span_last">
+			<div class="l-row">
+				<h3>slider_lightSpeedIn</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_lightSpeedIn">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+	</div>
+	<div class="i-clfx">
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_skew-flip</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_skew-flip">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4">
+			<div class="l-row">
+				<h3>slider_skew-extrude</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_skew-extrude">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+		<div class="exmpl-block__item l-span l-span_4 l-span_last">
+			<div class="l-row">
+				<h3>slider_skew-cut</h3>
+			</div>
+			<div class="element element_slider ase-slider js-ase slider_skew-cut">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="exmpl-block i-clfx" id="slider_sclice_horiz">
+	<div class="l-row">
+		<h2>Slider slider_sclice_horiz</h2>
+	</div>
+	<div class="l-row">
+		<div class="exmpl-block__item l-span l-span_12">
+			<div class="element element_slider ase-slider-slice ase-slider-slice_vertical js-ase slice-vertical-type-1">
+				<div class="ase-slider-slice__inner">
+					<div class="ase-slider-slice__container">
+						<ul class="ase-slider-slice__container__inner js-ase__items-wr">
+							<li class="ase-slider-slice__item ase-slider-slice__item_slide-1 js-ase__item">
+								<div class="ase-slider-slice__item__inner">
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_0"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_1"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_2"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_3"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_4"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_5"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_6"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_7"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_8"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_9"></i>
+								</div>
+							</li>
+							<li class="ase-slider-slice__item ase-slider-slice__item_slide-2 js-ase__item">
+								<div class="ase-slider-slice__item__inner">
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_0"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_1"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_2"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_3"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_4"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_5"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_6"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_7"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_8"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_9"></i>
+								</div>
+							</li>
+							<li class="ase-slider-slice__item ase-slider-slice__item_slide-3 js-ase__item">
+								<div class="ase-slider-slice__item__inner">
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_0"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_1"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_2"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_3"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_4"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_5"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_6"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_7"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_8"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_9"></i>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+				<ul class="nav nav_horiz nav_type-1 js-type-changer" data-js-animtype-family="ase-slider-slice_vertical">
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln js-type-changer-ln_active" data-js-animtype="slice-vertical-type-1">vertical-1</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-vertical-type-2">vertical-2</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-scale-type-1">scale-1</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-scale-type-2">scale-2</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-opacity-type-1">opacity-1</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-bgposit-type-1">bgposit-1</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="exmpl-block i-clfx" id="ase-slider-slice_horizontal">
+	<div class="l-row">
+		<h2>Slider ase-slider-slice_horizontal</h2>
+	</div>
+	<div class="l-row">
+		<div class="exmpl-block__item l-span l-span_12">
+			<div class="element element_slider ase-slider-slice ase-slider-slice_horizontal js-ase slice-horiz-type-1">
+				<div class="ase-slider-slice__inner">
+					<div class="ase-slider-slice__container">
+						<ul class="ase-slider-slice__container__inner js-ase__items-wr">
+							<li class="ase-slider-slice__item ase-slider-slice__item_slide-1 js-ase__item">
+								<div class="ase-slider-slice__item__inner">
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_0"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_1"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_2"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_3"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_4"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_5"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_6"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_7"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_8"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_9"></i>
+								</div>
+							</li>
+							<li class="ase-slider-slice__item ase-slider-slice__item_slide-2 js-ase__item">
+								<div class="ase-slider-slice__item__inner">
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_0"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_1"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_2"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_3"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_4"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_5"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_6"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_7"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_8"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_9"></i>
+								</div>
+							</li>
+							<li class="ase-slider-slice__item ase-slider-slice__item_slide-3 js-ase__item">
+								<div class="ase-slider-slice__item__inner">
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_0"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_1"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_2"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_3"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_4"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_5"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_6"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_7"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_8"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_9"></i>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+				<ul class="nav nav_horiz nav_type-1 js-type-changer" data-js-animtype-family="ase-slider-slice_horizontal">
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln js-type-changer-ln_active" data-js-animtype="slice-horiz-type-1">horiz-1</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-scale-type-1 js-type-changer-ln_active">scale-1</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-scale-type-2">scale-2</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-opacity-type-1">opacity-1</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-bgposit-type-1">bgposit-1</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="exmpl-block i-clfx" id="ase-slider-slice_radial">
+	<div class="l-row">
+		<h2>Slider ase-slider-slice_radial</h2>
+	</div>
+	<div class="l-row">
+		<div class="exmpl-block__item l-span l-span_12">
+			<div class="element element_slider ase-slider-slice ase-slider-slice_radial js-ase slice-radial-type-1">
+				<div class="ase-slider-slice__inner">
+					<div class="ase-slider-slice__container">
+						<ul class="ase-slider-slice__container__inner js-ase__items-wr">
+							<li class="ase-slider-slice__item ase-slider-slice__item_slide-1 js-ase__item">
+								<div class="ase-slider-slice__item__inner">
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_0"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_1"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_2"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_3"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_4"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_5"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_6"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_7"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_8"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_9"></i>
+								</div>
+							</li>
+							<li class="ase-slider-slice__item ase-slider-slice__item_slide-2 js-ase__item">
+								<div class="ase-slider-slice__item__inner">
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_0"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_1"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_2"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_3"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_4"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_5"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_6"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_7"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_8"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_9"></i>
+								</div>
+							</li>
+							<li class="ase-slider-slice__item ase-slider-slice__item_slide-3 js-ase__item">
+								<div class="ase-slider-slice__item__inner">
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_0"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_1"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_2"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_3"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_4"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_5"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_6"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_7"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_8"></i>
+									<i class="ase-slider-slice__item__slice ase-slider-slice__item__slice_9"></i>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+				<ul class="nav nav_horiz nav_type-1 js-type-changer" data-js-animtype-family="ase-slider-slice_radial">
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln js-type-changer-ln_active" data-js-animtype="slice-radial-type-1">radial-1</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-radial-type-2">radial-2</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-radial-type-3">radial-3</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-scale-type-1">scale-1</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-scale-type-2">scale-2</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-opacity-type-1">opacity-1</span>
+					</li>
+					<li class="nav__item">
+						<span class="nav__ln js-type-changer-ln" data-js-animtype="slice-bgposit-type-1">bgposit-1</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="exmpl-block i-clfx" id="slider_expression">
+	<div class="l-row">
+		<h2>Slider slider_expression</h2>
+	</div>
+	<div class="l-row">
+		<div class="exmpl-block__item l-span l-span_12">
+			<div class="element element_slider ase-slider js-ase slider_expression">
+				<div class="ase-slider__inner">
+					<div class="ase-slider__container">
+						<ul class="ase-slider__container__inner js-ase__items-wr">
+							<li class="ase-slider__item ase-slider__item_slide-1 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 1</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-2 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 2</p>
+								</div>
+							</li>
+							<li class="ase-slider__item ase-slider__item_slide-3 js-ase__item">
+								<div class="ase-slider__item__inner">
+									<p class="ase-slider__item__title h1">Slide 3</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination js-ase__pagination"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="exmpl-block i-clfx l-row_ov" id="slider_carusel">
+	<div class="l-row">
+		<h2>slider_carusel</h2>
+	</div>
+	<div class="l-row">
+		<div class="exmpl-block__item">
+			<div class="element element_carousel ase-carousel js-ase slider_slide-horiz_fade-rotate">
+				<div class="ase-carousel__inner">
+					<div class="ase-carousel__container">
+						<ul class="ase-carousel__container__inner js-ase__items-wr">
+							<li class="ase-carousel__item js-ase__item">
+								<div class="ase-carousel__item__inner">
+									<ul class="l-row">
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_1"></div>
+										</li>
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_1"></div>
+										</li>
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_1"></div>
+										</li>
+										<li class="l-span l-span_3 l-span_last">
+											<div class="carousel-element carousel-element_1"></div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ase-carousel__item js-ase__item">
+								<div class="ase-carousel__item__inner">
+									<ul class="l-row">
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_2"></div>
+										</li>
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_2"></div>
+										</li>
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_2"></div>
+										</li>
+										<li class="l-span l-span_3 l-span_last">
+											<div class="carousel-element carousel-element_2"></div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ase-carousel__item js-ase__item">
+								<div class="ase-carousel__item__inner">
+									<ul class="l-row">
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_3"></div>
+										</li>
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_3"></div>
+										</li>
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_3"></div>
+										</li>
+										<li class="l-span l-span_3 l-span_last">
+											<div class="carousel-element carousel-element_3"></div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="i-slider__pagination i-slider__pagination_carousel js-ase__pagination"></div>
+			</div>
+		</div>
+	</div>
+	<div class="l-row">
+		<div class="exmpl-block__item">
+			<div class="element element_carousel ase-carousel js-ase-carousel carousel_apple-like">
+				<div class="ase-carousel__inner">
+					<div class="ase-carousel__container">
+						<ul class="ase-carousel__container__inner js-ase-carousel__items-wr">
+							<li class="ase-carousel__item js-ase-carousel__item">
+								<div class="ase-carousel__item__inner">
+									<ul class="l-row">
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_1"></div>
+										</li>
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_1"></div>
+										</li>
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_1"></div>
+										</li>
+										<li class="l-span l-span_3 l-span_last">
+											<div class="carousel-element carousel-element_1"></div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ase-carousel__item js-ase-carousel__item">
+								<div class="ase-carousel__item__inner">
+									<ul class="l-row">
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_2"></div>
+										</li>
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_2"></div>
+										</li>
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_2"></div>
+										</li>
+										<li class="l-span l-span_3 l-span_last">
+											<div class="carousel-element carousel-element_2"></div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="ase-carousel__item js-ase-carousel__item">
+								<div class="ase-carousel__item__inner">
+									<ul class="l-row">
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_3"></div>
+										</li>
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_3"></div>
+										</li>
+										<li class="l-span l-span_3">
+											<div class="carousel-element carousel-element_3"></div>
+										</li>
+										<li class="l-span l-span_3 l-span_last">
+											<div class="carousel-element carousel-element_3"></div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="i-slider-nav i-slider-nav_prev js-ase-carousel__nav_prev" role="button" title="Previous slide"><span class="i-wai">Prev</span></a>
+				<a href="#" class="i-slider-nav i-slider-nav_next js-ase-carousel__nav_next" role="button" title="Next slide"><span class="i-wai">Next</span></a>
+				<div class="carousel-nav">
+					<ul class="carousel-nav__inner js-ase-carousel__pagination js-menu-line-container">
+						<li class="carousel-nav__item">
+							<a href="#" data-href="#1" class="carousel-nav__ln js-ase-carousel__pagination__ln js-ase-carousel__pagination__ln_active">
+								Item 1
+							</a>
+						</li>
+						<li class="carousel-nav__item">
+							<a href="#" data-href="#2" class="carousel-nav__ln js-ase-carousel__pagination__ln">
+								Item 2
+							</a>
+						</li>
+						<li class="carousel-nav__item">
+							<a href="#" data-href="#3" class="carousel-nav__ln js-ase-carousel__pagination__ln">
+								Item 3
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="exmpl-block i-clfx" id="accordion">
+	<div class="l-row">
+		<h2>Accordion</h2>
+	</div>
+	<div class="l-row">
+		<div class="exmpl-block__item l-span l-span_12">
+			<div class="element element_accordion ase-accordion js-ase-accordion">
+				<div class="ase-accordion__inner">
+					<div class="ase-accordion__container">
+						<ul class="ase-accordion__container__inner js-ase-accordion__items-wr">
+							<li class="ase-accordion__item ase-accordion__item_slide-1 js-ase-accordion__item">
+								<h3 class="ase-accordion__title">
+									<a href="#" data-href="#1" class="ase-accordion__title__inner js-ase-accordion__item-ln">
+										Lorem ipsum dolor sit amet
+										<i class="ase-accordion__title__ico"></i>
+									</a>
+								</h3>
+								<div class="ase-accordion__content">
+									<p>
+										Phasellus sed libero urna. Curabitur dui nisi, porta ut tincidunt feugiat, interdum quis sapien. In feugiat egestas elit, eu adipiscing lectus fringilla non. Nulla nunc mi, aliquet non euismod a, varius varius magna. Proin nec lorem turpis. Cras sapien arcu, aliquet ut malesuada id, viverra quis ligula. Praesent vitae dolor id magna bibendum molestie. Aliquam sapien odio, rhoncus ullamcorper egestas a, suscipit at dolor. Cras viverra pulvinar quam, non tempor ipsum varius a. Aenean condimentum scelerisque justo vel congue. Etiam augue ante, vestibulum in condimentum sit amet, volutpat vel ligula. Suspendisse potenti. Cras condimentum ultrices congue.
+									</p>
+								</div>
+							</li>
+							<li class="ase-accordion__item ase-accordion__item_slide-2 js-ase-accordion__item">
+								<h3 class="ase-accordion__title">
+									<a href="#" data-href="#2" class="ase-accordion__title__inner js-ase-accordion__item-ln">
+										Lorem ipsum dolor sit amet
+										<i class="ase-accordion__title__ico"></i>
+									</a>
+								</h3>
+								<div class="ase-accordion__content">
+									<p>
+										Donec scelerisque dictum dolor, eget pellentesque felis venenatis nec. Vestibulum convallis, est non porttitor eleifend, mauris justo iaculis turpis, sit amet euismod arcu mi nec odio. Donec mattis, sem nec porta blandit, nisi nulla varius leo, eget porttitor nisl dolor at turpis. Cras ut magna massa. Vivamus ipsum ipsum, rutrum nec adipiscing at, sodales vel odio. Integer eget ligula est, quis lobortis enim. Ut convallis, neque in pulvinar tristique, tellus metus pretium nulla, non ultricies orci quam sit amet nisi. Praesent in nisi dolor. Sed viverra pellentesque metus, vel varius augue vehicula non. Fusce placerat commodo nibh id ultrices. Vivamus tincidunt diam id est vehicula at rhoncus metus suscipit.
+									</p>
+								</div>
+							</li>
+							<li class="ase-accordion__item ase-accordion__item_slide-3 js-ase-accordion__item">
+								<h3 class="ase-accordion__title">
+									<a href="#" data-href="#3" class="ase-accordion__title__inner js-ase-accordion__item-ln">
+										Lorem ipsum dolor sit amet
+										<i class="ase-accordion__title__ico"></i>
+									</a>
+								</h3>
+								<div class="ase-accordion__content">
+									<p>
+										Sed elementum tincidunt turpis, a auctor orci sagittis quis. Integer placerat auctor felis eget pretium. Sed eget aliquam ligula. Sed dictum iaculis ligula, eu congue lorem suscipit et. Curabitur dignissim, nibh quis fringilla elementum, ligula arcu iaculis velit, sit amet mattis augue arcu eget mauris. Sed mollis vehicula velit non pulvinar. Nunc viverra, leo sit amet laoreet sodales, tellus elit lobortis purus, vel vulputate tortor lorem quis felis. Praesent condimentum tempus metus, vel pretium nulla euismod sit amet. Nam a adipiscing mauris. Integer id libero mauris, a tempor eros. Suspendisse accumsan urna non elit mattis mattis. In scelerisque, est faucibus rutrum mollis, felis risus euismod massa, nec faucibus ligula lectus eu sapien.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="exmpl-block i-clfx" id="tabs">
+	<div class="l-row">
+		<h2>Tabs</h2>
+	</div>
+	<div class="l-row">
+		<div class="exmpl-block__item l-span l-span_12">
+			<div class="element element_tabs ase-tab js-ase-tab">
+				<div class="tab__nav">
+					<ul class="tab__nav__inner js-ase-tab__pagination">
+						<li class="tab__nav__item">
+							<a href="#" data-href="#1" class="tab__nav__ln js-ase-tab__pagination__ln js-ase-tab__pagination__ln_active">
+								Tab 1
+							</a>
+						</li>
+						<li class="tab__nav__item">
+							<a href="#" data-href="#2" class="tab__nav__ln js-ase-tab__pagination__ln">
+								Tab 2
+							</a>
+						</li>
+						<li class="tab__nav__item">
+							<a href="#" data-href="#3" class="tab__nav__ln js-ase-tab__pagination__ln">
+								Tab 3
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="tab__content js-ase-tab__pane">
+					<div class="js-ase-tab__items-wr">
+						<!-- item -->
+						<div class="l-row tab__item js-ase-tab__item">
+							<div class="l-span l-span_6 article article_main">
+								<img src="images/example-tab/1.jpg" alt="" width="405" height="178" />
+								<h2>Tab 1 example content</h2>
+								<p>Fusce a mi quis sapien elementum tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla tincidunt pulvinar nisl, ut commodo arcu malesuada non. Fusce lacinia tristique ligula in vehicula.</p>
+								<p>Fusce a mi quis sapien elementum tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+								<p>Fusce a mi quis sapien elementum tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+							</div>
+							<div class="l-span l-span_6 l-span_last">
+								<div class="i-clfx">
+									<div class="l-span l-span_3 article article_sec article_sec_1">
+										<img src="images/example-tab/2.jpg" alt="" width="196" height="86" />
+										<h3 >Sed odio nisi, ultricies</h3>
+										<p>Phasellus et urna metus, id imperdiet mauris. Donec luctus ligula ac elit feugiat commodo.</p>
+									</div>
+									<div class="l-span l-span_3 l-span_last article article_sec article_sec_2">
+										<img src="images/example-tab/3.jpg" alt="" width="196" height="86" />
+										<h3 >Sed odio nisi, ultricies</h3>
+										<p>Quisque vitae erat libero. Etiam vestibulum metus eu nulla placerat dictum.</p>
+									</div>
+								</div>
+								<div class="i-clfx">
+									<div class="l-span l-span_3 article article_sec article_sec_3">
+										<img src="images/example-tab/4.jpg" alt="" width="194" height="86" />
+										<h3 >Sed odio nisi, ultricies</h3>
+										<p>Phasellus et urna metus, id imperdiet mauris. Donec luctus ligula ac elit feugiat commodo.</p>
+									</div>
+									<div class="l-span l-span_3 l-span_last article article_sec article_sec_4">
+										<img src="images/example-tab/2.jpg" alt="" width="196" height="86" />
+										<h3 >Sed odio nisi, ultricies</h3>
+										<p>Quisque vitae erat libero. Etiam vestibulum metus eu nulla placerat dictum.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /item -->
+						<!-- item -->
+						<div class="l-row tab__item js-ase-tab__item">
+							<div class="l-span l-span_6 article article_main">
+								<img src="images/example-tab/1.jpg" alt="" width="405" height="178" />
+								<h2>Tab 2 example content</h2>
+								<p>Fusce a mi quis sapien elementum tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla tincidunt pulvinar nisl, ut commodo arcu malesuada non. Fusce lacinia tristique ligula in vehicula.</p>
+								<p>Fusce a mi quis sapien elementum tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+								<p>Fusce a mi quis sapien elementum tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+							</div>
+							<div class="l-span l-span_6 l-span_last">
+								<div class="i-clfx">
+									<div class="l-span l-span_3 article article_sec article_sec_1">
+										<img src="images/example-tab/2.jpg" alt="" width="196" height="86" />
+										<h3 >Sed odio nisi, ultricies</h3>
+										<p>Phasellus et urna metus, id imperdiet mauris. Donec luctus ligula ac elit feugiat commodo.</p>
+									</div>
+									<div class="l-span l-span_3 l-span_last article article_sec article_sec_2">
+										<img src="images/example-tab/3.jpg" alt="" width="196" height="86" />
+										<h3 >Sed odio nisi, ultricies</h3>
+										<p>Quisque vitae erat libero. Etiam vestibulum metus eu nulla placerat dictum.</p>
+									</div>
+								</div>
+								<div class="i-clfx">
+									<div class="l-span l-span_3 article article_sec article_sec_3">
+										<img src="images/example-tab/4.jpg" alt="" width="194" height="86" />
+										<h3 >Sed odio nisi, ultricies</h3>
+										<p>Phasellus et urna metus, id imperdiet mauris. Donec luctus ligula ac elit feugiat commodo.</p>
+									</div>
+									<div class="l-span l-span_3 l-span_last article article_sec article_sec_4">
+										<img src="images/example-tab/2.jpg" alt="" width="196" height="86" />
+										<h3 >Sed odio nisi, ultricies</h3>
+										<p>Quisque vitae erat libero. Etiam vestibulum metus eu nulla placerat dictum.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /item -->
+						<!-- item -->
+						<div class="l-row tab__item js-ase-tab__item">
+							<div class="l-span l-span_6 article article_main">
+								<img src="images/example-tab/1.jpg" alt="" width="405" height="178" />
+								<h2>Tab 3 example content</h2>
+								<p>Fusce a mi quis sapien elementum tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla tincidunt pulvinar nisl, ut commodo arcu malesuada non. Fusce lacinia tristique ligula in vehicula.</p>
+								<p>Fusce a mi quis sapien elementum tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+								<p>Fusce a mi quis sapien elementum tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+							</div>
+							<div class="l-span l-span_6 l-span_last">
+								<div class="i-clfx">
+									<div class="l-span l-span_3 article article_sec article_sec_1">
+										<img src="images/example-tab/2.jpg" alt="" width="196" height="86" />
+										<h3 >Sed odio nisi, ultricies</h3>
+										<p>Phasellus et urna metus, id imperdiet mauris. Donec luctus ligula ac elit feugiat commodo.</p>
+									</div>
+									<div class="l-span l-span_3 l-span_last article article_sec article_sec_2">
+										<img src="images/example-tab/3.jpg" alt="" width="196" height="86" />
+										<h3 >Sed odio nisi, ultricies</h3>
+										<p>Quisque vitae erat libero. Etiam vestibulum metus eu nulla placerat dictum.</p>
+									</div>
+								</div>
+								<div class="i-clfx">
+									<div class="l-span l-span_3 article article_sec article_sec_3">
+										<img src="images/example-tab/4.jpg" alt="" width="194" height="86" />
+										<h3 >Sed odio nisi, ultricies</h3>
+										<p>Phasellus et urna metus, id imperdiet mauris. Donec luctus ligula ac elit feugiat commodo.</p>
+									</div>
+									<div class="l-span l-span_3 l-span_last article article_sec article_sec_4">
+										<img src="images/example-tab/2.jpg" alt="" width="196" height="86" />
+										<h3 >Sed odio nisi, ultricies</h3>
+										<p>Quisque vitae erat libero. Etiam vestibulum metus eu nulla placerat dictum.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /item -->
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<!-- /.l-main-aux__inner -->
+</div>
+<!-- /.l-main-aux --><!-- .region-footer -->
+<div class="region-footer l-global-footer">
+	<footer role="contentinfo">
+		<div class="l-global-footer__inner">
+			<div class="region-footer__top">
+				<div class="l-row">
+					<div class="footer-about">
+						<h2 class="footer-about__top h1">This is open source project. <a href="https://github.com/mrgambal/ase">Help make it better!</a></h2>
+						<p class="footer-about__bottom">
+							If you find useful this engine in our project you can send a pull request for your slider variant.
+							<br />
+							It helps other people to make slider of their dreams.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="region-footer__bottom">
+				<div class="l-row">
+					<div class="l-span l-span_6">
 						<p class="copy">
 							Aura Slider Engine <br />
 							&copy; 2013 D. Gambal / D. Nechepurenko
 						</p>
 					</div>
-					<div class="l-global-footer__right">
+					<div class="l-span l-span_6 l-span_last">
 						<p>
-							Copyright: Feel free to redistribute the script/modify it, as
-							long as you leave my infos at the top.
+							Copyright: Feel free to redistribute the script/modify it, as long as you leave my infos at the top.
 						</p>
 					</div>
 				</div>
-			</footer>
+			</div>
 		</div>
-		<!-- /.region-footer -->
-		<!--[if lt IE 9]>
-			<div class="warning"><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">This site does not fully support your browser! <br /> You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.</a></div>
-		<![endif]-->
-		<script src="js/vendor/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/vendor/jquery.mobile.custom.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/jQuery.ASEngine.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
-	</body>
+	</footer>
+</div>
+<!-- /.region-footer -->
+<!--[if lt IE 9]>
+<div class="warning">
+	<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">This site does not fully support your browser!
+		<br /> You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.
+	</a>
+</div>
+<![endif]-->
+<script src="js/vendor/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/vendor/jquery.mobile.custom.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../jQuery.ASEngine.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+</body>
 </html>

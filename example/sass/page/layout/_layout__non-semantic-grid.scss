@@ -9,6 +9,7 @@
   --------------------------------------------------------------------------- */
 
 .l-row {
+	@include container;
 	@extend .i-clfx;
 }
 
@@ -18,18 +19,12 @@ ul.l-row {
 	list-style: none;
 }
 
-l-row_flat {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.l-row_w {
-	@include container;
-}
-
 .l-row_ov {
 	overflow: hidden;
+}
+
+.l-row-full {
+	padding: 0 1em;
 }
 
 .l-span {
@@ -45,6 +40,11 @@ l-row_flat {
 .l-span_2 {
 	@include span-columns(2, 12);
 }
+
+.l-span_3 {
+	@include span-columns(3, 12);
+}
+
 
 .l-span_4 {
 	@include span-columns(4, 12);

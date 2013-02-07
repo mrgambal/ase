@@ -1,0 +1,101 @@
+@import "weiss-config";
+@import "helpers/mixins";
+
+/* @group accordion
+  --------------------------------------------------------------------------- */
+
+$purple: #A200B8;
+
+.ase-accordion__container__inner {
+	list-style: none;
+	padding: 0;
+}
+
+.ase-accordion__item {}
+
+.ase-accordion__title {
+	display: block;
+	margin-bottom: 12px;
+}
+
+.ase-accordion__title__inner {
+	display: block;
+	padding: .4em;
+	text-decoration: none;
+	background: $blue;
+	color: #fff;
+	@include transition();
+
+	&:hover,
+	&:focus {
+		background-color: darken($blue, 10%);
+		color: #fff;
+	}
+
+	&:active {
+		background-color: darken($blue, 20%);
+	}
+}
+
+.ase-accordion__title__ico {
+	float: right;
+	font-style: normal;
+	font-size: 23px;
+
+	&:after {
+		content: '+';
+	}
+}
+
+.ase-accordion__content {
+	display: none;
+
+	p {
+		padding: 0 .4em;
+	}
+}
+
+.ase-accordion {
+
+	.js-ase-accordion__item_active {
+		@include vendor(perspective, 1500px);
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective-origin, 50% 50%);
+
+		.ase-accordion__title__inner {
+			background: $purple;
+			cursor: default;
+		}
+
+		.ase-accordion__title__ico {
+			&:after {
+				content: '-';
+				margin-right: 4px;
+			}
+		}
+
+		.ase-accordion__content {
+			display: block;
+			@include vendor(animation, vert-fade-rotate ease-out 0.3s);
+			@include vendor(transform-origin, 0 0);
+		}
+	}
+
+}
+
+@-webkit-keyframes vert-fade-rotate {
+	0% { -webkit-transform: rotateX(-90deg); opacity: 0; }
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
+@-moz-keyframes vert-fade-rotate {
+	0% { -webkit-transform: rotateX(-90deg); opacity: 0; }
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
+@keyframes vert-fade-rotate {
+	0% { -webkit-transform: rotateX(-90deg); opacity: 0; }
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
+/* @end */

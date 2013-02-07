@@ -30,7 +30,7 @@
 @import "page/layout/layout__global";
 //@import "page/layout/layout__seo-friendly-columns";
 @import "page/layout/layout__non-semantic-grid";
-@import "page/layout/layout__sticky-footer";
+//@import "page/layout/layout__sticky-footer";
 
 @import "page/global/html__embed";
 @import "page/global/html__lists";
@@ -53,10 +53,12 @@
 // --------------------------------------------------------------------------
 
 @import "slider-variants/basic";
-@import "slider-variants/paralax";
+//@import "slider-variants/paralax";
 //@import "slider-variants/rotate";
 @import "slider-variants/slice";
-//@import "slider-variants/tab";
+@import "slider-variants/carousel";
+@import "slider-variants/tab";
+@import "slider-variants/accordion";
 
 // Blocks
 // --------------------------------------------------------------------------
