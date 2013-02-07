@@ -89,14 +89,14 @@
 	//@include vendor(perspective, 1600);
 
 	.article {
-		@include vendor(animation, tab-top ease-out .5s);
+		@include vendor(animation, tab-top ease-out .3s);
 		//-webkit-transform-origin: 0 50%;
 		//-webkit-backface-visibility: hidden;
 	}
 
 	@for $i from 0 through 4 {
 		.article_sec_#{$i} {
-			-webkit-animation-duration: #{$i * 500 + 400}ms;
+			-webkit-animation-duration: #{$i * 200 + 200}ms;
 		}
 	}
 }

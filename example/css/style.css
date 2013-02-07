@@ -3975,38 +3975,27 @@ http://dibusoft.com/
   margin-bottom: 12px;
 }
 
-.js-ase-tab__item_active {
-  -webkit-transform-style: preserve-3d;
-  -webkit-perspective-origin: 100% 100%;
-  -webkit-perspective: 1600;
-  -moz-perspective: 1600;
-  -ms-perspective: 1600;
-  -o-perspective: 1600;
-  perspective: 1600;
-}
 .js-ase-tab__item_active .article {
-  -webkit-animation: tab-fly ease-out 0.5s;
-  -moz-animation: tab-fly ease-out 0.5s;
-  -ms-animation: tab-fly ease-out 0.5s;
-  -o-animation: tab-fly ease-out 0.5s;
-  animation: tab-fly ease-out 0.5s;
-  -webkit-transform-origin: 0 50%;
-  -webkit-backface-visibility: hidden;
+  -webkit-animation: tab-top ease-out 0.3s;
+  -moz-animation: tab-top ease-out 0.3s;
+  -ms-animation: tab-top ease-out 0.3s;
+  -o-animation: tab-top ease-out 0.3s;
+  animation: tab-top ease-out 0.3s;
 }
 .js-ase-tab__item_active .article_sec_0 {
-  -webkit-animation-duration: 400ms;
+  -webkit-animation-duration: 200ms;
 }
 .js-ase-tab__item_active .article_sec_1 {
-  -webkit-animation-duration: 900ms;
+  -webkit-animation-duration: 400ms;
 }
 .js-ase-tab__item_active .article_sec_2 {
-  -webkit-animation-duration: 1400ms;
+  -webkit-animation-duration: 600ms;
 }
 .js-ase-tab__item_active .article_sec_3 {
-  -webkit-animation-duration: 1900ms;
+  -webkit-animation-duration: 800ms;
 }
 .js-ase-tab__item_active .article_sec_4 {
-  -webkit-animation-duration: 2400ms;
+  -webkit-animation-duration: 1000ms;
 }
 
 @-webkit-keyframes tab-top {
