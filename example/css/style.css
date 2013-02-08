@@ -1202,43 +1202,43 @@ dl dd {
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: getRandomColor();
+    background: #b40d2e;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: getRandomColor();
+    background: #18da4d;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: getRandomColor();
+    background: #cd1a1f;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: getRandomColor();
+    background: #ce3f8c;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: getRandomColor();
+    background: #08abc3;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: getRandomColor();
+    background: #30d905;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: getRandomColor();
+    background: #28fd2b;
   }
 }
 /* @end */
@@ -2831,52 +2831,52 @@ http://dibusoft.com/
 }
 .ase-slider-slice_vertical .ase-slider-slice__item__slice_0 {
   left: 0px;
-  width: 86px;
+  width: 85px;
   background-position: -0px 0;
 }
 .ase-slider-slice_vertical .ase-slider-slice__item__slice_1 {
   left: 85px;
-  width: 86px;
+  width: 85px;
   background-position: -85px 0;
 }
 .ase-slider-slice_vertical .ase-slider-slice__item__slice_2 {
   left: 170px;
-  width: 86px;
+  width: 85px;
   background-position: -170px 0;
 }
 .ase-slider-slice_vertical .ase-slider-slice__item__slice_3 {
   left: 255px;
-  width: 86px;
+  width: 85px;
   background-position: -255px 0;
 }
 .ase-slider-slice_vertical .ase-slider-slice__item__slice_4 {
   left: 340px;
-  width: 86px;
+  width: 85px;
   background-position: -340px 0;
 }
 .ase-slider-slice_vertical .ase-slider-slice__item__slice_5 {
   left: 425px;
-  width: 86px;
+  width: 85px;
   background-position: -425px 0;
 }
 .ase-slider-slice_vertical .ase-slider-slice__item__slice_6 {
   left: 510px;
-  width: 86px;
+  width: 85px;
   background-position: -510px 0;
 }
 .ase-slider-slice_vertical .ase-slider-slice__item__slice_7 {
   left: 595px;
-  width: 86px;
+  width: 85px;
   background-position: -595px 0;
 }
 .ase-slider-slice_vertical .ase-slider-slice__item__slice_8 {
   left: 680px;
-  width: 86px;
+  width: 85px;
   background-position: -680px 0;
 }
 .ase-slider-slice_vertical .ase-slider-slice__item__slice_9 {
   left: 765px;
-  width: 86px;
+  width: 85px;
   background-position: -765px 0;
 }
 
@@ -2975,61 +2975,6 @@ http://dibusoft.com/
   top: -40%;
 }
 
-.slice-vertical-type-2 .ase-slider-slice__item__slice {
-  -webkit-transition: all ease 1s;
-  -moz-transition: all ease 1s;
-  -o-transition: all ease 1s;
-  transition: all ease 1s;
-  opacity: 0;
-  top: -40px;
-  -webkit-transform: scale(1.2);
-}
-.slice-vertical-type-2 .js-ase__item_active .ase-slider-slice__item__slice {
-  top: 0;
-  opacity: 1;
-  -webkit-transform: scale(1);
-}
-.slice-vertical-type-2 .js-ase__item_next .ase-slider-slice__item__slice_0,
-.slice-vertical-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_0 {
-  -webkit-transition-duration: 300ms;
-}
-.slice-vertical-type-2 .js-ase__item_next .ase-slider-slice__item__slice_1,
-.slice-vertical-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_1 {
-  -webkit-transition-duration: 380ms;
-}
-.slice-vertical-type-2 .js-ase__item_next .ase-slider-slice__item__slice_2,
-.slice-vertical-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_2 {
-  -webkit-transition-duration: 460ms;
-}
-.slice-vertical-type-2 .js-ase__item_next .ase-slider-slice__item__slice_3,
-.slice-vertical-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_3 {
-  -webkit-transition-duration: 540ms;
-}
-.slice-vertical-type-2 .js-ase__item_next .ase-slider-slice__item__slice_4,
-.slice-vertical-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_4 {
-  -webkit-transition-duration: 620ms;
-}
-.slice-vertical-type-2 .js-ase__item_next .ase-slider-slice__item__slice_5,
-.slice-vertical-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_5 {
-  -webkit-transition-duration: 700ms;
-}
-.slice-vertical-type-2 .js-ase__item_next .ase-slider-slice__item__slice_6,
-.slice-vertical-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_6 {
-  -webkit-transition-duration: 780ms;
-}
-.slice-vertical-type-2 .js-ase__item_next .ase-slider-slice__item__slice_7,
-.slice-vertical-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_7 {
-  -webkit-transition-duration: 860ms;
-}
-.slice-vertical-type-2 .js-ase__item_next .ase-slider-slice__item__slice_8,
-.slice-vertical-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_8 {
-  -webkit-transition-duration: 940ms;
-}
-.slice-vertical-type-2 .js-ase__item_next .ase-slider-slice__item__slice_9,
-.slice-vertical-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_9 {
-  -webkit-transition-duration: 1020ms;
-}
-
 .slice-horiz-type-1 .js-ase__item {
   -webkit-transition: all ease-in 0.4s;
   -moz-transition: all ease-in 0.4s;
@@ -3090,6 +3035,10 @@ http://dibusoft.com/
 .slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice,
 .slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice {
   -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  transform: rotate(20deg);
   opacity: 0;
 }
 .slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_0,
@@ -3103,46 +3052,90 @@ http://dibusoft.com/
 .slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_6,
 .slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_8 {
   -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
 }
 .slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_0,
 .slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_0 {
   -webkit-transition-delay: Infinitys;
+  -moz-transition-delay: Infinitys;
+  -ms-transition-delay: Infinitys;
+  -o-transition-delay: Infinitys;
+  transition-delay: Infinitys;
 }
 .slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_1,
 .slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_1 {
   -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -ms-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
 }
 .slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_2,
 .slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_2 {
   -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -ms-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
 }
 .slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_3,
 .slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_3 {
   -webkit-transition-delay: 0.33333s;
+  -moz-transition-delay: 0.33333s;
+  -ms-transition-delay: 0.33333s;
+  -o-transition-delay: 0.33333s;
+  transition-delay: 0.33333s;
 }
 .slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_4,
 .slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_4 {
   -webkit-transition-delay: 0.25s;
+  -moz-transition-delay: 0.25s;
+  -ms-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
 .slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_5,
 .slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_5 {
   -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 .slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_6,
 .slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_6 {
   -webkit-transition-delay: 0.16667s;
+  -moz-transition-delay: 0.16667s;
+  -ms-transition-delay: 0.16667s;
+  -o-transition-delay: 0.16667s;
+  transition-delay: 0.16667s;
 }
 .slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_7,
 .slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_7 {
   -webkit-transition-delay: 0.14286s;
+  -moz-transition-delay: 0.14286s;
+  -ms-transition-delay: 0.14286s;
+  -o-transition-delay: 0.14286s;
+  transition-delay: 0.14286s;
 }
 .slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_8,
 .slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_8 {
   -webkit-transition-delay: 0.125s;
+  -moz-transition-delay: 0.125s;
+  -ms-transition-delay: 0.125s;
+  -o-transition-delay: 0.125s;
+  transition-delay: 0.125s;
 }
 .slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_9,
 .slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_9 {
   -webkit-transition-delay: 0.11111s;
+  -moz-transition-delay: 0.11111s;
+  -ms-transition-delay: 0.11111s;
+  -o-transition-delay: 0.11111s;
+  transition-delay: 0.11111s;
 }
 
 .slice-radial-type-2 .js-ase__item {
@@ -3167,6 +3160,10 @@ http://dibusoft.com/
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice {
   -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  transform: rotate(20deg);
   opacity: 1;
 }
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_0,
@@ -3180,46 +3177,90 @@ http://dibusoft.com/
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_6,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_8 {
   -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
 }
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_0,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_0 {
   -webkit-transition-delay: Infinitys;
+  -moz-transition-delay: Infinitys;
+  -ms-transition-delay: Infinitys;
+  -o-transition-delay: Infinitys;
+  transition-delay: Infinitys;
 }
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_1,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_1 {
   -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -ms-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
 }
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_2,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_2 {
   -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -ms-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
 }
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_3,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_3 {
   -webkit-transition-delay: 0.33333s;
+  -moz-transition-delay: 0.33333s;
+  -ms-transition-delay: 0.33333s;
+  -o-transition-delay: 0.33333s;
+  transition-delay: 0.33333s;
 }
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_4,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_4 {
   -webkit-transition-delay: 0.25s;
+  -moz-transition-delay: 0.25s;
+  -ms-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_5,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_5 {
   -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_6,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_6 {
   -webkit-transition-delay: 0.16667s;
+  -moz-transition-delay: 0.16667s;
+  -ms-transition-delay: 0.16667s;
+  -o-transition-delay: 0.16667s;
+  transition-delay: 0.16667s;
 }
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_7,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_7 {
   -webkit-transition-delay: 0.14286s;
+  -moz-transition-delay: 0.14286s;
+  -ms-transition-delay: 0.14286s;
+  -o-transition-delay: 0.14286s;
+  transition-delay: 0.14286s;
 }
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_8,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_8 {
   -webkit-transition-delay: 0.125s;
+  -moz-transition-delay: 0.125s;
+  -ms-transition-delay: 0.125s;
+  -o-transition-delay: 0.125s;
+  transition-delay: 0.125s;
 }
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_9,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_9 {
   -webkit-transition-delay: 0.11111s;
+  -moz-transition-delay: 0.11111s;
+  -ms-transition-delay: 0.11111s;
+  -o-transition-delay: 0.11111s;
+  transition-delay: 0.11111s;
 }
 
 .slice-radial-type-3 .js-ase__item {
@@ -3244,6 +3285,10 @@ http://dibusoft.com/
 .slice-radial-type-3 .js-ase__item_prev .ase-slider-slice__item__slice,
 .slice-radial-type-3 .js-ase__item_next .ase-slider-slice__item__slice {
   -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  transform: rotate(20deg);
   opacity: 1;
 }
 .slice-radial-type-3 .js-ase__item_prev .ase-slider-slice__item__slice_0,
@@ -3257,6 +3302,10 @@ http://dibusoft.com/
 .slice-radial-type-3 .js-ase__item_next .ase-slider-slice__item__slice_6,
 .slice-radial-type-3 .js-ase__item_next .ase-slider-slice__item__slice_8 {
   -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
 }
 
 .slice-scale-type-1 .js-ase__item {
@@ -3277,56 +3326,140 @@ http://dibusoft.com/
 }
 .slice-scale-type-1 .js-ase__item_active .ase-slider-slice__item__slice {
   -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
 }
 .slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_0,
 .slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_0 {
   -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -ms-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
   -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
 }
 .slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_1,
 .slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_1 {
   -webkit-transition-duration: 580ms;
+  -moz-transition-duration: 580ms;
+  -ms-transition-duration: 580ms;
+  -o-transition-duration: 580ms;
+  transition-duration: 580ms;
   -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  -o-transform: scale(0.75);
+  transform: scale(0.75);
 }
 .slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_2,
 .slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_2 {
   -webkit-transition-duration: 660ms;
+  -moz-transition-duration: 660ms;
+  -ms-transition-duration: 660ms;
+  -o-transition-duration: 660ms;
+  transition-duration: 660ms;
   -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
 }
 .slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_3,
 .slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_3 {
   -webkit-transition-duration: 740ms;
+  -moz-transition-duration: 740ms;
+  -ms-transition-duration: 740ms;
+  -o-transition-duration: 740ms;
+  transition-duration: 740ms;
   -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
 }
 .slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_4,
 .slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_4 {
   -webkit-transition-duration: 820ms;
+  -moz-transition-duration: 820ms;
+  -ms-transition-duration: 820ms;
+  -o-transition-duration: 820ms;
+  transition-duration: 820ms;
   -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
 }
 .slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_5,
 .slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_5 {
   -webkit-transition-duration: 900ms;
+  -moz-transition-duration: 900ms;
+  -ms-transition-duration: 900ms;
+  -o-transition-duration: 900ms;
+  transition-duration: 900ms;
   -webkit-transform: scale(1.75);
+  -moz-transform: scale(1.75);
+  -ms-transform: scale(1.75);
+  -o-transform: scale(1.75);
+  transform: scale(1.75);
 }
 .slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_6,
 .slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_6 {
   -webkit-transition-duration: 980ms;
+  -moz-transition-duration: 980ms;
+  -ms-transition-duration: 980ms;
+  -o-transition-duration: 980ms;
+  transition-duration: 980ms;
   -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
 }
 .slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_7,
 .slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_7 {
   -webkit-transition-duration: 1060ms;
+  -moz-transition-duration: 1060ms;
+  -ms-transition-duration: 1060ms;
+  -o-transition-duration: 1060ms;
+  transition-duration: 1060ms;
   -webkit-transform: scale(2.25);
+  -moz-transform: scale(2.25);
+  -ms-transform: scale(2.25);
+  -o-transform: scale(2.25);
+  transform: scale(2.25);
 }
 .slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_8,
 .slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_8 {
   -webkit-transition-duration: 1140ms;
+  -moz-transition-duration: 1140ms;
+  -ms-transition-duration: 1140ms;
+  -o-transition-duration: 1140ms;
+  transition-duration: 1140ms;
   -webkit-transform: scale(2.5);
+  -moz-transform: scale(2.5);
+  -ms-transform: scale(2.5);
+  -o-transform: scale(2.5);
+  transform: scale(2.5);
 }
 .slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_9,
 .slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_9 {
   -webkit-transition-duration: 1220ms;
+  -moz-transition-duration: 1220ms;
+  -ms-transition-duration: 1220ms;
+  -o-transition-duration: 1220ms;
+  transition-duration: 1220ms;
   -webkit-transform: scale(2.75);
+  -moz-transform: scale(2.75);
+  -ms-transform: scale(2.75);
+  -o-transform: scale(2.75);
+  transform: scale(2.75);
 }
 
 .slice-scale-type-2 .js-ase__item {
@@ -3342,60 +3475,308 @@ http://dibusoft.com/
   -o-transition: all ease 1s;
   transition: all ease 1s;
   -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3);
 }
 .slice-scale-type-2 .js-ase__item_active {
   opacity: 1;
 }
 .slice-scale-type-2 .js-ase__item_active .ase-slider-slice__item__slice {
   -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
 }
 .slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_0,
 .slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_0 {
   -webkit-transition-duration: 200ms;
+  -moz-transition-duration: 200ms;
+  -ms-transition-duration: 200ms;
+  -o-transition-duration: 200ms;
+  transition-duration: 200ms;
 }
 .slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_1,
 .slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_1 {
   -webkit-transition-duration: 280ms;
+  -moz-transition-duration: 280ms;
+  -ms-transition-duration: 280ms;
+  -o-transition-duration: 280ms;
+  transition-duration: 280ms;
 }
 .slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_2,
 .slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_2 {
   -webkit-transition-duration: 360ms;
+  -moz-transition-duration: 360ms;
+  -ms-transition-duration: 360ms;
+  -o-transition-duration: 360ms;
+  transition-duration: 360ms;
 }
 .slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_3,
 .slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_3 {
   -webkit-transition-duration: 440ms;
+  -moz-transition-duration: 440ms;
+  -ms-transition-duration: 440ms;
+  -o-transition-duration: 440ms;
+  transition-duration: 440ms;
 }
 .slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_4,
 .slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_4 {
   -webkit-transition-duration: 520ms;
+  -moz-transition-duration: 520ms;
+  -ms-transition-duration: 520ms;
+  -o-transition-duration: 520ms;
+  transition-duration: 520ms;
 }
 .slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_5,
 .slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_5 {
   -webkit-transition-duration: 600ms;
+  -moz-transition-duration: 600ms;
+  -ms-transition-duration: 600ms;
+  -o-transition-duration: 600ms;
+  transition-duration: 600ms;
 }
 .slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_6,
 .slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_6 {
   -webkit-transition-duration: 680ms;
+  -moz-transition-duration: 680ms;
+  -ms-transition-duration: 680ms;
+  -o-transition-duration: 680ms;
+  transition-duration: 680ms;
 }
 .slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_7,
 .slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_7 {
   -webkit-transition-duration: 760ms;
+  -moz-transition-duration: 760ms;
+  -ms-transition-duration: 760ms;
+  -o-transition-duration: 760ms;
+  transition-duration: 760ms;
 }
 .slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_8,
 .slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_8 {
   -webkit-transition-duration: 840ms;
+  -moz-transition-duration: 840ms;
+  -ms-transition-duration: 840ms;
+  -o-transition-duration: 840ms;
+  transition-duration: 840ms;
 }
 .slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_9,
 .slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_9 {
   -webkit-transition-duration: 920ms;
+  -moz-transition-duration: 920ms;
+  -ms-transition-duration: 920ms;
+  -o-transition-duration: 920ms;
+  transition-duration: 920ms;
 }
 
-.slice-opacity-type-1 .js-ase__item {
-  -webkit-transition: all ease-in 1s;
-  -moz-transition: all ease-in 1s;
-  -o-transition: all ease-in 1s;
-  transition: all ease-in 1s;
+.slice-scale-vert .ase-slider-slice__item__slice {
+  opacity: 0;
+  top: -40px;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  -o-transition: all ease 1s;
+  transition: all ease 1s;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
 }
+.slice-scale-vert .js-ase__item_active .ase-slider-slice__item__slice {
+  top: 0;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.slice-scale-vert .js-ase__item_next .ase-slider-slice__item__slice_0,
+.slice-scale-vert .js-ase__item_prev .ase-slider-slice__item__slice_0 {
+  -webkit-transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -ms-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+.slice-scale-vert .js-ase__item_next .ase-slider-slice__item__slice_1,
+.slice-scale-vert .js-ase__item_prev .ase-slider-slice__item__slice_1 {
+  -webkit-transition-duration: 380ms;
+  -moz-transition-duration: 380ms;
+  -ms-transition-duration: 380ms;
+  -o-transition-duration: 380ms;
+  transition-duration: 380ms;
+}
+.slice-scale-vert .js-ase__item_next .ase-slider-slice__item__slice_2,
+.slice-scale-vert .js-ase__item_prev .ase-slider-slice__item__slice_2 {
+  -webkit-transition-duration: 460ms;
+  -moz-transition-duration: 460ms;
+  -ms-transition-duration: 460ms;
+  -o-transition-duration: 460ms;
+  transition-duration: 460ms;
+}
+.slice-scale-vert .js-ase__item_next .ase-slider-slice__item__slice_3,
+.slice-scale-vert .js-ase__item_prev .ase-slider-slice__item__slice_3 {
+  -webkit-transition-duration: 540ms;
+  -moz-transition-duration: 540ms;
+  -ms-transition-duration: 540ms;
+  -o-transition-duration: 540ms;
+  transition-duration: 540ms;
+}
+.slice-scale-vert .js-ase__item_next .ase-slider-slice__item__slice_4,
+.slice-scale-vert .js-ase__item_prev .ase-slider-slice__item__slice_4 {
+  -webkit-transition-duration: 620ms;
+  -moz-transition-duration: 620ms;
+  -ms-transition-duration: 620ms;
+  -o-transition-duration: 620ms;
+  transition-duration: 620ms;
+}
+.slice-scale-vert .js-ase__item_next .ase-slider-slice__item__slice_5,
+.slice-scale-vert .js-ase__item_prev .ase-slider-slice__item__slice_5 {
+  -webkit-transition-duration: 700ms;
+  -moz-transition-duration: 700ms;
+  -ms-transition-duration: 700ms;
+  -o-transition-duration: 700ms;
+  transition-duration: 700ms;
+}
+.slice-scale-vert .js-ase__item_next .ase-slider-slice__item__slice_6,
+.slice-scale-vert .js-ase__item_prev .ase-slider-slice__item__slice_6 {
+  -webkit-transition-duration: 780ms;
+  -moz-transition-duration: 780ms;
+  -ms-transition-duration: 780ms;
+  -o-transition-duration: 780ms;
+  transition-duration: 780ms;
+}
+.slice-scale-vert .js-ase__item_next .ase-slider-slice__item__slice_7,
+.slice-scale-vert .js-ase__item_prev .ase-slider-slice__item__slice_7 {
+  -webkit-transition-duration: 860ms;
+  -moz-transition-duration: 860ms;
+  -ms-transition-duration: 860ms;
+  -o-transition-duration: 860ms;
+  transition-duration: 860ms;
+}
+.slice-scale-vert .js-ase__item_next .ase-slider-slice__item__slice_8,
+.slice-scale-vert .js-ase__item_prev .ase-slider-slice__item__slice_8 {
+  -webkit-transition-duration: 940ms;
+  -moz-transition-duration: 940ms;
+  -ms-transition-duration: 940ms;
+  -o-transition-duration: 940ms;
+  transition-duration: 940ms;
+}
+.slice-scale-vert .js-ase__item_next .ase-slider-slice__item__slice_9,
+.slice-scale-vert .js-ase__item_prev .ase-slider-slice__item__slice_9 {
+  -webkit-transition-duration: 1020ms;
+  -moz-transition-duration: 1020ms;
+  -ms-transition-duration: 1020ms;
+  -o-transition-duration: 1020ms;
+  transition-duration: 1020ms;
+}
+
+.slice-scale-horiz .ase-slider-slice__item__slice {
+  opacity: 0;
+  left: -40px;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  -o-transition: all ease 1s;
+  transition: all ease 1s;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.slice-scale-horiz .js-ase__item_active .ase-slider-slice__item__slice {
+  left: 0;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.slice-scale-horiz .js-ase__item_next .ase-slider-slice__item__slice_0,
+.slice-scale-horiz .js-ase__item_prev .ase-slider-slice__item__slice_0 {
+  -webkit-transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -ms-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+.slice-scale-horiz .js-ase__item_next .ase-slider-slice__item__slice_1,
+.slice-scale-horiz .js-ase__item_prev .ase-slider-slice__item__slice_1 {
+  -webkit-transition-duration: 380ms;
+  -moz-transition-duration: 380ms;
+  -ms-transition-duration: 380ms;
+  -o-transition-duration: 380ms;
+  transition-duration: 380ms;
+}
+.slice-scale-horiz .js-ase__item_next .ase-slider-slice__item__slice_2,
+.slice-scale-horiz .js-ase__item_prev .ase-slider-slice__item__slice_2 {
+  -webkit-transition-duration: 460ms;
+  -moz-transition-duration: 460ms;
+  -ms-transition-duration: 460ms;
+  -o-transition-duration: 460ms;
+  transition-duration: 460ms;
+}
+.slice-scale-horiz .js-ase__item_next .ase-slider-slice__item__slice_3,
+.slice-scale-horiz .js-ase__item_prev .ase-slider-slice__item__slice_3 {
+  -webkit-transition-duration: 540ms;
+  -moz-transition-duration: 540ms;
+  -ms-transition-duration: 540ms;
+  -o-transition-duration: 540ms;
+  transition-duration: 540ms;
+}
+.slice-scale-horiz .js-ase__item_next .ase-slider-slice__item__slice_4,
+.slice-scale-horiz .js-ase__item_prev .ase-slider-slice__item__slice_4 {
+  -webkit-transition-duration: 620ms;
+  -moz-transition-duration: 620ms;
+  -ms-transition-duration: 620ms;
+  -o-transition-duration: 620ms;
+  transition-duration: 620ms;
+}
+.slice-scale-horiz .js-ase__item_next .ase-slider-slice__item__slice_5,
+.slice-scale-horiz .js-ase__item_prev .ase-slider-slice__item__slice_5 {
+  -webkit-transition-duration: 700ms;
+  -moz-transition-duration: 700ms;
+  -ms-transition-duration: 700ms;
+  -o-transition-duration: 700ms;
+  transition-duration: 700ms;
+}
+.slice-scale-horiz .js-ase__item_next .ase-slider-slice__item__slice_6,
+.slice-scale-horiz .js-ase__item_prev .ase-slider-slice__item__slice_6 {
+  -webkit-transition-duration: 780ms;
+  -moz-transition-duration: 780ms;
+  -ms-transition-duration: 780ms;
+  -o-transition-duration: 780ms;
+  transition-duration: 780ms;
+}
+.slice-scale-horiz .js-ase__item_next .ase-slider-slice__item__slice_7,
+.slice-scale-horiz .js-ase__item_prev .ase-slider-slice__item__slice_7 {
+  -webkit-transition-duration: 860ms;
+  -moz-transition-duration: 860ms;
+  -ms-transition-duration: 860ms;
+  -o-transition-duration: 860ms;
+  transition-duration: 860ms;
+}
+.slice-scale-horiz .js-ase__item_next .ase-slider-slice__item__slice_8,
+.slice-scale-horiz .js-ase__item_prev .ase-slider-slice__item__slice_8 {
+  -webkit-transition-duration: 940ms;
+  -moz-transition-duration: 940ms;
+  -ms-transition-duration: 940ms;
+  -o-transition-duration: 940ms;
+  transition-duration: 940ms;
+}
+.slice-scale-horiz .js-ase__item_next .ase-slider-slice__item__slice_9,
+.slice-scale-horiz .js-ase__item_prev .ase-slider-slice__item__slice_9 {
+  -webkit-transition-duration: 1020ms;
+  -moz-transition-duration: 1020ms;
+  -ms-transition-duration: 1020ms;
+  -o-transition-duration: 1020ms;
+  transition-duration: 1020ms;
+}
+
 .slice-opacity-type-1 .ase-slider-slice__item__slice {
   -webkit-transition: all linear 1s;
   -moz-transition: all linear 1s;
@@ -3403,48 +3784,91 @@ http://dibusoft.com/
   transition: all linear 1s;
   opacity: 0;
 }
+.slice-opacity-type-1 .ase-slider-slice__item__slice_0 {
+  border-radius: 0;
+}
 .slice-opacity-type-1 .js-ase__item_active .ase-slider-slice__item__slice {
   opacity: 1;
 }
 .slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_0,
 .slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_0 {
   -webkit-transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -ms-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  transition-duration: 300ms;
 }
 .slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_1,
 .slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_1 {
   -webkit-transition-duration: 380ms;
+  -moz-transition-duration: 380ms;
+  -ms-transition-duration: 380ms;
+  -o-transition-duration: 380ms;
+  transition-duration: 380ms;
 }
 .slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_2,
 .slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_2 {
   -webkit-transition-duration: 460ms;
+  -moz-transition-duration: 460ms;
+  -ms-transition-duration: 460ms;
+  -o-transition-duration: 460ms;
+  transition-duration: 460ms;
 }
 .slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_3,
 .slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_3 {
   -webkit-transition-duration: 540ms;
+  -moz-transition-duration: 540ms;
+  -ms-transition-duration: 540ms;
+  -o-transition-duration: 540ms;
+  transition-duration: 540ms;
 }
 .slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_4,
 .slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_4 {
   -webkit-transition-duration: 620ms;
+  -moz-transition-duration: 620ms;
+  -ms-transition-duration: 620ms;
+  -o-transition-duration: 620ms;
+  transition-duration: 620ms;
 }
 .slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_5,
 .slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_5 {
   -webkit-transition-duration: 700ms;
+  -moz-transition-duration: 700ms;
+  -ms-transition-duration: 700ms;
+  -o-transition-duration: 700ms;
+  transition-duration: 700ms;
 }
 .slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_6,
 .slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_6 {
   -webkit-transition-duration: 780ms;
+  -moz-transition-duration: 780ms;
+  -ms-transition-duration: 780ms;
+  -o-transition-duration: 780ms;
+  transition-duration: 780ms;
 }
 .slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_7,
 .slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_7 {
   -webkit-transition-duration: 860ms;
+  -moz-transition-duration: 860ms;
+  -ms-transition-duration: 860ms;
+  -o-transition-duration: 860ms;
+  transition-duration: 860ms;
 }
 .slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_8,
 .slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_8 {
   -webkit-transition-duration: 940ms;
+  -moz-transition-duration: 940ms;
+  -ms-transition-duration: 940ms;
+  -o-transition-duration: 940ms;
+  transition-duration: 940ms;
 }
 .slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_9,
 .slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_9 {
   -webkit-transition-duration: 1020ms;
+  -moz-transition-duration: 1020ms;
+  -ms-transition-duration: 1020ms;
+  -o-transition-duration: 1020ms;
+  transition-duration: 1020ms;
 }
 
 .slice-bgposit-type-1 .js-ase__item {
@@ -3470,42 +3894,183 @@ http://dibusoft.com/
 .slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_0,
 .slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_0 {
   -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -ms-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
 }
 .slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_1,
 .slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_1 {
   -webkit-transition-duration: 580ms;
+  -moz-transition-duration: 580ms;
+  -ms-transition-duration: 580ms;
+  -o-transition-duration: 580ms;
+  transition-duration: 580ms;
 }
 .slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_2,
 .slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_2 {
   -webkit-transition-duration: 660ms;
+  -moz-transition-duration: 660ms;
+  -ms-transition-duration: 660ms;
+  -o-transition-duration: 660ms;
+  transition-duration: 660ms;
 }
 .slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_3,
 .slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_3 {
   -webkit-transition-duration: 740ms;
+  -moz-transition-duration: 740ms;
+  -ms-transition-duration: 740ms;
+  -o-transition-duration: 740ms;
+  transition-duration: 740ms;
 }
 .slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_4,
 .slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_4 {
   -webkit-transition-duration: 820ms;
+  -moz-transition-duration: 820ms;
+  -ms-transition-duration: 820ms;
+  -o-transition-duration: 820ms;
+  transition-duration: 820ms;
 }
 .slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_5,
 .slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_5 {
   -webkit-transition-duration: 900ms;
+  -moz-transition-duration: 900ms;
+  -ms-transition-duration: 900ms;
+  -o-transition-duration: 900ms;
+  transition-duration: 900ms;
 }
 .slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_6,
 .slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_6 {
   -webkit-transition-duration: 980ms;
+  -moz-transition-duration: 980ms;
+  -ms-transition-duration: 980ms;
+  -o-transition-duration: 980ms;
+  transition-duration: 980ms;
 }
 .slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_7,
 .slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_7 {
   -webkit-transition-duration: 1060ms;
+  -moz-transition-duration: 1060ms;
+  -ms-transition-duration: 1060ms;
+  -o-transition-duration: 1060ms;
+  transition-duration: 1060ms;
 }
 .slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_8,
 .slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_8 {
   -webkit-transition-duration: 1140ms;
+  -moz-transition-duration: 1140ms;
+  -ms-transition-duration: 1140ms;
+  -o-transition-duration: 1140ms;
+  transition-duration: 1140ms;
 }
 .slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_9,
 .slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_9 {
   -webkit-transition-duration: 1220ms;
+  -moz-transition-duration: 1220ms;
+  -ms-transition-duration: 1220ms;
+  -o-transition-duration: 1220ms;
+  transition-duration: 1220ms;
+}
+
+.slice-bgposit-type-2 .js-ase__item {
+  -webkit-transition: all ease-in 1s;
+  -moz-transition: all ease-in 1s;
+  -o-transition: all ease-in 1s;
+  transition: all ease-in 1s;
+  opacity: 0;
+}
+.slice-bgposit-type-2 .ase-slider-slice__item__slice {
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  -o-transition: all ease 1s;
+  transition: all ease 1s;
+}
+.slice-bgposit-type-2 .js-ase__item_active {
+  opacity: 1;
+}
+.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice,
+.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice {
+  background-position: 0 -40px;
+}
+.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_0,
+.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_0 {
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -ms-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_1,
+.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_1 {
+  -webkit-transition-duration: 580ms;
+  -moz-transition-duration: 580ms;
+  -ms-transition-duration: 580ms;
+  -o-transition-duration: 580ms;
+  transition-duration: 580ms;
+}
+.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_2,
+.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_2 {
+  -webkit-transition-duration: 660ms;
+  -moz-transition-duration: 660ms;
+  -ms-transition-duration: 660ms;
+  -o-transition-duration: 660ms;
+  transition-duration: 660ms;
+}
+.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_3,
+.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_3 {
+  -webkit-transition-duration: 740ms;
+  -moz-transition-duration: 740ms;
+  -ms-transition-duration: 740ms;
+  -o-transition-duration: 740ms;
+  transition-duration: 740ms;
+}
+.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_4,
+.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_4 {
+  -webkit-transition-duration: 820ms;
+  -moz-transition-duration: 820ms;
+  -ms-transition-duration: 820ms;
+  -o-transition-duration: 820ms;
+  transition-duration: 820ms;
+}
+.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_5,
+.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_5 {
+  -webkit-transition-duration: 900ms;
+  -moz-transition-duration: 900ms;
+  -ms-transition-duration: 900ms;
+  -o-transition-duration: 900ms;
+  transition-duration: 900ms;
+}
+.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_6,
+.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_6 {
+  -webkit-transition-duration: 980ms;
+  -moz-transition-duration: 980ms;
+  -ms-transition-duration: 980ms;
+  -o-transition-duration: 980ms;
+  transition-duration: 980ms;
+}
+.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_7,
+.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_7 {
+  -webkit-transition-duration: 1060ms;
+  -moz-transition-duration: 1060ms;
+  -ms-transition-duration: 1060ms;
+  -o-transition-duration: 1060ms;
+  transition-duration: 1060ms;
+}
+.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_8,
+.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_8 {
+  -webkit-transition-duration: 1140ms;
+  -moz-transition-duration: 1140ms;
+  -ms-transition-duration: 1140ms;
+  -o-transition-duration: 1140ms;
+  transition-duration: 1140ms;
+}
+.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_9,
+.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_9 {
+  -webkit-transition-duration: 1220ms;
+  -moz-transition-duration: 1220ms;
+  -ms-transition-duration: 1220ms;
+  -o-transition-duration: 1220ms;
+  transition-duration: 1220ms;
 }
 
 .slice-flip-type-1 .ase-slider__container__inner {
@@ -3611,6 +4176,7 @@ http://dibusoft.com/
   display: inline-block;
   vertical-align: top;
   float: none;
+  border: 2px solid #cccccc;
 }
 .ie6-7 .i-slider__pagination_carousel .i-slider__pagination__item {
   display: inline;
