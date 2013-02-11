@@ -6,8 +6,8 @@
  on items inside container. You could use all awailable css-powers to realize
  slider-effect of your dreams.
 
- Authors: JS-jedi: Dmitry Gambal (http://github.com/mrgambal)
-          CSS-jedi: Dmitry Nechepurenko (https://github.com/dimanech)
+ Authors: JS-jedi: Dmitry Gambal ( https://github.com/mrgambal )
+          CSS-jedi: Dmitry Nechepurenko ( https://github.com/dimanech )
 
  Inspired By: My Friend Dmitry Nechepurenko and some existing solutions
 
@@ -332,6 +332,9 @@
 
             itemIndex = _s.__nextIndex(itemIndex);
             goBack = itemIndex < _s.__curIndex;
+            // calculate prev and next index
+            if (Math.abs(itemIndex - _s.__curIndex) > 1)
+                prevIndex = _s.__nextIndex((goBack ? itemIndex + 1 : itemIndex - 1), true);
             nextIndex = _s.__nextIndex((goBack ? itemIndex - 1 : itemIndex + 1), true);
             // pagination links update
             if (_s.__pgnContainer)
@@ -340,21 +343,24 @@
             if (stopAutoplay)
                 _s.stopAutoplay();
 
+            // clear classes and add to prev/next class to destination item
             _s.items
-                .removeClass(_so.prevClass + " " + _so.nextClass)
-                .eq(itemIndex)
-                .addClass(goBack ? _so.prevClass : _so.nextClass);
+                .removeClass(_so.prevClass + " " + _so.nextClass)[itemIndex]
+                .className += " " + (goBack ? _so.prevClass : _so.nextClass);
+            // clear current class
             _s.__current
-                .removeClass(_so.currentClass)
-                .addClass(goBack ? _so.nextClass : _so.prevClass);
+                .removeClass(_so.currentClass);
+            // add class to prev item
+            _s.items[prevIndex]
+                .className += " " + (goBack ? _so.nextClass : _so.prevClass);
+            // set current item and add needed class
             _s.__current = _s.items.eq(itemIndex)
                 .removeClass(goBack ? _so.prevClass : _so.nextClass)
                 .addClass(_so.currentClass);
-            _s.items
-                .eq(nextIndex)
-                .addClass(goBack ? _so.prevClass : _so.nextClass);
+            // add class to next item
+            _s.items[nextIndex]
+                .className += " " + (goBack ? _so.prevClass : _so.nextClass);
             _s.__curIndex = itemIndex;
-
             // call onMove
             if (typeof _so.onMove === 'function')
                 _so.onMove.call(this);
@@ -405,7 +411,6 @@
 		/*
 		 * Initializes new ASE-object state
 		 * 
-		 * @private
 		 * @this {ASEngine}
 		 * 
 		 * @param {Object} opts Options set.

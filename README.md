@@ -5,7 +5,7 @@ Aura Slider Engine
 
 Authors:
 -------
-* JS-jedi: Dmitry Gambal (http://github.com/mrgambal)
+* JS-jedi: Dmitry Gambal (https://github.com/mrgambal)
 * CSS-jedi: Dmitry Nechepurenko (https://github.com/dimanech)
 
 Inspired By:
