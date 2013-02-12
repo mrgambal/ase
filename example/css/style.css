@@ -616,6 +616,22 @@ dl dd {
 }
 
 /* @end */
+/* @group article
+  --------------------------------------------------------------------------- */
+.article {
+  position: relative;
+}
+.article img {
+  margin-bottom: 6px;
+}
+.article h2 {
+  margin-bottom: 8px;
+}
+.article h3 {
+  margin-bottom: 12px;
+}
+
+/* @end */
 /* @group btn
   --------------------------------------------------------------------------- */
 .btn {
@@ -801,15 +817,15 @@ dl dd {
 }
 
 .ase-slider__item_slide-1 {
-  background: rgba(120, 198, 250, 0.4);
+  background: #78c6fa;
 }
 
 .ase-slider__item_slide-2 {
-  background: rgba(130, 203, 81, 0.4);
+  background: #82cb51;
 }
 
 .ase-slider__item_slide-3 {
-  background: rgba(162, 0, 184, 0.4);
+  background: #a200b8;
 }
 
 .ase-slider__item__inner {
@@ -892,19 +908,19 @@ dl dd {
 }
 
 .js-ase__pagination__item_active {
-  background: rgba(22, 156, 246, 0.4);
+  background: #169cf6;
 }
 
 .js-ase__pagination__item_p1 .js-ase__pagination__item_active {
-  background: rgba(22, 156, 246, 0.4);
+  background: #169cf6;
 }
 
 .js-ase__pagination__item_p2 .js-ase__pagination__item_active {
-  background: rgba(81, 140, 42, 0.4);
+  background: #518c2a;
 }
 
 .js-ase__pagination__item_p3 .js-ase__pagination__item_active {
-  background: rgba(72, 0, 82, 0.4);
+  background: #480052;
 }
 
 /* @end */
@@ -928,7 +944,7 @@ dl dd {
 }
 
 .def__bage {
-  background-color: rgba(81, 110, 203, 0.4);
+  background-color: #516ecb;
   color: #fff;
   padding: 0 5px;
   margin: 0 5px 0 0;
@@ -1202,43 +1218,43 @@ dl dd {
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #18dcf6;
+    background: #16d9ab;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #659661;
+    background: #acad21;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #e93e52;
+    background: #b9fb35;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #762d64;
+    background: #d70bc3;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #a9046c;
+    background: #a9e690;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #2daa8c;
+    background: #44b8bb;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #380ee4;
+    background: #e18b4f;
   }
 }
 /* @end */
@@ -4073,130 +4089,6 @@ http://dibusoft.com/
   transition-duration: 1220ms;
 }
 
-.slice-flip-type-1 .ase-slider__container__inner {
-  -webkit-perspective: 900;
-  -moz-perspective: 900;
-  -ms-perspective: 900;
-  -o-perspective: 900;
-  perspective: 900;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-.slice-flip-type-1 .js-ase__item {
-  -webkit-transition: all linear 0.5s;
-  -moz-transition: all linear 0.5s;
-  -o-transition: all linear 0.5s;
-  transition: all linear 0.5s;
-}
-.slice-flip-type-1 .js-ase__item .ase-slider-slice__item__slice {
-  -webkit-transform-origin: 0 50%;
-  -moz-transform-origin: 0 50%;
-  -ms-transform-origin: 0 50%;
-  -o-transform-origin: 0 50%;
-  transform-origin: 0 50%;
-  -webkit-transition: all linear 0.4s;
-  -moz-transition: all linear 0.4s;
-  -o-transition: all linear 0.4s;
-  transition: all linear 0.4s;
-}
-.slice-flip-type-1 .js-ase__item_active .ase-slider-slice__item__slice {
-  -webkit-transform: translate3d(0, -50%, 0) rotate3d(1, 0, 0, 90deg);
-  -moz-transform: translate3d(0, -50%, 0) rotate3d(1, 0, 0, 90deg);
-  -ms-transform: translate3d(0, -50%, 0) rotate3d(1, 0, 0, 90deg);
-  -o-transform: translate3d(0, -50%, 0) rotate3d(1, 0, 0, 90deg);
-  transform: translate3d(0, -50%, 0) rotate3d(1, 0, 0, 90deg);
-}
-.slice-flip-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_0,
-.slice-flip-type-1 .js-ase__item_next .ase-slider-slice__item__slice_0 {
-  -webkit-transition-duration: 500ms;
-  -moz-transition-duration: 500ms;
-  -ms-transition-duration: 500ms;
-  -o-transition-duration: 500ms;
-  transition-duration: 500ms;
-}
-.slice-flip-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_1,
-.slice-flip-type-1 .js-ase__item_next .ase-slider-slice__item__slice_1 {
-  -webkit-transition-duration: 580ms;
-  -moz-transition-duration: 580ms;
-  -ms-transition-duration: 580ms;
-  -o-transition-duration: 580ms;
-  transition-duration: 580ms;
-}
-.slice-flip-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_2,
-.slice-flip-type-1 .js-ase__item_next .ase-slider-slice__item__slice_2 {
-  -webkit-transition-duration: 660ms;
-  -moz-transition-duration: 660ms;
-  -ms-transition-duration: 660ms;
-  -o-transition-duration: 660ms;
-  transition-duration: 660ms;
-}
-.slice-flip-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_3,
-.slice-flip-type-1 .js-ase__item_next .ase-slider-slice__item__slice_3 {
-  -webkit-transition-duration: 740ms;
-  -moz-transition-duration: 740ms;
-  -ms-transition-duration: 740ms;
-  -o-transition-duration: 740ms;
-  transition-duration: 740ms;
-}
-.slice-flip-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_4,
-.slice-flip-type-1 .js-ase__item_next .ase-slider-slice__item__slice_4 {
-  -webkit-transition-duration: 820ms;
-  -moz-transition-duration: 820ms;
-  -ms-transition-duration: 820ms;
-  -o-transition-duration: 820ms;
-  transition-duration: 820ms;
-}
-.slice-flip-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_5,
-.slice-flip-type-1 .js-ase__item_next .ase-slider-slice__item__slice_5 {
-  -webkit-transition-duration: 900ms;
-  -moz-transition-duration: 900ms;
-  -ms-transition-duration: 900ms;
-  -o-transition-duration: 900ms;
-  transition-duration: 900ms;
-}
-.slice-flip-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_6,
-.slice-flip-type-1 .js-ase__item_next .ase-slider-slice__item__slice_6 {
-  -webkit-transition-duration: 980ms;
-  -moz-transition-duration: 980ms;
-  -ms-transition-duration: 980ms;
-  -o-transition-duration: 980ms;
-  transition-duration: 980ms;
-}
-.slice-flip-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_7,
-.slice-flip-type-1 .js-ase__item_next .ase-slider-slice__item__slice_7 {
-  -webkit-transition-duration: 1060ms;
-  -moz-transition-duration: 1060ms;
-  -ms-transition-duration: 1060ms;
-  -o-transition-duration: 1060ms;
-  transition-duration: 1060ms;
-}
-.slice-flip-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_8,
-.slice-flip-type-1 .js-ase__item_next .ase-slider-slice__item__slice_8 {
-  -webkit-transition-duration: 1140ms;
-  -moz-transition-duration: 1140ms;
-  -ms-transition-duration: 1140ms;
-  -o-transition-duration: 1140ms;
-  transition-duration: 1140ms;
-}
-.slice-flip-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_9,
-.slice-flip-type-1 .js-ase__item_next .ase-slider-slice__item__slice_9 {
-  -webkit-transition-duration: 1220ms;
-  -moz-transition-duration: 1220ms;
-  -ms-transition-duration: 1220ms;
-  -o-transition-duration: 1220ms;
-  transition-duration: 1220ms;
-}
-.slice-flip-type-1 .js-ase__item_next .ase-slider-slice__item__slice {
-  -webkit-transform: translate3d(0, 100%, 0) rotate3d(1, 0, 0, -90deg);
-  -moz-transform: translate3d(0, 100%, 0) rotate3d(1, 0, 0, -90deg);
-  -ms-transform: translate3d(0, 100%, 0) rotate3d(1, 0, 0, -90deg);
-  -o-transform: translate3d(0, 100%, 0) rotate3d(1, 0, 0, -90deg);
-  transform: translate3d(0, 100%, 0) rotate3d(1, 0, 0, -90deg);
-}
-
 /* @end */
 /* @group tab-generic
   --------------------------------------------------------------------------- */
@@ -4310,7 +4202,7 @@ http://dibusoft.com/
   height: 10px;
   top: -6px;
   width: 23px;
-  background: url(../images/example-carousel/bg-arrow-active.png) 0 center no-repeat;
+  background: url(../images/example-carousel/bg-arrow-active.gif) center 0 no-repeat;
   -webkit-transition: all ease-out 0.5s;
   -moz-transition: all ease-out 0.5s;
   -o-transition: all ease-out 0.5s;
@@ -4540,19 +4432,15 @@ http://dibusoft.com/
 }
 
 /* @end */
-.ase-tab {
+.tab {
   position: relative;
 }
-.ase-tab .l-span {
-  overflow: hidden;
-}
 
-.js-ase-tab__item {
-  display: none;
-}
-
-.js-ase-tab__item_active {
-  display: block;
+.tab__item {
+  max-width: 61em;
+  _width: 61em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tab__nav {
@@ -4594,42 +4482,66 @@ http://dibusoft.com/
   color: white !important;
 }
 
-/* @group article
+/* @group ase tabs behaviour
   --------------------------------------------------------------------------- */
-.article {
-  position: relative;
-}
-.article img {
-  margin-bottom: 6px;
-}
-.article h2 {
-  margin-bottom: 8px;
-}
-.article h3 {
-  margin-bottom: 12px;
+.js-ase-tab__item {
+  display: none;
 }
 
-.js-ase-tab__item_active .article {
+.js-ase-tab__item_active {
+  display: block;
+}
+
+/* @end */
+/* @group ase tabs animations
+  --------------------------------------------------------------------------- */
+.tab-anim-top .js-ase-tab__item {
+  display: none;
+}
+.tab-anim-top .js-ase-tab__item_active {
+  display: block;
+}
+.tab-anim-top .js-ase-tab__item_active .article {
   -webkit-animation: tab-top ease-out 0.3s;
   -moz-animation: tab-top ease-out 0.3s;
   -ms-animation: tab-top ease-out 0.3s;
   -o-animation: tab-top ease-out 0.3s;
   animation: tab-top ease-out 0.3s;
 }
-.js-ase-tab__item_active .article_sec_0 {
+.tab-anim-top .js-ase-tab__item_active .article_sec_0 {
   -webkit-animation-duration: 200ms;
+  -moz-animation-duration: 200ms;
+  -ms-animation-duration: 200ms;
+  -o-animation-duration: 200ms;
+  animation-duration: 200ms;
 }
-.js-ase-tab__item_active .article_sec_1 {
+.tab-anim-top .js-ase-tab__item_active .article_sec_1 {
   -webkit-animation-duration: 400ms;
+  -moz-animation-duration: 400ms;
+  -ms-animation-duration: 400ms;
+  -o-animation-duration: 400ms;
+  animation-duration: 400ms;
 }
-.js-ase-tab__item_active .article_sec_2 {
+.tab-anim-top .js-ase-tab__item_active .article_sec_2 {
   -webkit-animation-duration: 600ms;
+  -moz-animation-duration: 600ms;
+  -ms-animation-duration: 600ms;
+  -o-animation-duration: 600ms;
+  animation-duration: 600ms;
 }
-.js-ase-tab__item_active .article_sec_3 {
+.tab-anim-top .js-ase-tab__item_active .article_sec_3 {
   -webkit-animation-duration: 800ms;
+  -moz-animation-duration: 800ms;
+  -ms-animation-duration: 800ms;
+  -o-animation-duration: 800ms;
+  animation-duration: 800ms;
 }
-.js-ase-tab__item_active .article_sec_4 {
+.tab-anim-top .js-ase-tab__item_active .article_sec_4 {
   -webkit-animation-duration: 1000ms;
+  -moz-animation-duration: 1000ms;
+  -ms-animation-duration: 1000ms;
+  -o-animation-duration: 1000ms;
+  animation-duration: 1000ms;
 }
 
 @-webkit-keyframes tab-top {
@@ -4668,10 +4580,86 @@ http://dibusoft.com/
   }
 }
 
-@-webkit-keyframes tab-rotate {
+.tab-anim-flip .js-ase-tab__item {
+  display: none;
+  -webkit-perspective: 1200;
+  -moz-perspective: 1200;
+  -ms-perspective: 1200;
+  -o-perspective: 1200;
+  perspective: 1200;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.tab-anim-flip .js-ase-tab__item .l-span_6 {
+  -webkit-perspective: 1200;
+  -moz-perspective: 1200;
+  -ms-perspective: 1200;
+  -o-perspective: 1200;
+  perspective: 1200;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.tab-anim-flip .js-ase-tab__item .article {
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  -webkit-transform-origin: 0 50%;
+  -moz-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  -o-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+}
+.tab-anim-flip .js-ase-tab__item_active {
+  display: block;
+}
+.tab-anim-flip .js-ase-tab__item_active .article {
+  -webkit-animation: flip-bottom ease-out 0.6s;
+  -moz-animation: flip-bottom ease-out 0.6s;
+  -ms-animation: flip-bottom ease-out 0.6s;
+  -o-animation: flip-bottom ease-out 0.6s;
+  animation: flip-bottom ease-out 0.6s;
+}
+
+@-webkit-keyframes flip-bottom {
   0% {
-    opacity: 0;
-    -webkit-transform: rotate3d(80, 70, 10, 90deg);
+    opacity: .5;
+    -webkit-transform: translate3d(0, 20px, 0) rotate3d(1, 0, 0, -90deg);
+    -webkit-transform-origin: 0 0;
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+    -webkit-transform-origin: 0 50%;
+  }
+}
+
+/* @end */
+@-webkit-keyframes test-flip-top {
+  0% {
+    opacity: .5;
+    -webkit-transform: translate3d(0, -80px, 0) rotate3d(1, 0, 0, 40deg);
+    -webkit-transform-origin: 0 50%;
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
+    -webkit-transform-origin: 0 0;
+  }
+}
+
+@-webkit-keyframes test-cube {
+  0% {
+    opacity: .5;
+    -webkit-transform: translate3d(0, 50px, 0) rotate3d(1, 0, 0, -90deg);
   }
 
   100% {
@@ -4680,23 +4668,18 @@ http://dibusoft.com/
   }
 }
 
-@-webkit-keyframes tab-fly {
+@-webkit-keyframes test-cube {
   0% {
-    opacity: 0;
-    -webkit-transform: rotateX(-90deg);
-    bottom: -40px;
-    -webkit-transform-origin: 0 50%;
+    opacity: .5;
+    -webkit-transform: translate3d(0, -100px, 0) rotate3d(1, 0, 0, 90deg);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: rotateX(0);
-    bottom: 0;
-    -webkit-transform-origin: 0 100%;
+    -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
   }
 }
 
-/* @end */
 /*
 	TODO: http://www.factoria.it/
 

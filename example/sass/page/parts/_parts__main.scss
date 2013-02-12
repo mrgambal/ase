@@ -5,10 +5,16 @@
 		Main
 ============================================================================= */
 
-$green: rgba(#82CB51, .4);
-$blue: rgba(#78C6FA, .4);
-$dark-blue: rgba(#516ECB, .4);
-$violet: rgba(#A200B8, .4);
+$green: #82CB51;
+$blue: #78C6FA;
+$dark-blue: #516ECB;
+$violet: #A200B8;
+
+// testing
+//$green: rgba(#82CB51, .4);
+//$blue: rgba(#78C6FA, .4);
+//$dark-blue: rgba(#516ECB, .4);
+//$violet: rgba(#A200B8, .4);
 
 /* @group Pattern: Block
   --------------------------------------------------------------------------- */
@@ -87,6 +93,31 @@ $violet: rgba(#A200B8, .4);
 		color: $baseColor;
 	}
 }
+
+/* @end */
+
+/* @group article
+  --------------------------------------------------------------------------- */
+
+.article {
+	position: relative;
+
+	img {
+		margin-bottom: 6px;
+	}
+
+	h2 {
+		margin-bottom: 8px;
+	}
+
+	h3 {
+		margin-bottom: 12px;
+	}
+}
+
+.article_main {}
+
+.article_sec {}
 
 /* @end */
 

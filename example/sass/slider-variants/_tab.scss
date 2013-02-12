@@ -1,21 +1,18 @@
 @import "weiss-config";
 @import "helpers/mixins";
 
-.ase-tab {
+.tab {
 	position: relative;
-
-	.l-span {
-		overflow: hidden;
-	}
 }
 
-.js-ase-tab__item {
-	display: none;
+.tab__item {
+	max-width: 61em;
+	_width: 61em;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.js-ase-tab__item_active {
-	display: block;
-}
+// tab nav
 
 .tab__nav {
 	text-align: center;
@@ -58,45 +55,42 @@
 	color: #fff !important;
 }
 
+// tab content
+
 .tab__content {}
 
-/* @group article
+/* @group ase tabs behaviour
   --------------------------------------------------------------------------- */
 
-.article {
-	position: relative;
-
-	img {
-		margin-bottom: 6px;
-	}
-
-	h2 {
-		margin-bottom: 8px;
-	}
-
-	h3 {
-		margin-bottom: 12px;
-	}
+.js-ase-tab__item {
+	display: none;
 }
 
-.article_main {}
-
-.article_sec {}
-
 .js-ase-tab__item_active {
-	//-webkit-transform-style: preserve-3d;
-	//-webkit-perspective-origin: 100% 100%;
-	//@include vendor(perspective, 1600);
+	display: block;
+}
 
-	.article {
-		@include vendor(animation, tab-top ease-out .3s);
-		//-webkit-transform-origin: 0 50%;
-		//-webkit-backface-visibility: hidden;
+/* @end */
+
+/* @group ase tabs animations
+  --------------------------------------------------------------------------- */
+
+.tab-anim-top {
+	.js-ase-tab__item {
+		display: none;
 	}
 
-	@for $i from 0 through 4 {
-		.article_sec_#{$i} {
-			-webkit-animation-duration: #{$i * 200 + 200}ms;
+	.js-ase-tab__item_active {
+		display: block;
+
+		.article {
+			@include vendor(animation, tab-top ease-out .3s);
+		}
+
+		@for $i from 0 through 4 {
+			.article_sec_#{$i} {
+				@include vendor(animation-duration, #{$i * 200 + 200}ms);
+			}
 		}
 	}
 }
@@ -116,17 +110,56 @@
 	100% { bottom: 0; opacity: 1; }
 }
 
-@-webkit-keyframes tab-rotate {
-	0%   { opacity: 0; -webkit-transform: rotate3d( 80,70,10,90deg );}
-	100% { opacity: 1; -webkit-transform: rotate3d( 0, 0, 0, 0deg );}
+.tab-anim-flip {
+
+	.js-ase-tab__item {
+		display: none;
+		@include vendor(perspective, 1200);
+		@include vendor(transform-style, preserve-3d);
+
+		.l-span_6 {
+			@include vendor(perspective, 1200);
+			@include vendor(transform-style, preserve-3d);
+		}
+
+		.article {
+			@include transition(all 0.6s ease-in-out);
+			@include vendor(transform-origin, 0 50%);
+		}
+	}
+
+	.js-ase-tab__item_active {
+		display: block;
+
+		.article {
+			@include vendor(animation, flip-bottom ease-out .6s);
+		}
+	}
 }
 
-@-webkit-keyframes tab-fly {
-	0%   { opacity: 0; -webkit-transform: rotateX(-90deg); bottom: -40px; -webkit-transform-origin: 0 50%;}
-	100% { opacity: 1; -webkit-transform: rotateX(0); bottom: 0; -webkit-transform-origin: 0 100%;}
+@-webkit-keyframes flip-bottom {
+	0% { opacity: .5; -webkit-transform: translate3d(0,20px,0) rotate3d(1,0,0,-90deg);-webkit-transform-origin: 0 0;}
+	100%   { opacity: 1; -webkit-transform: rotate3d(0,0,0,0deg);-webkit-transform-origin: 0 50%;}
 }
 
 /* @end */
+
+// testing
+
+@-webkit-keyframes test-flip-top {
+	0% { opacity: .5; -webkit-transform: translate3d(0,-80px,0) rotate3d(1,0,0,40deg); -webkit-transform-origin: 0 50%;}
+	100%   { opacity: 1; -webkit-transform: translate3d(0,0,0) rotate3d(0,0,0,0deg); -webkit-transform-origin: 0 0; }
+}
+
+@-webkit-keyframes test-cube { // front
+	0% { opacity: .5; -webkit-transform: translate3d(0,50px,0) rotate3d(1,0,0,-90deg);}
+	100%   { opacity: 1; -webkit-transform: rotate3d(0,0,0,0deg);}
+}
+
+@-webkit-keyframes test-cube { // back
+	0% { opacity: .5; -webkit-transform: translate3d(0,-100px,0) rotate3d(1,0,0,90deg);}
+	100%   { opacity: 1; -webkit-transform: translate3d(0,0,0) rotate3d(0,0,0,0deg);}
+}
 
 /*
 	TODO: http://www.factoria.it/

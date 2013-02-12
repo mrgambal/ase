@@ -596,54 +596,52 @@ $sliceIndexH: $sliceItemheight/10;
 
 // flip
 
-.slice-flip-type-1 {
-
-	.ase-slider__container__inner {
-		@include vendor(perspective, 900);
-		@include vendor(transform-style, preserve-3d);
-		//@include vendor(perspective-origin, 50% 50%);
-	}
-
-	.js-ase__item {
-		//visibility: hidden;
-		@include transition(all linear .5s);
-
-		.ase-slider-slice__item__slice {
-			@include vendor(transform-origin, 0 50%);
-			@include transition(all linear .4s);
-		}
-	}
-
-	.js-ase__item_active {
-		//visibility: visible;
-
-		.ase-slider-slice__item__slice {
-			@include vendor(transform, translate3d(0, -50%, 0) rotate3d(1, 0, 0, 90deg));
-			//@include vendor(transform, translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg));
-		}
-	}
-
-	.js-ase__item_prev,
-	.js-ase__item_next {
-		@for $i from 0 through 9 {
-			.ase-slider-slice__item__slice_#{$i} {
-				@include vendor(transition-duration, #{$i * 80 + 500}ms);
-			}
-		}
-	}
-
-	.js-ase__item_prev {
-		.ase-slider-slice__item__slice {
-
-		}
-	}
-
-	.js-ase__item_next {
-		.ase-slider-slice__item__slice {
-			@include vendor(transform, translate3d(0, 100%, 0) rotate3d(1, 0, 0, -90deg));
-		}
-	}
-}
+//.slice-flip-type-1 {
+//
+//	.ase-slider__container__inner {
+//		@include vendor(perspective, 900);
+//		@include vendor(transform-style, preserve-3d);
+//	}
+//
+//	.js-ase__item {
+//		opacity: 0;
+//		@include transition(all linear .6s);
+//
+//		.ase-slider-slice__item__slice {
+//			@include vendor(transform-origin, 0 50%);
+//			@include transition(all linear .4s);
+//		}
+//	}
+//
+//	.js-ase__item_active {
+//		opacity: 1;
+//
+//		.ase-slider-slice__item__slice {
+//			@include vendor(transform, translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg));
+//		}
+//	}
+//
+//	.js-ase__item_prev,
+//	.js-ase__item_next {
+//		@for $i from 0 through 9 {
+//			.ase-slider-slice__item__slice_#{$i} {
+//				@include vendor(transition-delay, #{$i * 80}ms);
+//			}
+//		}
+//	}
+//
+//	.js-ase__item_prev {
+//		.ase-slider-slice__item__slice {
+//			@include vendor(transform, translate3d(0, -50%, 0) rotate3d(1, 0, 0, 90deg));
+//		}
+//	}
+//
+//	.js-ase__item_next {
+//		.ase-slider-slice__item__slice {
+//			@include vendor(transform, translate3d(0, 100%, 0) rotate3d(1, 0, 0, -90deg));
+//		}
+//	}
+//}
 
 /* @end */
 
