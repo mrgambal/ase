@@ -358,7 +358,11 @@ $btn-height-hero: 42px;
 	position: absolute;
 	top: 40%;
 	width: 67px;
-	height: 8em;
+	height: 116px;
+	line-height: 116px;
+	text-align: center;
+	font-size: 80px;
+	color: #ccc;
 	text-decoration: none;
 	background-color: #fff;
 	border: 2px solid transparent;
@@ -378,11 +382,19 @@ $btn-height-hero: 42px;
 .i-slider-nav_prev {
 	left: 0;
 	border-left: none;
+
+	&:before {
+		content: '〈';
+	}
 }
 
 .i-slider-nav_next {
 	right: 0;
 	border-right: none;
+
+	&:before {
+		content: '〉';
+	}
 }
 
 /* @end */
