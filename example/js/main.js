@@ -76,7 +76,12 @@ Scripts.Common = {
 				prevClass:'js-ase-tab__item_prev',
 				nextClass:'js-ase-tab__item_next',
 				currentClass:'js-ase-tab__item_active',
-				autoplay:false
+				autoplay:false,
+				onMove:function () {
+					setTimeout(function () {
+						tabContainer.find('.js-ase-tab__item').addClass('js-ase-tab__item_anim-end');
+					}, 200);
+				}
 			}).addPagination('.js-ase-tab__pagination', 'js-ase-tab__pagination__ln');
 		}
 
