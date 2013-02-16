@@ -361,17 +361,16 @@ $btn-height-hero: 42px;
 	height: 116px;
 	line-height: 116px;
 	text-align: center;
-	font-size: 80px;
-	color: #ccc;
+	font-size: 85px;
 	text-decoration: none;
-	background-color: #fff;
-	border: 2px solid transparent;
-	@include transition();
+	color: #fff;
+	@include transition(all .1s linear);
 
 	&:hover,
 	&:focus {
 		outline: none;
-		border-color: #ccc;
+		background-color: rgba(#fff, .2);
+		color: #fff;
 	}
 
 	&:active {
@@ -381,7 +380,6 @@ $btn-height-hero: 42px;
 
 .i-slider-nav_prev {
 	left: 0;
-	border-left: none;
 
 	&:before {
 		content: '〈';

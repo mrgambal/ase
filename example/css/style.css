@@ -860,19 +860,18 @@ dl dd {
   height: 116px;
   line-height: 116px;
   text-align: center;
-  font-size: 80px;
-  color: #ccc;
+  font-size: 85px;
   text-decoration: none;
-  background-color: #fff;
-  border: 2px solid transparent;
-  -webkit-transition: all linear 200ms;
-  -moz-transition: all linear 200ms;
-  -o-transition: all linear 200ms;
-  transition: all linear 200ms;
+  color: #fff;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
 }
 .i-slider-nav:hover, .i-slider-nav:focus {
   outline: none;
-  border-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 .i-slider-nav:active {
   width: 60px;
@@ -880,7 +879,6 @@ dl dd {
 
 .i-slider-nav_prev {
   left: 0;
-  border-left: none;
 }
 .i-slider-nav_prev:before {
   content: '〈';
@@ -1228,43 +1226,43 @@ dl dd {
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #da8b11;
+    background: #f6c033;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #50a82b;
+    background: #7b0174;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #89a97d;
+    background: #f3171d;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #592d27;
+    background: #2d74d7;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #ee0e7c;
+    background: #703a55;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #3fbf85;
+    background: #b68f58;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #6be576;
+    background: #f038c2;
   }
 }
 /* @end */
@@ -4146,7 +4144,7 @@ http://dibusoft.com/
   display: inline-block;
   vertical-align: top;
   float: none;
-  border: 2px solid #cccccc;
+  border: 2px solid #e6e6e6;
 }
 .ie6-7 .i-slider__pagination_carousel .i-slider__pagination__item {
   display: inline;
