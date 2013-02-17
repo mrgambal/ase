@@ -87,7 +87,7 @@ Scripts.Common = {
 
 		return sc;
 	},
-	caruselInit:function () {
+	carouselInit:function () {
 		var sc = Scripts.Common,
 			containers = $('.js-ase-carousel');
 
@@ -172,7 +172,7 @@ Scripts.Common = {
 			sc.sliderInit()
 				.accordionInit()
 				.tabsInit()
-				.caruselInit()
+				.carouselInit()
 				.warning()
 				.animTypeChanger()
 		};
