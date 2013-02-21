@@ -793,8 +793,6 @@ dl dd {
 .ase-slider {
   position: relative;
   width: 100%;
-  background: #222;
-  box-shadow: inset 0 0 160px black;
 }
 .ase-slider .i-slider-nav {
   z-index: 2;
@@ -855,6 +853,16 @@ dl dd {
 
 .ase-slider__item__title {
   color: #fff;
+}
+
+.ase-slider_w-images .ase-slider__item_slide-1 {
+  background-image: url(../images/example-slice/1.jpg);
+}
+.ase-slider_w-images .ase-slider__item_slide-2 {
+  background-image: url(../images/example-slice/2.jpg);
+}
+.ase-slider_w-images .ase-slider__item_slide-3 {
+  background-image: url(../images/example-slice/3.jpg);
 }
 
 /* @group i-slider-nav
@@ -1236,43 +1244,43 @@ dl dd {
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #ebcb21;
+    background: #83e53b;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #e9f172;
+    background: #ed4e61;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #3ed5fc;
+    background: #cdb982;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #748f6f;
+    background: #8796c0;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #e854e4;
+    background: #ac2670;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #528d82;
+    background: #7e5e7b;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #47e954;
+    background: #375ad4;
   }
 }
 /* @end */
