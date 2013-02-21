@@ -1,0 +1,26 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+/* TEAM */
+	JS-jedi: Dmitry Gambal
+	Contact:
+	Twitter: @mr_gambal
+	From: Luhansk, Luhanskaya obl., Ukraine
+
+	CSS-jedi: Dmitry Nechepurenko
+	Contact: dimanechepurenko [at] gmail.com
+	Twitter: @VulpesFerrilata
+	From: Luhansk, Luhanskaya obl., Ukraine
+
+/* THANKS */
+
+	Our families and closest friends
+
+/* TECHNOLOGY COLOPHON */
+
+	HTML5, CSS3, JS
+	jQuery, Modernizr
+	WebStorm, PhpStorm, Sublime Text
+
+Last update:2013/21/02
+
