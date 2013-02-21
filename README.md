@@ -19,11 +19,11 @@ Dependencies:
 
 Version:
 --------
- 0.7a
+ 0.8b
 
 Copyright:
 ----------
- 	Feel free to redistribute the script/modify it, as long as you leave my info at the top.
+    Feel free to redistribute the script/modify it, as long as you leave my info at the top.
 
 Manual
 ------
@@ -44,7 +44,7 @@ Before you'll put ASE into webpage you should assert that all dependencies speci
 ###2. First steps###
 
 Minimal pre-configuration set is some html-container (div, p, span... whatever) and at least 3 slides (tag-independent too) inside it.
-If your container has class *js-slider-container* and slides have class *js-slider-item* easiest case to initialize ASE looks like this:
+If your container has class `js-slider-container` and slides have class `js-slider-item` easiest case to initialize ASE looks like this:
 
 ```js
  $('.js-slider__container').ASE({itemsSelector: '.js-slider__item'});
@@ -56,7 +56,7 @@ If you want to specify prev, next or swipe controls - just declare them into ASE
 
 ```js
  $('.js-slider__container').ASE({
- 	itemsSelector: '.js-slider__item',
+    itemsSelector: '.js-slider__item',
     prevCtrl: $('.js-slider__prevcontrol'), // control to show prev slide
     nextCtrl: $('.js-slider__nextcontrol'), // control to show next slide
     swipeCtrl: $('.js-slider__swipecontrol') // control to handle swipes
@@ -71,7 +71,7 @@ One more useful feature you can use 'from-the-scratch' is auto-slide. To enable 
 
 ```js
  $('.js-slider__container').ASE({
- 	itemsSelector: '.js-slider__item',
+    itemsSelector: '.js-slider__item',
     prevCtrl: $('.js-slider__prevcontrol'),
     nextCtrl: $('.js-slider__nextcontrol'),
     swipeCtrl: $('.js-slider__swipecontrol'),
@@ -84,7 +84,7 @@ But if you want to specify own changing time value - simply add one more string:
 
 ```js
  $('.js-slider-container').ASE({
- 	itemsSelector: '.js-slider__item',
+    itemsSelector: '.js-slider__item',
     prevCtrl: $('.js-slider__prevcontrol'),
     nextCtrl: $('.js-slider__nextcontrol'),
     swipeCtrl: $('.js-slider__swipecontrol'),
@@ -95,11 +95,11 @@ But if you want to specify own changing time value - simply add one more string:
 
 ###5. Callbacks###
 
-Often, in my web-developers practice, i've faced with a lack of functions, that would be called up at some event in the slider. By this reason basic set of event-callbacks was implemented in ASE. They would be declared in init-options as keys 'onMove', 'onNext' and/or 'onPrev'. That is how it looks like:
+Often, in my web-developers practice, i've faced with a lack of functions, that would be called up at some event in the slider. By this reason basic set of event-callbacks was implemented in ASE. They would be declared in init-options as keys `onMove`, `onNext` and/or `onPrev`. That is how it looks like:
 
 ```js
  $('.js-slider-container').ASE({
- 	itemsSelector: '.js-slider__item',
+    itemsSelector: '.js-slider__item',
     prevCtrl: $('.js-slider__prevcontrol'),
     nextCtrl: $('.js-slider__nextcontrol'),
     swipeCtrl: $('.js-slider__swipecontrol'),
@@ -117,7 +117,7 @@ Often, in my web-developers practice, i've faced with a lack of functions, that 
  });
 ```
 
-**IMPORTANT:** As you can see, context (*this*) in those callbacks is current ASE-instance. Yes, you can change some settings or even override some functionality inside them, but it is strongly recommended to do that only if you fully understand what and why you want to do.
+**IMPORTANT:** As you can see, context (`this`) in those callbacks is current ASE-instance. Yes, you can change some settings or even override some functionality inside them, but it is strongly recommended to do that only if you fully understand what and why you want to do.
 
 ###6. After-init access###
 
@@ -136,15 +136,15 @@ $('.js-slider__container').data('ASEngine') === window.ASESliders[0]
 
 ###7. Pagination###
 
-Aura Slider Engine has a built-in pagination handler/generator. It should be called via *.addPagination()* method applied to slider container that was received as described above. Method can receive 3 parameters
+Aura Slider Engine has a built-in pagination handler/generator. It should be called via `.addPagination()` method applied to slider container that was received as described above. Method can receive 3 parameters
 
-	1. [jQuery-object | string] container - jQuery-selected container for pagination controls or selector for that container;
-	2. [string | bool]          pgnClass  - class for pagination controls explicitly declared in your HTML-markup inside container specified by first parameter. Default value - 'js-ase__pagination';
-	3. [string]                 addClass  - class that will be added to pagination controls, only if they will be generated automatically. Default value - null.
+    1. [jQuery-object | string] container - jQuery-selected container for pagination controls or selector for that container;
+    2. [string | bool]          pgnClass  - class for pagination controls explicitly declared in your HTML-markup inside container specified by first parameter. Default value - 'js-ase__pagination';
+    3. [string]                 addClass  - class that will be added to pagination controls, only if they will be generated automatically. Default value - null.
 
-Default class for active pagination link is pagination-item-class + '_active'.
+Default class for active pagination link is `pagination-item-class + '_active'`.
 
-**IMPORTANT:** If you'll try to bind pagination with existing controls - don't forget to add *data-href*-attribute to them. Value must be hash-tag with number of slide (count starts from 1). E.g.:
+**IMPORTANT:** If you'll try to bind pagination with existing controls - don't forget to add `data-href`-attribute to them. Value must be hash-tag with number of slide (count starts from 1). E.g.:
 
     <a href="#" data-href="#1" class="js-tab-ln">Tab 1</a>
 
@@ -172,11 +172,11 @@ sl.addPagination('.js-tabnav', 'js-tabnav__ln');
 
 ###8. Reinit###
 
-In case if you need to change something in slider behavior on-the-fly e.g. set new autoplay delay time, you can use *init(options, container)* method.
+In case if you need to change something in slider behavior on-the-fly e.g. set new autoplay delay time, you can use `init(options, container)` method.
 This metod receives two arguments:
 
     1. [JS-object]              options               - JavaScript-object with same options like in initialization example;
-    2. [jQuery-object | string] container (redundant) -  jQuery-selected container for pagination controls or selector for that container;
+    2. [jQuery-object | string] container (redundant) - jQuery-selected container for pagination controls or selector for that container;
 
 **NOTICE:** second parameter was redundant. If passed - existing container wouldn't to be overridden.
 See example below:
@@ -191,6 +191,51 @@ sl.data('ASEngine').init({
                     onMove: function () {console.log('Reinited Slider #' + this.__indexInArray + ' - Slide#' + this.__curIndex);}
                 });
 ```
+
+###9. Public API###
+
+**NOTICE:** All of that fields and methods are designed for common usage cases. Also ASE have  some private methods and fields that are documented in code. 
+But you will use them at your own risk because I wouldn't guarantee immutability of inner realization.
+
+**items** {jQuery} Slider items list.<br/>
+**options** {Object} Options set. Contains:
+>**itemsSelector** {String} Default selector for items  
+    **prevCtrl** {jQuery} 'Go to prev slide'-control.<br/>
+    **nextCtrl** {jQuery} 'Go to next slide'-control.<br/>
+    **swipeCtrl** {jQuery} 'Swipe for next slide'-control.<br/>
+    **nextClass** {String} Default classname for next slide (w/o leading dot).<br/>
+    **currentClass** {String} Default classname for current slide (w/o leading dot).<br/>
+    **prevClass** {String} Default classname for previous slide (w/o leading dot).<br/>
+    **onMove** {Function | null} Default callback for any slider move.<br/>
+    **onNext** {Function | null} Default callback that executes on slide-to-next change.<br/>
+    **onPrev** {Function | null} Default callback that executes on slide-to-prev change.<br/>
+    **autoplay** {Boolean} Flag to activate built-in autoplay functionality.<br/>
+    **autoplayDelay** {Number} Delay in milliseconds between automatic slide change.<br/>
+
+**goNext** {Function} Moves slider to the next slide.<br/>
+>*@param* **stopAutoplay** {Boolean} Allows stop autoplay if enabled.<br/>
+*@return* {ASEngine} Current ASE instance.<br/>
+
+**goPrev** {Function} Moves slider to the previous slide.<br/>
+>*@param* **stopAutoplay** {Boolean} Allows stop autoplay if enabled.<br/>
+*@return* {ASEngine} Current ASE instance.<br/>
+
+**goTo** {Function} Moves slider to specified slide.<br/>
+>*@param* **itemIndex** {Number} Target slide index. May be recalculated, if out of bounds.<br/>
+*@param* **stopAutoplay** {Boolean} Allows stop autoplay if enabled.<br/>
+*@return* {ASEngine} Current ASE instance.<br/>
+
+**setAutoplay** {Function} Enables autoslide using timeouts with specified or default delay.<br/>
+>*@param* **interval** {Number} Delay in milliseconds between automatic slide change.<br/>
+*@return* {ASEngine} Current ASE instance.<br/>
+
+**stopAutoplay** {Function} Disables autoslide if enabled.<br/>
+>*@return* {ASEngine} Current ASE instance.<br/>
+
+**init** {Function} Initializes new ASE-object state.<br/>
+>*@param* **opts** {Object} Options set.<br/>
+*@param* **container** {jQuery} jQuery-wrapped container.<br/>
+*@return* {ASEngine} Current ASE instance.<br/>
 
 ##Resume##
 

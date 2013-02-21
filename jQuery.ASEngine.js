@@ -238,7 +238,7 @@
 		 * 
 		 * @this {ASEngine} Current ASE instance.
 		 * 
-		 * @param {jQuery-object | String} Container jQuery-selected container for pagination controls 
+		 * @param {jQuery-object | String} container jQuery-selected container for pagination controls 
 		 *			or selector for that container;
 		 * @param {String | Boolean} pgnClass Class for pagination controls explicitly declared in your HTML-markup 
 		 *			inside container specified by first parameter. Default value - 'js-ase__pagination';
@@ -285,7 +285,7 @@
 		 * @this {ASEngine} Current ASE instance.
 		 * @see <goTo>
 		 * 
-		 * @param {Boolean} Allows stop autoplay if enabled.
+		 * @param {Boolean} stopAutoplay Allows stop autoplay if enabled.
 		 *		
 		 * @return {ASEngine} Current ASE instance.
 		 */
@@ -301,7 +301,7 @@
 		 * @this {ASEngine} Current ASE instance.
 		 * @see <goTo>
 		 * 
-		 * @param {Boolean} Allows stop autoplay if enabled.
+		 * @param {Boolean} stopAutoplay Allows stop autoplay if enabled.
 		 *		
 		 * @return {ASEngine} Current ASE instance.
 		 */
@@ -317,7 +317,7 @@
 		 * @this {ASEngine} Current ASE instance.
 		 * 
 		 * @param {Number} itemIndex Target slide index. May be recalculated, if out of bounds.
-		 * @param {Boolean} Allows stop autoplay if enabled.
+		 * @param {Boolean} stopAutoplay Allows stop autoplay if enabled.
 		 *		
 		 * @return {ASEngine} Current ASE instance.
 		 */
@@ -372,7 +372,7 @@
 		 * 
 		 * @this {ASEngine} Current ASE instance.
 		 * 
-		 * @param {Number} Delay in milliseconds between automatic slide change.
+		 * @param {Number} interval Delay in milliseconds between automatic slide change.
 		 *		
 		 * @return {ASEngine} Current ASE instance.
 		 */
@@ -415,6 +415,8 @@
 		 * 
 		 * @param {Object} opts Options set.
 		 * @param {jQuery} container jQuery-wrapped container.
+         *
+         * @return {ASEngine} Current ASE instance.
 		 */
         init: function (opts, container) {
             var _s = this;
