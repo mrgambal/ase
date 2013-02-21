@@ -27,13 +27,15 @@ $purple: #A200B8;
 	@include transition();
 
 	&:hover,
-	&:focus {
+	&:focus,
+	&:visited {
 		background-color: darken($blue, 10%);
 		color: #fff;
 	}
 
 	&:active {
 		background-color: darken($blue, 20%);
+		color: #fff;
 	}
 }
 

@@ -29,6 +29,9 @@ body {
   overflow-y: scroll;
   margin: 0;
 }
+.ie6-7 body {
+  overflow-y: auto;
+}
 
 /* @group selection fixes
   --------------------------------------------------------------------------- */
@@ -297,6 +300,10 @@ ins {
   background-color: #cccccc;
   position: relative;
   z-index: 0;
+}
+.ie6-7 .l-main-aux {
+  margin: 0 auto;
+  width: 854px;
 }
 
 .l-main-aux__inner {
@@ -876,6 +883,9 @@ dl dd {
 .i-slider-nav:active {
   width: 60px;
 }
+.ie6-7 .i-slider-nav {
+  background: #fff;
+}
 
 .i-slider-nav_prev {
   left: 0;
@@ -1226,43 +1236,43 @@ dl dd {
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #f6c033;
+    background: #ebcb21;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #7b0174;
+    background: #e9f172;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #f3171d;
+    background: #3ed5fc;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #2d74d7;
+    background: #748f6f;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #703a55;
+    background: #e854e4;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #b68f58;
+    background: #528d82;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #f038c2;
+    background: #47e954;
   }
 }
 /* @end */
@@ -2961,6 +2971,19 @@ http://dibusoft.com/
 
 /* @group Animation types
   --------------------------------------------------------------------------- */
+.ie6-7 .ase-slider-slice .js-ase__item {
+  visibility: hidden;
+}
+.ie6-7 .ase-slider-slice .ase-slider-slice__item__slice {
+  visibility: hidden;
+}
+.ie6-7 .ase-slider-slice .js-ase__item_active {
+  visibility: visible;
+}
+.ie6-7 .ase-slider-slice .js-ase__item_active .ase-slider-slice__item__slice {
+  visibility: visible;
+}
+
 .slice-vertical-type-1 .js-ase__item {
   -webkit-transition: all ease-in 1s;
   -moz-transition: all ease-in 1s;
@@ -4464,7 +4487,7 @@ http://dibusoft.com/
   display: inline-block;
   vertical-align: top;
 }
-.ie7-8 .tab__nav__inner {
+.ie6-7 .tab__nav__inner {
   display: inline;
   zoom: 1;
 }
@@ -4743,12 +4766,13 @@ http://dibusoft.com/
   -o-transition: all linear 200ms;
   transition: all linear 200ms;
 }
-.ase-accordion__title__inner:hover, .ase-accordion__title__inner:focus {
+.ase-accordion__title__inner:hover, .ase-accordion__title__inner:focus, .ase-accordion__title__inner:visited {
   background-color: #47b1f8;
   color: #fff;
 }
 .ase-accordion__title__inner:active {
   background-color: #169cf6;
+  color: #fff;
 }
 
 .ase-accordion__title__ico {

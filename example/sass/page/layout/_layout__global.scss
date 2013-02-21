@@ -9,6 +9,11 @@
 	background-color: $mainFgColor;
 	position: relative;
 	z-index: 0;
+
+	.ie6-7 & {
+		margin: 0 auto;
+		width: 854px;
+	}
 }
 
 .l-main-aux__inner {

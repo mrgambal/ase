@@ -376,6 +376,10 @@ $btn-height-hero: 42px;
 	&:active {
 		width: 60px;
 	}
+
+	.ie6-7 & {
+		background: #fff;
+	}
 }
 
 .i-slider-nav_prev {
