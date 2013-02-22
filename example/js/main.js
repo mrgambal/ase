@@ -68,10 +68,10 @@ Scripts.Common = {
 	},
 	tabsInit:function () {
 		var sc = Scripts.Common,
-			tabContainer = $('.js-ase-tab');
+			tabContainers = $('.js-ase-tab');
 
-		if (tabContainer.length) {
-			tabContainer.each(function () {
+		if (tabContainers.length) {
+			tabContainers.each(function () {
 				var el = $(this);
 				el.ASE({
 					itemsSelector:'.js-ase-tab__item',
@@ -79,7 +79,7 @@ Scripts.Common = {
 					nextClass:'js-ase-tab__item_next',
 					currentClass:'js-ase-tab__item_active',
 					autoplay:false
-				}).addPagination('.js-ase-tab__pagination', 'js-ase-tab__pagination__ln');
+				}).addPagination(el.find('.js-ase-tab__pagination'), 'js-ase-tab__pagination__ln');
 			});
 		}
 

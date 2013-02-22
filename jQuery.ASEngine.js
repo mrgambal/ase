@@ -14,7 +14,7 @@
  Dependencies: jQuery >= 1.7.2
                jQuery Mobile (if you want to handle swipe events on mobile devices)
 
- Version: 0.7a
+ Version: 0.8b
 
  Copyright: Feel free to redistribute the script/modify it, as
  long as you leave my info at the top.
