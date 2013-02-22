@@ -449,6 +449,13 @@ ul.l-row {
   display: inline;
 }
 
+.l-span_9 {
+  width: 74.57627%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
 .l-span_10 {
   width: 83.05085%;
   float: left;
@@ -1244,43 +1251,43 @@ dl dd {
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #83e53b;
+    background: #316a76;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #ed4e61;
+    background: #c4622a;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #cdb982;
+    background: #98472e;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #8796c0;
+    background: #1ff89b;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #ac2670;
+    background: #046f73;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #7e5e7b;
+    background: #7cbb33;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #375ad4;
+    background: #ffa049;
   }
 }
 /* @end */
@@ -4482,29 +4489,37 @@ http://dibusoft.com/
   margin-right: auto;
 }
 
-.tab__nav {
-  text-align: center;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #78c6fa;
-}
-
 .tab__nav__inner {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: inline-block;
-  vertical-align: top;
-}
-.ie6-7 .tab__nav__inner {
-  display: inline;
-  zoom: 1;
 }
 
 .tab__nav__item {
   margin: 0;
   padding: 0;
   display: block;
+}
+
+.tab__nav_horiz {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #78c6fa;
+}
+.tab__nav_horiz .tab__nav__inner {
+  display: inline-block;
+  vertical-align: top;
+}
+.ie6-7 .tab__nav_horiz .tab__nav__inner {
+  display: inline;
+  zoom: 1;
+}
+.tab__nav_horiz .tab__nav__item {
   float: left;
+}
+
+.tab__nav_vert .tab__nav__inner {
+  display: block;
 }
 
 .tab__nav__ln {
@@ -4709,48 +4724,188 @@ http://dibusoft.com/
 }
 
 /* @end */
-@-webkit-keyframes test-flip-top {
+/* @group tab_horiz
+  --------------------------------------------------------------------------- */
+.tab_horiz {
+  overflow: hidden;
+  margin-top: -40px;
+  border-bottom: 1px solid #d8d8d8;
+}
+.tab_horiz .tab__nav {
+  margin-top: 40px;
+}
+
+/* @end */
+/* @group covers-tab Original example http://www.factoria.it/
+  --------------------------------------------------------------------------- */
+.covers-tab {
+  position: relative;
+  width: 615px;
+  height: 199px;
+  overflow: hidden;
+  margin-left: -15px;
+}
+
+.covers-tab__elem {
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-color: #444;
+  float: left;
+  position: relative;
+}
+
+.covers-tab__elem_1 {
+  background-image: url(../images/example-slice/1.jpg);
+  margin: 0;
+  z-index: 1;
+}
+
+.covers-tab__elem_2 {
+  background-image: url(../images/example-slice/2.jpg);
+  margin: 40px 0 0 -60px;
+  z-index: 2;
+}
+
+.covers-tab__elem_3 {
+  background-image: url(../images/example-slice/3.jpg);
+  margin: 80px 20px 0 -60px;
+  z-index: 3;
+}
+
+.covers-tab__descr {
+  margin-top: 40px;
+  position: relative;
+}
+
+.tab-anim-covers .js-ase-tab__item {
+  display: none;
+}
+.tab-anim-covers .js-ase-tab__item_active {
+  display: block;
+}
+.tab-anim-covers .js-ase-tab__item_active .covers-tab__elem {
+  -webkit-animation: cover-slide ease-out 0.3s;
+  -moz-animation: cover-slide ease-out 0.3s;
+  -ms-animation: cover-slide ease-out 0.3s;
+  -o-animation: cover-slide ease-out 0.3s;
+  animation: cover-slide ease-out 0.3s;
+}
+.tab-anim-covers .js-ase-tab__item_active .covers-tab__descr {
+  -webkit-animation: fade-in ease-out 0.6s;
+  -moz-animation: fade-in ease-out 0.6s;
+  -ms-animation: fade-in ease-out 0.6s;
+  -o-animation: fade-in ease-out 0.6s;
+  animation: fade-in ease-out 0.6s;
+  -webkit-transform-origin: 100% 0;
+  -moz-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  -o-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+.tab-anim-covers .js-ase-tab__item_active .i-anim-elem_0 {
+  -webkit-animation-duration: 200ms;
+  -moz-animation-duration: 200ms;
+  -ms-animation-duration: 200ms;
+  -o-animation-duration: 200ms;
+  animation-duration: 200ms;
+}
+.tab-anim-covers .js-ase-tab__item_active .i-anim-elem_1 {
+  -webkit-animation-duration: 400ms;
+  -moz-animation-duration: 400ms;
+  -ms-animation-duration: 400ms;
+  -o-animation-duration: 400ms;
+  animation-duration: 400ms;
+}
+.tab-anim-covers .js-ase-tab__item_active .i-anim-elem_2 {
+  -webkit-animation-duration: 600ms;
+  -moz-animation-duration: 600ms;
+  -ms-animation-duration: 600ms;
+  -o-animation-duration: 600ms;
+  animation-duration: 600ms;
+}
+.tab-anim-covers .js-ase-tab__item_active .i-anim-elem_3 {
+  -webkit-animation-duration: 800ms;
+  -moz-animation-duration: 800ms;
+  -ms-animation-duration: 800ms;
+  -o-animation-duration: 800ms;
+  animation-duration: 800ms;
+}
+.tab-anim-covers .js-ase-tab__item_active .i-anim-elem_4 {
+  -webkit-animation-duration: 1000ms;
+  -moz-animation-duration: 1000ms;
+  -ms-animation-duration: 1000ms;
+  -o-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+}
+
+@-webkit-keyframes cover-slide {
   0% {
-    opacity: .5;
-    -webkit-transform: translate3d(0, -80px, 0) rotate3d(1, 0, 0, 40deg);
-    -webkit-transform-origin: 0 50%;
+    -webkit-transform: translate3d(0, 100%, 0) rotate3d(0, 1, 0, -60deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+  }
+}
+
+@-moz-keyframes cover-slide {
+  0% {
+    -moz-transform: translate3d(0, 100%, 0) rotate3d(0, 1, 0, -60deg);
+  }
+
+  100% {
+    -moz-transform: rotate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+  }
+}
+
+@keyframes cover-slide {
+  0% {
+    transform: translate3d(0, 100%, 0) rotate3d(0, 1, 0, -60deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
-    -webkit-transform-origin: 0 0;
+    -webkit-transform: translateX(0);
   }
 }
 
-@-webkit-keyframes test-cube {
+@-moz-keyframes fade-in {
   0% {
-    opacity: .5;
-    -webkit-transform: translate3d(0, 50px, 0) rotate3d(1, 0, 0, -90deg);
+    opacity: 0;
+    -moz-transform: translateX(30px);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+    -moz-transform: translateX(0);
   }
 }
 
-@-webkit-keyframes test-cube {
+@keyframes fade-in {
   0% {
-    opacity: .5;
-    -webkit-transform: translate3d(0, -100px, 0) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+    transform: translateX(30px);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
+    transform: translateX(0);
   }
 }
 
-/*
-	TODO: http://www.factoria.it/
-
-*/
+/* @end */
 /* @group accordion
   --------------------------------------------------------------------------- */
 .ase-accordion__container__inner {

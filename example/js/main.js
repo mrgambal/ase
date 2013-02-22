@@ -48,10 +48,10 @@ Scripts.Common = {
 	},
 	accordionInit:function () {
 		var sc = Scripts.Common,
-			tabContainer = $('.js-ase-accordion');
+			accordContainer = $('.js-ase-accordion');
 
-		if (tabContainer.length) {
-			tabContainer.ASE({
+		if (accordContainer.length) {
+			accordContainer.ASE({
 				itemsSelector:'.js-ase-accordion__item',
 				prevClass:'js-ase-accordion__item_prev',
 				nextClass:'js-ase-accordion__item_next',
@@ -71,18 +71,16 @@ Scripts.Common = {
 			tabContainer = $('.js-ase-tab');
 
 		if (tabContainer.length) {
-			tabContainer.ASE({
-				itemsSelector:'.js-ase-tab__item',
-				prevClass:'js-ase-tab__item_prev',
-				nextClass:'js-ase-tab__item_next',
-				currentClass:'js-ase-tab__item_active',
-				autoplay:false,
-				onMove:function () {
-					setTimeout(function () {
-						tabContainer.find('.js-ase-tab__item').addClass('js-ase-tab__item_anim-end');
-					}, 200);
-				}
-			}).addPagination('.js-ase-tab__pagination', 'js-ase-tab__pagination__ln');
+			tabContainer.each(function () {
+				var el = $(this);
+				el.ASE({
+					itemsSelector:'.js-ase-tab__item',
+					prevClass:'js-ase-tab__item_prev',
+					nextClass:'js-ase-tab__item_next',
+					currentClass:'js-ase-tab__item_active',
+					autoplay:false
+				}).addPagination('.js-ase-tab__pagination', 'js-ase-tab__pagination__ln');
+			});
 		}
 
 		return sc;
