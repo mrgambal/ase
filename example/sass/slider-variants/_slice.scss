@@ -155,6 +155,27 @@ $sliceIndexH: $sliceItemheight/10;
 /* @group Animation types
   --------------------------------------------------------------------------- */
 
+// IE default behavior
+
+.ie6-7 .ase-slider-slice {
+
+	.js-ase__item {
+		visibility: hidden;
+	}
+
+	.ase-slider-slice__item__slice {
+		visibility: hidden;
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+
+		.ase-slider-slice__item__slice {
+			visibility: visible;
+		}
+	}
+}
+
 // Vertical
 
 .slice-vertical-type-1 {

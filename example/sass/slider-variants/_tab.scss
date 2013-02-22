@@ -15,30 +15,52 @@
 // tab nav
 
 .tab__nav {
-	text-align: center;
-	margin-bottom: 30px;
-	border-bottom: 1px solid #78C6FA;
+
 }
 
 .tab__nav__inner {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	display: inline-block;
-	vertical-align: top;
-
-	.ie7-8 & {
-		display: inline;
-		zoom: 1;
-	}
 }
 
 .tab__nav__item {
 	margin: 0;
 	padding: 0;
 	display: block;
-	float: left;
 }
+
+.tab__nav_horiz {
+	text-align: center;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #78C6FA;
+
+	.tab__nav__inner {
+		display: inline-block;
+		vertical-align: top;
+
+		.ie6-7 & {
+			display: inline;
+			zoom: 1;
+		}
+	}
+
+	.tab__nav__item {
+		float: left;
+	}
+}
+
+.tab__nav_vert {
+
+	.tab__nav__inner {
+		display: block;
+	}
+
+	.tab__nav__item {
+	}
+}
+
+// tab ln
 
 .tab__nav__ln {
 	display: block;
@@ -154,24 +176,117 @@
 
 /* @end */
 
-// testing
+/* @group tab_horiz
+  --------------------------------------------------------------------------- */
 
-@-webkit-keyframes test-flip-top {
-	0% { opacity: .5; -webkit-transform: translate3d(0,-80px,0) rotate3d(1,0,0,40deg); -webkit-transform-origin: 0 50%;}
-	100%   { opacity: 1; -webkit-transform: translate3d(0,0,0) rotate3d(0,0,0,0deg); -webkit-transform-origin: 0 0; }
+.tab_horiz {
+	overflow: hidden;
+	margin-top: -40px;
+	border-bottom: 1px solid #D8D8D8;
+
+	.tab__nav {
+		margin-top: 40px;
+	}
 }
 
-@-webkit-keyframes test-cube { // front
-	0% { opacity: .5; -webkit-transform: translate3d(0,50px,0) rotate3d(1,0,0,-90deg);}
-	100%   { opacity: 1; -webkit-transform: rotate3d(0,0,0,0deg);}
+/* @end */
+
+/* @group covers-tab Original example http://www.factoria.it/
+  --------------------------------------------------------------------------- */
+
+.covers-tab {
+	position: relative;
+	width: 615px;
+	height: 199px;
+	overflow: hidden;
+	margin-left: -15px;
 }
 
-@-webkit-keyframes test-cube { // back
-	0% { opacity: .5; -webkit-transform: translate3d(0,-100px,0) rotate3d(1,0,0,90deg);}
-	100%   { opacity: 1; -webkit-transform: translate3d(0,0,0) rotate3d(0,0,0,0deg);}
+.covers-tab__elem {
+	display: block;
+	width: 200px;
+	height: 200px;
+	background-color: #444;
+	float: left;
+	position: relative;
 }
 
-/*
-	TODO: http://www.factoria.it/
+.covers-tab__elem_1 {
+	background-image: url(../images/example-slice/1.jpg);
+	margin: 0;
+	z-index: 1;
+}
 
-*/
+.covers-tab__elem_2 {
+	background-image: url(../images/example-slice/2.jpg);
+	margin: 40px 0 0 -60px;
+	z-index: 2;
+}
+
+.covers-tab__elem_3 {
+	background-image: url(../images/example-slice/3.jpg);
+	margin: 80px 20px 0 -60px;
+	z-index: 3;
+}
+
+.covers-tab__descr {
+	margin-top: 40px;
+	position: relative;
+}
+
+.tab-anim-covers {
+	.js-ase-tab__item {
+		display: none;
+	}
+
+	.js-ase-tab__item_active {
+		display: block;
+
+		.covers-tab__elem {
+			@include vendor(animation, cover-slide ease-out .3s);
+		}
+
+		.covers-tab__descr {
+			@include vendor(animation, fade-in ease-out .6s);
+			@include vendor(transform-origin, 100% 0);
+		}
+
+		@for $i from 0 through 4 {
+			.i-anim-elem_#{$i} {
+				@include vendor(animation-duration, #{$i * 200 + 200}ms);
+			}
+		}
+	}
+}
+
+@-webkit-keyframes cover-slide {
+	0% { -webkit-transform: translate3d(0,100%,0) rotate3d(0,1,0,-60deg);}
+	100% { -webkit-transform: rotate3d(0,0,0) rotate3d(0,0,0,0);}
+}
+
+@-moz-keyframes cover-slide {
+	0% { -moz-transform: translate3d(0,100%,0) rotate3d(0,1,0,-60deg);}
+	100% { -moz-transform: rotate3d(0,0,0) rotate3d(0,0,0,0);}
+}
+
+@keyframes cover-slide {
+	0% { transform: translate3d(0,100%,0) rotate3d(0,1,0,-60deg);}
+	100%  { transform: rotate3d(0,0,0) rotate3d(0,0,0,0);}
+}
+
+@-webkit-keyframes fade-in {
+	0% { opacity: 0; -webkit-transform: translateX(30px);}
+	100% { opacity: 1; -webkit-transform: translateX(0);}
+}
+
+@-moz-keyframes fade-in {
+	0% { opacity: 0; -moz-transform: translateX(30px);}
+	100% { opacity: 1; -moz-transform: translateX(0);}
+}
+
+@keyframes fade-in {
+	0% { opacity: 0; transform: translateX(30px);}
+	100% { opacity: 1; transform: translateX(0);}
+}
+
+/* @end */
