@@ -135,51 +135,33 @@ $violet: #A200B8;
 
 /* @end */
 
-/* @group carousel_apple-like
+/* @group carousel_apple-like animation
   --------------------------------------------------------------------------- */
 .carousel_apple-like {
-	//overflow: hidden;
 
 	.js-ase-carousel__item {
 		@include transition(all linear 650ms);
 		visibility: hidden;
 	}
 
+	// animation delay function
+	$items: 4;
+	$step: 90;
+
 	.js-ase-carousel__item li {
-
-		&:first-child {
-			@include vendor(animation-delay, 90ms);
-		}
-
-		&:nth-child(2) {
-			@include vendor(animation-delay, 180ms);
-		}
-
-		&:nth-child(3) {
-			@include vendor(animation-delay, 270ms);
-		}
-
-		&:nth-child(4) {
-			@include vendor(animation-delay, 360ms);
+		@for $item from 1 through $items {
+			&:nth-child(#{$item}) {
+				@include vendor(animation-delay, #{$step * $item}ms);
+			}
 		}
 	}
 
 	.js-ase-carousel__item_active_to-prev li,
 	.js-ase-carousel__item_next li {
-		&:nth-child(4) {
-			@include vendor(animation-delay, 90ms);
-		}
-
-		&:nth-child(3) {
-			@include vendor(animation-delay, 180ms);
-		}
-
-		&:nth-child(2) {
-			@include vendor(animation-delay, 270ms);
-		}
-
-		&:first-child {
-			@include vendor(animation-delay, 360ms);
+		@for $item from 1 through $items {
+			&:nth-child(#{$item}) {
+				@include vendor(animation-delay, #{($step * $items) / $item}ms);
+			}
 		}
 	}
 

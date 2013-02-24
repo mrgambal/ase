@@ -62,7 +62,6 @@ $purple: #A200B8;
 	.js-ase-accordion__item_active {
 		@include vendor(perspective, 1500px);
 		@include vendor(transform-style, preserve-3d);
-		@include vendor(perspective-origin, 50% 50%);
 
 		.ase-accordion__title__inner {
 			background: $purple;
@@ -86,18 +85,18 @@ $purple: #A200B8;
 }
 
 @-webkit-keyframes vert-fade-rotate {
-	0% { -webkit-transform: rotateX(-90deg); opacity: 0; }
+	0% { -webkit-transform: rotateX(-70deg); opacity: 0; }
 	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
 }
 
 @-moz-keyframes vert-fade-rotate {
-	0% { -webkit-transform: rotateX(-90deg); opacity: 0; }
-	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+	0% { -moz-transform: rotateX(-90deg); opacity: 0; }
+	100% { -moz-transform: rotateX(0deg); opacity: 1; }
 }
 
 @keyframes vert-fade-rotate {
-	0% { -webkit-transform: rotateX(-90deg); opacity: 0; }
-	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+	0% { transform: rotateX(-90deg); opacity: 0; }
+	100% { transform: rotateX(0deg); opacity: 1; }
 }
 
 /* @end */

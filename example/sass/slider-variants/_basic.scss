@@ -29,7 +29,7 @@
 	.js-ase__item {
 		visibility: hidden;
 		top: -100%;
-		@include transition(all 600ms ease-in-out);
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_active {
@@ -53,7 +53,7 @@
 	.js-ase__item {
 		visibility: hidden;
 		left: 100%;
-		@include transition(all 600ms ease-in-out);
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_active {
@@ -78,7 +78,7 @@
 		visibility: hidden;
 		top: 100%;
 		left: -100%;
-		@include transition(all 600ms ease-in-out);
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_active {
@@ -105,7 +105,7 @@
 		visibility: hidden;
 		top: -100%;
 		opacity: 0;
-		@include transition(all 600ms ease-in-out);
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_active {
@@ -132,7 +132,7 @@
 		top: 100%;
 		left: -100%;
 		opacity: 0;
-		@include transition(all 600ms ease-in-out);
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_active {
@@ -160,7 +160,7 @@
 		visibility: hidden;
 		left: 100%;
 		opacity: 0;
-		@include transition(all 600ms ease-in-out);
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_active {
@@ -176,6 +176,83 @@
 
 /* @end */
 
+/* @group slider_slide-complex
+  --------------------------------------------------------------------------- */
+
+.ase-slider__item__elem {
+	display: block;
+	padding: 1em;
+	box-sizing: padding-box;
+	width: 50%;
+	height: 430px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.ase-slider__item__elem_1 {
+	background-color: $blue;
+}
+
+.ase-slider__item__elem_2 {
+	background-color: $green;
+	left: 50%;
+}
+
+.slider_slide-complex {
+	overflow: hidden;
+
+	.js-ase__item {
+		position: static;
+
+		.ase-slider__item__elem {
+			visibility: hidden;
+			@include transition(all .6s ease-out);
+		}
+
+		.ase-slider__item__elem_1 {
+			left: 100%;
+			z-index: 1;
+		}
+
+		.ase-slider__item__elem_2 {
+			top: 430px;
+			z-index: 2;
+		}
+	}
+
+	.js-ase__item_active {
+		.ase-slider__item__elem {
+			visibility: visible;
+		}
+
+		.ase-slider__item__elem_1 {
+			left: 0;
+		}
+
+		.ase-slider__item__elem_2 {
+			top: 0;
+		}
+	}
+
+	.js-ase__item_prev {
+		.ase-slider__item__elem_1 {
+			left: -100%;
+		}
+
+		.ase-slider__item__elem_2 {
+			top: -430px;
+		}
+	}
+}
+
+/* @end */
+
+
+/* =============================================================================
+	Based on ROTATE transformation
+============================================================================= */
+
 /* @group effect: slider type: slider_slide-vert_fade-rotate
   --------------------------------------------------------------------------- */
 
@@ -185,7 +262,6 @@
 	.ase-slider__container__inner {
 		@include vendor(perspective, 1500px);
 		@include vendor(transform-style, preserve-3d);
-		@include vendor(perspective-origin, 50% 50%);
 	}
 
 	.js-ase__item {
@@ -193,7 +269,7 @@
 		top: 400px;
 		opacity: 0;
 		@include vendor(transform-origin, 50% 50%);
-		@include transition(all 600ms ease-in-out);
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_active {
@@ -225,7 +301,7 @@
 	.ase-slider__container__inner {
 		@include vendor(perspective, 1500px);
 		@include vendor(transform-style, preserve-3d);
-		@include vendor(perspective-origin, 50% 50%);
+		@include vendor(perspective-origin, 50% 215px); // fix Y persentage calc fall
 	}
 
 	.js-ase__item {
@@ -234,7 +310,7 @@
 		opacity: 0;
 		@include vendor(backface-visibility, hidden);
 		@include vendor(transform-origin, 50% 50%);
-		@include transition(all 600ms ease-in-out);
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_active {
@@ -264,81 +340,35 @@
 	overflow: hidden;
 
 	.ase-slider__container__inner {
-		@include vendor(perspective, 900px);
 		@include vendor(transform-style, preserve-3d);
-		@include vendor(perspective-origin, 50% 50%);
+		@include vendor(perspective, 900px);
+		@include vendor(perspective-origin, 50% 215px);
 	}
 
 	.js-ase__item {
-		z-index: 0;
 		left: 100%;
 		visibility: hidden;
-		@include vendor(transform-style, preserve-3d);
-		@include transition(all 600ms ease-in-out);
+		z-index: 0;
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_active {
-		@include vendor(transform, rotate3d(0,1,0,0));
-		@include vendor(perspective-origin, 0 0);
-		@include transition(all 600ms ease-in-out);
-		z-index: 1;
 		left: 0;
 		visibility: visible;
+		z-index: 1;
+		@include vendor(transform, rotateY(0));
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_prev {
 		left: -100%;
-		@include vendor(transform, rotate3d(0,1,0,90deg));
+		@include vendor(transform, rotateY(90deg));
 		@include vendor(transform-origin, 0 -100%);
 	}
 
 	.js-ase__item_next {
-		@include vendor(transform, rotate3d(0,1,0,-90deg));
+		@include vendor(transform, rotateY(-90deg));
 		@include vendor(transform-origin, 0 100%);
-	}
-}
-
-/* @end */
-
-/* @group Animation: slider_slide-windy
-  --------------------------------------------------------------------------- */
-
-.slider_slide-windy {
-
-	.ase-slider__container__inner {
-		@include vendor(perspective, 1500px);
-		@include vendor(transform-style, preserve-3d);
-		@include vendor(perspective-origin, 50% 50%);
-	}
-
-	.js-ase__item {
-		visibility: hidden;
-		left: 0;
-		top: 0;
-		opacity: 0;
-		@include vendor(backface-visibility, hidden);
-		@include vendor(transform-origin, 50% 50%);
-		@include transition(all 600ms ease-in-out);
-	}
-
-	.js-ase__item_active {
-		visibility: visible;
-		left: 0;
-		top: 0;
-		opacity: 1;
-		@include vendor(transform, scale(1) rotate3d(1, 1, 0, 0));
-	}
-
-	.js-ase__item_prev {
-		left: -40%;
-		top: 100px;
-		@include vendor(transform, scale(0.8) rotate3d(1, 1, 0, 60deg));
-	}
-
-	.js-ase__item_next {
-		left: 20%;
-		top: -100px;
-		@include vendor(transform, scale(1.2) rotate3d(1, 1, 0, -60deg));
 	}
 }
 
@@ -352,14 +382,13 @@
 	.ase-slider__container__inner {
 		@include vendor(perspective, 2000px);
 		@include vendor(transform-style, preserve-3d);
-		@include vendor(perspective-origin, 50% 50%);
 	}
 
 	.js-ase__item {
 		visibility: hidden;
 		@include vendor(backface-visibility, hidden);
 		@include vendor(transform-origin, 50% 50%);
-		@include transition(all linear .6s);
+		@include transition(all .6s linear);
 	}
 
 	.js-ase__item_active {
@@ -386,14 +415,14 @@
 	.ase-slider__container__inner {
 		@include vendor(perspective, 2000px);
 		@include vendor(transform-style, preserve-3d);
-		@include vendor(perspective-origin, 200px 200px); // persentage dosen`t work for Y
+		@include vendor(perspective-origin, 50% 215px); // fix Y persentage calc fall
 	}
 
 	.js-ase__item {
 		visibility: hidden;
 		@include vendor(backface-visibility, hidden);
 		@include vendor(transform-origin, 50% 0);
-		@include transition(all linear .6s);
+		@include transition(all .6s linear);
 	}
 
 	.js-ase__item_active {
@@ -418,17 +447,13 @@
 .slider_slide-rotate_diag {
 	overflow: hidden;
 
-	.ase-slider__container__inner {
-		@include vendor(perspective, 1500);
-		@include vendor(transform-style, preserve-3d);
-		@include vendor(perspective-origin, 50% 50%);
-	}
+	.ase-slider__container__inner {}
 
 	.js-ase__item {
 		visibility: hidden;
 		@include vendor(backface-visibility, hidden);
-		@include vendor(transform-origin, 50%);
-		@include transition(all linear .6s);
+		@include vendor(transform-origin, 50% 50%);
+		@include transition(all .6s linear);
 	}
 
 	.js-ase__item_active {
@@ -453,22 +478,22 @@
 .slider_slide-flip_horiz {
 
 	.ase-slider__container__inner {
-		@include vendor(perspective, 2000);
+		@include vendor(perspective, 2000px);
 		@include vendor(transform-style, preserve-3d);
-		@include vendor(perspective-origin, 50% 50%);
+		@include vendor(perspective-origin, 50% 215px);
 	}
 
 	.js-ase__item {
 		visibility: hidden;
-		@include vendor(backface-visibility, hidden);
+		@include transition(all .4s linear);
 		@include vendor(transform-origin, 100% 0);
 		@include vendor(transform, rotateX(90deg));
-		@include transition(all linear .4s);
+		@include vendor(backface-visibility, hidden);
 	}
 
 	.js-ase__item_active {
-		@include vendor(transform, rotateX(0deg));
 		visibility: visible;
+		@include vendor(transform, rotateX(0deg));
 	}
 
 	.js-ase__item_prev {
@@ -484,28 +509,26 @@
 .slider_slide-flip_vert {
 
 	.ase-slider__container__inner {
-		@include vendor(perspective, 2000);
+		@include vendor(perspective, 2000px);
 		@include vendor(transform-style, preserve-3d);
-		@include vendor(perspective-origin, 200px 200px);
+		@include vendor(perspective-origin, 50% 215px);
 	}
 
 	.js-ase__item {
 		visibility: hidden;
-		z-index: 2;
-		@include vendor(transform-origin, 0 100%);
+		@include transition(all .6s linear);
 		@include vendor(transform, rotateY(-90deg));
+		@include vendor(transform-origin, 0 100%);
 		@include vendor(backface-visibility, hidden);
-		@include transition(all linear .6s);
 	}
 
 	.js-ase__item_active {
-		@include vendor(transform, rotateY(0deg));
 		visibility: visible;
+		@include vendor(transform, rotateY(0deg));
 	}
 
 	.js-ase__item_prev {
 		@include vendor(transform, rotateY(90deg));
-		z-index: 1;
 	}
 }
 
@@ -518,22 +541,22 @@
 	overflow: hidden;
 
 	.ase-slider__container__inner {
-		@include vendor(perspective, 1500);
+		@include vendor(perspective, 1500px);
 		@include vendor(transform-style, preserve-3d);
-		@include vendor(perspective-origin, 200px 200px);
+		@include vendor(perspective-origin, 50% 215px);
 	}
 
 	.js-ase__item {
 		opacity: 0;
-		@include vendor(transform-origin, 0 100% 50%);
+		@include transition(all .6s linear);
 		@include vendor(transform, rotateY(-90deg));
+		@include vendor(transform-origin, 0 100% 50%);
 		@include vendor(backface-visibility, hidden);
-		@include transition(all linear .6s);
 	}
 
 	.js-ase__item_active {
-		@include vendor(transform, rotateY(0deg));
 		opacity: 1;
+		@include vendor(transform, rotateY(0deg));
 	}
 
 	.js-ase__item_prev {
@@ -543,6 +566,10 @@
 
 /* @end */
 
+/* =============================================================================
+	Based on SCALE transformation
+============================================================================= */
+
 /* @group Animation: slider_slide-scale-in_fade
   --------------------------------------------------------------------------- */
 
@@ -550,7 +577,7 @@
 	.js-ase__item {
 		visibility: hidden;
 		opacity: 0;
-		@include transition(all 600ms ease-in-out);
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_active {
@@ -570,6 +597,31 @@
 
 /* @end */
 
+/* @group Animation: slider_slide-scale-out
+  --------------------------------------------------------------------------- */
+
+.slider_slide-scale-out {
+	overflow: hidden;
+
+	.js-ase__item {
+		visibility: hidden;
+		opacity: 0;
+		@include transition(all .6s ease-in);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		opacity: 1;
+		@include vendor(transform, scale(1));
+	}
+
+	.js-ase__item_prev {
+		@include vendor(transform, scale(3) rotate(30deg));
+	}
+}
+
+/* @end */
+
 /* @group Animation: slider_slide-scale-extrude
   --------------------------------------------------------------------------- */
 
@@ -577,30 +629,23 @@
 	overflow: hidden;
 
 	.js-ase__item {
-		@include transition(all ease-in 600ms);
-		z-index: 0;
 		left: 100%;
 		visibility: hidden;
+		z-index: 0;
+		@include transition(all .7s ease-in-out);
+		@include vendor(transform, scale(.8));
 	}
 
 	.js-ase__item_active {
-		@include transition(all ease-in 600ms);
-		@include  vendor(perspective-origin, 50% 50%);
-		z-index: 1;
 		left: 0;
 		visibility: visible;
+		z-index: 1;
+		@include vendor(transform, scale(1));
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_prev {
 		left: -100%;
-		@include vendor(transform, rotateX(90deg));
-		@include vendor(transform-origin, 50% 50% -50px);
-	}
-
-	.js-ase__item_next {
-		//left: 100%;
-		@include vendor(transform, rotateX(-90deg));
-		@include vendor(transform-origin, 50% 50% 50px);
 	}
 }
 
@@ -613,7 +658,7 @@
 	.js-ase__item {
 		visibility: hidden;
 		opacity: 0;
-		@include transition(all 600ms ease-in-out);
+		@include transition(all .6s ease-in-out);
 		@include vendor(transform-origin, 50% 50%);
 	}
 
@@ -630,6 +675,10 @@
 
 /* @end */
 
+/* =============================================================================
+	Based on SKEW transformation
+============================================================================= */
+
 /* @group effect: slider type: slider_skew-vert
   --------------------------------------------------------------------------- */
 
@@ -639,7 +688,7 @@
 		visibility: hidden;
 		opacity: 0;
 		top: -100%;
-		@include transition(all 600ms ease-in-out);
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_active {
@@ -670,7 +719,7 @@
 		visibility: hidden;
 		opacity: 0;
 		left: -100%;
-		@include transition(all 600ms ease-in-out);
+		@include transition(all .6s ease-in-out);
 	}
 
 	.js-ase__item_active {
@@ -692,129 +741,6 @@
 
 /* @end */
 
-/* @group effect: slider type: slider_skew-flip
-  --------------------------------------------------------------------------- */
-
-.slider_skew-flip {
-	overflow: hidden;
-	@include vendor(perspective, 600px);
-	@include vendor(perspective-origin, 0% 50%);
-
-	.js-ase__item {
-		visibility: hidden;
-		@include transition(all 600ms ease-in-out);
-		@include vendor(transform-origin, 0 0);
-	}
-
-	.js-ase__item_active {
-		visibility: visible;
-		@include vendor(transform, skewY(0));
-	}
-
-	.js-ase__item_prev {
-		@include vendor(transform, skewY(-90deg));
-	}
-
-	.js-ase__item_next {
-		@include vendor(transform, skewY(90deg));
-	}
-}
-
-/* @end */
-
-/* @group effect: slider type: slider_skew-extrude
-  --------------------------------------------------------------------------- */
-
-.slider_skew-extrude {
-	overflow: hidden;
-	@include vendor(perspective, 600px);
-	@include vendor(perspective-origin, 0% 50%);
-
-	.js-ase__item {
-		visibility: hidden;
-		left: -100%;
-		@include transition(all 600ms ease-in-out);
-	}
-
-	.js-ase__item_active {
-		visibility: visible;
-		left: 0;
-		@include vendor(transform-origin, 0% 0%);
-	}
-
-	.js-ase__item_prev {
-		left: 100%;
-		@include vendor(transform, skewY(-30deg));
-	}
-
-	.js-ase__item_next {
-		@include vendor(transform, skewY(30deg));
-	}
-}
-
-/* @end */
-
-/* @group effect: slider type: slider_skew-rotate
-  --------------------------------------------------------------------------- */
-
-.slider_skew-rotate {
-	overflow: hidden;
-	@include vendor(perspective, 600px);
-	@include vendor(perspective-origin, 0% 50%);
-
-	.js-ase__item {
-		visibility: hidden;
-		top: -100%;
-		@include transition(all 600ms ease-in-out);
-	}
-
-	.js-ase__item_active {
-		visibility: visible;
-		top: 0;
-		@include vendor(transform-origin, 50% 0%);
-	}
-
-	.js-ase__item_prev {
-		top: 100%;
-		@include vendor(transform, skewY(-90deg));
-	}
-
-	.js-ase__item_next {
-		@include vendor(transform, skewY(90deg));
-	}
-}
-
-/* @end */
-
-/* @group effect: slider type: slider_skew-cut
-  --------------------------------------------------------------------------- */
-
-.slider_skew-cut {
-	overflow: hidden;
-	@include vendor(perspective, 600px);
-	@include vendor(perspective-origin, 0% 50%);
-
-	.js-ase__item {
-		visibility: hidden;
-		@include transition(all 600ms ease-in-out);
-	}
-
-	.js-ase__item_active {
-		visibility: visible;
-		@include vendor(transform-origin, 50% 0%);
-	}
-
-	.js-ase__item_prev {
-		@include vendor(transform, skewY(-90deg));
-	}
-
-	.js-ase__item_next {
-		@include vendor(transform, skewY(90deg));
-	}
-}
-
-/* @end */
-
 /* @group Animation: slider_lightSpeedIn
   --------------------------------------------------------------------------- */
 
@@ -827,7 +753,7 @@
 
 	.js-ase__item_active {
 		display: block;
-		@include vendor(animation, lightSpeedIn ease-out 0.5s);
+		@include vendor(animation, lightSpeedIn .5s ease-out);
 		@include vendor(transform-origin, 100% 100%);
 	}
 }
@@ -846,13 +772,6 @@
 	100% { -moz-transform: translateX(0%) skewX(0deg); opacity: 1; }
 }
 
-@-o-keyframes lightSpeedIn {
-	0% { -o-transform: translateX(100%) skewX(-30deg); opacity: 0; }
-	60% { -o-transform: translateX(-20%) skewX(30deg); opacity: 1; }
-	80% { -o-transform: translateX(0%) skewX(-15deg); opacity: 1; }
-	100% { -o-transform: translateX(0%) skewX(0deg); opacity: 1; }
-}
-
 @keyframes lightSpeedIn {
 	0% { transform: translateX(100%) skewX(-30deg); opacity: 0; }
 	60% { transform: translateX(-20%) skewX(30deg); opacity: 1; }
@@ -862,6 +781,91 @@
 
 /* @end */
 
+/* @group effect: slider type: slider_skew-steps
+  --------------------------------------------------------------------------- */
+
+.slider_skew-steps {
+	overflow: hidden;
+
+	.js-ase__item {
+		visibility: hidden;
+		@include transition(all .6s ease-in-out);
+		@include vendor(transform, skewY(90deg));
+		@include vendor(transform-origin, 0 0);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		@include vendor(transform, skewY(0));
+	}
+
+	.js-ase__item_prev {
+		@include vendor(transform, skewY(-90deg));
+	}
+}
+
+/* @end */
+
+/* @group effect: slider type: slider_skew-extrude
+  --------------------------------------------------------------------------- */
+
+.slider_skew-extrude {
+	overflow: hidden;
+
+	.js-ase__item {
+		visibility: hidden;
+		left: -100%;
+		@include transition(all .6s ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		left: 0;
+		@include vendor(transform-origin, 0 0);
+	}
+
+	.js-ase__item_prev {
+		left: 100%;
+		@include vendor(transform, skewY(-30deg));
+	}
+
+	.js-ase__item_next {
+		@include vendor(transform, skewY(30deg));
+	}
+}
+
+/* @end */
+
+/* @group effect: slider type: slider_skew-cut
+  --------------------------------------------------------------------------- */
+
+.slider_skew-cut {
+	overflow: hidden;
+
+	.js-ase__item {
+		visibility: hidden;
+		@include transition(all .6s ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		@include vendor(transform-origin, 50% 0);
+	}
+
+	.js-ase__item_prev {
+		@include vendor(transform, skewY(-90deg));
+	}
+
+	.js-ase__item_next {
+		@include vendor(transform, skewY(90deg));
+	}
+}
+
+/* @end */
+
+/* =============================================================================
+	Transitional
+============================================================================= */
 
 /* @group slider_expression
   --------------------------------------------------------------------------- */
@@ -884,7 +888,7 @@
 	.ase-slider__container__inner {
 		@include vendor(perspective, 2500px);
 		@include vendor(transform-style, preserve-3d);
-		@include vendor(perspective-origin, 50% 50%);
+		@include vendor(perspective-origin, 50% 415px);
 	}
 
 	.js-ase__item {
@@ -892,8 +896,8 @@
 		top: 0;
 		z-index: 1;
 		@include vendor(transform-origin, 50% 50%);
-		@include transition(all 800ms ease-in-out);
-		//@include vendor(backface-visibility, hidden);
+		@include transition(all .8s ease-in-out);
+		@include vendor(backface-visibility, hidden);
 	}
 
 	.js-ase__item_active {
@@ -918,12 +922,54 @@
 
 /* @end */
 
+/* @group Animation: slider_slide-windy
+  --------------------------------------------------------------------------- */
+
+.slider_slide-windy {
+
+	.ase-slider__container__inner {
+		@include vendor(perspective, 1500px);
+		@include vendor(transform-style, preserve-3d);
+	}
+
+	.js-ase__item {
+		visibility: hidden;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		@include vendor(backface-visibility, hidden);
+		@include vendor(transform-origin, 50% 50%);
+		@include transition(all .6s ease-in-out);
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		left: 0;
+		top: 0;
+		opacity: 1;
+		@include vendor(transform, scale(1) rotate3d(1, 1, 0, 0));
+	}
+
+	.js-ase__item_prev {
+		left: -40%;
+		top: 100px;
+		@include vendor(transform, scale(0.8) rotate3d(1, 1, 0, 60deg));
+	}
+
+	.js-ase__item_next {
+		left: 20%;
+		top: -100px;
+		@include vendor(transform, scale(1.2) rotate3d(1, 1, 0, -60deg));
+	}
+}
+
+/* @end */
+
 
 /* TODO
 
 http://www.stuskitchen.com/
 http://www.fillstudio.com/
 http://dibusoft.com/
-
 
 */
