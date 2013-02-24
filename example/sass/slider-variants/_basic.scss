@@ -904,19 +904,19 @@
 		left: 0;
 		top: 0;
 		z-index: 2;
-		@include vendor(transform, scale(1) rotate3d(1, 1, 0, 0));
+		@include vendor(transform, scale(1) rotate3d(1, 1, 0, 0) translateZ(0));
 	}
 
 	.js-ase__item_prev {
 		left: -40%;
 		top: 100px;
-		@include vendor(transform, scale(0.8) rotate3d(1, 1, 0, 60deg));
+		@include vendor(transform, scale(0.8) rotate3d(1, 1, 0, 60deg) translateZ(-1px));
 	}
 
 	.js-ase__item_next {
 		left: 20%;
 		top: -100px;
-		@include vendor(transform, scale(1.2) rotate3d(1, 1, 0, -57deg));
+		@include vendor(transform, scale(1.2) rotate3d(1, 1, 0, -57deg) translateZ(-1px));
 	}
 }
 

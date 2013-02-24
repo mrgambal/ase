@@ -6,7 +6,7 @@ $blue: #78C6FA;
 $dark-blue: #516ECB;
 $violet: #A200B8;
 
-/* @group tab-generic
+/* @group ase-carousel
   --------------------------------------------------------------------------- */
 
 .ase-carousel {
@@ -245,6 +245,49 @@ $violet: #A200B8;
 @keyframes moveToLeft {
 	0% { transform: translateX(0); }
 	100% { transform: translateX(-1000%); }
+}
+
+/* @end */
+
+/* @group slider_carousel-3d
+  --------------------------------------------------------------------------- */
+
+.slider_carousel-3d {
+	@include vendor(perspective, 1500px);
+	@include vendor(transform-style, preserve-3d);
+
+	.i-slider-nav,
+	.i-slider__pagination {
+		@include vendor(transform, translateZ(3px));
+	}
+
+	.js-ase__item {
+		width: 826px;
+		visibility: hidden;
+		@include transition(all .6s ease-in-out);
+		@include vendor(transform, translateZ(-200px));
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		left: 50%;
+		margin-left: -413px;
+		@include vendor(transform, translateZ(2px));
+	}
+
+	.js-ase__item_prev {
+		visibility: visible;
+		left: -105%;
+		@include vendor(transform-origin, 100% 50%);
+		@include vendor(transform, rotateY(-20deg));
+	}
+
+	.js-ase__item_next {
+		visibility: visible;
+		left: 105%;
+		@include vendor(transform-origin, 0 50%);
+		@include vendor(transform, rotateY(20deg));
+	}
 }
 
 /* @end */
