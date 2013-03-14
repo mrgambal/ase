@@ -1252,43 +1252,43 @@ dl dd {
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #bb35d1;
+    background: #ba5ecd;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #a3ad85;
+    background: #8d9c82;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #df516b;
+    background: #18aa81;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #cab889;
+    background: #fc588d;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #c0841d;
+    background: #a16817;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #c1fdd6;
+    background: #43a6ce;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #4dd866;
+    background: #6ebb43;
   }
 }
 /* @end */
@@ -2853,15 +2853,12 @@ http://dibusoft.com/
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
 }
-.slice-radial-type-2 .js-ase__item_active .ase-slider-slice__item__slice {
-  opacity: 0;
-}
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice {
-  -moz-transform: rotate(20deg);
-  -webkit-transform: rotate(20deg);
-  transform: rotate(20deg);
-  opacity: 1;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  opacity: 0;
 }
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_0,
 .slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_2,
@@ -2873,9 +2870,15 @@ http://dibusoft.com/
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_4,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_6,
 .slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_8 {
-  -moz-transform: rotate(-20deg);
-  -webkit-transform: rotate(-20deg);
-  transform: rotate(-20deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.slice-radial-type-2 .js-ase__item_active .ase-slider-slice__item__slice {
+  opacity: 1;
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .slice-flip-vert {
@@ -3342,78 +3345,6 @@ http://dibusoft.com/
   transition-duration: 1080ms;
 }
 
-.slice-opacity-type-1 .ase-slider-slice__item__slice {
-  -moz-transition: all linear 1s;
-  -webkit-transition: all linear 1s;
-  transition: all linear 1s;
-  opacity: 0;
-  z-index: 0;
-}
-.slice-opacity-type-1 .js-ase__item_active .ase-slider-slice__item__slice {
-  opacity: 1;
-  z-index: 1;
-}
-.slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_0,
-.slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_0 {
-  -moz-transition-delay: 0ms;
-  -webkit-transition-delay: 0ms;
-  transition-delay: 0ms;
-}
-.slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_1,
-.slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_1 {
-  -moz-transition-delay: 90ms;
-  -webkit-transition-delay: 90ms;
-  transition-delay: 90ms;
-}
-.slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_2,
-.slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_2 {
-  -moz-transition-delay: 180ms;
-  -webkit-transition-delay: 180ms;
-  transition-delay: 180ms;
-}
-.slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_3,
-.slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_3 {
-  -moz-transition-delay: 270ms;
-  -webkit-transition-delay: 270ms;
-  transition-delay: 270ms;
-}
-.slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_4,
-.slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_4 {
-  -moz-transition-delay: 360ms;
-  -webkit-transition-delay: 360ms;
-  transition-delay: 360ms;
-}
-.slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_5,
-.slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_5 {
-  -moz-transition-delay: 450ms;
-  -webkit-transition-delay: 450ms;
-  transition-delay: 450ms;
-}
-.slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_6,
-.slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_6 {
-  -moz-transition-delay: 540ms;
-  -webkit-transition-delay: 540ms;
-  transition-delay: 540ms;
-}
-.slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_7,
-.slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_7 {
-  -moz-transition-delay: 630ms;
-  -webkit-transition-delay: 630ms;
-  transition-delay: 630ms;
-}
-.slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_8,
-.slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_8 {
-  -moz-transition-delay: 720ms;
-  -webkit-transition-delay: 720ms;
-  transition-delay: 720ms;
-}
-.slice-opacity-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_9,
-.slice-opacity-type-1 .js-ase__item_next .ase-slider-slice__item__slice_9 {
-  -moz-transition-delay: 810ms;
-  -webkit-transition-delay: 810ms;
-  transition-delay: 810ms;
-}
-
 .slice-bgposit-type-1 .js-ase__item {
   -moz-transition: all ease-in 1s;
   -webkit-transition: all ease-in 1s;
@@ -3570,6 +3501,72 @@ http://dibusoft.com/
   -moz-transition-duration: 810ms;
   -webkit-transition-duration: 810ms;
   transition-duration: 810ms;
+}
+
+.slice-curtain .ase-slider-slice__item__slice {
+  -moz-transition: all linear 1s;
+  -webkit-transition: all linear 1s;
+  transition: all linear 1s;
+  visibility: hidden;
+}
+.slice-curtain .js-ase__item_next .ase-slider-slice__item__slice {
+  top: -20px;
+}
+.slice-curtain .js-ase__item_prev .ase-slider-slice__item__slice {
+  bottom: 20px;
+}
+.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice {
+  visibility: visible;
+}
+.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_0 {
+  -moz-transition-delay: 0ms;
+  -webkit-transition-delay: 0ms;
+  transition-delay: 0ms;
+}
+.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_1 {
+  -moz-transition-delay: 90ms;
+  -webkit-transition-delay: 90ms;
+  transition-delay: 90ms;
+}
+.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_2 {
+  -moz-transition-delay: 180ms;
+  -webkit-transition-delay: 180ms;
+  transition-delay: 180ms;
+}
+.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_3 {
+  -moz-transition-delay: 270ms;
+  -webkit-transition-delay: 270ms;
+  transition-delay: 270ms;
+}
+.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_4 {
+  -moz-transition-delay: 360ms;
+  -webkit-transition-delay: 360ms;
+  transition-delay: 360ms;
+}
+.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_5 {
+  -moz-transition-delay: 450ms;
+  -webkit-transition-delay: 450ms;
+  transition-delay: 450ms;
+}
+.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_6 {
+  -moz-transition-delay: 540ms;
+  -webkit-transition-delay: 540ms;
+  transition-delay: 540ms;
+}
+.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_7 {
+  -moz-transition-delay: 630ms;
+  -webkit-transition-delay: 630ms;
+  transition-delay: 630ms;
+}
+.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_8 {
+  -moz-transition-delay: 720ms;
+  -webkit-transition-delay: 720ms;
+  transition-delay: 720ms;
+}
+.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_9 {
+  -moz-transition-delay: 810ms;
+  -webkit-transition-delay: 810ms;
+  transition-delay: 810ms;
 }
 
 /* @end */

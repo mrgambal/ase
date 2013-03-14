@@ -315,19 +315,12 @@ $sliceItemH: $sliceItemsHeight/10;
 		@include transition(all ease 1s);
 	}
 
-	.js-ase__item_active {
-
-		.ase-slider-slice__item__slice {
-			opacity: 0;
-		}
-	}
-
 	.js-ase__item_prev,
 	.js-ase__item_next {
 
 		.ase-slider-slice__item__slice {
-			@include vendor(transform, rotate(20deg));
-			opacity: 1;
+			@include vendor(transform, rotate(90deg));
+			opacity: 0;
 		}
 
 		.ase-slider-slice__item__slice_0,
@@ -335,9 +328,17 @@ $sliceItemH: $sliceItemsHeight/10;
 		.ase-slider-slice__item__slice_4,
 		.ase-slider-slice__item__slice_6,
 		.ase-slider-slice__item__slice_8 {
-			@include vendor(transform, rotate(-20deg));
+			@include vendor(transform, rotate(-90deg));
 		}
 
+	}
+
+	.js-ase__item_active {
+
+		.ase-slider-slice__item__slice {
+			opacity: 1;
+			@include vendor(transform, rotate(0deg));
+		}
 	}
 }
 
@@ -533,38 +534,6 @@ $sliceItemH: $sliceItemsHeight/10;
 
 }
 
-// Opacity
-
-.slice-opacity-type-1 {
-
-	.js-ase__item {
-	}
-
-	.ase-slider-slice__item__slice {
-		@include transition(all linear 1s);
-		opacity: 0;
-		z-index: 0;
-	}
-
-	.js-ase__item_active {
-
-		.ase-slider-slice__item__slice {
-			opacity: 1;
-			z-index: 1;
-		}
-	}
-
-	.js-ase__item_prev,
-	.js-ase__item_next {
-		@for $i from 0 through 9 {
-			.ase-slider-slice__item__slice_#{$i} {
-				@include vendor(transition-delay, #{90 * $i}ms);
-			}
-		}
-	}
-
-}
-
 // bg position
 
 .slice-bgposit-type-1 { // horizontal
@@ -626,6 +595,44 @@ $sliceItemH: $sliceItemsHeight/10;
 		}
 	}
 }
+
+// Сurtain
+
+.slice-curtain {
+
+	.ase-slider-slice__item__slice {
+		@include transition(all linear 1s);
+		visibility: hidden;
+	}
+
+	.js-ase__item_next {
+		.ase-slider-slice__item__slice {
+			top: -20px;
+		}
+	}
+
+	.js-ase__item_prev {
+		.ase-slider-slice__item__slice {
+			bottom: 20px;
+		}
+	}
+
+	.js-ase__item_active {
+
+		.ase-slider-slice__item__slice {
+			visibility: visible;
+		}
+
+		@for $i from 0 through 9 {
+			.ase-slider-slice__item__slice_#{$i} {
+				@include vendor(transition-delay, #{90 * $i}ms);
+			}
+		}
+
+	}
+
+}
+
 
 /* @end */
 
