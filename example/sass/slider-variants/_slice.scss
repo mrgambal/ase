@@ -149,7 +149,7 @@ $sliceItemH: $sliceItemsHeight/10;
 
 .ie6-7 .ase-slider-slice {
 
-	.js-ase__item {
+	.js-ase-slice__item {
 		visibility: hidden;
 	}
 
@@ -157,7 +157,7 @@ $sliceItemH: $sliceItemsHeight/10;
 		visibility: hidden;
 	}
 
-	.js-ase__item_active {
+	.js-ase-slice__item_active {
 		visibility: visible;
 
 		.ase-slider-slice__item__slice {
@@ -171,19 +171,19 @@ $sliceItemH: $sliceItemsHeight/10;
 .slice-vertical-type-1 {
 
 	.ase-slider-slice__item__slice {
-		@include transition(all linear .7s);
+		@include transition(all ease-out .7s);
 		visibility: hidden;
 		top: 420px;
 	}
 
-	.js-ase__item_active {
+	.js-ase-slice__item_active {
 		.ase-slider-slice__item__slice {
 			visibility: visible; // fix change from .prev to .next animation
 			top: 0 !important;
 		}
 	}
 
-	.js-ase__item_next {
+	.js-ase-slice__item_next {
 		.ase-slider-slice__item__slice {
 			top: 420px;
 		}
@@ -197,7 +197,7 @@ $sliceItemH: $sliceItemsHeight/10;
 		}
 	}
 
-	.js-ase__item_prev {
+	.js-ase-slice__item_prev {
 		.ase-slider-slice__item__slice {
 			top: -420px;
 		}
@@ -209,6 +209,53 @@ $sliceItemH: $sliceItemsHeight/10;
 		.ase-slider-slice__item__slice_8 {
 			top: 420px;
 		}
+	}
+
+}
+
+.slice-vertical-type-2 {
+
+	.ase-slider-slice__item__slice {
+		@include transition(all linear .7s);
+		visibility: hidden;
+		top: 420px;
+	}
+
+	.js-ase-slice__item_active {
+		.ase-slider-slice__item__slice {
+			visibility: visible; // fix change from .prev to .next animation
+			top: 0 !important;
+		}
+
+		@for $sliceItem from 0 through 10 {
+			.ase-slider-slice__item__slice_#{$sliceItem} {
+				@include vendor(transition-delay, #{90 * ($sliceItem + 1)}ms);
+			}
+		}
+
+	}
+
+	.js-ase-slice__item_next {
+		.ase-slider-slice__item__slice {
+			top: -420px;
+		}
+	}
+
+	.js-ase-slice__item_prev {
+		.ase-slider-slice__item__slice {
+			top: 420px;
+		}
+	}
+
+	.js-ase-slice__item_prev,
+	.js-ase-slice__item_next {
+
+		@for $sliceItem from 0 through 10 {
+			.ase-slider-slice__item__slice_#{$sliceItem} {
+				@include vendor(transition-delay, #{90 * ($sliceItem + 1)}ms);
+			}
+		}
+
 	}
 
 }
@@ -223,14 +270,14 @@ $sliceItemH: $sliceItemsHeight/10;
 		left: 100%;
 	}
 
-	.js-ase__item_active {
+	.js-ase-slice__item_active {
 		.ase-slider-slice__item__slice {
 			visibility: visible; // fix change from .prev to .next animation
 			left: 0 !important;
 		}
 	}
 
-	.js-ase__item_next {
+	.js-ase-slice__item_next {
 		.ase-slider-slice__item__slice {
 			left: 100%;
 		}
@@ -244,7 +291,7 @@ $sliceItemH: $sliceItemsHeight/10;
 		}
 	}
 
-	.js-ase__item_prev {
+	.js-ase-slice__item_prev {
 		.ase-slider-slice__item__slice {
 			left: -100%;
 		}
@@ -259,11 +306,92 @@ $sliceItemH: $sliceItemsHeight/10;
 	}
 }
 
+.slice-horiz-type-2 {
+
+	.ase-slider-slice__item__slice {
+		@include transition(all linear .7s);
+		visibility: hidden;
+		left: 100%;
+	}
+
+	.js-ase-slice__item_active {
+		.ase-slider-slice__item__slice {
+			visibility: visible; // fix change from .prev to .next animation
+			left: 0 !important;
+		}
+
+		@for $sliceItem from 0 through 10 {
+			.ase-slider-slice__item__slice_#{$sliceItem} {
+				@include vendor(transition-delay, #{90 * ($sliceItem + 1)}ms);
+			}
+		}
+
+	}
+
+	.js-ase-slice__item_next {
+		.ase-slider-slice__item__slice {
+			left: -100%;
+		}
+	}
+
+	.js-ase-slice__item_prev {
+		.ase-slider-slice__item__slice {
+			left: 100%;
+		}
+	}
+
+	.js-ase-slice__item_prev,
+	.js-ase-slice__item_next {
+
+		@for $sliceItem from 0 through 10 {
+			.ase-slider-slice__item__slice_#{$sliceItem} {
+				@include vendor(transition-delay, #{90 * ($sliceItem + 1)}ms);
+			}
+		}
+
+	}
+
+}
+
 // Radial
 
 .slice-radial-type-1 {
 
-	.js-ase__item {
+	.js-ase-slice__item {}
+
+	.ase-slider-slice__item__slice {
+		display: none;
+	}
+
+	.js-ase-slice__item_active {
+		.ase-slider-slice__item__slice {
+			display: block;
+		}
+	}
+
+	.js-ase-slice__item_animated {
+
+		.ase-slider-slice__item__slice {
+			@include vendor(animation, radialSlice1 ease-out 1s);
+		}
+
+		@for $sliceItem from 0 through 10 {
+			.ase-slider-slice__item__slice_#{$sliceItem} {
+				@include vendor(animation-duration, #{4 / $sliceItem}s);
+			}
+		}
+	}
+
+}
+
+@-webkit-keyframes radialSlice1 {
+	0% { -webkit-transform: rotate(30deg); opacity: 0; }
+	100% { -webkit-transform: rotate(0deg); opacity: 1; }
+}
+
+.slice-radial-type-3 {
+
+	.js-ase-slice__item {
 		@include transition(all ease-in 1s);
 		opacity: 0;
 	}
@@ -272,7 +400,7 @@ $sliceItemH: $sliceItemsHeight/10;
 		@include transition(all ease 1s);
 	}
 
-	.js-ase__item_active {
+	.js-ase-slice__item_active {
 		opacity: 1;
 
 		.ase-slider-slice__item__slice {
@@ -280,8 +408,8 @@ $sliceItemH: $sliceItemsHeight/10;
 		}
 	}
 
-	.js-ase__item_prev,
-	.js-ase__item_next {
+	.js-ase-slice__item_prev,
+	.js-ase-slice__item_next {
 
 		.ase-slider-slice__item__slice {
 			@include vendor(transform, rotate(20deg));
@@ -308,15 +436,15 @@ $sliceItemH: $sliceItemsHeight/10;
 
 .slice-radial-type-2 {
 
-	.js-ase__item {
+	.js-ase-slice__item {
 	}
 
 	.ase-slider-slice__item__slice {
 		@include transition(all ease 1s);
 	}
 
-	.js-ase__item_prev,
-	.js-ase__item_next {
+	.js-ase-slice__item_prev,
+	.js-ase-slice__item_next {
 
 		.ase-slider-slice__item__slice {
 			@include vendor(transform, rotate(90deg));
@@ -333,7 +461,7 @@ $sliceItemH: $sliceItemsHeight/10;
 
 	}
 
-	.js-ase__item_active {
+	.js-ase-slice__item_active {
 
 		.ase-slider-slice__item__slice {
 			opacity: 1;
@@ -364,20 +492,20 @@ $sliceItemH: $sliceItemsHeight/10;
 		@include transition(all .6s linear);
 	}
 
-	.js-ase__item_active {
+	.js-ase-slice__item_active {
 		.ase-slider-slice__item__slice {
 			@include vendor(transform, rotateY(0deg));
 			visibility: visible;
 		}
 	}
 
-	.js-ase__item_prev {
+	.js-ase-slice__item_prev {
 		.ase-slider-slice__item__slice {
 			@include vendor(transform, rotateY(180deg));
 		}
 	}
 
-	.js-ase__item_next {
+	.js-ase-slice__item_next {
 		.ase-slider-slice__item__slice {
 			@include vendor(transform, rotateY(-180deg));
 		}
@@ -411,20 +539,20 @@ $sliceItemH: $sliceItemsHeight/10;
 		@include transition(all .6s linear);
 	}
 
-	.js-ase__item_active {
+	.js-ase-slice__item_active {
 		.ase-slider-slice__item__slice {
 			@include vendor(transform, rotateX(0deg));
 			visibility: visible;
 		}
 	}
 
-	.js-ase__item_prev {
+	.js-ase-slice__item_prev {
 		.ase-slider-slice__item__slice {
 			@include vendor(transform, rotateX(180deg));
 		}
 	}
 
-	.js-ase__item_next {
+	.js-ase-slice__item_next {
 		.ase-slider-slice__item__slice {
 			@include vendor(transform, rotateX(-180deg));
 		}
@@ -442,28 +570,28 @@ $sliceItemH: $sliceItemsHeight/10;
 
 .slice-scale-type-1 {
 
-	.js-ase__item {
-		visibility: hidden;
+	.js-ase-slice__item {
 		@include transition(all ease #{9 * 90}ms);
 	}
 
 	.ase-slider-slice__item__slice {
+		visibility: hidden;
 		opacity: 0;
 		@include transition(all ease 1s);
 	}
 
-	.js-ase__item_active {
-		visibility: visible;
+	.js-ase-slice__item_active {
 
 		.ase-slider-slice__item__slice {
+			visibility: visible;
 			opacity: 1;
 			z-index: 2;
 			@include vendor(transform, scale(1));
 		}
 	}
 
-	.js-ase__item_next,
-	.js-ase__item_prev {
+	.js-ase-slice__item_next,
+	.js-ase-slice__item_prev {
 
 		@for $i from 0 through 9 {
 			.ase-slider-slice__item__slice_#{$i} {
@@ -476,7 +604,7 @@ $sliceItemH: $sliceItemsHeight/10;
 
 .slice-scale-type-2 {
 
-	.js-ase__item {
+	.js-ase-slice__item {
 		@include transition(all ease-in 1s);
 		opacity: 0;
 	}
@@ -486,7 +614,7 @@ $sliceItemH: $sliceItemsHeight/10;
 		@include vendor(transform, scale(1.3));
 	}
 
-	.js-ase__item_active {
+	.js-ase-slice__item_active {
 		opacity: 1;
 
 		.ase-slider-slice__item__slice {
@@ -494,8 +622,8 @@ $sliceItemH: $sliceItemsHeight/10;
 		}
 	}
 
-	.js-ase__item_next,
-	.js-ase__item_prev {
+	.js-ase-slice__item_next,
+	.js-ase-slice__item_prev {
 
 		@for $i from 0 through 9 {
 			.ase-slider-slice__item__slice_#{$i} {
@@ -514,7 +642,7 @@ $sliceItemH: $sliceItemsHeight/10;
 		@include vendor(transform, scale(1.2));
 	}
 
-	.js-ase__item_active {
+	.js-ase-slice__item_active {
 
 		.ase-slider-slice__item__slice {
 			opacity: 1;
@@ -522,8 +650,8 @@ $sliceItemH: $sliceItemsHeight/10;
 		}
 	}
 
-	.js-ase__item_next,
-	.js-ase__item_prev {
+	.js-ase-slice__item_next,
+	.js-ase-slice__item_prev {
 
 		@for $i from 0 through 9 {
 			.ase-slider-slice__item__slice_#{$i} {
@@ -538,7 +666,7 @@ $sliceItemH: $sliceItemsHeight/10;
 
 .slice-bgposit-type-1 { // horizontal
 
-	.js-ase__item {
+	.js-ase-slice__item {
 		@include transition(all ease-in 1s);
 		opacity: 0;
 	}
@@ -547,12 +675,12 @@ $sliceItemH: $sliceItemsHeight/10;
 		@include transition(all ease 1s);
 	}
 
-	.js-ase__item_active {
+	.js-ase-slice__item_active {
 		opacity: 1;
 	}
 
-	.js-ase__item_next,
-	.js-ase__item_prev {
+	.js-ase-slice__item_next,
+	.js-ase-slice__item_prev {
 
 		.ase-slider-slice__item__slice {
 			background-position: -40px 0;
@@ -568,7 +696,7 @@ $sliceItemH: $sliceItemsHeight/10;
 
 .slice-bgposit-type-2 { // vertical
 
-	.js-ase__item {
+	.js-ase-slice__item {
 		@include transition(all ease-in 1s);
 		opacity: 0;
 	}
@@ -577,12 +705,12 @@ $sliceItemH: $sliceItemsHeight/10;
 		@include transition(all ease 1s);
 	}
 
-	.js-ase__item_active {
+	.js-ase-slice__item_active {
 		opacity: 1;
 	}
 
-	.js-ase__item_next,
-	.js-ase__item_prev {
+	.js-ase-slice__item_next,
+	.js-ase-slice__item_prev {
 
 		.ase-slider-slice__item__slice {
 			background-position: 0 -40px;
@@ -605,19 +733,19 @@ $sliceItemH: $sliceItemsHeight/10;
 		visibility: hidden;
 	}
 
-	.js-ase__item_next {
+	.js-ase-slice__item_next {
 		.ase-slider-slice__item__slice {
 			top: -20px;
 		}
 	}
 
-	.js-ase__item_prev {
+	.js-ase-slice__item_prev {
 		.ase-slider-slice__item__slice {
 			bottom: 20px;
 		}
 	}
 
-	.js-ase__item_active {
+	.js-ase-slice__item_active {
 
 		.ase-slider-slice__item__slice {
 			visibility: visible;
@@ -635,4 +763,3 @@ $sliceItemH: $sliceItemsHeight/10;
 
 
 /* @end */
-

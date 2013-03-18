@@ -20,8 +20,8 @@ Scripts.Common = {
 		warning.mouseenter(function () {
 			clearTimeout($(this).data('timeoutId'));
 		}).mouseleave(function () {
-				warnHide();
-			});
+			warnHide();
+		});
 
 		return sc;
 	},
@@ -101,8 +101,7 @@ Scripts.Common = {
 					currentClass:'js-ase-carousel__item_active',
 					autoplay:false,
 					onMove:function () {
-						el.find('.js-ase-carousel__item_prev').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
-						el.find('.js-ase-carousel__item_next').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
+						el.find('.js-ase-carousel__item').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
 						menuLne(el.find('.js-ase-carousel__pagination__ln_active'));
 					},
 					onPrev:function () {
@@ -129,7 +128,7 @@ Scripts.Common = {
 
 			line.css('width', initWidth).css('left', initLeft);
 
-			// menu line on change
+			// menu line on change behaviour
 
 			function menuLne (el) {
 				var line = $('.js-menu-line'),
@@ -138,6 +137,35 @@ Scripts.Common = {
 
 				line.css('width', newWidth).css('left', newLeft);
 			}
+		}
+
+		return sc;
+	},
+	sliceInit:function () {
+		var sc = Scripts.Common,
+			containers = $('.js-ase-slice');
+
+		if (containers.length) {
+			containers.each(function () {
+				var slider = $(this);
+				slider.ASE({
+					itemsSelector:'.js-ase-slice__item',
+					prevCtrl:slider.find('.js-ase__nav_prev'),
+					nextCtrl:slider.find('.js-ase__nav_next'),
+					prevClass:'js-ase-slice__item_prev',
+					nextClass:'js-ase-slice__item_next',
+					currentClass:'js-ase-slice__item_active',
+					autoplay:false,
+					onMove:function () {
+
+						slider.find('.js-ase-slice__item_active').addClass('js-ase-slice__item_animated');
+
+						setTimeout(function() {
+							slider.find('.js-ase-slice__item').removeClass('js-ase-slice__item_animated');
+						}, 400);
+					}
+				}).addPagination(slider.find('.js-ase__pagination'), false, 'i-slider__pagination__item');
+			});
 		}
 
 		return sc;
@@ -171,6 +199,7 @@ Scripts.Common = {
 				.accordionInit()
 				.tabsInit()
 				.carouselInit()
+				.sliceInit()
 				.warning()
 				.animTypeChanger()
 		};

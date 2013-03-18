@@ -1252,43 +1252,43 @@ dl dd {
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #ba5ecd;
+    background: #93a771;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #8d9c82;
+    background: #19b866;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #18aa81;
+    background: #6f9e26;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #fc588d;
+    background: #7fb547;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #a16817;
+    background: #a6c3a7;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #43a6ce;
+    background: #0923c4;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #6ebb43;
+    background: #83f31e;
   }
 }
 /* @end */
@@ -2664,49 +2664,188 @@ http://dibusoft.com/
 
 /* @group Animation types
   --------------------------------------------------------------------------- */
-.ie6-7 .ase-slider-slice .js-ase__item {
+.ie6-7 .ase-slider-slice .js-ase-slice__item {
   visibility: hidden;
 }
 .ie6-7 .ase-slider-slice .ase-slider-slice__item__slice {
   visibility: hidden;
 }
-.ie6-7 .ase-slider-slice .js-ase__item_active {
+.ie6-7 .ase-slider-slice .js-ase-slice__item_active {
   visibility: visible;
 }
-.ie6-7 .ase-slider-slice .js-ase__item_active .ase-slider-slice__item__slice {
+.ie6-7 .ase-slider-slice .js-ase-slice__item_active .ase-slider-slice__item__slice {
   visibility: visible;
 }
 
 .slice-vertical-type-1 .ase-slider-slice__item__slice {
+  -moz-transition: all ease-out 0.7s;
+  -webkit-transition: all ease-out 0.7s;
+  transition: all ease-out 0.7s;
+  visibility: hidden;
+  top: 420px;
+}
+.slice-vertical-type-1 .js-ase-slice__item_active .ase-slider-slice__item__slice {
+  visibility: visible;
+  top: 0 !important;
+}
+.slice-vertical-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice {
+  top: 420px;
+}
+.slice-vertical-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_0,
+.slice-vertical-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_2,
+.slice-vertical-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_4,
+.slice-vertical-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_6,
+.slice-vertical-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_8 {
+  top: -420px;
+}
+.slice-vertical-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice {
+  top: -420px;
+}
+.slice-vertical-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_0,
+.slice-vertical-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_2,
+.slice-vertical-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_4,
+.slice-vertical-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_6,
+.slice-vertical-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_8 {
+  top: 420px;
+}
+
+.slice-vertical-type-2 .ase-slider-slice__item__slice {
   -moz-transition: all linear 0.7s;
   -webkit-transition: all linear 0.7s;
   transition: all linear 0.7s;
   visibility: hidden;
   top: 420px;
 }
-.slice-vertical-type-1 .js-ase__item_active .ase-slider-slice__item__slice {
+.slice-vertical-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice {
   visibility: visible;
   top: 0 !important;
 }
-.slice-vertical-type-1 .js-ase__item_next .ase-slider-slice__item__slice {
-  top: 420px;
+.slice-vertical-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_0 {
+  -moz-transition-delay: 90ms;
+  -webkit-transition-delay: 90ms;
+  transition-delay: 90ms;
 }
-.slice-vertical-type-1 .js-ase__item_next .ase-slider-slice__item__slice_0,
-.slice-vertical-type-1 .js-ase__item_next .ase-slider-slice__item__slice_2,
-.slice-vertical-type-1 .js-ase__item_next .ase-slider-slice__item__slice_4,
-.slice-vertical-type-1 .js-ase__item_next .ase-slider-slice__item__slice_6,
-.slice-vertical-type-1 .js-ase__item_next .ase-slider-slice__item__slice_8 {
+.slice-vertical-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_1 {
+  -moz-transition-delay: 180ms;
+  -webkit-transition-delay: 180ms;
+  transition-delay: 180ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_2 {
+  -moz-transition-delay: 270ms;
+  -webkit-transition-delay: 270ms;
+  transition-delay: 270ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_3 {
+  -moz-transition-delay: 360ms;
+  -webkit-transition-delay: 360ms;
+  transition-delay: 360ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_4 {
+  -moz-transition-delay: 450ms;
+  -webkit-transition-delay: 450ms;
+  transition-delay: 450ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_5 {
+  -moz-transition-delay: 540ms;
+  -webkit-transition-delay: 540ms;
+  transition-delay: 540ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_6 {
+  -moz-transition-delay: 630ms;
+  -webkit-transition-delay: 630ms;
+  transition-delay: 630ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_7 {
+  -moz-transition-delay: 720ms;
+  -webkit-transition-delay: 720ms;
+  transition-delay: 720ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_8 {
+  -moz-transition-delay: 810ms;
+  -webkit-transition-delay: 810ms;
+  transition-delay: 810ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_9 {
+  -moz-transition-delay: 900ms;
+  -webkit-transition-delay: 900ms;
+  transition-delay: 900ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_10 {
+  -moz-transition-delay: 990ms;
+  -webkit-transition-delay: 990ms;
+  transition-delay: 990ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice {
   top: -420px;
 }
-.slice-vertical-type-1 .js-ase__item_prev .ase-slider-slice__item__slice {
-  top: -420px;
-}
-.slice-vertical-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_0,
-.slice-vertical-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_2,
-.slice-vertical-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_4,
-.slice-vertical-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_6,
-.slice-vertical-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_8 {
+.slice-vertical-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice {
   top: 420px;
+}
+.slice-vertical-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_0,
+.slice-vertical-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_0 {
+  -moz-transition-delay: 90ms;
+  -webkit-transition-delay: 90ms;
+  transition-delay: 90ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_1,
+.slice-vertical-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_1 {
+  -moz-transition-delay: 180ms;
+  -webkit-transition-delay: 180ms;
+  transition-delay: 180ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_2,
+.slice-vertical-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_2 {
+  -moz-transition-delay: 270ms;
+  -webkit-transition-delay: 270ms;
+  transition-delay: 270ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_3,
+.slice-vertical-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_3 {
+  -moz-transition-delay: 360ms;
+  -webkit-transition-delay: 360ms;
+  transition-delay: 360ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_4,
+.slice-vertical-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_4 {
+  -moz-transition-delay: 450ms;
+  -webkit-transition-delay: 450ms;
+  transition-delay: 450ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_5,
+.slice-vertical-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_5 {
+  -moz-transition-delay: 540ms;
+  -webkit-transition-delay: 540ms;
+  transition-delay: 540ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_6,
+.slice-vertical-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_6 {
+  -moz-transition-delay: 630ms;
+  -webkit-transition-delay: 630ms;
+  transition-delay: 630ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_7,
+.slice-vertical-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_7 {
+  -moz-transition-delay: 720ms;
+  -webkit-transition-delay: 720ms;
+  transition-delay: 720ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_8,
+.slice-vertical-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_8 {
+  -moz-transition-delay: 810ms;
+  -webkit-transition-delay: 810ms;
+  transition-delay: 810ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_9,
+.slice-vertical-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_9 {
+  -moz-transition-delay: 900ms;
+  -webkit-transition-delay: 900ms;
+  transition-delay: 900ms;
+}
+.slice-vertical-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_10,
+.slice-vertical-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_10 {
+  -moz-transition-delay: 990ms;
+  -webkit-transition-delay: 990ms;
+  transition-delay: 990ms;
 }
 
 .slice-horiz-type-1 .ase-slider-slice__item__slice {
@@ -2716,133 +2855,351 @@ http://dibusoft.com/
   visibility: hidden;
   left: 100%;
 }
-.slice-horiz-type-1 .js-ase__item_active .ase-slider-slice__item__slice {
+.slice-horiz-type-1 .js-ase-slice__item_active .ase-slider-slice__item__slice {
   visibility: visible;
   left: 0 !important;
 }
-.slice-horiz-type-1 .js-ase__item_next .ase-slider-slice__item__slice {
+.slice-horiz-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice {
   left: 100%;
 }
-.slice-horiz-type-1 .js-ase__item_next .ase-slider-slice__item__slice_0,
-.slice-horiz-type-1 .js-ase__item_next .ase-slider-slice__item__slice_2,
-.slice-horiz-type-1 .js-ase__item_next .ase-slider-slice__item__slice_4,
-.slice-horiz-type-1 .js-ase__item_next .ase-slider-slice__item__slice_6,
-.slice-horiz-type-1 .js-ase__item_next .ase-slider-slice__item__slice_8 {
+.slice-horiz-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_0,
+.slice-horiz-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_2,
+.slice-horiz-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_4,
+.slice-horiz-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_6,
+.slice-horiz-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_8 {
   left: -100%;
 }
-.slice-horiz-type-1 .js-ase__item_prev .ase-slider-slice__item__slice {
+.slice-horiz-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice {
   left: -100%;
 }
-.slice-horiz-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_0,
-.slice-horiz-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_2,
-.slice-horiz-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_4,
-.slice-horiz-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_6,
-.slice-horiz-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_8 {
+.slice-horiz-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_0,
+.slice-horiz-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_2,
+.slice-horiz-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_4,
+.slice-horiz-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_6,
+.slice-horiz-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_8 {
   left: 100%;
 }
 
-.slice-radial-type-1 .js-ase__item {
+.slice-horiz-type-2 .ase-slider-slice__item__slice {
+  -moz-transition: all linear 0.7s;
+  -webkit-transition: all linear 0.7s;
+  transition: all linear 0.7s;
+  visibility: hidden;
+  left: 100%;
+}
+.slice-horiz-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice {
+  visibility: visible;
+  left: 0 !important;
+}
+.slice-horiz-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_0 {
+  -moz-transition-delay: 90ms;
+  -webkit-transition-delay: 90ms;
+  transition-delay: 90ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_1 {
+  -moz-transition-delay: 180ms;
+  -webkit-transition-delay: 180ms;
+  transition-delay: 180ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_2 {
+  -moz-transition-delay: 270ms;
+  -webkit-transition-delay: 270ms;
+  transition-delay: 270ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_3 {
+  -moz-transition-delay: 360ms;
+  -webkit-transition-delay: 360ms;
+  transition-delay: 360ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_4 {
+  -moz-transition-delay: 450ms;
+  -webkit-transition-delay: 450ms;
+  transition-delay: 450ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_5 {
+  -moz-transition-delay: 540ms;
+  -webkit-transition-delay: 540ms;
+  transition-delay: 540ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_6 {
+  -moz-transition-delay: 630ms;
+  -webkit-transition-delay: 630ms;
+  transition-delay: 630ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_7 {
+  -moz-transition-delay: 720ms;
+  -webkit-transition-delay: 720ms;
+  transition-delay: 720ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_8 {
+  -moz-transition-delay: 810ms;
+  -webkit-transition-delay: 810ms;
+  transition-delay: 810ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_9 {
+  -moz-transition-delay: 900ms;
+  -webkit-transition-delay: 900ms;
+  transition-delay: 900ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice_10 {
+  -moz-transition-delay: 990ms;
+  -webkit-transition-delay: 990ms;
+  transition-delay: 990ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice {
+  left: -100%;
+}
+.slice-horiz-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice {
+  left: 100%;
+}
+.slice-horiz-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_0,
+.slice-horiz-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_0 {
+  -moz-transition-delay: 90ms;
+  -webkit-transition-delay: 90ms;
+  transition-delay: 90ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_1,
+.slice-horiz-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_1 {
+  -moz-transition-delay: 180ms;
+  -webkit-transition-delay: 180ms;
+  transition-delay: 180ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_2,
+.slice-horiz-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_2 {
+  -moz-transition-delay: 270ms;
+  -webkit-transition-delay: 270ms;
+  transition-delay: 270ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_3,
+.slice-horiz-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_3 {
+  -moz-transition-delay: 360ms;
+  -webkit-transition-delay: 360ms;
+  transition-delay: 360ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_4,
+.slice-horiz-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_4 {
+  -moz-transition-delay: 450ms;
+  -webkit-transition-delay: 450ms;
+  transition-delay: 450ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_5,
+.slice-horiz-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_5 {
+  -moz-transition-delay: 540ms;
+  -webkit-transition-delay: 540ms;
+  transition-delay: 540ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_6,
+.slice-horiz-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_6 {
+  -moz-transition-delay: 630ms;
+  -webkit-transition-delay: 630ms;
+  transition-delay: 630ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_7,
+.slice-horiz-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_7 {
+  -moz-transition-delay: 720ms;
+  -webkit-transition-delay: 720ms;
+  transition-delay: 720ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_8,
+.slice-horiz-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_8 {
+  -moz-transition-delay: 810ms;
+  -webkit-transition-delay: 810ms;
+  transition-delay: 810ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_9,
+.slice-horiz-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_9 {
+  -moz-transition-delay: 900ms;
+  -webkit-transition-delay: 900ms;
+  transition-delay: 900ms;
+}
+.slice-horiz-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_10,
+.slice-horiz-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_10 {
+  -moz-transition-delay: 990ms;
+  -webkit-transition-delay: 990ms;
+  transition-delay: 990ms;
+}
+
+.slice-radial-type-1 .ase-slider-slice__item__slice {
+  display: none;
+}
+.slice-radial-type-1 .js-ase-slice__item_active .ase-slider-slice__item__slice {
+  display: block;
+}
+.slice-radial-type-1 .js-ase-slice__item_animated .ase-slider-slice__item__slice {
+  -moz-animation: radialSlice1 ease-out 1s;
+  -webkit-animation: radialSlice1 ease-out 1s;
+  animation: radialSlice1 ease-out 1s;
+}
+.slice-radial-type-1 .js-ase-slice__item_animated .ase-slider-slice__item__slice_0 {
+  -moz-animation-duration: Infinitys;
+  -webkit-animation-duration: Infinitys;
+  animation-duration: Infinitys;
+}
+.slice-radial-type-1 .js-ase-slice__item_animated .ase-slider-slice__item__slice_1 {
+  -moz-animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+.slice-radial-type-1 .js-ase-slice__item_animated .ase-slider-slice__item__slice_2 {
+  -moz-animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+.slice-radial-type-1 .js-ase-slice__item_animated .ase-slider-slice__item__slice_3 {
+  -moz-animation-duration: 1.33333s;
+  -webkit-animation-duration: 1.33333s;
+  animation-duration: 1.33333s;
+}
+.slice-radial-type-1 .js-ase-slice__item_animated .ase-slider-slice__item__slice_4 {
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.slice-radial-type-1 .js-ase-slice__item_animated .ase-slider-slice__item__slice_5 {
+  -moz-animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+}
+.slice-radial-type-1 .js-ase-slice__item_animated .ase-slider-slice__item__slice_6 {
+  -moz-animation-duration: 0.66667s;
+  -webkit-animation-duration: 0.66667s;
+  animation-duration: 0.66667s;
+}
+.slice-radial-type-1 .js-ase-slice__item_animated .ase-slider-slice__item__slice_7 {
+  -moz-animation-duration: 0.57143s;
+  -webkit-animation-duration: 0.57143s;
+  animation-duration: 0.57143s;
+}
+.slice-radial-type-1 .js-ase-slice__item_animated .ase-slider-slice__item__slice_8 {
+  -moz-animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+.slice-radial-type-1 .js-ase-slice__item_animated .ase-slider-slice__item__slice_9 {
+  -moz-animation-duration: 0.44444s;
+  -webkit-animation-duration: 0.44444s;
+  animation-duration: 0.44444s;
+}
+.slice-radial-type-1 .js-ase-slice__item_animated .ase-slider-slice__item__slice_10 {
+  -moz-animation-duration: 0.4s;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+}
+
+@-webkit-keyframes radialSlice1 {
+  0% {
+    -webkit-transform: rotate(30deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.slice-radial-type-3 .js-ase-slice__item {
   -moz-transition: all ease-in 1s;
   -webkit-transition: all ease-in 1s;
   transition: all ease-in 1s;
   opacity: 0;
 }
-.slice-radial-type-1 .ase-slider-slice__item__slice {
+.slice-radial-type-3 .ase-slider-slice__item__slice {
   -moz-transition: all ease 1s;
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
 }
-.slice-radial-type-1 .js-ase__item_active {
+.slice-radial-type-3 .js-ase-slice__item_active {
   opacity: 1;
 }
-.slice-radial-type-1 .js-ase__item_active .ase-slider-slice__item__slice {
+.slice-radial-type-3 .js-ase-slice__item_active .ase-slider-slice__item__slice {
   opacity: 1;
 }
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice {
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice {
   -moz-transform: rotate(20deg);
   -webkit-transform: rotate(20deg);
   transform: rotate(20deg);
   opacity: 0;
 }
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_0,
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_2,
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_4,
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_6,
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_8,
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_10,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_0,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_2,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_4,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_6,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_8,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_10 {
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_0,
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_2,
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_4,
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_6,
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_8,
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_10,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_0,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_2,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_4,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_6,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_8,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_10 {
   -moz-transform: rotate(-20deg);
   -webkit-transform: rotate(-20deg);
   transform: rotate(-20deg);
 }
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_0,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_0 {
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_0,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_0 {
   -moz-transition-delay: Infinitys;
   -webkit-transition-delay: Infinitys;
   transition-delay: Infinitys;
 }
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_1,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_1 {
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_1,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_1 {
   -moz-transition-delay: 1s;
   -webkit-transition-delay: 1s;
   transition-delay: 1s;
 }
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_2,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_2 {
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_2,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_2 {
   -moz-transition-delay: 0.5s;
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
 }
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_3,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_3 {
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_3,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_3 {
   -moz-transition-delay: 0.33333s;
   -webkit-transition-delay: 0.33333s;
   transition-delay: 0.33333s;
 }
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_4,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_4 {
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_4,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_4 {
   -moz-transition-delay: 0.25s;
   -webkit-transition-delay: 0.25s;
   transition-delay: 0.25s;
 }
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_5,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_5 {
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_5,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_5 {
   -moz-transition-delay: 0.2s;
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_6,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_6 {
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_6,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_6 {
   -moz-transition-delay: 0.16667s;
   -webkit-transition-delay: 0.16667s;
   transition-delay: 0.16667s;
 }
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_7,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_7 {
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_7,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_7 {
   -moz-transition-delay: 0.14286s;
   -webkit-transition-delay: 0.14286s;
   transition-delay: 0.14286s;
 }
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_8,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_8 {
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_8,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_8 {
   -moz-transition-delay: 0.125s;
   -webkit-transition-delay: 0.125s;
   transition-delay: 0.125s;
 }
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_9,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_9 {
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_9,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_9 {
   -moz-transition-delay: 0.11111s;
   -webkit-transition-delay: 0.11111s;
   transition-delay: 0.11111s;
 }
-.slice-radial-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_10,
-.slice-radial-type-1 .js-ase__item_next .ase-slider-slice__item__slice_10 {
+.slice-radial-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_10,
+.slice-radial-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_10 {
   -moz-transition-delay: 0.1s;
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
@@ -2853,28 +3210,28 @@ http://dibusoft.com/
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
 }
-.slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice,
-.slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice {
+.slice-radial-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice,
+.slice-radial-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice {
   -moz-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   opacity: 0;
 }
-.slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_0,
-.slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_2,
-.slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_4,
-.slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_6,
-.slice-radial-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_8,
-.slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_0,
-.slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_2,
-.slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_4,
-.slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_6,
-.slice-radial-type-2 .js-ase__item_next .ase-slider-slice__item__slice_8 {
+.slice-radial-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_0,
+.slice-radial-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_2,
+.slice-radial-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_4,
+.slice-radial-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_6,
+.slice-radial-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_8,
+.slice-radial-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_0,
+.slice-radial-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_2,
+.slice-radial-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_4,
+.slice-radial-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_6,
+.slice-radial-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_8 {
   -moz-transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-.slice-radial-type-2 .js-ase__item_active .ase-slider-slice__item__slice {
+.slice-radial-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice {
   opacity: 1;
   -moz-transform: rotate(0deg);
   -webkit-transform: rotate(0deg);
@@ -2910,18 +3267,18 @@ http://dibusoft.com/
   -webkit-transition: all 0.6s linear;
   transition: all 0.6s linear;
 }
-.slice-flip-vert .js-ase__item_active .ase-slider-slice__item__slice {
+.slice-flip-vert .js-ase-slice__item_active .ase-slider-slice__item__slice {
   -moz-transform: rotateY(0deg);
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
   visibility: visible;
 }
-.slice-flip-vert .js-ase__item_prev .ase-slider-slice__item__slice {
+.slice-flip-vert .js-ase-slice__item_prev .ase-slider-slice__item__slice {
   -moz-transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-.slice-flip-vert .js-ase__item_next .ase-slider-slice__item__slice {
+.slice-flip-vert .js-ase-slice__item_next .ase-slider-slice__item__slice {
   -moz-transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
@@ -3006,18 +3363,18 @@ http://dibusoft.com/
   -webkit-transition: all 0.6s linear;
   transition: all 0.6s linear;
 }
-.slice-flip-horiz .js-ase__item_active .ase-slider-slice__item__slice {
+.slice-flip-horiz .js-ase-slice__item_active .ase-slider-slice__item__slice {
   -moz-transform: rotateX(0deg);
   -webkit-transform: rotateX(0deg);
   transform: rotateX(0deg);
   visibility: visible;
 }
-.slice-flip-horiz .js-ase__item_prev .ase-slider-slice__item__slice {
+.slice-flip-horiz .js-ase-slice__item_prev .ase-slider-slice__item__slice {
   -moz-transform: rotateX(180deg);
   -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
 }
-.slice-flip-horiz .js-ase__item_next .ase-slider-slice__item__slice {
+.slice-flip-horiz .js-ase-slice__item_next .ase-slider-slice__item__slice {
   -moz-transform: rotateX(-180deg);
   -webkit-transform: rotateX(-180deg);
   transform: rotateX(-180deg);
@@ -3073,30 +3430,28 @@ http://dibusoft.com/
   transition-delay: 540ms;
 }
 
-.slice-scale-type-1 .js-ase__item {
-  visibility: hidden;
+.slice-scale-type-1 .js-ase-slice__item {
   -moz-transition: all ease 810ms;
   -webkit-transition: all ease 810ms;
   transition: all ease 810ms;
 }
 .slice-scale-type-1 .ase-slider-slice__item__slice {
+  visibility: hidden;
   opacity: 0;
   -moz-transition: all ease 1s;
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
 }
-.slice-scale-type-1 .js-ase__item_active {
+.slice-scale-type-1 .js-ase-slice__item_active .ase-slider-slice__item__slice {
   visibility: visible;
-}
-.slice-scale-type-1 .js-ase__item_active .ase-slider-slice__item__slice {
   opacity: 1;
   z-index: 2;
   -moz-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-.slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_0,
-.slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_0 {
+.slice-scale-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_0,
+.slice-scale-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_0 {
   -moz-transition-delay: 0ms;
   -webkit-transition-delay: 0ms;
   transition-delay: 0ms;
@@ -3104,8 +3459,8 @@ http://dibusoft.com/
   -webkit-transform: scale(0);
   transform: scale(0);
 }
-.slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_1,
-.slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_1 {
+.slice-scale-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_1,
+.slice-scale-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_1 {
   -moz-transition-delay: 90ms;
   -webkit-transition-delay: 90ms;
   transition-delay: 90ms;
@@ -3113,8 +3468,8 @@ http://dibusoft.com/
   -webkit-transform: scale(0.05);
   transform: scale(0.05);
 }
-.slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_2,
-.slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_2 {
+.slice-scale-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_2,
+.slice-scale-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_2 {
   -moz-transition-delay: 180ms;
   -webkit-transition-delay: 180ms;
   transition-delay: 180ms;
@@ -3122,8 +3477,8 @@ http://dibusoft.com/
   -webkit-transform: scale(0.1);
   transform: scale(0.1);
 }
-.slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_3,
-.slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_3 {
+.slice-scale-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_3,
+.slice-scale-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_3 {
   -moz-transition-delay: 270ms;
   -webkit-transition-delay: 270ms;
   transition-delay: 270ms;
@@ -3131,8 +3486,8 @@ http://dibusoft.com/
   -webkit-transform: scale(0.15);
   transform: scale(0.15);
 }
-.slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_4,
-.slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_4 {
+.slice-scale-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_4,
+.slice-scale-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_4 {
   -moz-transition-delay: 360ms;
   -webkit-transition-delay: 360ms;
   transition-delay: 360ms;
@@ -3140,8 +3495,8 @@ http://dibusoft.com/
   -webkit-transform: scale(0.2);
   transform: scale(0.2);
 }
-.slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_5,
-.slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_5 {
+.slice-scale-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_5,
+.slice-scale-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_5 {
   -moz-transition-delay: 450ms;
   -webkit-transition-delay: 450ms;
   transition-delay: 450ms;
@@ -3149,8 +3504,8 @@ http://dibusoft.com/
   -webkit-transform: scale(0.25);
   transform: scale(0.25);
 }
-.slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_6,
-.slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_6 {
+.slice-scale-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_6,
+.slice-scale-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_6 {
   -moz-transition-delay: 540ms;
   -webkit-transition-delay: 540ms;
   transition-delay: 540ms;
@@ -3158,8 +3513,8 @@ http://dibusoft.com/
   -webkit-transform: scale(0.3);
   transform: scale(0.3);
 }
-.slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_7,
-.slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_7 {
+.slice-scale-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_7,
+.slice-scale-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_7 {
   -moz-transition-delay: 630ms;
   -webkit-transition-delay: 630ms;
   transition-delay: 630ms;
@@ -3167,8 +3522,8 @@ http://dibusoft.com/
   -webkit-transform: scale(0.35);
   transform: scale(0.35);
 }
-.slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_8,
-.slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_8 {
+.slice-scale-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_8,
+.slice-scale-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_8 {
   -moz-transition-delay: 720ms;
   -webkit-transition-delay: 720ms;
   transition-delay: 720ms;
@@ -3176,8 +3531,8 @@ http://dibusoft.com/
   -webkit-transform: scale(0.4);
   transform: scale(0.4);
 }
-.slice-scale-type-1 .js-ase__item_next .ase-slider-slice__item__slice_9,
-.slice-scale-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_9 {
+.slice-scale-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_9,
+.slice-scale-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_9 {
   -moz-transition-delay: 810ms;
   -webkit-transition-delay: 810ms;
   transition-delay: 810ms;
@@ -3186,7 +3541,7 @@ http://dibusoft.com/
   transform: scale(0.45);
 }
 
-.slice-scale-type-2 .js-ase__item {
+.slice-scale-type-2 .js-ase-slice__item {
   -moz-transition: all ease-in 1s;
   -webkit-transition: all ease-in 1s;
   transition: all ease-in 1s;
@@ -3200,70 +3555,70 @@ http://dibusoft.com/
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
-.slice-scale-type-2 .js-ase__item_active {
+.slice-scale-type-2 .js-ase-slice__item_active {
   opacity: 1;
 }
-.slice-scale-type-2 .js-ase__item_active .ase-slider-slice__item__slice {
+.slice-scale-type-2 .js-ase-slice__item_active .ase-slider-slice__item__slice {
   -moz-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-.slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_0,
-.slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_0 {
+.slice-scale-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_0,
+.slice-scale-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_0 {
   -moz-transition-delay: 0ms;
   -webkit-transition-delay: 0ms;
   transition-delay: 0ms;
 }
-.slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_1,
-.slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_1 {
+.slice-scale-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_1,
+.slice-scale-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_1 {
   -moz-transition-delay: 90ms;
   -webkit-transition-delay: 90ms;
   transition-delay: 90ms;
 }
-.slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_2,
-.slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_2 {
+.slice-scale-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_2,
+.slice-scale-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_2 {
   -moz-transition-delay: 180ms;
   -webkit-transition-delay: 180ms;
   transition-delay: 180ms;
 }
-.slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_3,
-.slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_3 {
+.slice-scale-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_3,
+.slice-scale-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_3 {
   -moz-transition-delay: 270ms;
   -webkit-transition-delay: 270ms;
   transition-delay: 270ms;
 }
-.slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_4,
-.slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_4 {
+.slice-scale-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_4,
+.slice-scale-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_4 {
   -moz-transition-delay: 360ms;
   -webkit-transition-delay: 360ms;
   transition-delay: 360ms;
 }
-.slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_5,
-.slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_5 {
+.slice-scale-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_5,
+.slice-scale-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_5 {
   -moz-transition-delay: 450ms;
   -webkit-transition-delay: 450ms;
   transition-delay: 450ms;
 }
-.slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_6,
-.slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_6 {
+.slice-scale-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_6,
+.slice-scale-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_6 {
   -moz-transition-delay: 540ms;
   -webkit-transition-delay: 540ms;
   transition-delay: 540ms;
 }
-.slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_7,
-.slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_7 {
+.slice-scale-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_7,
+.slice-scale-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_7 {
   -moz-transition-delay: 630ms;
   -webkit-transition-delay: 630ms;
   transition-delay: 630ms;
 }
-.slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_8,
-.slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_8 {
+.slice-scale-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_8,
+.slice-scale-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_8 {
   -moz-transition-delay: 720ms;
   -webkit-transition-delay: 720ms;
   transition-delay: 720ms;
 }
-.slice-scale-type-2 .js-ase__item_next .ase-slider-slice__item__slice_9,
-.slice-scale-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_9 {
+.slice-scale-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_9,
+.slice-scale-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_9 {
   -moz-transition-delay: 810ms;
   -webkit-transition-delay: 810ms;
   transition-delay: 810ms;
@@ -3278,74 +3633,74 @@ http://dibusoft.com/
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
-.slice-scale-type-3 .js-ase__item_active .ase-slider-slice__item__slice {
+.slice-scale-type-3 .js-ase-slice__item_active .ase-slider-slice__item__slice {
   opacity: 1;
   -moz-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-.slice-scale-type-3 .js-ase__item_next .ase-slider-slice__item__slice_0,
-.slice-scale-type-3 .js-ase__item_prev .ase-slider-slice__item__slice_0 {
+.slice-scale-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_0,
+.slice-scale-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_0 {
   -moz-transition-duration: 0ms;
   -webkit-transition-duration: 0ms;
   transition-duration: 0ms;
 }
-.slice-scale-type-3 .js-ase__item_next .ase-slider-slice__item__slice_1,
-.slice-scale-type-3 .js-ase__item_prev .ase-slider-slice__item__slice_1 {
+.slice-scale-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_1,
+.slice-scale-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_1 {
   -moz-transition-duration: 120ms;
   -webkit-transition-duration: 120ms;
   transition-duration: 120ms;
 }
-.slice-scale-type-3 .js-ase__item_next .ase-slider-slice__item__slice_2,
-.slice-scale-type-3 .js-ase__item_prev .ase-slider-slice__item__slice_2 {
+.slice-scale-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_2,
+.slice-scale-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_2 {
   -moz-transition-duration: 240ms;
   -webkit-transition-duration: 240ms;
   transition-duration: 240ms;
 }
-.slice-scale-type-3 .js-ase__item_next .ase-slider-slice__item__slice_3,
-.slice-scale-type-3 .js-ase__item_prev .ase-slider-slice__item__slice_3 {
+.slice-scale-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_3,
+.slice-scale-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_3 {
   -moz-transition-duration: 360ms;
   -webkit-transition-duration: 360ms;
   transition-duration: 360ms;
 }
-.slice-scale-type-3 .js-ase__item_next .ase-slider-slice__item__slice_4,
-.slice-scale-type-3 .js-ase__item_prev .ase-slider-slice__item__slice_4 {
+.slice-scale-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_4,
+.slice-scale-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_4 {
   -moz-transition-duration: 480ms;
   -webkit-transition-duration: 480ms;
   transition-duration: 480ms;
 }
-.slice-scale-type-3 .js-ase__item_next .ase-slider-slice__item__slice_5,
-.slice-scale-type-3 .js-ase__item_prev .ase-slider-slice__item__slice_5 {
+.slice-scale-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_5,
+.slice-scale-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_5 {
   -moz-transition-duration: 600ms;
   -webkit-transition-duration: 600ms;
   transition-duration: 600ms;
 }
-.slice-scale-type-3 .js-ase__item_next .ase-slider-slice__item__slice_6,
-.slice-scale-type-3 .js-ase__item_prev .ase-slider-slice__item__slice_6 {
+.slice-scale-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_6,
+.slice-scale-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_6 {
   -moz-transition-duration: 720ms;
   -webkit-transition-duration: 720ms;
   transition-duration: 720ms;
 }
-.slice-scale-type-3 .js-ase__item_next .ase-slider-slice__item__slice_7,
-.slice-scale-type-3 .js-ase__item_prev .ase-slider-slice__item__slice_7 {
+.slice-scale-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_7,
+.slice-scale-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_7 {
   -moz-transition-duration: 840ms;
   -webkit-transition-duration: 840ms;
   transition-duration: 840ms;
 }
-.slice-scale-type-3 .js-ase__item_next .ase-slider-slice__item__slice_8,
-.slice-scale-type-3 .js-ase__item_prev .ase-slider-slice__item__slice_8 {
+.slice-scale-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_8,
+.slice-scale-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_8 {
   -moz-transition-duration: 960ms;
   -webkit-transition-duration: 960ms;
   transition-duration: 960ms;
 }
-.slice-scale-type-3 .js-ase__item_next .ase-slider-slice__item__slice_9,
-.slice-scale-type-3 .js-ase__item_prev .ase-slider-slice__item__slice_9 {
+.slice-scale-type-3 .js-ase-slice__item_next .ase-slider-slice__item__slice_9,
+.slice-scale-type-3 .js-ase-slice__item_prev .ase-slider-slice__item__slice_9 {
   -moz-transition-duration: 1080ms;
   -webkit-transition-duration: 1080ms;
   transition-duration: 1080ms;
 }
 
-.slice-bgposit-type-1 .js-ase__item {
+.slice-bgposit-type-1 .js-ase-slice__item {
   -moz-transition: all ease-in 1s;
   -webkit-transition: all ease-in 1s;
   transition: all ease-in 1s;
@@ -3356,75 +3711,75 @@ http://dibusoft.com/
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
 }
-.slice-bgposit-type-1 .js-ase__item_active {
+.slice-bgposit-type-1 .js-ase-slice__item_active {
   opacity: 1;
 }
-.slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice,
-.slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice {
+.slice-bgposit-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice,
+.slice-bgposit-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice {
   background-position: -40px 0;
 }
-.slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_0,
-.slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_0 {
+.slice-bgposit-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_0,
+.slice-bgposit-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_0 {
   -moz-transition-duration: 0ms;
   -webkit-transition-duration: 0ms;
   transition-duration: 0ms;
 }
-.slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_1,
-.slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_1 {
+.slice-bgposit-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_1,
+.slice-bgposit-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_1 {
   -moz-transition-duration: 90ms;
   -webkit-transition-duration: 90ms;
   transition-duration: 90ms;
 }
-.slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_2,
-.slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_2 {
+.slice-bgposit-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_2,
+.slice-bgposit-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_2 {
   -moz-transition-duration: 180ms;
   -webkit-transition-duration: 180ms;
   transition-duration: 180ms;
 }
-.slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_3,
-.slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_3 {
+.slice-bgposit-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_3,
+.slice-bgposit-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_3 {
   -moz-transition-duration: 270ms;
   -webkit-transition-duration: 270ms;
   transition-duration: 270ms;
 }
-.slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_4,
-.slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_4 {
+.slice-bgposit-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_4,
+.slice-bgposit-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_4 {
   -moz-transition-duration: 360ms;
   -webkit-transition-duration: 360ms;
   transition-duration: 360ms;
 }
-.slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_5,
-.slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_5 {
+.slice-bgposit-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_5,
+.slice-bgposit-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_5 {
   -moz-transition-duration: 450ms;
   -webkit-transition-duration: 450ms;
   transition-duration: 450ms;
 }
-.slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_6,
-.slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_6 {
+.slice-bgposit-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_6,
+.slice-bgposit-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_6 {
   -moz-transition-duration: 540ms;
   -webkit-transition-duration: 540ms;
   transition-duration: 540ms;
 }
-.slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_7,
-.slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_7 {
+.slice-bgposit-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_7,
+.slice-bgposit-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_7 {
   -moz-transition-duration: 630ms;
   -webkit-transition-duration: 630ms;
   transition-duration: 630ms;
 }
-.slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_8,
-.slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_8 {
+.slice-bgposit-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_8,
+.slice-bgposit-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_8 {
   -moz-transition-duration: 720ms;
   -webkit-transition-duration: 720ms;
   transition-duration: 720ms;
 }
-.slice-bgposit-type-1 .js-ase__item_next .ase-slider-slice__item__slice_9,
-.slice-bgposit-type-1 .js-ase__item_prev .ase-slider-slice__item__slice_9 {
+.slice-bgposit-type-1 .js-ase-slice__item_next .ase-slider-slice__item__slice_9,
+.slice-bgposit-type-1 .js-ase-slice__item_prev .ase-slider-slice__item__slice_9 {
   -moz-transition-duration: 810ms;
   -webkit-transition-duration: 810ms;
   transition-duration: 810ms;
 }
 
-.slice-bgposit-type-2 .js-ase__item {
+.slice-bgposit-type-2 .js-ase-slice__item {
   -moz-transition: all ease-in 1s;
   -webkit-transition: all ease-in 1s;
   transition: all ease-in 1s;
@@ -3435,69 +3790,69 @@ http://dibusoft.com/
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
 }
-.slice-bgposit-type-2 .js-ase__item_active {
+.slice-bgposit-type-2 .js-ase-slice__item_active {
   opacity: 1;
 }
-.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice,
-.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice {
+.slice-bgposit-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice,
+.slice-bgposit-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice {
   background-position: 0 -40px;
 }
-.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_0,
-.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_0 {
+.slice-bgposit-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_0,
+.slice-bgposit-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_0 {
   -moz-transition-duration: 0ms;
   -webkit-transition-duration: 0ms;
   transition-duration: 0ms;
 }
-.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_1,
-.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_1 {
+.slice-bgposit-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_1,
+.slice-bgposit-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_1 {
   -moz-transition-duration: 90ms;
   -webkit-transition-duration: 90ms;
   transition-duration: 90ms;
 }
-.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_2,
-.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_2 {
+.slice-bgposit-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_2,
+.slice-bgposit-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_2 {
   -moz-transition-duration: 180ms;
   -webkit-transition-duration: 180ms;
   transition-duration: 180ms;
 }
-.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_3,
-.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_3 {
+.slice-bgposit-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_3,
+.slice-bgposit-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_3 {
   -moz-transition-duration: 270ms;
   -webkit-transition-duration: 270ms;
   transition-duration: 270ms;
 }
-.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_4,
-.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_4 {
+.slice-bgposit-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_4,
+.slice-bgposit-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_4 {
   -moz-transition-duration: 360ms;
   -webkit-transition-duration: 360ms;
   transition-duration: 360ms;
 }
-.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_5,
-.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_5 {
+.slice-bgposit-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_5,
+.slice-bgposit-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_5 {
   -moz-transition-duration: 450ms;
   -webkit-transition-duration: 450ms;
   transition-duration: 450ms;
 }
-.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_6,
-.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_6 {
+.slice-bgposit-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_6,
+.slice-bgposit-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_6 {
   -moz-transition-duration: 540ms;
   -webkit-transition-duration: 540ms;
   transition-duration: 540ms;
 }
-.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_7,
-.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_7 {
+.slice-bgposit-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_7,
+.slice-bgposit-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_7 {
   -moz-transition-duration: 630ms;
   -webkit-transition-duration: 630ms;
   transition-duration: 630ms;
 }
-.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_8,
-.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_8 {
+.slice-bgposit-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_8,
+.slice-bgposit-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_8 {
   -moz-transition-duration: 720ms;
   -webkit-transition-duration: 720ms;
   transition-duration: 720ms;
 }
-.slice-bgposit-type-2 .js-ase__item_next .ase-slider-slice__item__slice_9,
-.slice-bgposit-type-2 .js-ase__item_prev .ase-slider-slice__item__slice_9 {
+.slice-bgposit-type-2 .js-ase-slice__item_next .ase-slider-slice__item__slice_9,
+.slice-bgposit-type-2 .js-ase-slice__item_prev .ase-slider-slice__item__slice_9 {
   -moz-transition-duration: 810ms;
   -webkit-transition-duration: 810ms;
   transition-duration: 810ms;
@@ -3509,61 +3864,61 @@ http://dibusoft.com/
   transition: all linear 1s;
   visibility: hidden;
 }
-.slice-curtain .js-ase__item_next .ase-slider-slice__item__slice {
+.slice-curtain .js-ase-slice__item_next .ase-slider-slice__item__slice {
   top: -20px;
 }
-.slice-curtain .js-ase__item_prev .ase-slider-slice__item__slice {
+.slice-curtain .js-ase-slice__item_prev .ase-slider-slice__item__slice {
   bottom: 20px;
 }
-.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice {
+.slice-curtain .js-ase-slice__item_active .ase-slider-slice__item__slice {
   visibility: visible;
 }
-.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_0 {
+.slice-curtain .js-ase-slice__item_active .ase-slider-slice__item__slice_0 {
   -moz-transition-delay: 0ms;
   -webkit-transition-delay: 0ms;
   transition-delay: 0ms;
 }
-.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_1 {
+.slice-curtain .js-ase-slice__item_active .ase-slider-slice__item__slice_1 {
   -moz-transition-delay: 90ms;
   -webkit-transition-delay: 90ms;
   transition-delay: 90ms;
 }
-.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_2 {
+.slice-curtain .js-ase-slice__item_active .ase-slider-slice__item__slice_2 {
   -moz-transition-delay: 180ms;
   -webkit-transition-delay: 180ms;
   transition-delay: 180ms;
 }
-.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_3 {
+.slice-curtain .js-ase-slice__item_active .ase-slider-slice__item__slice_3 {
   -moz-transition-delay: 270ms;
   -webkit-transition-delay: 270ms;
   transition-delay: 270ms;
 }
-.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_4 {
+.slice-curtain .js-ase-slice__item_active .ase-slider-slice__item__slice_4 {
   -moz-transition-delay: 360ms;
   -webkit-transition-delay: 360ms;
   transition-delay: 360ms;
 }
-.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_5 {
+.slice-curtain .js-ase-slice__item_active .ase-slider-slice__item__slice_5 {
   -moz-transition-delay: 450ms;
   -webkit-transition-delay: 450ms;
   transition-delay: 450ms;
 }
-.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_6 {
+.slice-curtain .js-ase-slice__item_active .ase-slider-slice__item__slice_6 {
   -moz-transition-delay: 540ms;
   -webkit-transition-delay: 540ms;
   transition-delay: 540ms;
 }
-.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_7 {
+.slice-curtain .js-ase-slice__item_active .ase-slider-slice__item__slice_7 {
   -moz-transition-delay: 630ms;
   -webkit-transition-delay: 630ms;
   transition-delay: 630ms;
 }
-.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_8 {
+.slice-curtain .js-ase-slice__item_active .ase-slider-slice__item__slice_8 {
   -moz-transition-delay: 720ms;
   -webkit-transition-delay: 720ms;
   transition-delay: 720ms;
 }
-.slice-curtain .js-ase__item_active .ase-slider-slice__item__slice_9 {
+.slice-curtain .js-ase-slice__item_active .ase-slider-slice__item__slice_9 {
   -moz-transition-delay: 810ms;
   -webkit-transition-delay: 810ms;
   transition-delay: 810ms;
