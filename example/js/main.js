@@ -157,12 +157,11 @@ Scripts.Common = {
 					currentClass:'js-ase-slice__item_active',
 					autoplay:false,
 					onMove:function () {
+						slider.find('.js-ase-slice__item').removeClass('js-ase-slice__item_animated');
 
-						slider.find('.js-ase-slice__item_active').addClass('js-ase-slice__item_animated');
-
-						setTimeout(function() {
-							slider.find('.js-ase-slice__item').removeClass('js-ase-slice__item_animated');
-						}, 400);
+						setTimeout(function () {
+							slider.find('.js-ase-slice__item_active').addClass('js-ase-slice__item_animated');
+						}, 1);
 					}
 				}).addPagination(slider.find('.js-ase__pagination'), false, 'i-slider__pagination__item');
 			});
