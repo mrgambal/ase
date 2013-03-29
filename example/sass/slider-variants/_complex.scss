@@ -100,86 +100,161 @@ $example-complex-spacing: 10px;
 
 // town layers
 
-%anim-elem_bg_1 {
+%anim-elem_bg_1_day {
 	@include example-complex-sprite(bg-day-town-1);
 }
 
-%anim-elem_bg_2 {
+%anim-elem_bg_2_day {
 	@include example-complex-sprite(bg-day-town-2);
 }
 
-%anim-elem_bg_3 {
+%anim-elem_bg_3_day {
 	@include example-complex-sprite(bg-day-town-3);
+}
+
+%anim-elem_bg_1_night {
+	@include example-complex-sprite(bg-night-town-1);
+}
+
+%anim-elem_bg_2_night {
+	@include example-complex-sprite(bg-night-town-2);
+}
+
+%anim-elem_bg_3_night {
+	@include example-complex-sprite(bg-night-town-3);
 }
 
 // town street light
 
-%anim-elem_bg_4 {
+%anim-elem_bg_4_day {
 	@include example-complex-sprite(bg-day-lights);
+}
+
+%anim-elem_bg_4_night {
+	@include example-complex-sprite(bg-night-lights);
 }
 
 // cars
 
-%anim-elem_car_1 {
+%anim-elem_car_1_day {
 	width: 195px;
 	height: 85px;
 	@include example-complex-sprite(bg-day-car-1);
 }
 
-%anim-elem_car_2 {
+%anim-elem_car_2_day {
 	width: 203px;
 	height: 103px;
 	@include example-complex-sprite(bg-day-car-2);
 }
 
-%anim-elem_car_3 {
+%anim-elem_car_3_day {
 	width: 201px;
 	height: 111px;
 	@include example-complex-sprite(bg-day-car-3);
 }
 
+%anim-elem_car_1_night {
+	width: 195px;
+	height: 85px;
+	@include example-complex-sprite(bg-night-car-1);
+}
+
+%anim-elem_car_2_night {
+	width: 203px;
+	height: 103px;
+	@include example-complex-sprite(bg-night-car-2);
+}
+
+%anim-elem_car_3_night {
+	width: 201px;
+	height: 111px;
+	@include example-complex-sprite(bg-night-car-3);
+}
+
 // trees
 
-%anim-elem_tree_1 {
+%anim-elem_tree_1_day {
 	width: 116px;
 	height: 115px;
 	@include example-complex-sprite(bg-day-tree-1);
 }
 
-%anim-elem_tree_2 {
+%anim-elem_tree_2_day {
 	@include example-complex-sprite(bg-day-tree-2);
+}
+
+%anim-elem_tree_1_night {
+	width: 116px;
+	height: 115px;
+	@include example-complex-sprite(bg-night-tree-1);
+}
+
+%anim-elem_tree_2_night {
+	@include example-complex-sprite(bg-night-tree-2);
 }
 
 // clouds
 
-%anim-elem_cloud_1 {
+%anim-elem_cloud_1_day {
 	width: 190px;
 	height: 100px;
 	@include example-complex-sprite(bg-day-cloud-1);
 }
 
-%anim-elem_cloud_2 {
+%anim-elem_cloud_2_day {
 	width: 162px;
 	height: 75px;
 	@include example-complex-sprite(bg-day-cloud-2);
 }
 
-%anim-elem_cloud_3 {
+%anim-elem_cloud_3_day {
 	width: 178px;
 	height: 89px;
 	@include example-complex-sprite(bg-day-cloud-3);
 }
 
-%anim-elem_cloud_4 {
+%anim-elem_cloud_4_day {
 	width: 203px;
 	height: 97px;
 	@include example-complex-sprite(bg-day-cloud-4);
 }
 
+%anim-elem_cloud_1_night {
+	width: 190px;
+	height: 100px;
+	@include example-complex-sprite(bg-night-cloud-1);
+}
+
+%anim-elem_cloud_2_night {
+	width: 162px;
+	height: 75px;
+	@include example-complex-sprite(bg-night-cloud-2);
+}
+
+%anim-elem_cloud_3_night {
+	width: 178px;
+	height: 89px;
+	@include example-complex-sprite(bg-night-cloud-3);
+}
+
+%anim-elem_cloud_4_night {
+	width: 203px;
+	height: 97px;
+	@include example-complex-sprite(bg-night-cloud-4);
+}
+
+
 %anim-elem_sun {
 	width: 287px;
 	height: 211px;
 	@include example-complex-sprite(bg-day-sun);
+}
+
+%anim-elem_moon {
+	width: 372px;
+	height: 232px;
+	@include example-complex-sprite(bg-night-moon);
 }
 
 /* @end */
@@ -200,121 +275,228 @@ $example-complex-spacing: 10px;
 }
 
 .ase-slider-complex__item_slide-1 {
+	// town layers
 
+	.town__anim-elem-container_1 {
+		@extend %anim-elem_bg_1_day;
+	}
+
+	.town__anim-elem-container_2 {
+		@extend %anim-elem_bg_2_day;
+	}
+
+	.town__anim-elem-container_3 {
+		@extend %anim-elem_bg_3_day;
+	}
+
+	// lights
+
+	.town__anim-elem-container_4 {
+		@extend %anim-elem_bg_4_day;
+	}
+
+	// cars
+
+	.town__anim-elem-container_5 {
+		top: 430px;
+		left:300px;
+
+		.town__anim-elem_car {
+			@extend %anim-elem_car_1_day;
+		}
+	}
+
+	.town__anim-elem-container_6 {
+		top: 400px;
+		left: 607px;
+
+		.town__anim-elem_car {
+			@extend %anim-elem_car_2_day;
+		}
+	}
+
+	.town__anim-elem-container_7 {
+		top: 432px;
+		left: 1100px;
+
+		.town__anim-elem_car {
+			@extend %anim-elem_car_3_day;
+		}
+	}
+
+	// trees
+
+	.town__anim-elem-container_8 {
+		top: 338px;
+		left: 201px;
+
+		.town__anim-elem_tree {
+			@extend %anim-elem_tree_1_day;
+		}
+	}
+
+	.town__anim-elem-container_9 {
+		@extend %anim-elem_tree_2_day;
+	}
+
+	// clouds
+
+	.town__anim-elem-container_10 {
+		top: 38px;
+		left: 1000px;
+
+		.town__anim-elem_cloud {
+			@extend %anim-elem_cloud_1_day;
+		}
+	}
+
+	.town__anim-elem-container_11 {
+		top: 38px;
+		left: 450px;
+
+		.town__anim-elem_cloud {
+			@extend %anim-elem_cloud_2_day;
+		}
+	}
+
+	.town__anim-elem-container_12 {
+		top: 94px;
+		left: 1150px;
+
+		.town__anim-elem_cloud {
+			@extend %anim-elem_cloud_3_day;
+		}
+	}
+
+	.town__anim-elem-container_13 {
+		top: 100px;
+		left: 101px;
+
+		.town__anim-elem_cloud {
+			@extend %anim-elem_cloud_4_day;
+		}
+	}
+
+	.town__anim-elem-container_14 {
+		top: 0;
+		left: 574px;
+
+		.town__anim-elem_sun {
+			@extend %anim-elem_sun;
+		}
+	}
 }
 
 .ase-slider-complex__item_slide-2 {
+	// town layers
 
-}
-
-// town layers
-
-.town__anim-elem-container_1 {
-	@extend %anim-elem_bg_1;
-}
-
-.town__anim-elem-container_2 {
-	@extend %anim-elem_bg_2;
-}
-
-.town__anim-elem-container_3 {
-	@extend %anim-elem_bg_3;
-}
-
-// lights
-
-.town__anim-elem-container_4 {
-	@extend %anim-elem_bg_4;
-}
-
-// cars
-
-.town__anim-elem-container_5 {
-	top: 430px;
-	left:300px;
-
-	.town__anim-elem_car {
-		@extend %anim-elem_car_1;
+	.town__anim-elem-container_1 {
+		@extend %anim-elem_bg_1_night;
 	}
-}
 
-.town__anim-elem-container_6 {
-	top: 400px;
-	left: 607px;
-
-	.town__anim-elem_car {
-		@extend %anim-elem_car_2;
+	.town__anim-elem-container_2 {
+		@extend %anim-elem_bg_2_night;
 	}
-}
 
-.town__anim-elem-container_7 {
-	top: 432px;
-	left: 1100px;
-
-	.town__anim-elem_car {
-		@extend %anim-elem_car_3;
+	.town__anim-elem-container_3 {
+		@extend %anim-elem_bg_3_night;
 	}
-}
 
-// trees
+	// lights
 
-.town__anim-elem-container_8 {
-	top: 338px;
-	left: 201px;
-
-	.town__anim-elem_tree {
-		@extend %anim-elem_tree_1;
+	.town__anim-elem-container_4 {
+		@extend %anim-elem_bg_4_night;
 	}
-}
 
-.town__anim-elem-container_9 {
-	@extend %anim-elem_tree_2;
-}
+	// cars
 
-// clouds
+	.town__anim-elem-container_5 {
+		top: 430px;
+		left:300px;
 
-.town__anim-elem-container_10 {
-	top: 38px;
-	left: 1000px;
-
-	.town__anim-elem_cloud {
-		@extend %anim-elem_cloud_1;
+		.town__anim-elem_car {
+			@extend %anim-elem_car_1_night;
+		}
 	}
-}
 
-.town__anim-elem-container_11 {
-	top: 38px;
-	left: 450px;
+	.town__anim-elem-container_6 {
+		top: 400px;
+		left: 607px;
 
-	.town__anim-elem_cloud {
-		@extend %anim-elem_cloud_2;
+		.town__anim-elem_car {
+			@extend %anim-elem_car_2_night;
+		}
 	}
-}
 
-.town__anim-elem-container_12 {
-	top: 94px;
-	left: 1150px;
+	.town__anim-elem-container_7 {
+		top: 432px;
+		left: 1100px;
 
-	.town__anim-elem_cloud {
-		@extend %anim-elem_cloud_3;
+		.town__anim-elem_car {
+			@extend %anim-elem_car_3_night;
+		}
 	}
-}
 
-.town__anim-elem-container_13 {
-	top: 100px;
-	left: 101px;
+	// trees
 
-	.town__anim-elem_cloud {
-		@extend %anim-elem_cloud_4;
+	.town__anim-elem-container_8 {
+		top: 338px;
+		left: 201px;
+
+		.town__anim-elem_tree {
+			@extend %anim-elem_tree_1_night;
+		}
 	}
-}
 
-.town__anim-elem-container_14 {
-	top: 0;
-	left: 574px;
+	.town__anim-elem-container_9 {
+		@extend %anim-elem_tree_2_day;
+	}
 
-	.town__anim-elem_sun {
-		@extend %anim-elem_sun;
+	// clouds
+
+	.town__anim-elem-container_10 {
+		top: 38px;
+		left: 1000px;
+
+		.town__anim-elem_cloud {
+			@extend %anim-elem_cloud_1_night;
+		}
+	}
+
+	.town__anim-elem-container_11 {
+		top: 38px;
+		left: 450px;
+
+		.town__anim-elem_cloud {
+			@extend %anim-elem_cloud_2_night;
+		}
+	}
+
+	.town__anim-elem-container_12 {
+		top: 94px;
+		left: 1150px;
+
+		.town__anim-elem_cloud {
+			@extend %anim-elem_cloud_3_night;
+		}
+	}
+
+	.town__anim-elem-container_13 {
+		top: 100px;
+		left: 101px;
+
+		.town__anim-elem_cloud {
+			@extend %anim-elem_cloud_4_night;
+		}
+	}
+
+	.town__anim-elem-container_14 {
+		top: 0;
+		left: 574px;
+
+		.town__anim-elem_sun {
+			@extend %anim-elem_moon;
+		}
 	}
 }
 
