@@ -1246,37 +1246,37 @@ dl dd {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/includes\/_c\.scss}line{font-family:\0000336}}
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #8bdcbd; } }
+    background: #fc7d39; } }
 @media screen and (max-width: 1280px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/includes\/_c\.scss}line{font-family:\0000336}}
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #917865; } }
+    background: #14baf9; } }
 @media screen and (max-width: 1024px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/includes\/_c\.scss}line{font-family:\0000336}}
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #4fc4e3; } }
+    background: #5edbfd; } }
 @media screen and (max-width: 768px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/includes\/_c\.scss}line{font-family:\0000336}}
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #d6a245; } }
+    background: #97b70f; } }
 @media screen and (max-width: 600px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/includes\/_c\.scss}line{font-family:\0000336}}
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #326ff2; } }
+    background: #ea1ec3; } }
 @media screen and (max-width: 480px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/includes\/_c\.scss}line{font-family:\0000336}}
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #ea5406; } }
+    background: #c0f73f; } }
 @media screen and (max-width: 320px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/includes\/_c\.scss}line{font-family:\0000336}}
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #087d4f; } }
+    background: #b074c5; } }
 /* @end */
 /* @group Width targeting hide/show
   --------------------------------------------------------------------------- */
@@ -4680,25 +4680,26 @@ http://dibusoft.com/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\000037}}
 .ase-slider-complex {
   position: relative;
-  width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000311}}
+  width: 100%;
+  overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000312}}
   .ase-slider-complex .i-slider-nav {
     z-index: 2; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000317}}
 .ase-slider-complex__container {
   position: relative;
   height: 552px;
   width: 100%;
   z-index: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000324}}
 .ase-slider-complex__container__inner {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000330}}
 .ase-slider-complex__item {
   margin: 0;
   padding: 0;
@@ -4708,50 +4709,42 @@ http://dibusoft.com/
   width: 100%;
   height: 552px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000340}}
 .ase-slider-complex__item_slide-1 {
   background: url(../images/example-complex/bg-main-day.png) 0 0 repeat-x; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000343}}
   .ase-slider-complex__item_slide-1 .region-header {
     background-color: #339fe6;
     color: #fff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000349}}
 .ase-slider-complex__item_slide-2 {
   background: url(../images/example-complex/bg-main-night.png) 0 0 repeat-x; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000352}}
   .ase-slider-complex__item_slide-2 .region-header {
     background-color: #0535a8;
     color: #fff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000358}}
 .ase-slider-complex__item_slide-3 {
   background: #a200b8; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000362}}
 .ase-slider-complex__item__inner {
-  width: 100%;
   height: 552px;
+  width: 1400px;
+  margin: 0 auto;
   position: relative;
   z-index: 1; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000368}}
-.js-ase-complex__item {
-  visibility: hidden;
-  opacity: 1; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000373}}
-.js-ase-complex__item_active {
-  visibility: visible; }
 
 /* @end */
 /* @group elements generic parts
   --------------------------------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000375}}
 .town__anim-elem-container {
   position: absolute; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000379}}
 .town__anim-elem-container_bg {
   width: 100%;
   height: 100%;
@@ -4762,149 +4755,149 @@ http://dibusoft.com/
 /* @group elements bg
   --------------------------------------------------------------------------- */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/example-complex\/\*\.png}line{font-family:\00003298}}
-.example-complex-sprite, .ase-slider-complex__item_slide-1 .town__anim-elem-container_1, .ase-slider-complex__item_slide-1 .town__anim-elem-container_2, .ase-slider-complex__item_slide-1 .town__anim-elem-container_3, .ase-slider-complex__item_slide-2 .town__anim-elem-container_1, .ase-slider-complex__item_slide-2 .town__anim-elem-container_2, .ase-slider-complex__item_slide-2 .town__anim-elem-container_3, .ase-slider-complex__item_slide-1 .town__anim-elem-container_4, .ase-slider-complex__item_slide-2 .town__anim-elem-container_4, .ase-slider-complex__item_slide-1 .town__anim-elem-container_5 .town__anim-elem_car, .ase-slider-complex__item_slide-1 .town__anim-elem-container_6 .town__anim-elem_car, .ase-slider-complex__item_slide-1 .town__anim-elem-container_7 .town__anim-elem_car, .ase-slider-complex__item_slide-2 .town__anim-elem-container_5 .town__anim-elem_car, .ase-slider-complex__item_slide-2 .town__anim-elem-container_6 .town__anim-elem_car, .ase-slider-complex__item_slide-2 .town__anim-elem-container_7 .town__anim-elem_car, .ase-slider-complex__item_slide-1 .town__anim-elem-container_8 .town__anim-elem_tree, .ase-slider-complex__item_slide-1 .town__anim-elem-container_9, .ase-slider-complex__item_slide-2 .town__anim-elem-container_9, .ase-slider-complex__item_slide-2 .town__anim-elem-container_8 .town__anim-elem_tree, .ase-slider-complex__item_slide-1 .town__anim-elem-container_10 .town__anim-elem_cloud, .ase-slider-complex__item_slide-1 .town__anim-elem-container_11 .town__anim-elem_cloud, .ase-slider-complex__item_slide-1 .town__anim-elem-container_12 .town__anim-elem_cloud, .ase-slider-complex__item_slide-1 .town__anim-elem-container_13 .town__anim-elem_cloud, .ase-slider-complex__item_slide-2 .town__anim-elem-container_10 .town__anim-elem_cloud, .ase-slider-complex__item_slide-2 .town__anim-elem-container_11 .town__anim-elem_cloud, .ase-slider-complex__item_slide-2 .town__anim-elem-container_12 .town__anim-elem_cloud, .ase-slider-complex__item_slide-2 .town__anim-elem-container_13 .town__anim-elem_cloud, .ase-slider-complex__item_slide-1 .town__anim-elem-container_14 .town__anim-elem_sun, .ase-slider-complex__item_slide-2 .town__anim-elem-container_14 .town__anim-elem_sun {
+.example-complex-sprite, .ase-slider-complex__item_slide-1 .town__anim-elem-container_1, .ase-slider-complex__item_slide-1 .town__anim-elem-container_2, .ase-slider-complex__item_slide-1 .town__anim-elem-container_3, .ase-slider-complex__item_slide-2 .town__anim-elem-container_1, .ase-slider-complex__item_slide-2 .town__anim-elem-container_2, .ase-slider-complex__item_slide-2 .town__anim-elem-container_3, .ase-slider-complex__item_slide-1 .town__anim-elem-container_4, .ase-slider-complex__item_slide-2 .town__anim-elem-container_4, .ase-slider-complex__item_slide-1 .town__anim-elem-container_5 .town__anim-elem, .ase-slider-complex__item_slide-1 .town__anim-elem-container_6 .town__anim-elem, .ase-slider-complex__item_slide-1 .town__anim-elem-container_7 .town__anim-elem, .ase-slider-complex__item_slide-2 .town__anim-elem-container_5 .town__anim-elem, .ase-slider-complex__item_slide-2 .town__anim-elem-container_6 .town__anim-elem, .ase-slider-complex__item_slide-2 .town__anim-elem-container_7 .town__anim-elem, .ase-slider-complex__item_slide-1 .town__anim-elem-container_8 .town__anim-elem, .ase-slider-complex__item_slide-1 .town__anim-elem-container_9, .ase-slider-complex__item_slide-2 .town__anim-elem-container_9, .ase-slider-complex__item_slide-2 .town__anim-elem-container_8 .town__anim-elem, .ase-slider-complex__item_slide-1 .town__anim-elem-container_10 .town__anim-elem, .ase-slider-complex__item_slide-1 .town__anim-elem-container_11 .town__anim-elem, .ase-slider-complex__item_slide-1 .town__anim-elem-container_12 .town__anim-elem, .ase-slider-complex__item_slide-1 .town__anim-elem-container_13 .town__anim-elem, .ase-slider-complex__item_slide-2 .town__anim-elem-container_10 .town__anim-elem, .ase-slider-complex__item_slide-2 .town__anim-elem-container_11 .town__anim-elem, .ase-slider-complex__item_slide-2 .town__anim-elem-container_12 .town__anim-elem, .ase-slider-complex__item_slide-2 .town__anim-elem-container_13 .town__anim-elem, .ase-slider-complex__item_slide-1 .town__anim-elem-container_14 .town__anim-elem, .ase-slider-complex__item_slide-2 .town__anim-elem-container_14 .town__anim-elem {
   background: url('../images/example-complex-sc62de8c2eb.png') no-repeat; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003104}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\0000397}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_1 {
   background-position: 0 -2254px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003101}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_2 {
   background-position: 0 -3380px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003105}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_3 {
   background-position: 0 -1126px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003116}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003109}}
 .ase-slider-complex__item_slide-2 .town__anim-elem-container_1 {
   background-position: 0 -3943px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003113}}
 .ase-slider-complex__item_slide-2 .town__anim-elem-container_2 {
   background-position: 0 -2817px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003124}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003117}}
 .ase-slider-complex__item_slide-2 .town__anim-elem-container_3 {
   background-position: 0 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003123}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_4 {
   background-position: 0 -6345px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003134}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003127}}
 .ase-slider-complex__item_slide-2 .town__anim-elem-container_4 {
   background-position: 0 -4969px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003140}}
-.ase-slider-complex__item_slide-1 .town__anim-elem-container_5 .town__anim-elem_car {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003133}}
+.ase-slider-complex__item_slide-1 .town__anim-elem-container_5 .town__anim-elem {
   width: 195px;
   height: 85px;
   background-position: 0 -6250px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003146}}
-.ase-slider-complex__item_slide-1 .town__anim-elem-container_6 .town__anim-elem_car {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003139}}
+.ase-slider-complex__item_slide-1 .town__anim-elem-container_6 .town__anim-elem {
   width: 203px;
   height: 103px;
   background-position: 0 -5657px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003152}}
-.ase-slider-complex__item_slide-1 .town__anim-elem-container_7 .town__anim-elem_car {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003145}}
+.ase-slider-complex__item_slide-1 .town__anim-elem-container_7 .town__anim-elem {
   width: 201px;
   height: 111px;
   background-position: 0 -5770px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003158}}
-.ase-slider-complex__item_slide-2 .town__anim-elem-container_5 .town__anim-elem_car {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003151}}
+.ase-slider-complex__item_slide-2 .town__anim-elem-container_5 .town__anim-elem {
   width: 195px;
   height: 85px;
   background-position: 0 -6908px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003164}}
-.ase-slider-complex__item_slide-2 .town__anim-elem-container_6 .town__anim-elem_car {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003157}}
+.ase-slider-complex__item_slide-2 .town__anim-elem-container_6 .town__anim-elem {
   width: 203px;
   height: 103px;
   background-position: 0 -6016px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003170}}
-.ase-slider-complex__item_slide-2 .town__anim-elem-container_7 .town__anim-elem_car {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003163}}
+.ase-slider-complex__item_slide-2 .town__anim-elem-container_7 .town__anim-elem {
   width: 201px;
   height: 111px;
   background-position: 0 -6129px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003178}}
-.ase-slider-complex__item_slide-1 .town__anim-elem-container_8 .town__anim-elem_tree {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003171}}
+.ase-slider-complex__item_slide-1 .town__anim-elem-container_8 .town__anim-elem {
   width: 116px;
   height: 115px;
   background-position: 0 -5532px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003184}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003177}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_9, .ase-slider-complex__item_slide-2 .town__anim-elem-container_9 {
   background-position: 0 -563px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003188}}
-.ase-slider-complex__item_slide-2 .town__anim-elem-container_8 .town__anim-elem_tree {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003181}}
+.ase-slider-complex__item_slide-2 .town__anim-elem-container_8 .town__anim-elem {
   width: 116px;
   height: 115px;
   background-position: 0 -5891px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003200}}
-.ase-slider-complex__item_slide-1 .town__anim-elem-container_10 .town__anim-elem_cloud {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003193}}
+.ase-slider-complex__item_slide-1 .town__anim-elem-container_10 .town__anim-elem {
   width: 190px;
   height: 100px;
   background-position: 0 -7113px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003206}}
-.ase-slider-complex__item_slide-1 .town__anim-elem-container_11 .town__anim-elem_cloud {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003199}}
+.ase-slider-complex__item_slide-1 .town__anim-elem-container_11 .town__anim-elem {
   width: 162px;
   height: 75px;
   background-position: 0 -7720px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003212}}
-.ase-slider-complex__item_slide-1 .town__anim-elem-container_12 .town__anim-elem_cloud {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003205}}
+.ase-slider-complex__item_slide-1 .town__anim-elem-container_12 .town__anim-elem {
   width: 178px;
   height: 89px;
   background-position: 0 -7621px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003218}}
-.ase-slider-complex__item_slide-1 .town__anim-elem-container_13 .town__anim-elem_cloud {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003211}}
+.ase-slider-complex__item_slide-1 .town__anim-elem-container_13 .town__anim-elem {
   width: 203px;
   height: 97px;
   background-position: 0 -7330px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003224}}
-.ase-slider-complex__item_slide-2 .town__anim-elem-container_10 .town__anim-elem_cloud {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003217}}
+.ase-slider-complex__item_slide-2 .town__anim-elem-container_10 .town__anim-elem {
   width: 190px;
   height: 100px;
   background-position: 0 -7003px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003230}}
-.ase-slider-complex__item_slide-2 .town__anim-elem-container_11 .town__anim-elem_cloud {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003223}}
+.ase-slider-complex__item_slide-2 .town__anim-elem-container_11 .town__anim-elem {
   width: 162px;
   height: 75px;
   background-position: 0 -7536px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003236}}
-.ase-slider-complex__item_slide-2 .town__anim-elem-container_12 .town__anim-elem_cloud {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003229}}
+.ase-slider-complex__item_slide-2 .town__anim-elem-container_12 .town__anim-elem {
   width: 178px;
   height: 89px;
   background-position: 0 -7437px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003242}}
-.ase-slider-complex__item_slide-2 .town__anim-elem-container_13 .town__anim-elem_cloud {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003235}}
+.ase-slider-complex__item_slide-2 .town__anim-elem-container_13 .town__anim-elem {
   width: 203px;
   height: 97px;
   background-position: 0 -7223px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003249}}
-.ase-slider-complex__item_slide-1 .town__anim-elem-container_14 .town__anim-elem_sun {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003243}}
+.ase-slider-complex__item_slide-1 .town__anim-elem-container_14 .town__anim-elem {
   width: 287px;
   height: 211px;
   background-position: 0 -4506px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003255}}
-.ase-slider-complex__item_slide-2 .town__anim-elem-container_14 .town__anim-elem_sun {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003249}}
+.ase-slider-complex__item_slide-2 .town__anim-elem-container_14 .town__anim-elem {
   width: 372px;
   height: 232px;
   background-position: 0 -4727px; }
@@ -4912,95 +4905,124 @@ http://dibusoft.com/
 /* @end */
 /* @group animation containers
   --------------------------------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003266}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003260}}
 .town__anim-elem-container {
   position: absolute;
   display: block; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003271}}
-.town__anim-elem_car,
-.town__anim-elem_tree,
-.town__anim-elem_cloud,
-.town__anim-elem_sun {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003265}}
+.town__anim-elem {
   display: block; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003301}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003292}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_5 {
   top: 430px;
   left: 300px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003301}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_6 {
   top: 400px;
   left: 607px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003310}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_7 {
   top: 432px;
   left: 1100px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003321}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_8 {
   top: 338px;
   left: 201px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003336}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_10 {
   top: 38px;
   left: 1000px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003345}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_11 {
   top: 38px;
   left: 450px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003354}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_12 {
   top: 94px;
   left: 1150px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003363}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_13 {
   top: 100px;
   left: 101px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003372}}
 .ase-slider-complex__item_slide-1 .town__anim-elem-container_14 {
   top: 0;
   left: 574px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003414}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003405}}
 .ase-slider-complex__item_slide-2 .town__anim-elem-container_5 {
   top: 430px;
   left: 300px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003423}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003414}}
 .ase-slider-complex__item_slide-2 .town__anim-elem-container_6 {
   top: 400px;
   left: 607px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003432}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003423}}
 .ase-slider-complex__item_slide-2 .town__anim-elem-container_7 {
   top: 432px;
   left: 1100px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003443}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003434}}
 .ase-slider-complex__item_slide-2 .town__anim-elem-container_8 {
   top: 338px;
   left: 201px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003458}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003449}}
 .ase-slider-complex__item_slide-2 .town__anim-elem-container_10 {
   top: 38px;
   left: 1000px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003467}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003458}}
 .ase-slider-complex__item_slide-2 .town__anim-elem-container_11 {
   top: 38px;
   left: 450px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003476}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003467}}
 .ase-slider-complex__item_slide-2 .town__anim-elem-container_12 {
   top: 94px;
   left: 1150px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003485}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003476}}
 .ase-slider-complex__item_slide-2 .town__anim-elem-container_13 {
   top: 100px;
   left: 101px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003494}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003485}}
 .ase-slider-complex__item_slide-2 .town__anim-elem-container_14 {
   top: 0;
-  left: 574px; }
+  left: 550px; }
 
 /* @end */
-/* @group elem animatin types
+/* @group elem animatin
   --------------------------------------------------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003500}}
+.js-ase-complex__item {
+  visibility: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003503}}
+  .js-ase-complex__item .ase-slider-complex__item__inner {
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-perspective: 1000px;
+    -webkit-perspective: 1000px;
+    perspective: 1000px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003508}}
+  .js-ase-complex__item .town__anim-elem-container_bg {
+    -moz-transform: rotateX(85deg);
+    -webkit-transform: rotateX(85deg);
+    transform: rotateX(85deg);
+    -moz-transform-origin: 0 408px;
+    -webkit-transform-origin: 0 408px;
+    transform-origin: 0 408px;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003527}}
+.js-ase-complex__item_active {
+  visibility: visible; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/dimanech\/workspace-new\/ase\/example\/sass\/slider-variants\/_complex\.scss}line{font-family:\00003530}}
+  .js-ase-complex__item_active .town__anim-elem-container_bg {
+    -moz-transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg); }
+
 /* @end */
 /* ============================================================================
    @group Horizontal menu

@@ -7,6 +7,7 @@
 .ase-slider-complex {
 	position: relative;
 	width: 100%;
+	overflow:hidden;
 
 	.i-slider-nav {
 		z-index: 2;
@@ -59,18 +60,11 @@
 }
 
 .ase-slider-complex__item__inner {
-	width: 100%;
 	height: 552px;
+	width: 1400px;
+	margin: 0 auto;
 	position: relative;
 	z-index: 1;
-}
-
-.js-ase-complex__item {
-	visibility: hidden;
-}
-
-.js-ase-complex__item_active {
-	visibility: visible;
 }
 
 /* @end */
@@ -244,6 +238,7 @@ $example-complex-spacing: 10px;
 	@include example-complex-sprite(bg-night-cloud-4);
 }
 
+// sun and moon
 
 %anim-elem_sun {
 	width: 287px;
@@ -267,10 +262,7 @@ $example-complex-spacing: 10px;
 	display:block;
 }
 
-.town__anim-elem_car,
-.town__anim-elem_tree,
-.town__anim-elem_cloud,
-.town__anim-elem_sun {
+.town__anim-elem {
 	display:block;
 }
 
@@ -301,7 +293,7 @@ $example-complex-spacing: 10px;
 		top: 430px;
 		left:300px;
 
-		.town__anim-elem_car {
+		.town__anim-elem {
 			@extend %anim-elem_car_1_day;
 		}
 	}
@@ -310,7 +302,7 @@ $example-complex-spacing: 10px;
 		top: 400px;
 		left: 607px;
 
-		.town__anim-elem_car {
+		.town__anim-elem {
 			@extend %anim-elem_car_2_day;
 		}
 	}
@@ -319,7 +311,7 @@ $example-complex-spacing: 10px;
 		top: 432px;
 		left: 1100px;
 
-		.town__anim-elem_car {
+		.town__anim-elem {
 			@extend %anim-elem_car_3_day;
 		}
 	}
@@ -330,7 +322,7 @@ $example-complex-spacing: 10px;
 		top: 338px;
 		left: 201px;
 
-		.town__anim-elem_tree {
+		.town__anim-elem {
 			@extend %anim-elem_tree_1_day;
 		}
 	}
@@ -345,7 +337,7 @@ $example-complex-spacing: 10px;
 		top: 38px;
 		left: 1000px;
 
-		.town__anim-elem_cloud {
+		.town__anim-elem {
 			@extend %anim-elem_cloud_1_day;
 		}
 	}
@@ -354,7 +346,7 @@ $example-complex-spacing: 10px;
 		top: 38px;
 		left: 450px;
 
-		.town__anim-elem_cloud {
+		.town__anim-elem {
 			@extend %anim-elem_cloud_2_day;
 		}
 	}
@@ -363,7 +355,7 @@ $example-complex-spacing: 10px;
 		top: 94px;
 		left: 1150px;
 
-		.town__anim-elem_cloud {
+		.town__anim-elem {
 			@extend %anim-elem_cloud_3_day;
 		}
 	}
@@ -372,7 +364,7 @@ $example-complex-spacing: 10px;
 		top: 100px;
 		left: 101px;
 
-		.town__anim-elem_cloud {
+		.town__anim-elem {
 			@extend %anim-elem_cloud_4_day;
 		}
 	}
@@ -381,7 +373,7 @@ $example-complex-spacing: 10px;
 		top: 0;
 		left: 574px;
 
-		.town__anim-elem_sun {
+		.town__anim-elem {
 			@extend %anim-elem_sun;
 		}
 	}
@@ -414,7 +406,7 @@ $example-complex-spacing: 10px;
 		top: 430px;
 		left:300px;
 
-		.town__anim-elem_car {
+		.town__anim-elem {
 			@extend %anim-elem_car_1_night;
 		}
 	}
@@ -423,7 +415,7 @@ $example-complex-spacing: 10px;
 		top: 400px;
 		left: 607px;
 
-		.town__anim-elem_car {
+		.town__anim-elem {
 			@extend %anim-elem_car_2_night;
 		}
 	}
@@ -432,7 +424,7 @@ $example-complex-spacing: 10px;
 		top: 432px;
 		left: 1100px;
 
-		.town__anim-elem_car {
+		.town__anim-elem {
 			@extend %anim-elem_car_3_night;
 		}
 	}
@@ -443,7 +435,7 @@ $example-complex-spacing: 10px;
 		top: 338px;
 		left: 201px;
 
-		.town__anim-elem_tree {
+		.town__anim-elem {
 			@extend %anim-elem_tree_1_night;
 		}
 	}
@@ -458,7 +450,7 @@ $example-complex-spacing: 10px;
 		top: 38px;
 		left: 1000px;
 
-		.town__anim-elem_cloud {
+		.town__anim-elem {
 			@extend %anim-elem_cloud_1_night;
 		}
 	}
@@ -467,7 +459,7 @@ $example-complex-spacing: 10px;
 		top: 38px;
 		left: 450px;
 
-		.town__anim-elem_cloud {
+		.town__anim-elem {
 			@extend %anim-elem_cloud_2_night;
 		}
 	}
@@ -476,7 +468,7 @@ $example-complex-spacing: 10px;
 		top: 94px;
 		left: 1150px;
 
-		.town__anim-elem_cloud {
+		.town__anim-elem {
 			@extend %anim-elem_cloud_3_night;
 		}
 	}
@@ -485,16 +477,16 @@ $example-complex-spacing: 10px;
 		top: 100px;
 		left: 101px;
 
-		.town__anim-elem_cloud {
+		.town__anim-elem {
 			@extend %anim-elem_cloud_4_night;
 		}
 	}
 
 	.town__anim-elem-container_14 {
 		top: 0;
-		left: 574px;
+		left: 550px;
 
-		.town__anim-elem_sun {
+		.town__anim-elem {
 			@extend %anim-elem_moon;
 		}
 	}
@@ -502,11 +494,42 @@ $example-complex-spacing: 10px;
 
 /* @end */
 
-/* @group elem animatin types
+/* @group elem animatin
   --------------------------------------------------------------------------- */
 
-//%anim-elem_bubble_anim-1 {
-//	@include vendor(animation, star-1 linear 20s infinite);
-//}
+.js-ase-complex__item {
+	visibility: hidden;
+
+	.ase-slider-complex__item__inner {
+		@include vendor(transform-style, preserve-3d);
+		@include vendor(perspective, 1000px);
+	}
+
+	.town__anim-elem-container_bg {
+		@include vendor(transform, rotateX(85deg));
+		@include vendor(transform-origin, 0 408px);
+		@include transition();
+	}
+
+	.town__anim-elem-container_1 {
+
+	}
+
+	.town__anim-elem-container_2 {
+
+	}
+
+	.town__anim-elem-container_3 {
+
+	}
+}
+
+.js-ase-complex__item_active {
+	visibility: visible;
+
+	.town__anim-elem-container_bg {
+		@include vendor(transform, rotateX(0deg));
+	}
+}
 
 /* @end */
