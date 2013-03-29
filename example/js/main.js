@@ -188,6 +188,27 @@ Scripts.Common = {
 		});
 
 	},
+	complexSlider:function () {
+		var sc = Scripts.Common,
+			containers = $('.js-ase-complex');
+
+		if (containers.length) {
+			containers.each(function () {
+				var el = $(this);
+				el.ASE({
+					itemsSelector:'.js-ase-complex__item',
+					prevCtrl:el.find('.js-ase-complex__nav_prev'),
+					nextCtrl:el.find('.js-ase-complex__nav_next'),
+					prevClass:'js-ase-complex__item_prev',
+					nextClass:'js-ase-complex__item_next',
+					currentClass:'js-ase-complex__item_active',
+					autoplay:false
+				}).addPagination(el.find('.js-ase__pagination'), false, 'i-slider__pagination__item');
+			});
+		}
+
+		return sc;
+	},
 	init:function () {
 		var sc = this;
 
@@ -199,6 +220,7 @@ Scripts.Common = {
 				.tabsInit()
 				.carouselInit()
 				.sliceInit()
+				.complexSlider()
 				.warning()
 				.animTypeChanger()
 		};

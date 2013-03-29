@@ -38,10 +38,20 @@
 
 .ase-slider-complex__item_slide-1 {
 	background: url(../images/example-complex/bg-main-day.png) 0 0 repeat-x;
+
+	.region-header {
+		background-color:#339fe6;
+		color:#fff;
+	}
 }
 
 .ase-slider-complex__item_slide-2 {
-	background: $green;
+	background: url(../images/example-complex/bg-main-night.png) 0 0 repeat-x;
+
+	.region-header {
+		background-color:#0535a8;
+		color:#fff;
+	}
 }
 
 .ase-slider-complex__item_slide-3 {
@@ -55,15 +65,12 @@
 	z-index: 1;
 }
 
-.slider_complex {
+.js-ase-complex__item {
+	visibility: hidden;
+}
 
-	.js-ase__item {
-		visibility: hidden;
-	}
-
-	.js-ase__item_active {
-		visibility: visible;
-	}
+.js-ase-complex__item_active {
+	visibility: visible;
 }
 
 /* @end */
@@ -143,14 +150,37 @@ $example-complex-spacing: 10px;
 	@include example-complex-sprite(bg-day-tree-2);
 }
 
-/* @end */
+// clouds
 
-/* @group elem animatin types
-  --------------------------------------------------------------------------- */
+%anim-elem_cloud_1 {
+	width: 190px;
+	height: 100px;
+	@include example-complex-sprite(bg-day-cloud-1);
+}
 
-//%anim-elem_bubble_anim-1 {
-//	@include vendor(animation, star-1 linear 20s infinite);
-//}
+%anim-elem_cloud_2 {
+	width: 162px;
+	height: 75px;
+	@include example-complex-sprite(bg-day-cloud-2);
+}
+
+%anim-elem_cloud_3 {
+	width: 178px;
+	height: 89px;
+	@include example-complex-sprite(bg-day-cloud-3);
+}
+
+%anim-elem_cloud_4 {
+	width: 203px;
+	height: 97px;
+	@include example-complex-sprite(bg-day-cloud-4);
+}
+
+%anim-elem_sun {
+	width: 287px;
+	height: 211px;
+	@include example-complex-sprite(bg-day-sun);
+}
 
 /* @end */
 
@@ -163,8 +193,18 @@ $example-complex-spacing: 10px;
 }
 
 .town__anim-elem_car,
-.town__anim-elem_tree {
+.town__anim-elem_tree,
+.town__anim-elem_cloud,
+.town__anim-elem_sun {
 	display:block;
+}
+
+.ase-slider-complex__item_slide-1 {
+
+}
+
+.ase-slider-complex__item_slide-2 {
+
 }
 
 // town layers
@@ -230,5 +270,61 @@ $example-complex-spacing: 10px;
 .town__anim-elem-container_9 {
 	@extend %anim-elem_tree_2;
 }
+
+// clouds
+
+.town__anim-elem-container_10 {
+	top: 38px;
+	left: 1000px;
+
+	.town__anim-elem_cloud {
+		@extend %anim-elem_cloud_1;
+	}
+}
+
+.town__anim-elem-container_11 {
+	top: 38px;
+	left: 450px;
+
+	.town__anim-elem_cloud {
+		@extend %anim-elem_cloud_2;
+	}
+}
+
+.town__anim-elem-container_12 {
+	top: 94px;
+	left: 1150px;
+
+	.town__anim-elem_cloud {
+		@extend %anim-elem_cloud_3;
+	}
+}
+
+.town__anim-elem-container_13 {
+	top: 100px;
+	left: 101px;
+
+	.town__anim-elem_cloud {
+		@extend %anim-elem_cloud_4;
+	}
+}
+
+.town__anim-elem-container_14 {
+	top: 0;
+	left: 574px;
+
+	.town__anim-elem_sun {
+		@extend %anim-elem_sun;
+	}
+}
+
+/* @end */
+
+/* @group elem animatin types
+  --------------------------------------------------------------------------- */
+
+//%anim-elem_bubble_anim-1 {
+//	@include vendor(animation, star-1 linear 20s infinite);
+//}
 
 /* @end */
