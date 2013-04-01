@@ -530,7 +530,7 @@ $example-complex-spacing: 10px;
 	@for $i from 1 through 9 {
 		.town__anim-elem-container_#{$i} {
 			@include vendor(transition-delay, #{$i * 100}ms);
-			@include vendor(transform, rotateX(90deg));
+			@include vendor(transform, rotateX(90deg) translateZ(#{$i * 10}px));
 		}
 	}
 
@@ -581,6 +581,12 @@ $example-complex-spacing: 10px;
 
 	.town__anim-elem-container {
 		@include vendor(transform, rotateX(0deg));
+	}
+
+	@for $i from 1 through 9 {
+		.town__anim-elem-container_#{$i} {
+			@include vendor(transform, rotateX(0deg) translateZ(#{$i * 10}px));
+		}
 	}
 }
 
