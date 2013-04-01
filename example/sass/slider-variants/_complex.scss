@@ -74,6 +74,7 @@
 
 .town__anim-elem-container {
 	position:absolute;
+	display:block;
 }
 
 .town__anim-elem-container_bg {
@@ -81,6 +82,10 @@
 	height:100%;
 	top: 0;
 	left: 0;
+}
+
+.town__anim-elem {
+	display:block;
 }
 
 /* @end */
@@ -256,15 +261,6 @@ $example-complex-spacing: 10px;
 
 /* @group animation containers
   --------------------------------------------------------------------------- */
-
-.town__anim-elem-container {
-	position: absolute;
-	display:block;
-}
-
-.town__anim-elem {
-	display:block;
-}
 
 .ase-slider-complex__item_slide-1 {
 	// town layers
@@ -497,38 +493,100 @@ $example-complex-spacing: 10px;
 /* @group elem animatin
   --------------------------------------------------------------------------- */
 
+.slider_complex {
+	overflow:hidden;
+}
+
 .js-ase-complex__item {
-	visibility: hidden;
+	visibility:hidden;
+	@include transition();
 
 	.ase-slider-complex__item__inner {
 		@include vendor(transform-style, preserve-3d);
-		@include vendor(perspective, 1000px);
-	}
-
-	.town__anim-elem-container_bg {
-		@include vendor(transform, rotateX(85deg));
-		@include vendor(transform-origin, 0 408px);
+		@include vendor(perspective, 200px);
+		left: 100%;
 		@include transition();
 	}
 
-	.town__anim-elem-container_1 {
-
+	.town__anim-elem-container {
+		@include vendor(transform-origin, 0 100%);
 	}
 
-	.town__anim-elem-container_2 {
-
+	.town__anim-elem-container_bg {
+		@include vendor(transform-origin, 0 408px);
+		@include vendor(transform, rotateX(90deg));
 	}
 
-	.town__anim-elem-container_3 {
-
+	.town__anim-elem-container_9 {
+		@include vendor(transform-origin, 0 100%);
 	}
+
+	.town__anim-elem_anim-1 {
+		@include vendor(backface-visibility, hidden);
+		@include transition(all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275));
+		@include vendor(transform, rotateX(90deg));
+	}
+
+	@for $i from 1 through 9 {
+		.town__anim-elem-container_#{$i} {
+			@include vendor(transition-delay, #{$i * 100}ms);
+			@include vendor(transform, rotateX(90deg));
+		}
+	}
+
+	//.town__anim-elem-container_1 {
+	//	@include vendor(transition-delay, #{300 * 9}ms );
+	//}
+	//
+	//.town__anim-elem-container_2 {
+	//	@include vendor(transition-delay, #{300 * 8}ms );
+	//}
+	//
+	//.town__anim-elem-container_3 {
+	//	@include vendor(transition-delay, #{300 * 7}ms );
+	//}
+	//
+	//.town__anim-elem-container_4 {
+	//	@include vendor(transition-delay, #{300 * 6}ms );
+	//}
+	//
+	//.town__anim-elem-container_5 {
+	//	@include vendor(transition-delay, #{300 * 5}ms );
+	//}
+	//
+	//.town__anim-elem-container_6 {
+	//	@include vendor(transition-delay, #{300 * 4}ms );
+	//}
+	//
+	//.town__anim-elem-container_7 {
+	//	@include vendor(transition-delay, #{300 * 3}ms );
+	//}
+	//
+	//.town__anim-elem-container_8 {
+	//	@include vendor(transition-delay, #{300 * 2}ms );
+	//}
+	//
+	//.town__anim-elem-container_9 {
+	//	@include vendor(transition-delay, #{300 * 1}ms );
+	//}
+
 }
 
 .js-ase-complex__item_active {
-	visibility: visible;
+	visibility:visible;
 
-	.town__anim-elem-container_bg {
+	.ase-slider-complex__item__inner {
+		left: 0;
+	}
+
+	.town__anim-elem-container {
 		@include vendor(transform, rotateX(0deg));
+	}
+}
+
+.js-ase-complex__item_prev {
+	.ase-slider-complex__item__inner {
+		left: -100%;
 	}
 }
 
