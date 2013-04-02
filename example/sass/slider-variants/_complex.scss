@@ -530,45 +530,9 @@ $example-complex-spacing: 10px;
 	@for $i from 1 through 9 {
 		.town__anim-elem-container_#{$i} {
 			@include vendor(transition-delay, #{$i * 100}ms);
-			@include vendor(transform, rotateX(90deg) translateZ(#{$i * 10}px));
+			@include vendor(transform, rotateX(90deg));
 		}
 	}
-
-	//.town__anim-elem-container_1 {
-	//	@include vendor(transition-delay, #{300 * 9}ms );
-	//}
-	//
-	//.town__anim-elem-container_2 {
-	//	@include vendor(transition-delay, #{300 * 8}ms );
-	//}
-	//
-	//.town__anim-elem-container_3 {
-	//	@include vendor(transition-delay, #{300 * 7}ms );
-	//}
-	//
-	//.town__anim-elem-container_4 {
-	//	@include vendor(transition-delay, #{300 * 6}ms );
-	//}
-	//
-	//.town__anim-elem-container_5 {
-	//	@include vendor(transition-delay, #{300 * 5}ms );
-	//}
-	//
-	//.town__anim-elem-container_6 {
-	//	@include vendor(transition-delay, #{300 * 4}ms );
-	//}
-	//
-	//.town__anim-elem-container_7 {
-	//	@include vendor(transition-delay, #{300 * 3}ms );
-	//}
-	//
-	//.town__anim-elem-container_8 {
-	//	@include vendor(transition-delay, #{300 * 2}ms );
-	//}
-	//
-	//.town__anim-elem-container_9 {
-	//	@include vendor(transition-delay, #{300 * 1}ms );
-	//}
 
 }
 
@@ -581,12 +545,6 @@ $example-complex-spacing: 10px;
 
 	.town__anim-elem-container {
 		@include vendor(transform, rotateX(0deg));
-	}
-
-	@for $i from 1 through 9 {
-		.town__anim-elem-container_#{$i} {
-			@include vendor(transform, rotateX(0deg) translateZ(#{$i * 10}px));
-		}
 	}
 }
 
