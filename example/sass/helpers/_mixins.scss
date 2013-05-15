@@ -2,12 +2,6 @@
 //  WAI and W3C support
 //=============================================================================
 
-// Hide from both screenreaders and browsers
-@mixin i-hide {
-	display: none !important;
-	visibility: hidden;
-}
-
 // Hide only visually, but have it available for screenreaders
 @mixin i-hide_vis {
 	border: 0;
@@ -37,22 +31,26 @@
 	}
 }
 
-// Hide visually and from screenreaders, but maintain layout
-@mixin i-hide_invisible {
-	visibility: hidden;
+// ============================================================================
+//    Vendor prefix Mixins
+//=============================================================================
+
+$prefix_defaults: -moz- -webkit- '' !default;
+
+@mixin vendor($property, $value, $prefixes: $prefix_defaults) {
+	@each $prefix in $prefixes {
+		#{$prefix}#{$property}: $value;
+	}
 }
 
-@mixin i-hide_offscreen {
-	text-indent: -9999px;
-	overflow: hidden;
-	text-decoration: none;
-	display: block;
-	font-size: 0;
-	text-align: start;
+@mixin transition($value: all .2s linear, $prefixes: $prefix_defaults) {
+	@each $prefix in $prefixes {
+		#{$prefix}transition: $value;
+	}
 }
 
 //============================================================================
-//   Retina display alternatives
+//   HIDPI display alternatives
 //============================================================================
 
 //http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss
@@ -74,81 +72,35 @@
 //	@include image-2x("logo2x.png", 100px, 25px);
 //}
 
-//============================================================================
-//   Create CSS Triangles
-//============================================================================
+// Inspired by Tim Kadlec | Media Query & Asset Downloading Results
+// http://timkadlec.com/2012/04/media-query-asset-downloading-results/
 
-// Create CSS Triangles in a Breeze
+// Inspired by kaelig / hidpi
+// https://github.com/kaelig/hidpi
+// hidpi() is a Sass mixin that serves high resolution graphics to high density (Retina-like) displays
 
-@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
-	content: "";
-	display: block;
-	width: 0;
-	height: 0;
-	border: solid $triangleSize;
-	@if ($triangleDirection == top) {
-		border-color: $triangleColor transparent transparent transparent;
+$extension: png !default;
+
+@mixin hidpi($image: false, $extension: $extension) {
+	@if $image {
+		background: url('#{$imgDir}#{$image}.#{$extension}') no-repeat;
 	}
-	@if ($triangleDirection == bottom) {
-		border-color: transparent transparent $triangleColor transparent;
+	@media #{$hidpi} {
+		@if $image {
+			$image-hidpi-fullname: '#{$imgDir}#{$image}_x2.#{$extension}';
+			background: url($image-hidpi-fullname) no-repeat;
+			@content;
+		}
+		@else {
+			@content;
+		}
 	}
-	@if ($triangleDirection == left) {
-		border-color: transparent transparent transparent $triangleColor;
+}
+
+@mixin hidpi-image ($image: false, $width: false, $height: false, $extension: $extension) {
+	width: em($width);
+	height: em($height);
+	@include hidpi ($image, $extension) {
+		background-size: em($width) em($height);
 	}
-	@if ($triangleDirection == right) {
-		border-color: transparent $triangleColor transparent transparent;
-	}
-// .example { @include css-triangle(5px, #fff, bottom); }
 }
-
-// ============================================================================
-//    Vendor prefix Mixins
-//=============================================================================
-
-@mixin vendor($property, $value) {
-	-webkit-#{$property}: $value;
-	-moz-#{$property}: $value;
-	-ms-#{$property}: $value;
-	-o-#{$property}: $value;
-	#{$property}: $value;
-}
-
-@mixin border-radius($radius: 5px) {
-	-moz-border-radius: $radius;
-	-webkit-border-radius: $radius;
-	-o-border-radius: $radius;
-	border-radius: $radius;
-	-webkit-background-clip: padding-box;
-}
-
-@mixin box-shadow($bshval: 0 0 4px rgba(black, 0.5)) {
-	-moz-box-shadow: $bshval;
-	-webkit-box-shadow: $bshval;
-	-o-box-shadow: $bshval;
-	-box-shadow: $bshval;
-}
-
-@mixin transition($transition: all linear 200ms) {
-	-webkit-transition: $transition;
-	-moz-transition: $transition;
-	-o-transition: $transition;
-	transition: $transition;
-}
-
-//@mixin rotate($deg: 5deg) { // FIXME test
-//	-webkit-transform: rotate($deg);
-//	-moz-transform: rotate($deg);
-//	-o-transform: rotate($deg);
-//	transform: rotate($deg);
-//}
-//
-//@mixin scale($factor: 0.2) {
-//	-webkit-transform: scale($factor);
-//	-moz-transform: scale($factor);
-//	-o-transform: scale($factor);
-//	transform: scale($factor);
-//}
-
-//.test-class {
-//  @include transition(all ease 300ms);
-//}
