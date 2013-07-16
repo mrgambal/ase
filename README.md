@@ -19,7 +19,7 @@ Dependencies:
 
 Version:
 --------
- 0.8b
+ 0.9b
 
 Copyright:
 ----------
@@ -43,7 +43,7 @@ Before you'll put ASE into webpage you should assert that all dependencies speci
 
 ###2. First steps###
 
-Minimal pre-configuration set is some html-container (div, p, span... whatever) and at least 3 slides (tag-independent too) inside it.
+Minimal pre-configuration set is some html-container (div, p, span... whatever) and at least 1 slide (tag-independent too) inside it.
 If your container has class `js-slider-container` and slides have class `js-slider-item` easiest case to initialize ASE looks like this:
 
 ```js

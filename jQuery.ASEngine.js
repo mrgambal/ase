@@ -6,15 +6,17 @@
  on items inside container. You could use all available css-powers to realize
  slider-effect of your dreams.
 
- Authors: JS-jedi: Dmitry Gambal ( https://github.com/mrgambal )
- CSS-jedi: Dmitry Nechepurenko ( https://github.com/dimanech )
+ Authors: 
+ 	JS-jedi: Dmitry Gambal ( https://github.com/mrgambal )
+ 	CSS-jedi: Dmitry Nechepurenko ( https://github.com/dimanech )
 
  Inspired By: My Friend Dmitry Nechepurenko and some existing solutions
 
- Dependencies: jQuery >= 1.7.2
- jQuery Mobile (if you want to handle swipe events on mobile devices)
+ Dependencies: 
+ 	jQuery >= 1.7.2
+ 	jQuery Mobile (if you want to handle swipe events on mobile devices)
 
- Version: 0.8b
+ Version: 0.9b
 
  Copyright: Feel free to redistribute the script/modify it, as
  long as you leave my info at the top.
@@ -122,6 +124,8 @@
 				_s.goNext.call(_s, true);
 			};
 
+			if (_s.items.length === 0)
+				return _s;
 			// previous
 			if (_so.prevCtrl && _so.prevCtrl.length)
 				_so.prevCtrl.on('click' + _s.__eventNS, _p);
@@ -339,6 +343,7 @@
 			// calculate prev and next index
 			if (Math.abs(itemIndex - _s.__curIndex) > 1)
 				prevIndex = _s.__nextIndex((goBack ? itemIndex + 1 : itemIndex - 1), true);
+			
 			nextIndex = _s.__nextIndex((goBack ? itemIndex - 1 : itemIndex + 1), true);
 			// pagination links update
 			if (_s.__pgnContainer)
@@ -347,23 +352,20 @@
 			if (stopAutoplay)
 				_s.stopAutoplay();
 
-			// clear classes and add to prev/next class to destination item
-			_s.items
-					.removeClass(_so.prevClass + " " + _so.nextClass)[itemIndex]
+			// clear classes and add prev/next class to destination item
+			_s.items.removeClass(_so.prevClass + " " + _so.nextClass)[itemIndex]
 					.className += " " + (goBack ? _so.prevClass : _so.nextClass);
 			// clear current class
-			_s.__current
-					.removeClass(_so.currentClass);
+			_s.__current.removeClass(_so.currentClass);
 			// add class to prev item
-			_s.items[prevIndex]
-					.className += " " + (goBack ? _so.nextClass : _so.prevClass);
+			if (_s.items.length > 1)
+				_s.items[prevIndex].className += " " + (goBack ? _so.nextClass : _so.prevClass);
 			// set current item and add needed class
 			_s.__current = _s.items.eq(itemIndex)
 					.removeClass(goBack ? _so.prevClass : _so.nextClass)
 					.addClass(_so.currentClass);
 			// add class to next item
-			_s.items[nextIndex]
-					.className += " " + (goBack ? _so.prevClass : _so.nextClass);
+			_s.items[nextIndex].className += " " + (goBack ? _so.prevClass : _so.nextClass);
 			_s.__curIndex = itemIndex;
 			// call onMove
 			if (typeof _so.onMove === 'function')
@@ -430,12 +432,15 @@
 			_s.options = $.extend({}, (_old ? _old.options : _s.defaultOptions), opts);
 			_s.items = (_s.__container = _s.__container || container).find(_s.options.itemsSelector);
 
-			if (_s.items.length < 3)
+			if (_s.items.length === 0)
 				return false;
 
 			_s.__current = _s.items.first().addClass(_s.options.currentClass);
-			_s.items[1].className += ' ' + _s.options.nextClass;
-			_s.items[_s.items.length - 1].className += ' ' + _s.options.prevClass;
+
+			if (_s.items.length > 1)
+				_s.items[1].className += ' ' + _s.options.nextClass;
+			if (_s.items.length > 2)
+				_s.items[_s.items.length - 1].className += ' ' + _s.options.prevClass;
 
 			_s.__curIndex = 0;
 			_s.__removeEventHandlers()
