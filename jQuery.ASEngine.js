@@ -16,7 +16,7 @@
  	jQuery >= 1.7.2
  	jQuery Mobile (if you want to handle swipe events on mobile devices)
 
- Version: 0.9b
+ Version: 1.0
 
  Copyright: Feel free to redistribute the script/modify it, as
  long as you leave my info at the top.
@@ -114,14 +114,26 @@
 					return;
 
 				e.preventDefault();
+
 				_s.goPrev.call(_s, true);
+
+				if (typeof _so.onPrev === 'function')
+					_so.onPrev.call(_s.__getPseudoObject());
+				if (typeof _so.onMove === 'function')
+					_so.onMove.call(_s.__getPseudoObject());
 			},
 			_n = function(e) {
 				if (hasHref(this))
 					return;
 
 				e.preventDefault();
+
 				_s.goNext.call(_s, true);
+
+				if (typeof _so.onNext === 'function')
+					_so.onNext.call(_s.__getPseudoObject());
+				if (typeof _so.onMove === 'function')
+					_so.onMove.call(_s.__getPseudoObject());
 			};
 
 			if (_s.items.length === 0)
@@ -183,6 +195,19 @@
 					.className += ' ' + actClass;
 
 			return _s;
+		},
+		__getPseudoObject : function () {
+			return {
+				goNext: this.goNext,
+				goPrev: this.goPrev,
+				goTo: this.goTo,
+				index: this.__curIndex,
+				items: this.items,
+				options: this.options,
+				reinit: this.init,
+				setAutoplay: this.setAutoplay,
+				stopAutoplay: this.stopAutoplay
+			};
 		},
 		/*
 		 * Next slide index calculation.
@@ -297,9 +322,6 @@
 		 * @return {ASEngine} Current ASE instance.
 		 */
 		goNext: function(stopAutoplay) {
-			if (typeof this.options.onNext === 'function')
-				this.options.onNext.call(this);
-
 			return this.goTo(this.__curIndex + 1, stopAutoplay);
 		},
 		/*
@@ -313,9 +335,6 @@
 		 * @return {ASEngine} Current ASE instance.
 		 */
 		goPrev: function(stopAutoplay) {
-			if (typeof this.options.onPrev === 'function')
-				this.options.onPrev.call(this);
-
 			return this.goTo(this.__curIndex - 1, stopAutoplay);
 		},
 		/*
@@ -367,9 +386,6 @@
 			// add class to next item
 			_s.items[nextIndex].className += " " + (goBack ? _so.prevClass : _so.nextClass);
 			_s.__curIndex = itemIndex;
-			// call onMove
-			if (typeof _so.onMove === 'function')
-				_so.onMove.call(this);
 
 			return _s;
 		},
