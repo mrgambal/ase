@@ -6,7 +6,7 @@ $blue: #78C6FA;
 $dark-blue: #516ECB;
 $violet: #A200B8;
 
-/* @group tab-generic
+/* @group ase-carousel
   --------------------------------------------------------------------------- */
 
 .ase-carousel {
@@ -56,12 +56,16 @@ $violet: #A200B8;
 		display: inline-block;
 		vertical-align: top;
 		float: none;
-		border: 2px solid #E6E6E6;
+		border: 1px solid #E6E6E6;
 
 		.ie6-7 & {
 			display: inline;
 			zoom: 1;
 		}
+	}
+
+	.js-ase__pagination__item_active {
+		border-color: $blue;
 	}
 }
 
@@ -135,51 +139,81 @@ $violet: #A200B8;
 
 /* @end */
 
-/* @group carousel_apple-like
+/* @group slider_slide-horiz_rotate
+  --------------------------------------------------------------------------- */
+
+.slider_slide-horiz_rotate {
+
+	.js-ase__item {
+		opacity: 0;
+		visibility: hidden;
+		@include vendor(transform, translate(100%));
+		@include transition(all linear 450ms);
+	}
+
+	.js-ase__item_active {
+		opacity: 1;
+		visibility: visible;
+		@include vendor(transform, translate(0));
+	}
+
+	.js-ase__item_prev {
+		@include vendor(transform, translate(-100%));
+	}
+
+	// elements
+	.l-row {
+		@include vendor(perspective, 1500px);
+		@include vendor(transform-style, preserve-3d);
+	}
+
+	.l-span {
+		@include vendor(transform, rotateY(-60deg));
+		@include transition(all linear 450ms);
+	}
+
+	.js-ase__item_active {
+		.l-span {
+			@include vendor(transform, rotateY(0deg));
+		}
+	}
+
+	.js-ase__item_prev {
+		.l-span {
+			@include vendor(transform, rotateY(60deg));
+		}
+	}
+}
+
+/* @end */
+
+/* @group carousel_apple-like animation
   --------------------------------------------------------------------------- */
 .carousel_apple-like {
-	//overflow: hidden;
 
 	.js-ase-carousel__item {
 		@include transition(all linear 650ms);
 		visibility: hidden;
 	}
 
+	// animation delay function
+	$items: 4;
+	$step: 90;
+
 	.js-ase-carousel__item li {
-
-		&:first-child {
-			@include vendor(animation-delay, 90ms);
-		}
-
-		&:nth-child(2) {
-			@include vendor(animation-delay, 180ms);
-		}
-
-		&:nth-child(3) {
-			@include vendor(animation-delay, 270ms);
-		}
-
-		&:nth-child(4) {
-			@include vendor(animation-delay, 360ms);
+		@for $item from 1 through $items {
+			&:nth-child(#{$item}) {
+				@include vendor(animation-delay, #{$step * $item}ms);
+			}
 		}
 	}
 
 	.js-ase-carousel__item_active_to-prev li,
 	.js-ase-carousel__item_next li {
-		&:nth-child(4) {
-			@include vendor(animation-delay, 90ms);
-		}
-
-		&:nth-child(3) {
-			@include vendor(animation-delay, 180ms);
-		}
-
-		&:nth-child(2) {
-			@include vendor(animation-delay, 270ms);
-		}
-
-		&:first-child {
-			@include vendor(animation-delay, 360ms);
+		@for $item from 1 through $items {
+			&:nth-child(#{$item}) {
+				@include vendor(animation-delay, #{($step * $items) / $item}ms);
+			}
 		}
 	}
 
@@ -263,6 +297,49 @@ $violet: #A200B8;
 @keyframes moveToLeft {
 	0% { transform: translateX(0); }
 	100% { transform: translateX(-1000%); }
+}
+
+/* @end */
+
+/* @group slider_carousel-3d
+  --------------------------------------------------------------------------- */
+
+.slider_carousel-3d {
+	@include vendor(perspective, 1500px);
+	@include vendor(transform-style, preserve-3d);
+
+	.i-slider-nav,
+	.i-slider__pagination {
+		@include vendor(transform, translateZ(3px));
+	}
+
+	.js-ase__item {
+		width: 826px;
+		visibility: hidden;
+		@include transition(all .6s ease-in-out);
+		@include vendor(transform, translateZ(-200px));
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		left: 50%;
+		margin-left: -413px;
+		@include vendor(transform, translateZ(2px));
+	}
+
+	.js-ase__item_prev {
+		visibility: visible;
+		left: -105%;
+		@include vendor(transform-origin, 100% 50%);
+		@include vendor(transform, rotateY(-20deg));
+	}
+
+	.js-ase__item_next {
+		visibility: visible;
+		left: 105%;
+		@include vendor(transform-origin, 0 50%);
+		@include vendor(transform, rotateY(20deg));
+	}
 }
 
 /* @end */

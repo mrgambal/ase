@@ -11,6 +11,7 @@ $dark-blue: #516ECB;
 $violet: #A200B8;
 
 // testing
+
 //$green: rgba(#82CB51, .4);
 //$blue: rgba(#78C6FA, .4);
 //$dark-blue: rgba(#516ECB, .4);
@@ -26,31 +27,35 @@ $violet: #A200B8;
 
 // Block Hero
 
-.block_hero__title {
-	font-size: 50px;
-	line-height: 1.2;
-	margin: 0 0 15px;
-	white-space: nowrap;
-}
-
-@media #{$media-tablet_portrait} {
-	.block_hero__title {
-		white-space: normal;
-	}
-}
-
-.block_hero__subtitle {
-	font-size: 1.6em;
-	line-height: 1.4em;
-	margin-bottom: 0;
-}
-
-.block_hero__info {
-	padding-top: 15px;
+.block_hero {
 	text-align: center;
 
-	.btn {
-		width: 200px;
+	.block__title {
+		font-size: 98px;
+		line-height: 1.2;
+		margin: 0 0 15px;
+		white-space: nowrap;
+	}
+
+	@media #{$media-tablet_portrait} {
+		.block__title {
+			white-space: normal;
+		}
+	}
+
+	.block__subtitle {
+		font-size: 1.6em;
+		line-height: 1.4em;
+		margin-bottom: 0;
+	}
+
+	.block__info {
+		padding-top: 15px;
+		text-align: center;
+
+		.btn {
+			width: 200px;
+		}
 	}
 }
 
@@ -177,7 +182,7 @@ $btn-height-hero: 42px;
 	}
 }
 
-@mixin btn-skin-dark ($color) {
+@mixin btn-skin-dark($color) {
 	background-color: $color;
 	color: #fff;
 
@@ -215,7 +220,6 @@ $btn-height-hero: 42px;
 
 .btn__ico_github:before {
 	content: "\e0ca";
-	//content: "\e0c8";
 }
 
 @mixin btn-ico-skin($color) {
@@ -295,9 +299,6 @@ $btn-height-hero: 42px;
 .ase-slider {
 	position: relative;
 	width: 100%;
-	//overflow: hidden; //ff fix
-	//background: #222;
-	//box-shadow: inset 0 0 160px #000;
 
 	.i-slider-nav {
 		z-index: 2;
@@ -306,7 +307,7 @@ $btn-height-hero: 42px;
 
 .ase-slider__container {
 	position: relative;
-	height: 430px;
+	height: 420px;
 	width: 100%;
 	z-index: 1;
 }
@@ -324,7 +325,7 @@ $btn-height-hero: 42px;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 430px;
+	height: 420px;
 }
 
 .ase-slider__item_slide-1 {
@@ -373,22 +374,25 @@ $btn-height-hero: 42px;
 	top: 40%;
 	width: 67px;
 	height: 116px;
-	line-height: 116px;
+	line-height: 108px;
 	text-align: center;
-	font-size: 85px;
+	font-size: 45px;
 	text-decoration: none;
 	color: #fff;
 	@include transition(all .1s linear);
+	border-radius: 1px;
 
 	&:hover,
 	&:focus {
 		outline: none;
 		background-color: rgba(#fff, .2);
 		color: #fff;
+		width: 70px;
 	}
 
 	&:active {
-		width: 60px;
+		width: 67px;
+		background-color: rgba(#fff, .4);
 	}
 
 	.ie6-7 & {
@@ -428,37 +432,36 @@ $btn-height-hero: 42px;
 .i-slider__pagination__item {
 	width: 1em;
 	height: 1em;
-	background: #fff;
 	display: block;
 	float: left;
 	margin-left: .5em;
 	cursor: pointer;
+	border: 1px solid #fff;
 
 	&:hover {
-		background-color: #eee;
+		background-color: #fff;
 	}
-
 }
 
 .js-ase__pagination__item_active {
-	background: darken($blue, 20%);
+	border-color: darken($blue, 20%);
 }
 
 .js-ase__pagination__item_p1 {
 	.js-ase__pagination__item_active {
-		background: darken($blue, 20%);
+		border-color: darken($blue, 20%);
 	}
 }
 
 .js-ase__pagination__item_p2 {
 	.js-ase__pagination__item_active {
-		background: darken($green, 20%);
+		border-color: darken($green, 20%);
 	}
 }
 
 .js-ase__pagination__item_p3 {
 	.js-ase__pagination__item_active {
-		background: darken($violet, 20%);
+		border-color: darken($violet, 20%);
 	}
 }
 

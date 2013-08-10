@@ -19,7 +19,7 @@ Dependencies:
 
 Version:
 --------
- 0.8b
+ 0.9b
 
 Copyright:
 ----------
@@ -43,7 +43,7 @@ Before you'll put ASE into webpage you should assert that all dependencies speci
 
 ###2. First steps###
 
-Minimal pre-configuration set is some html-container (div, p, span... whatever) and at least 3 slides (tag-independent too) inside it.
+Minimal pre-configuration set is some html-container (div, p, span... whatever) and at least 1 slide (tag-independent too) inside it.
 If your container has class `js-slider-container` and slides have class `js-slider-item` easiest case to initialize ASE looks like this:
 
 ```js
@@ -106,18 +106,33 @@ Often, in my web-developers practice, i've faced with a lack of functions, that 
     autoplay: true,
     autoplayDelay: 10000,
     onMove: function () {
-        console.log('Slide #' + this.__curIndex + '. onMove');
+        console.log('Slide #' + this.index + '. onMove');
     },
     onPrev: function () {
-        console.log('Slide #' + this.__curIndex + '. onPrev');
+        console.log('Slide #' + this.index + '. onPrev');
     },
     onNext: function () {
-        console.log('Slide #' + this.__curIndex + '. onNext');
+        console.log('Slide #' + this.index + '. onNext');
     }
  });
 ```
 
-**IMPORTANT:** As you can see, context (`this`) in those callbacks is current ASE-instance. Yes, you can change some settings or even override some functionality inside them, but it is strongly recommended to do that only if you fully understand what and why you want to do.
+Context (`this`) in those callbacks is object:
+```js
+{
+    goNext(),
+    goPrev(),
+    goTo( index ),
+    index,
+    items,
+    options, 
+    reinit( options ), 
+    setAutoplay( delay ), 
+    stopAutoplay() 
+}
+```
+
+**IMPORTANT:** callbacks would be executed AFTER slider state change.
 
 ###6. After-init access###
 

@@ -24,8 +24,8 @@
 @import "page/global/typography__fonts";
 @import "page/global/typography__basic";
 
-@import "page/global/html__additional";
-@import "page/global/html__specific";
+//@import "page/global/html__additional";
+//@import "page/global/html__specific";
 
 @import "page/layout/layout__global";
 //@import "page/layout/layout__seo-friendly-columns";
@@ -37,9 +37,9 @@
 //@import "page/global/html__tables";
 //@import "page/global/html__forms";
 
-@import "page/parts/parts__header";
+//@import "page/parts/parts__header";
 @import "page/parts/parts__main";
-@import "page/parts/parts__aside";
+//@import "page/parts/parts__aside";
 @import "page/parts/parts__footer";
 
 // Includes
@@ -59,11 +59,12 @@
 @import "slider-variants/carousel";
 @import "slider-variants/tab";
 @import "slider-variants/accordion";
+@import "slider-variants/complex";
 
 // Blocks
 // --------------------------------------------------------------------------
 
-@import "blocks/menu-horiz";
+//@import "blocks/menu-horiz";
 //@import "blocks/pagination";
 //@import "blocks/tabs";
 //@import "blocks/modal";
