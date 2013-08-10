@@ -20,32 +20,6 @@
 	background-color: $mainBgColor;
 }
 
-/* @group header
-  --------------------------------------------------------------------------- */
-
-.l-global-header {
-}
-
-.l-global-header__top,
-.l-global-header__bottom {
-	@include container;
-}
-
-.l-global-header__top__l {
-	@include span-columns(4,12);
-}
-
-.l-global-header__top__r {
-	@include span-columns(8,12);
-	text-align: right;
-}
-
-.l-global-header__top__r {
-	@include omega;
-}
-
-/* @end */
-
 /* @group footer
   --------------------------------------------------------------------------- */
 

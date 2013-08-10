@@ -23,14 +23,8 @@ body {
 	font-family: $baseFontFamily;
 	color: $baseColor;
 	background: $mainBgColor;
-	overflow-y: scroll;
-	// force scroll
 	margin: 0;
 	// Removes default margin.
-
-	.ie6-7 & {
-		overflow-y: auto;
-	}
 }
 
 /* @group selection fixes
