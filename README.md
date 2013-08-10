@@ -23,7 +23,7 @@ Version:
 
 Copyright:
 ----------
-    Published under MIT License (see LICENSE.txt). Feel free to redistribute the script/modify it, as long as you leave my info at the top.
+Published under MIT License (see LICENSE.txt). Feel free to redistribute the script/modify it, as long as you leave my info at the top.
 
 Manual
 ------
