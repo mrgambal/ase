@@ -196,6 +196,14 @@
 
 			return _s;
 		},
+		/*
+		 * Return new constrained object w/ needed data for callbacks.
+		 *
+		 * @private
+		 * @this {ASEngine} Current ASE instance.
+		 *
+		 * @return {Object} New constrained object.
+		 */
 		__getPseudoObject : function () {
 			return {
 				goNext: this.goNext,
@@ -292,10 +300,12 @@
 
 					e.preventDefault();
 
+					_s.goTo(nextIndex, true);
+
 					if (typeof _s.options[fnName] === 'function')
 						_s.options[fnName].call(_s);
-
-					_s.goTo(nextIndex, true);
+					if (typeof _s.options.onMove === 'function')
+						_s.options.onMove.call(_s);
 				};
 
 			if (pgnClass && pgnClass.length)

@@ -125,10 +125,10 @@ Context (`this`) in those callbacks is object:
     goTo( index ),
     index,
     items,
-    options, 
-    reinit( options ), 
-    setAutoplay( delay ), 
-    stopAutoplay() 
+    options,
+    reinit( options ),
+    setAutoplay( delay ),
+    stopAutoplay()
 }
 ```
 
@@ -207,14 +207,32 @@ sl.data('ASEngine').init({
                 });
 ```
 
-###9. Public API###
+###9. Support old browsers###
+If necessary, implementation of the animation effects in browsers, that do not support css transition/animation, can be gracefully overridden to jQuery `animate()`. For example:
 
-**NOTICE:** All of that fields and methods are designed for common usage cases. Also ASE have  some private methods and fields that are documented in code. 
+```js
+if (!Modernizr.csstransitions) {
+    slider.data('ASEngine').init({
+        onMove: function () {
+            var left = [this.index] * $('.js-ase__item').outerWidth();
+
+            $('.ase-slider__container').animate({
+                    left: "-" + left + "px"
+                }, 1000
+            );
+        }
+    });
+}
+```
+
+###10. Public API###
+
+**NOTICE:** All of that fields and methods are designed for common usage cases. Also ASE have  some private methods and fields that are documented in code.
 But you will use them at your own risk because I wouldn't guarantee immutability of inner realization.
 
 **items** {jQuery} Slider items list.<br/>
 **options** {Object} Options set. Contains:
->**itemsSelector** {String} Default selector for items  
+>**itemsSelector** {String} Default selector for items
     **prevCtrl** {jQuery} 'Go to prev slide'-control.<br/>
     **nextCtrl** {jQuery} 'Go to next slide'-control.<br/>
     **swipeCtrl** {jQuery} 'Swipe for next slide'-control.<br/>

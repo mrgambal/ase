@@ -239,64 +239,40 @@ $violet: #A200B8;
 
 }
 
-@-webkit-keyframes moveFromRight {
-	0% { -webkit-transform: translateX(1000%); }
-	100% { -webkit-transform: translateX(0); }
+@include keyframes(moveFromRight) {
+	from {
+		@include vendor(transform, translateX(1000%));
+	}
+	to {
+		@include vendor(transform, translateX(0%));
+	}
 }
 
-@-webkit-keyframes moveFromLeft {
-	0% { -webkit-transform: translateX(-1000%); }
-	100% { -webkit-transform: translateX(0); }
+@include keyframes(moveFromLeft) {
+	from {
+		@include vendor(transform, translateX(-1000%));
+	}
+	to {
+		@include vendor(transform, translateX(0%));
+	}
 }
 
-@-webkit-keyframes moveToRight {
-	0% { -webkit-transform: translateX(0); }
-	100% { -webkit-transform: translateX(1000%); }
+@include keyframes(moveToRight) {
+	from {
+		@include vendor(transform, translateX(0%));
+	}
+	to {
+		@include vendor(transform, translateX(1000%));
+	}
 }
 
-@-webkit-keyframes moveToLeft {
-	0% { -webkit-transform: translateX(0); }
-	100% { -webkit-transform: translateX(-1000%); }
-}
-
-@-moz-keyframes moveFromRight {
-	0% { -moz-transform: translateX(1000%); }
-	100% { -moz-transform: translateX(0); }
-}
-
-@-moz-keyframes moveFromLeft {
-	0% { -moz-transform: translateX(-1000%); }
-	100% { -moz-transform: translateX(0); }
-}
-
-@-moz-keyframes moveToRight {
-	0% { -moz-transform: translateX(0); }
-	100% { -moz-transform: translateX(1000%); }
-}
-
-@-moz-keyframes moveToLeft {
-	0% { -moz-transform: translateX(0); }
-	100% { -moz-transform: translateX(-1000%); }
-}
-
-@keyframes moveFromRight {
-	0% { transform: translateX(1000%); }
-	100% { transform: translateX(0); }
-}
-
-@keyframes moveFromLeft {
-	0% { transform: translateX(-1000%); }
-	100% { transform: translateX(0); }
-}
-
-@keyframes moveToRight {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(1000%); }
-}
-
-@keyframes moveToLeft {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(-1000%); }
+@include keyframes(moveToLeft) {
+	from {
+		@include vendor(transform, translateX(0%));
+	}
+	to {
+		@include vendor(transform, translateX(-1000%));
+	}
 }
 
 /* @end */
@@ -339,6 +315,106 @@ $violet: #A200B8;
 		left: 105%;
 		@include vendor(transform-origin, 0 50%);
 		@include vendor(transform, rotateY(20deg));
+	}
+}
+
+/* @end */
+
+/* @group slider_carousel-3d
+  --------------------------------------------------------------------------- */
+
+.slider_carousel-3d_2 {
+	@include vendor(perspective, 1500px);
+	@include vendor(transform-style, preserve-3d);
+	height: 320px;
+
+	.ase-carousel__container {
+		height: 300px;
+		width: 300px;
+		margin: 0 auto;
+	}
+	
+	.i-slider-nav {
+		top: 80px;
+		background-color: #eee;
+	}
+
+	.i-slider-nav,
+	.i-slider__pagination,
+	.ui-slider-controls {
+		@include vendor(transform, translateZ(0px));
+	}
+
+	.js-ase__item {
+		width: 300px;
+		height: 300px;
+		visibility: hidden;
+		@include transition(all .6s ease-in-out);
+		@include vendor(transform, translateZ(-200px));
+	}
+
+	.js-ase__item_active {
+		visibility: visible;
+		left: 50%;
+		margin-left: -150px;
+		@include vendor(transform, translateZ(0px));
+	}
+
+	.js-ase__item_prev {
+		visibility: visible;
+		left: -40%;
+		@include vendor(transform-origin, 100% 50%);
+		@include vendor(transform, rotateY(-20deg));
+	}
+
+	.js-ase__item_next {
+		visibility: visible;
+		left: 40%;
+		@include vendor(transform-origin, 0 50%);
+		@include vendor(transform, rotateY(20deg));
+	}
+}
+
+/* @end */
+
+/* @group slider controls jqueryUI slider widget
+  --------------------------------------------------------------------------- */
+
+$handle-width: 153px;
+
+.ui-slider-controls {
+	background: #ccc;
+	width: 478px;
+	height: 6px;
+	margin: 2em auto 0;
+}
+
+.ui-slider {
+	height: 6px;
+	cursor: pointer;
+}
+
+.ui-handle-helper-parent {
+	position: relative;
+	width: 478px - $handle-width * 2;
+	height: 6px;
+	padding-right: $handle-width;
+}
+
+.ui-slider-handle {
+	display: block;
+	width: $handle-width;
+	height: 18px;
+	position: absolute;
+	top: -8px;
+	z-index: 2;
+	background: $blue;
+	border: 1px solid $blue;
+	cursor: col-resize;
+	outline: none;
+
+	&.ui-state-active {
+		border-color: darken($blue, 10%);
 	}
 }
 
