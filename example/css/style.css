@@ -862,31 +862,31 @@ dl dd {
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #fbd4f9; } }
+    background: #14683c; } }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #410c9d; } }
+    background: #b1a1df; } }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #fec2c9; } }
+    background: #26dc78; } }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #1caa22; } }
+    background: #823ebe; } }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #1c323d; } }
+    background: #2f479f; } }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #3ea9e7; } }
+    background: #e42e74; } }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #6de5ab; } }
+    background: #de73a1; } }
 /* @end */
 /* @group Width targeting hide/show
   --------------------------------------------------------------------------- */
@@ -3555,6 +3555,66 @@ http://dibusoft.com/
   .slider_carousel-3d .js-ase__item_next {
     visibility: visible;
     left: 105%;
+    -moz-transform-origin: 0 50%;
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -moz-transform: rotateY(20deg);
+    -webkit-transform: rotateY(20deg);
+    transform: rotateY(20deg); }
+
+/* @end */
+/* @group slider_carousel-3d
+  --------------------------------------------------------------------------- */
+.slider_carousel-3d_2 {
+  -moz-perspective: 1500px;
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 320px; }
+  .slider_carousel-3d_2 .ase-carousel__container {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto; }
+  .slider_carousel-3d_2 .i-slider-nav {
+    top: 80px;
+    background-color: #eee; }
+  .slider_carousel-3d_2 .i-slider-nav,
+  .slider_carousel-3d_2 .i-slider__pagination,
+  .slider_carousel-3d_2 .ui-slider-controls {
+    -moz-transform: translateZ(0px);
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px); }
+  .slider_carousel-3d_2 .js-ase__item {
+    width: 300px;
+    height: 300px;
+    visibility: hidden;
+    -moz-transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    -moz-transform: translateZ(-200px);
+    -webkit-transform: translateZ(-200px);
+    transform: translateZ(-200px); }
+  .slider_carousel-3d_2 .js-ase__item_active {
+    visibility: visible;
+    left: 50%;
+    margin-left: -150px;
+    -moz-transform: translateZ(0px);
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px); }
+  .slider_carousel-3d_2 .js-ase__item_prev {
+    visibility: visible;
+    left: -40%;
+    -moz-transform-origin: 100% 50%;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -moz-transform: rotateY(-20deg);
+    -webkit-transform: rotateY(-20deg);
+    transform: rotateY(-20deg); }
+  .slider_carousel-3d_2 .js-ase__item_next {
+    visibility: visible;
+    left: 40%;
     -moz-transform-origin: 0 50%;
     -webkit-transform-origin: 0 50%;
     transform-origin: 0 50%;

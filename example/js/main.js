@@ -169,8 +169,7 @@ Scripts.Common = {
 		var sc = Scripts.Common,
 			container = $('.js-ase-carousel-scroll'),
 			ase,
-			scrollbar = $('#js-ui-slider-controls'),
-			handleHelper;
+			scrollbar = $('#js-ui-slider-controls');
 
 		if (container.length) {
 			container.ASE({
@@ -185,7 +184,7 @@ Scripts.Common = {
 
 			ase = container.data('ASEngine');
 
-			// scrollbar
+			// init scrollbar
 
 			scrollbar.slider({
 				min: 0,
@@ -197,9 +196,7 @@ Scripts.Common = {
 				}
 			});
 
-			// add scrollbar helper
-
-			handleHelper = scrollbar.find( ".ui-slider-handle" ).wrap( "<div class='ui-handle-helper-parent'></div>" ).parent();
+			scrollbar.find( ".ui-slider-handle" ).wrap( "<div class='ui-handle-helper-parent'></div>" );
 
 			// change scrollbar position
 
