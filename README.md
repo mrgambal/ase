@@ -208,19 +208,20 @@ sl.data('ASEngine').init({
 ```
 
 ###9. Support old browsers###
-If necessary the implementation of the animation effects in browsers that do not support css transition/animation can be effortlessly transfer them to the jQuery animate (). For example:
+If necessary, implementation of the animation effects in browsers, that do not support css transition/animation, can be gracefully overridden to jQuery `animate()`. For example:
+
 ```js
 if (!Modernizr.csstransitions) {
-	slider.data('ASEngine').init({
-		onMove: function () {
-			var left = [this.__curIndex] * $('.js-ase__item').outerWidth();
+    slider.data('ASEngine').init({
+        onMove: function () {
+            var left = [this.index] * $('.js-ase__item').outerWidth();
 
-			$('.ase-slider__container').animate({
-					left: "-" + left + "px"
-				}, 1000
-			);
-		}
-	});
+            $('.ase-slider__container').animate({
+                    left: "-" + left + "px"
+                }, 1000
+            );
+        }
+    });
 }
 ```
 
