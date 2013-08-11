@@ -114,35 +114,34 @@ Scripts.Common = {
 	},
 	carouselInit:function () {
 		var sc = Scripts.Common,
-			cacrousel = $('.js-ase-carousel');
+			carousel = $('.js-ase-carousel');
 
-		if (cacrousel.length) {
-			cacrousel.ASE({
+		if (carousel.length) {
+			carousel.ASE({
 				itemsSelector:'.js-ase-carousel__item',
-				prevCtrl:cacrousel.find('.js-ase-carousel__nav_prev'),
-				nextCtrl:cacrousel.find('.js-ase-carousel__nav_next'),
+				prevCtrl:carousel.find('.js-ase-carousel__nav_prev'),
+				nextCtrl:carousel.find('.js-ase-carousel__nav_next'),
 				prevClass:'js-ase-carousel__item_prev',
 				nextClass:'js-ase-carousel__item_next',
 				currentClass:'js-ase-carousel__item_active',
 				autoplay:false,
 				onMove:function () {
-					cacrousel.find('.js-ase-carousel__item').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
-					menuLne(cacrousel.find('.js-ase-carousel__pagination__ln_active'));
+					carousel.find('.js-ase-carousel__item').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
+					menuLne(carousel.find('.js-ase-carousel__pagination__ln_active'));
 				},
 				onPrev:function () {
 					setTimeout(function () {
-						cacrousel.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-prev');
+						carousel.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-prev');
 					}, 1);
 				},
 				onNext:function () {
 					setTimeout(function () {
-						cacrousel.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-next');
+						carousel.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-next');
 					}, 1);
 				}
 			}).addPagination('.js-ase-carousel__pagination', 'js-ase-carousel__pagination__ln');
 
 			// menu line initial state
-
 			$('.js-menu-line-container').append('<li class="js-menu-line"></li>');
 
 			var activeEl = $('.js-ase-carousel__pagination__ln_active'),
@@ -153,9 +152,7 @@ Scripts.Common = {
 			line.css('width', initWidth).css('left', initLeft);
 
 			// menu line on change behaviour
-
 			function menuLne (el) {
-				var line = $('.js-menu-line'),
 					newLeft = el.position().left,
 					newWidth = el.width();
 
