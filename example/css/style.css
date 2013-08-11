@@ -429,9 +429,9 @@ dl dd {
 
 .btn,
 .btn__ico {
-  -moz-transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear; }
+  -moz-transition: all linear 0.2s;
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s; }
 
 .btn__inner {
   display: block;
@@ -820,7 +820,7 @@ dl dd {
   background-color: transparent; }
 
 .i-wai {
-  border: 0;
+  border: none;
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   margin: -1px;
@@ -862,31 +862,31 @@ dl dd {
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #7916b9; } }
+    background: #fbd4f9; } }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #d10200; } }
+    background: #410c9d; } }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #41348b; } }
+    background: #fec2c9; } }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #23f6fb; } }
+    background: #1caa22; } }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #33f1c4; } }
+    background: #1c323d; } }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #e92566; } }
+    background: #3ea9e7; } }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #1b0efa; } }
+    background: #6de5ab; } }
 /* @end */
 /* @group Width targeting hide/show
   --------------------------------------------------------------------------- */
@@ -3429,87 +3429,87 @@ http://dibusoft.com/
   animation: moveToRight 450ms ease-in-out both; }
 
 @-webkit-keyframes moveFromRight {
-  0% {
+  from {
     -webkit-transform: translateX(1000%); }
 
-  100% {
-    -webkit-transform: translateX(0); } }
-
-@-webkit-keyframes moveFromLeft {
-  0% {
-    -webkit-transform: translateX(-1000%); }
-
-  100% {
-    -webkit-transform: translateX(0); } }
-
-@-webkit-keyframes moveToRight {
-  0% {
-    -webkit-transform: translateX(0); }
-
-  100% {
-    -webkit-transform: translateX(1000%); } }
-
-@-webkit-keyframes moveToLeft {
-  0% {
-    -webkit-transform: translateX(0); }
-
-  100% {
-    -webkit-transform: translateX(-1000%); } }
+  to {
+    -webkit-transform: translateX(0%); } }
 
 @-moz-keyframes moveFromRight {
-  0% {
+  from {
     -moz-transform: translateX(1000%); }
 
-  100% {
-    -moz-transform: translateX(0); } }
-
-@-moz-keyframes moveFromLeft {
-  0% {
-    -moz-transform: translateX(-1000%); }
-
-  100% {
-    -moz-transform: translateX(0); } }
-
-@-moz-keyframes moveToRight {
-  0% {
-    -moz-transform: translateX(0); }
-
-  100% {
-    -moz-transform: translateX(1000%); } }
-
-@-moz-keyframes moveToLeft {
-  0% {
-    -moz-transform: translateX(0); }
-
-  100% {
-    -moz-transform: translateX(-1000%); } }
+  to {
+    -moz-transform: translateX(0%); } }
 
 @keyframes moveFromRight {
-  0% {
+  from {
     transform: translateX(1000%); }
 
-  100% {
-    transform: translateX(0); } }
+  to {
+    transform: translateX(0%); } }
+
+@-webkit-keyframes moveFromLeft {
+  from {
+    -webkit-transform: translateX(-1000%); }
+
+  to {
+    -webkit-transform: translateX(0%); } }
+
+@-moz-keyframes moveFromLeft {
+  from {
+    -moz-transform: translateX(-1000%); }
+
+  to {
+    -moz-transform: translateX(0%); } }
 
 @keyframes moveFromLeft {
-  0% {
+  from {
     transform: translateX(-1000%); }
 
-  100% {
-    transform: translateX(0); } }
+  to {
+    transform: translateX(0%); } }
+
+@-webkit-keyframes moveToRight {
+  from {
+    -webkit-transform: translateX(0%); }
+
+  to {
+    -webkit-transform: translateX(1000%); } }
+
+@-moz-keyframes moveToRight {
+  from {
+    -moz-transform: translateX(0%); }
+
+  to {
+    -moz-transform: translateX(1000%); } }
 
 @keyframes moveToRight {
-  0% {
-    transform: translateX(0); }
+  from {
+    transform: translateX(0%); }
 
-  100% {
+  to {
     transform: translateX(1000%); } }
 
-@keyframes moveToLeft {
-  0% {
-    transform: translateX(0); }
+@-webkit-keyframes moveToLeft {
+  from {
+    -webkit-transform: translateX(0%); }
 
-  100% {
+  to {
+    -webkit-transform: translateX(-1000%); } }
+
+@-moz-keyframes moveToLeft {
+  from {
+    -moz-transform: translateX(0%); }
+
+  to {
+    -moz-transform: translateX(-1000%); } }
+
+@keyframes moveToLeft {
+  from {
+    transform: translateX(0%); }
+
+  to {
     transform: translateX(-1000%); } }
 
 /* @end */
@@ -3561,6 +3561,39 @@ http://dibusoft.com/
     -moz-transform: rotateY(20deg);
     -webkit-transform: rotateY(20deg);
     transform: rotateY(20deg); }
+
+/* @end */
+/* @group slider controls jqueryUI slider widget
+  --------------------------------------------------------------------------- */
+.ui-slider-controls {
+  background: #ccc;
+  width: 478px;
+  height: 6px;
+  margin: 2em auto 0; }
+
+.ui-slider {
+  height: 6px;
+  cursor: pointer; }
+
+.ui-handle-helper-parent {
+  position: relative;
+  width: 172px;
+  height: 6px;
+  padding-right: 153px; }
+
+.ui-slider-handle {
+  display: block;
+  width: 153px;
+  height: 18px;
+  position: absolute;
+  top: -8px;
+  z-index: 2;
+  background: #78c6fa;
+  border: 1px solid #78c6fa;
+  cursor: col-resize;
+  outline: none; }
+  .ui-slider-handle.ui-state-active {
+    border-color: #47b1f8; }
 
 /* @end */
 .tab {
@@ -3883,9 +3916,9 @@ http://dibusoft.com/
   text-decoration: none;
   background: #78c6fa;
   color: #fff;
-  -moz-transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear; }
+  -moz-transition: all linear 0.2s;
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s; }
   .ase-accordion__title__inner:hover, .ase-accordion__title__inner:focus, .ase-accordion__title__inner:visited {
     background-color: #47b1f8;
     color: #fff; }
@@ -4212,9 +4245,9 @@ http://dibusoft.com/
 
 .js-ase-complex__item {
   visibility: hidden;
-  -moz-transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear; }
+  -moz-transition: all linear 0.2s;
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s; }
   .js-ase-complex__item .ase-slider-complex__item__inner {
     -moz-transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
@@ -4223,9 +4256,9 @@ http://dibusoft.com/
     -webkit-perspective: 200px;
     perspective: 200px;
     left: 100%;
-    -moz-transition: all 0.2s linear;
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear; }
+    -moz-transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    transition: all linear 0.2s; }
   .js-ase-complex__item .town__anim-elem-container {
     -moz-transform-origin: 0 100%;
     -webkit-transform-origin: 0 100%;

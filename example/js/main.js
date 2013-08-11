@@ -25,6 +25,25 @@ Scripts.Common = {
 
 		return sc;
 	},
+	animTypeChanger:function () {
+
+		$('.js-type-changer-ln').on('click', function () {
+			var self = $(this),
+				actClass = 'js-type-changer-ln_active',
+				slider = self.parent().parent().parent().parent().find('.ase-slider-slice'),
+				animType = self.data('js-animtype'),
+				container = self.parent().parent(),
+				animFamily = container.data('js-animtype-family');
+
+			container.find('.js-type-changer-ln').removeClass(actClass);
+			self.addClass(actClass);
+
+			slider.removeClass()
+				.addClass(animType)
+				.addClass('element element_slider ase-slider-slice js-ase ' + animFamily);
+		});
+
+	},
 	sliderInit:function () {
 		var sc = Scripts.Common,
 			containers = $('.js-ase');
@@ -41,6 +60,14 @@ Scripts.Common = {
 					currentClass:'js-ase__item_active',
 					autoplay:false
 				}).addPagination(el.find('.js-ase__pagination'), false, 'i-slider__pagination__item');
+			});
+
+			containers.data('ASEngine').init({ // FIXME call some event before goPrev
+				onMove: function () {
+
+					console.log('Slide #' + this.index + '. onMove');
+
+				}
 			});
 		}
 
@@ -87,35 +114,32 @@ Scripts.Common = {
 	},
 	carouselInit:function () {
 		var sc = Scripts.Common,
-			containers = $('.js-ase-carousel');
+			cacrousel = $('.js-ase-carousel');
 
-		if (containers.length) {
-			containers.each(function () {
-				var el = $(this);
-				el.ASE({
-					itemsSelector:'.js-ase-carousel__item',
-					prevCtrl:el.find('.js-ase-carousel__nav_prev'),
-					nextCtrl:el.find('.js-ase-carousel__nav_next'),
-					prevClass:'js-ase-carousel__item_prev',
-					nextClass:'js-ase-carousel__item_next',
-					currentClass:'js-ase-carousel__item_active',
-					autoplay:false,
-					onMove:function () {
-						el.find('.js-ase-carousel__item').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
-						menuLne(el.find('.js-ase-carousel__pagination__ln_active'));
-					},
-					onPrev:function () {
-						setTimeout(function () {
-							el.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-prev');
-						}, 1);
-					},
-					onNext:function () {
-						setTimeout(function () {
-							el.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-next');
-						}, 1);
-					}
-				}).addPagination('.js-ase-carousel__pagination', 'js-ase-carousel__pagination__ln');
-			});
+		if (cacrousel.length) {
+			cacrousel.ASE({
+				itemsSelector:'.js-ase-carousel__item',
+				prevCtrl:cacrousel.find('.js-ase-carousel__nav_prev'),
+				nextCtrl:cacrousel.find('.js-ase-carousel__nav_next'),
+				prevClass:'js-ase-carousel__item_prev',
+				nextClass:'js-ase-carousel__item_next',
+				currentClass:'js-ase-carousel__item_active',
+				autoplay:false,
+				onMove:function () {
+					cacrousel.find('.js-ase-carousel__item').removeClass('js-ase-carousel__item_active_to-prev js-ase-carousel__item_active_to-next');
+					menuLne(cacrousel.find('.js-ase-carousel__pagination__ln_active'));
+				},
+				onPrev:function () {
+					setTimeout(function () {
+						cacrousel.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-prev');
+					}, 1);
+				},
+				onNext:function () {
+					setTimeout(function () {
+						cacrousel.find('.js-ase-carousel__item_active').addClass('js-ase-carousel__item_active_to-next');
+					}, 1);
+				}
+			}).addPagination('.js-ase-carousel__pagination', 'js-ase-carousel__pagination__ln');
 
 			// menu line initial state
 
@@ -141,6 +165,55 @@ Scripts.Common = {
 
 		return sc;
 	},
+	scrollSliderInit : function() {
+		var sc = Scripts.Common,
+			container = $('.js-ase-carousel-scroll'),
+			ase,
+			scrollbar = $('#js-ui-slider-controls'),
+			handleHelper;
+
+		if (container.length) {
+			container.ASE({
+				itemsSelector:'.js-ase__item',
+				prevCtrl:container.find('.js-ase__nav_prev'),
+				nextCtrl:container.find('.js-ase__nav_next'),
+				prevClass:'js-ase__item_prev',
+				nextClass:'js-ase__item_next',
+				currentClass:'js-ase__item_active',
+				autoplay:false
+			});
+
+			ase = container.data('ASEngine');
+
+			// scrollbar
+
+			scrollbar.slider({
+				min: 0,
+				max: ase.items.length - 1,
+				value: ase.__curIndex,
+
+				slide: function(event, ui) {
+					ase.goTo(ui.value);
+				}
+			});
+
+			// add scrollbar helper
+
+			handleHelper = scrollbar.find( ".ui-slider-handle" ).wrap( "<div class='ui-handle-helper-parent'></div>" ).parent();
+
+			// change scrollbar position
+
+			ase.init({
+				onMove: function () {
+					$('#js-ui-slider-controls').slider({
+						value: ase.__curIndex
+					});
+				}
+			});
+		}
+
+		return sc;
+	},
 	sliceInit:function () {
 		var sc = Scripts.Common,
 			containers = $('.js-ase-slice');
@@ -155,38 +228,12 @@ Scripts.Common = {
 					prevClass:'js-ase-slice__item_prev',
 					nextClass:'js-ase-slice__item_next',
 					currentClass:'js-ase-slice__item_active',
-					autoplay:false,
-					onMove:function () {
-						slider.find('.js-ase-slice__item').removeClass('js-ase-slice__item_animated');
-
-						setTimeout(function () {
-							slider.find('.js-ase-slice__item_active').addClass('js-ase-slice__item_animated');
-						}, 1);
-					}
+					autoplay:false
 				}).addPagination(slider.find('.js-ase__pagination'), false, 'i-slider__pagination__item');
 			});
 		}
 
 		return sc;
-	},
-	animTypeChanger:function () {
-
-		$('.js-type-changer-ln').on('click', function () {
-			var self = $(this),
-				actClass = 'js-type-changer-ln_active',
-				slider = self.parent().parent().parent().parent().find('.ase-slider-slice'),
-				animType = self.data('js-animtype'),
-				container = self.parent().parent(),
-				animFamily = container.data('js-animtype-family');
-
-			container.find('.js-type-changer-ln').removeClass(actClass);
-			self.addClass(actClass);
-
-			slider.removeClass()
-				.addClass(animType)
-				.addClass('element element_slider ase-slider-slice js-ase ' + animFamily);
-		});
-
 	},
 	complexSlider:function () {
 		var sc = Scripts.Common,
@@ -222,7 +269,9 @@ Scripts.Common = {
 				.sliceInit()
 				.complexSlider()
 				.warning()
-				.animTypeChanger()
+				.animTypeChanger();
+
+			sc.scrollSliderInit();
 		};
 
 		return sc;
