@@ -41,6 +41,8 @@
 	}
 
 	ASEngine.prototype = {
+		/** @private {Boolean} Shows that animation in progress. */
+		__animated: false,
 		/** @private {jQuery} Items container. */
 		__container: null,
 		/** @private {jQuery} Currently selected item. */
@@ -57,8 +59,14 @@
 		__pgnClass: 'js-ase__pagination__item',
 		/** @private {jQuery} Pagination controls container. */
 		__pgnContainer: null,
+		/** @private {String} Browser-specific CSS prefix. */
+		__prefix : '',
 		/** @private {Number} Timer ID for autoplay. */
 		__timerID: 0,
+		/** @private {String} Animation end events names. */
+		__transEnds: '',
+		/** @private {String} Animation start events names. */
+		__transStarts: '',
 		/** {jQuery} Slider items list. */
 		items: null,
 		/** {Object} Options set. */
@@ -108,33 +116,31 @@
 				hasHref = function(el) {
 					var href = el.href || (el.attributes['data-href'] ? el.attributes['data-href'].value : '');
 					return (href !== "" & (href !== location.href && href.indexOf(location.href + '#') < 0));
-			},
-			_p = function(e) {
-				if (hasHref(this))
-					return;
+				},
+				_p = function(e) {
+					if (_s.__animated ||hasHref(this))
+						return false;
 
-				e.preventDefault();
+					e.preventDefault();
+					_s.goPrev.call(_s, true);
 
-				_s.goPrev.call(_s, true);
+					if (typeof _so.onPrev === 'function')
+						_so.onPrev.call(_s.__getPseudoObject());
+					if (typeof _so.onMove === 'function')
+						_so.onMove.call(_s.__getPseudoObject());
+				},
+				_n = function(e) {
+					if (_s.__animated || hasHref(this))
+						return false;
 
-				if (typeof _so.onPrev === 'function')
-					_so.onPrev.call(_s.__getPseudoObject());
-				if (typeof _so.onMove === 'function')
-					_so.onMove.call(_s.__getPseudoObject());
-			},
-			_n = function(e) {
-				if (hasHref(this))
-					return;
+					e.preventDefault();
+					_s.goNext.call(_s, true);
 
-				e.preventDefault();
-
-				_s.goNext.call(_s, true);
-
-				if (typeof _so.onNext === 'function')
-					_so.onNext.call(_s.__getPseudoObject());
-				if (typeof _so.onMove === 'function')
-					_so.onMove.call(_s.__getPseudoObject());
-			};
+					if (typeof _so.onNext === 'function')
+						_so.onNext.call(_s.__getPseudoObject());
+					if (typeof _so.onMove === 'function')
+						_so.onMove.call(_s.__getPseudoObject());
+				};
 
 			if (_s.items.length === 0)
 				return _s;
@@ -163,6 +169,19 @@
 				if (_so.autoplay)
 					_s.setAutoplay.call(_s);
 			});
+
+			_s.items.on(_s.__transStarts, function () {
+						if (!_s.__animated) {
+							_s.__animated = true;
+							console.log('!');
+						}
+					})
+					.on(_s.__transEnds, function () {
+						if (_s.__animated) {
+							_s.__animated = false;
+							console.log('#');
+						}
+					});					
 
 			return _s;
 		},
@@ -196,6 +215,20 @@
 
 			return _s;
 		},
+		__detectBrowser: function() {
+			var ua = navigator.userAgent;
+			// old Opera
+			if (ua.indexOf('Opera') > -1)
+				return 'o';
+			else if (ua.indexOf('WebKit') > -1)
+				return 'webkit';
+			else if (ua.indexOf('MSIE') > -1)
+				return 'ms';
+			else if (ua.indexOf('Firefox') > -1)
+				return 'moz';
+			else 
+				return '';
+		},
 		/*
 		 * Return new constrained object w/ needed data for callbacks.
 		 *
@@ -204,7 +237,7 @@
 		 *
 		 * @return {Object} New constrained object.
 		 */
-		__getPseudoObject : function () {
+		__getPseudoObject : function() {
 			return {
 				goNext: this.goNext,
 				goPrev: this.goPrev,
@@ -269,7 +302,10 @@
 				_so.swipeCtrl.off(_s.__eventNS);
 			if (_s.__pgnContainer)
 				_s.__pgnContainer.find('.' + _s.__pgnClass).off(_s.__eventNS);
+
 			_s.__container.off(_s.__eventNS);
+			_s.items.off(_s.__transEnds);
+			_s.items.off(_s.__transStarts);
 
 			return _s;
 		},
@@ -297,6 +333,9 @@
 				_h = function(e) {
 					var nextIndex = this.attributes['data-href'].value.substr(this.attributes['data-href'].value.indexOf('#') + 1) - 1,
 						fnName = (nextIndex < _s.__curIndex) ? 'onPrev' : 'onNext';
+
+					if (_s.__animated)
+						return false;
 
 					e.preventDefault();
 
@@ -358,7 +397,7 @@
 		 * @return {ASEngine} Current ASE instance.
 		 */
 		goTo: function(itemIndex, stopAutoplay) {
-			if (itemIndex === this.__curIndex)
+			if (itemIndex === this.__curIndex || this.__animated)
 				return this;
 
 			var _s = this,
@@ -467,6 +506,14 @@
 				_s.items[1].className += ' ' + _s.options.nextClass;
 			if (_s.items.length > 2)
 				_s.items[_s.items.length - 1].className += ' ' + _s.options.prevClass;
+
+			_s.__prefix = _s.__detectBrowser();
+			_s.__transStarts = [
+				_s.__prefix + 'TransitionStart' + _s.__eventNS,
+				_s.__prefix + 'AnimationStart' + _s.__eventNS].join(' ');
+			_s.__transEnds = [
+				_s.__prefix + 'TransitionEnd' + _s.__eventNS,
+				_s.__prefix + 'AnimationEnd' + _s.__eventNS].join(' ');
 
 			_s.__curIndex = 0;
 			_s.__removeEventHandlers()
